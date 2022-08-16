@@ -53,7 +53,7 @@ public class ServletContext {
             // tomcat.addServlet("","MemberServlet", new MemberServlet(objMap, memberService));
             // standardContext.addServletMappingDecoded("/member","MemberServlet");
 
-
+            //
             tomcat.start();
             tomcat.getServer().await();
 
