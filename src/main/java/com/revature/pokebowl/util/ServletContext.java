@@ -45,9 +45,9 @@ public class ServletContext {
             // OrdersService ordersService = new OrdersService(ordersDao);
             // OrderDetailsService orderDetailsService = new OrderDetailsService(orderDetailsDao);
 
-            ObjectMapper objMap = new ObjectMapper();   // instantiate the ObjectMapper dependency for JSON marshalling
+            ObjectMapper objectMapper = new ObjectMapper();   // instantiate the ObjectMapper dependency for JSON marshalling
 
-            tomcat.addServlet("","TestServlet", new TestServlet(objMap));
+            tomcat.addServlet("","TestServlet", new TestServlet(objectMapper));
             standardContext.addServletMappingDecoded("/test","TestServlet");
 
             // tomcat.addServlet("","MemberServlet", new MemberServlet(objMap, memberService));
