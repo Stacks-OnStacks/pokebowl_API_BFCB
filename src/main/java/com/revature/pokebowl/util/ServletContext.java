@@ -48,6 +48,14 @@ public class ServletContext {
             ObjectMapper objMap = new ObjectMapper();   // instantiate the ObjectMapper dependency for JSON marshalling
 
             tomcat.addServlet("","TestServlet", new TestServlet(objMap));
+            standardContext.addServletMappingDecoded("/test","TestServlet");
+
+            // tomcat.addServlet("","MemberServlet", new MemberServlet(objMap, memberService));
+            // standardContext.addServletMappingDecoded("/member","MemberServlet");
+
+
+            tomcat.start();
+            tomcat.getServer().await();
 
         } catch (ServletException | LifecycleException e){
             throw new RuntimeException(e);
