@@ -27,6 +27,9 @@ public class HibernateUtil {
             Configuration configuration = new Configuration();
             Properties properties = new Properties();
 
+            // for Elastic Beanstalk
+            // ClassLoader loader = Thread.currentThread().getContextClassLoader();
+            // properties.load(loader.getResourceAsStream("hibernate.properties"));
             properties.load(new FileReader("src/main/resources/hibernate.properties"));
 
             //HERE IS WHERE WE ADD OUR CLASSES
