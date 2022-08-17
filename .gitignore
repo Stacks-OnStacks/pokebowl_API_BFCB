@@ -2,5 +2,6 @@
 /shelf/
 /.idea
 /target
-/src/main/resources/
+/src/main/resources/hibernate.properties
+
 
