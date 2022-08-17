@@ -18,7 +18,9 @@ public class HibernateUtil {
 
     private static SessionFactory sessionFactory;
     private static Session session;
-
+    public static SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
     public static Session getSession() throws IOException {
         if(sessionFactory == null) {
             Configuration configuration = new Configuration();
