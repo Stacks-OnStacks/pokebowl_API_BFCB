@@ -2,7 +2,6 @@ package com.revature.pokebowl.member;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.hibernate.annotations.Proxy;
 
 import javax.persistence.*;
 import java.sql.Date;

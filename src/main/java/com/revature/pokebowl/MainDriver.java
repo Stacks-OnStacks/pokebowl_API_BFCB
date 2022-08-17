@@ -24,13 +24,14 @@ public class MainDriver {
         //Test for members
         try (Session session = getSession()) {
             Transaction transaction = session.beginTransaction();
-            //Add new memberloyee object
+            //Add new member object
             Member member = new Member();
             member.setId(UUID.randomUUID().toString());
             member.setFull_name("test mcTester");
             member.setUser_password("test mcTester");
             member.setDob(new Date(System.currentTimeMillis()));
             session.save(member);
+
             transaction.commit();
             HibernateUtil.closeSession();
         } catch (HibernateException | IOException e) {
