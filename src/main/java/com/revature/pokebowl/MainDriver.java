@@ -27,8 +27,8 @@ public class MainDriver {
             //Add new member object
             Member member = new Member();
             member.setId(UUID.randomUUID().toString());
-            member.setFull_name("test mcTester");
-            member.setUser_password("test mcTester");
+            member.setFullName("test mcTester");
+            member.setUserPassword("test mcTester");
             member.setDob(new Date(System.currentTimeMillis()));
             session.save(member);
 

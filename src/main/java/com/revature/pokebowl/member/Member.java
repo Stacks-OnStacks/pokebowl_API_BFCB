@@ -14,78 +14,78 @@ public class Member {
     private String id;
 
     @Column(name="full_name",nullable=false)
-    private String full_name;
+    private String fullName;
 
     @Column(name="user_password",nullable=false)
     @JsonProperty(access=JsonProperty.Access.WRITE_ONLY)
-    private String user_password;
+    private String userPassword;
 
     @Column(name="dob",nullable=false)
     private Date dob;
 
     @Column(name="is_admin",nullable=false)
-    private boolean is_admin;
+    private boolean isAdmin;
 
-    public Member(String id, String full_name, String user_password, Date dob, boolean is_admin) {
+    public Member(String id, String fullName, String userPassword, Date dob, boolean isAdmin) {
         this.id = id;
-        this.full_name = full_name;
-        this.user_password = user_password;
+        this.fullName = fullName;
+        this.userPassword = userPassword;
         this.dob = dob;
-        this.is_admin = is_admin;
+        this.isAdmin = isAdmin;
     }
 
     public Member() {
         super();
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setFull_name(String full_name) {
-        this.full_name = full_name;
-    }
-
-    public void setUser_password(String user_password) {
-        this.user_password = user_password;
-    }
-
-    public void setDob(Date dob) {
-        this.dob = dob;
-    }
-
-    public void setIs_admin(boolean is_admin) {
-        this.is_admin = is_admin;
-    }
-
     public String getId() {
         return id;
     }
 
-    public String getFull_name() {
-        return full_name;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getUser_password() {
-        return user_password;
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 
     public Date getDob() {
         return dob;
     }
 
-    public boolean isIs_admin() {
-        return is_admin;
+    public void setDob(Date dob) {
+        this.dob = dob;
+    }
+
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
     }
 
     @Override
     public String toString() {
         return "Member{" +
                 "id='" + id + '\'' +
-                ", full_name='" + full_name + '\'' +
-                ", user_password='" + user_password + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", userPassword='" + userPassword + '\'' +
                 ", dob=" + dob +
-                ", is_admin=" + is_admin +
+                ", isAdmin=" + isAdmin +
                 '}';
     }
 }
