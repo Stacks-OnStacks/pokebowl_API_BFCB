@@ -11,8 +11,8 @@ public class MainDriver {
     public static void main(String[] args) {
 
         // Instantiate the ServletContext (run the program)
-        ServletContext sc = new ServletContext();
-        sc.run();
+        //ServletContext sc = new ServletContext();
+        //sc.run();
 
         //Test for members
         Session session = HibernateUtil.getSessionFactory().openSession();
@@ -23,6 +23,7 @@ public class MainDriver {
         member.setFull_name("test mcTester");
         member.setUser_password("test mcTester");
         member.setDob(new Date(System.currentTimeMillis()));
+        member.setIs_admin(false);
         session.save(member);
 
         session.getTransaction().commit();
