@@ -5,6 +5,9 @@ import com.revature.pokebowl.dish.Dish;
 //import com.revature.pokebowl.member.Member;// no member class yet
 
 import com.revature.pokebowl.member.Member;
+import com.revature.pokebowl.memberpayment.MemberPayment;
+import com.revature.pokebowl.order.Order;
+import com.revature.pokebowl.orderdetails.OrderDetails;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -34,11 +37,14 @@ public class HibernateUtil {
 
             //HERE IS WHERE WE ADD OUR CLASSES
             configuration.addAnnotatedClass(Member.class);
+            configuration.addAnnotatedClass(Dish.class);
+            // configuration.addAnnotatedClass(Order.class);
+            // configuration.addAnnotatedClass(OrderDetails.class);
+            // configuration.addAnnotatedClass(MemberPayment.class);
 
 
             // ServiceRegistry
-            ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
-                    .applySettings(configuration.getProperties()).build();
+            ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
 
             sessionFactory = configuration.buildSessionFactory(serviceRegistry);
         }

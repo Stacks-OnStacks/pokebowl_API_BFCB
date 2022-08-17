@@ -693,3 +693,305 @@ java.lang.Exception: exception just for purpose of providing stack trace
 [DEBUG] 2022-08-17 14:14:48.882 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
 [DEBUG] 2022-08-17 14:14:48.882 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
 [DEBUG] 2022-08-17 14:14:48.882 [main] JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+[DEBUG] 2022-08-17 17:29:33.128 [main] logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[DEBUG] 2022-08-17 17:29:33.142 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2022-08-17 17:29:33.144 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[DEBUG] 2022-08-17 17:29:33.149 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[INFO ] 2022-08-17 17:29:33.176 [main] Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+[INFO ] 2022-08-17 17:29:33.180 [main] Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=postgres, hibernate.connection.password=****, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.show_sql=true, hibernate.connection.url=jdbc:postgresql://beck-db-instance.cewwl2d9shzm.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=pokebowl, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=org.postgresql.Driver, hibernate.hbm2ddl.auto=update}
+[DEBUG] 2022-08-17 17:29:33.415 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2022-08-17 17:29:33.416 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[DEBUG] 2022-08-17 17:29:33.416 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[DEBUG] 2022-08-17 17:29:33.427 [main] ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+[DEBUG] 2022-08-17 17:29:33.427 [main] Configuration - Building session factory using provided StandardServiceRegistry
+[DEBUG] 2022-08-17 17:29:33.444 [main] RegionFactoryInitiator - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+[DEBUG] 2022-08-17 17:29:33.447 [main] RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[INFO ] 2022-08-17 17:29:33.482 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[DEBUG] 2022-08-17 17:29:33.677 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@5a5a729f
+[DEBUG] 2022-08-17 17:29:33.678 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@5a5a729f
+[DEBUG] 2022-08-17 17:29:33.678 [main] BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@5a5a729f
+[DEBUG] 2022-08-17 17:29:33.679 [main] BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@6b09fb41
+[DEBUG] 2022-08-17 17:29:33.679 [main] BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@782859e
+[DEBUG] 2022-08-17 17:29:33.680 [main] BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@1b1cfb87
+[DEBUG] 2022-08-17 17:29:33.681 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@20b2475a
+[DEBUG] 2022-08-17 17:29:33.681 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@20b2475a
+[DEBUG] 2022-08-17 17:29:33.682 [main] BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@20b2475a
+[DEBUG] 2022-08-17 17:29:33.683 [main] BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@58e1d9d
+[DEBUG] 2022-08-17 17:29:33.683 [main] BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@58e1d9d
+[DEBUG] 2022-08-17 17:29:33.684 [main] BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@58e1d9d
+[DEBUG] 2022-08-17 17:29:33.685 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@47caedad
+[DEBUG] 2022-08-17 17:29:33.686 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@47caedad
+[DEBUG] 2022-08-17 17:29:33.686 [main] BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@47caedad
+[DEBUG] 2022-08-17 17:29:33.687 [main] BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@1500b2f3
+[DEBUG] 2022-08-17 17:29:33.688 [main] BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@1500b2f3
+[DEBUG] 2022-08-17 17:29:33.688 [main] BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@1500b2f3
+[DEBUG] 2022-08-17 17:29:33.690 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@5c86a017
+[DEBUG] 2022-08-17 17:29:33.690 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@5c86a017
+[DEBUG] 2022-08-17 17:29:33.690 [main] BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@5c86a017
+[DEBUG] 2022-08-17 17:29:33.691 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@1b919693
+[DEBUG] 2022-08-17 17:29:33.692 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@1b919693
+[DEBUG] 2022-08-17 17:29:33.692 [main] BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@1b919693
+[DEBUG] 2022-08-17 17:29:33.693 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@2584b82d
+[DEBUG] 2022-08-17 17:29:33.693 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@2584b82d
+[DEBUG] 2022-08-17 17:29:33.693 [main] BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@2584b82d
+[DEBUG] 2022-08-17 17:29:33.694 [main] BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@626abbd0
+[DEBUG] 2022-08-17 17:29:33.694 [main] BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@626abbd0
+[DEBUG] 2022-08-17 17:29:33.696 [main] BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@46d59067
+[DEBUG] 2022-08-17 17:29:33.696 [main] BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@46d59067
+[DEBUG] 2022-08-17 17:29:33.697 [main] BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@5dafbe45
+[DEBUG] 2022-08-17 17:29:33.697 [main] BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@5dafbe45
+[DEBUG] 2022-08-17 17:29:33.698 [main] BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@2f953efd
+[DEBUG] 2022-08-17 17:29:33.699 [main] BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@14bdbc74
+[DEBUG] 2022-08-17 17:29:33.700 [main] BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@1b66c0fb
+[DEBUG] 2022-08-17 17:29:33.700 [main] BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@1b66c0fb
+[DEBUG] 2022-08-17 17:29:33.701 [main] BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@1e4f4a5c
+[DEBUG] 2022-08-17 17:29:33.701 [main] BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@1e4f4a5c
+[DEBUG] 2022-08-17 17:29:33.715 [main] BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@565f390
+[DEBUG] 2022-08-17 17:29:33.716 [main] BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@565f390
+[DEBUG] 2022-08-17 17:29:33.717 [main] BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@49b2a47d
+[DEBUG] 2022-08-17 17:29:33.718 [main] BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@49b2a47d
+[DEBUG] 2022-08-17 17:29:33.720 [main] BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@642a7222
+[DEBUG] 2022-08-17 17:29:33.720 [main] BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@642a7222
+[DEBUG] 2022-08-17 17:29:33.722 [main] BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@147e2ae7
+[DEBUG] 2022-08-17 17:29:33.722 [main] BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@147e2ae7
+[DEBUG] 2022-08-17 17:29:33.723 [main] BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@503f91c3
+[DEBUG] 2022-08-17 17:29:33.724 [main] BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@503f91c3
+[DEBUG] 2022-08-17 17:29:33.725 [main] BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@3b6d844d
+[DEBUG] 2022-08-17 17:29:33.725 [main] BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@3b6d844d
+[DEBUG] 2022-08-17 17:29:33.728 [main] BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@5167f57d
+[DEBUG] 2022-08-17 17:29:33.728 [main] BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@5167f57d
+[DEBUG] 2022-08-17 17:29:33.730 [main] BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@6cc4cdb9
+[DEBUG] 2022-08-17 17:29:33.730 [main] BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@6cc4cdb9
+[DEBUG] 2022-08-17 17:29:33.732 [main] BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@32115b28
+[DEBUG] 2022-08-17 17:29:33.732 [main] BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@32115b28
+[DEBUG] 2022-08-17 17:29:33.733 [main] BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@4b8729ff
+[DEBUG] 2022-08-17 17:29:33.733 [main] BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@4b8729ff
+[DEBUG] 2022-08-17 17:29:33.734 [main] BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@4b8729ff
+[DEBUG] 2022-08-17 17:29:33.736 [main] BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@383dc82c
+[DEBUG] 2022-08-17 17:29:33.737 [main] BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@5f9edf14
+[DEBUG] 2022-08-17 17:29:33.738 [main] BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@5f9edf14
+[DEBUG] 2022-08-17 17:29:33.738 [main] BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@5f9edf14
+[DEBUG] 2022-08-17 17:29:33.739 [main] BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@68878f6d
+[DEBUG] 2022-08-17 17:29:33.739 [main] BasicTypeRegistry - Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@7fd7a283
+[DEBUG] 2022-08-17 17:29:33.740 [main] BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@2c78324b
+[DEBUG] 2022-08-17 17:29:33.741 [main] BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@2c78324b
+[DEBUG] 2022-08-17 17:29:33.742 [main] BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@4b86805d
+[DEBUG] 2022-08-17 17:29:33.742 [main] BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@4b86805d
+[DEBUG] 2022-08-17 17:29:33.743 [main] BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@38af9828
+[DEBUG] 2022-08-17 17:29:33.743 [main] BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@38af9828
+[DEBUG] 2022-08-17 17:29:33.744 [main] BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@34129c78
+[DEBUG] 2022-08-17 17:29:33.744 [main] BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@34129c78
+[DEBUG] 2022-08-17 17:29:33.745 [main] BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@3e62d773
+[DEBUG] 2022-08-17 17:29:33.745 [main] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@3e62d773
+[DEBUG] 2022-08-17 17:29:33.746 [main] BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@638ef7ed
+[DEBUG] 2022-08-17 17:29:33.747 [main] BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@776a6d9b
+[DEBUG] 2022-08-17 17:29:33.747 [main] BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@776a6d9b
+[DEBUG] 2022-08-17 17:29:33.747 [main] BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@776a6d9b
+[DEBUG] 2022-08-17 17:29:33.748 [main] BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@1cf56a1c
+[DEBUG] 2022-08-17 17:29:33.748 [main] BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@1cf56a1c
+[DEBUG] 2022-08-17 17:29:33.749 [main] BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@1cf56a1c
+[DEBUG] 2022-08-17 17:29:33.750 [main] BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@35b74c5c
+[DEBUG] 2022-08-17 17:29:33.751 [main] BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@81d9a72
+[DEBUG] 2022-08-17 17:29:33.753 [main] BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@70e38ce1
+[DEBUG] 2022-08-17 17:29:33.753 [main] BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@70e38ce1
+[DEBUG] 2022-08-17 17:29:33.753 [main] BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@70e38ce1
+[DEBUG] 2022-08-17 17:29:33.754 [main] BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@1787f2a0
+[DEBUG] 2022-08-17 17:29:33.754 [main] BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@1787f2a0
+[DEBUG] 2022-08-17 17:29:33.754 [main] BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@1787f2a0
+[DEBUG] 2022-08-17 17:29:33.755 [main] BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@51bf5add
+[DEBUG] 2022-08-17 17:29:33.756 [main] BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@389b0789
+[DEBUG] 2022-08-17 17:29:33.757 [main] BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@1b410b60
+[DEBUG] 2022-08-17 17:29:33.758 [main] BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@1b410b60
+[DEBUG] 2022-08-17 17:29:33.758 [main] BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@64ec96c6
+[DEBUG] 2022-08-17 17:29:33.760 [main] BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@6f8e8894
+[DEBUG] 2022-08-17 17:29:33.760 [main] BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@6f8e8894
+[DEBUG] 2022-08-17 17:29:33.762 [main] BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@2f666ebb
+[DEBUG] 2022-08-17 17:29:33.762 [main] BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@2f666ebb
+[DEBUG] 2022-08-17 17:29:33.763 [main] BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@4b2c5e02
+[DEBUG] 2022-08-17 17:29:33.764 [main] BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@4bc222e
+[DEBUG] 2022-08-17 17:29:33.766 [main] BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@102cec62
+[DEBUG] 2022-08-17 17:29:33.770 [main] BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@7ba8c737
+[DEBUG] 2022-08-17 17:29:33.770 [main] BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@7ba8c737
+[DEBUG] 2022-08-17 17:29:33.771 [main] BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@16c069df
+[DEBUG] 2022-08-17 17:29:33.771 [main] BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@2bec854f
+[DEBUG] 2022-08-17 17:29:33.771 [main] BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@31edaa7d
+[DEBUG] 2022-08-17 17:29:33.771 [main] BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@26adfd2d
+[DEBUG] 2022-08-17 17:29:33.771 [main] BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@3336e6b6
+[DEBUG] 2022-08-17 17:29:33.772 [main] BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@7c3fdb62
+[DEBUG] 2022-08-17 17:29:33.772 [main] BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@205d38da
+[DEBUG] 2022-08-17 17:29:33.772 [main] BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@6950ed69
+[DEBUG] 2022-08-17 17:29:33.806 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[DEBUG] 2022-08-17 17:29:33.807 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[DEBUG] 2022-08-17 17:29:33.808 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2022-08-17 17:29:33.808 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2022-08-17 17:29:33.808 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[DEBUG] 2022-08-17 17:29:33.809 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[DEBUG] 2022-08-17 17:29:33.810 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[DEBUG] 2022-08-17 17:29:33.811 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2022-08-17 17:29:33.812 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+[DEBUG] 2022-08-17 17:29:33.813 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[DEBUG] 2022-08-17 17:29:33.813 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[DEBUG] 2022-08-17 17:29:33.814 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+[DEBUG] 2022-08-17 17:29:33.814 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2022-08-17 17:29:33.815 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[WARN ] 2022-08-17 17:29:33.820 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2022-08-17 17:29:33.825 [main] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://beck-db-instance.cewwl2d9shzm.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=pokebowl]
+[INFO ] 2022-08-17 17:29:33.826 [main] pooling - HHH10001001: Connection properties: {user=postgres, password=WSo3vUcu75t39dnr9GPfWt}
+[INFO ] 2022-08-17 17:29:33.826 [main] pooling - HHH10001003: Autocommit mode: false
+[DEBUG] 2022-08-17 17:29:33.830 [main] DriverManagerConnectionProviderImpl - Initializing Connection pool with 1 Connections
+[INFO ] 2022-08-17 17:29:33.831 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[DEBUG] 2022-08-17 17:29:34.642 [main] JdbcEnvironmentInitiator - Database ->
+       name : PostgreSQL
+    version : 13.4
+      major : 13
+      minor : 4
+[DEBUG] 2022-08-17 17:29:34.643 [main] JdbcEnvironmentInitiator - Driver ->
+       name : PostgreSQL JDBC Driver
+    version : 42.3.3
+      major : 42
+      minor : 3
+[DEBUG] 2022-08-17 17:29:34.643 [main] JdbcEnvironmentInitiator - JDBC version : 4.2
+[INFO ] 2022-08-17 17:29:34.656 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[DEBUG] 2022-08-17 17:29:34.671 [main] IdentifierHelperBuilder - JDBC driver metadata reported database stores quoted identifiers in neither upper, lower nor mixed case
+[DEBUG] 2022-08-17 17:29:34.822 [main] BasicTypeRegistry - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@7ca33c24
+[DEBUG] 2022-08-17 17:29:34.823 [main] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.PostgresUUIDType@7ca33c24
+[DEBUG] 2022-08-17 17:29:34.823 [main] BasicTypeRegistry - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@3e62d773
+[DEBUG] 2022-08-17 17:29:34.825 [main] TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@18920cc] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@2807bdeb]
+[DEBUG] 2022-08-17 17:29:34.860 [main] Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[DEBUG] 2022-08-17 17:29:34.875 [main] AnnotationBinder - Binding entity from annotated class: com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-17 17:29:34.896 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2022-08-17 17:29:34.902 [main] EntityBinder - Import with entity name Member
+[DEBUG] 2022-08-17 17:29:34.905 [main] EntityBinder - Bind entity com.revature.pokebowl.member.Member on table members
+[DEBUG] 2022-08-17 17:29:34.929 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-17 17:29:34.931 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.member.Member] is safe
+[DEBUG] 2022-08-17 17:29:34.931 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-17 17:29:34.932 [main] PropertyBinder - MetadataSourceProcessor property id with lazy=false
+[DEBUG] 2022-08-17 17:29:34.933 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:id]
+[DEBUG] 2022-08-17 17:29:34.936 [main] SimpleValueBinder - building SimpleValue for id
+[DEBUG] 2022-08-17 17:29:34.938 [main] PropertyBinder - Building property id
+[DEBUG] 2022-08-17 17:29:34.941 [main] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, assigned, , ...)
+[DEBUG] 2022-08-17 17:29:34.941 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=dob, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-17 17:29:34.941 [main] PropertyBinder - MetadataSourceProcessor property dob with lazy=false
+[DEBUG] 2022-08-17 17:29:34.942 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:dob]
+[DEBUG] 2022-08-17 17:29:34.942 [main] SimpleValueBinder - building SimpleValue for dob
+[DEBUG] 2022-08-17 17:29:34.942 [main] PropertyBinder - Building property dob
+[DEBUG] 2022-08-17 17:29:34.942 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=full_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-17 17:29:34.942 [main] PropertyBinder - MetadataSourceProcessor property fullName with lazy=false
+[DEBUG] 2022-08-17 17:29:34.943 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:fullName]
+[DEBUG] 2022-08-17 17:29:34.943 [main] SimpleValueBinder - building SimpleValue for fullName
+[DEBUG] 2022-08-17 17:29:34.943 [main] PropertyBinder - Building property fullName
+[DEBUG] 2022-08-17 17:29:34.943 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=is_admin, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-17 17:29:34.943 [main] PropertyBinder - MetadataSourceProcessor property isAdmin with lazy=false
+[DEBUG] 2022-08-17 17:29:34.943 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:isAdmin]
+[DEBUG] 2022-08-17 17:29:34.943 [main] SimpleValueBinder - building SimpleValue for isAdmin
+[DEBUG] 2022-08-17 17:29:34.943 [main] PropertyBinder - Building property isAdmin
+[DEBUG] 2022-08-17 17:29:34.944 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=user_password, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-17 17:29:34.944 [main] PropertyBinder - MetadataSourceProcessor property userPassword with lazy=false
+[DEBUG] 2022-08-17 17:29:34.944 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:userPassword]
+[DEBUG] 2022-08-17 17:29:34.944 [main] SimpleValueBinder - building SimpleValue for userPassword
+[DEBUG] 2022-08-17 17:29:34.944 [main] PropertyBinder - Building property userPassword
+[DEBUG] 2022-08-17 17:29:34.954 [main] SimpleValueBinder - Starting fillSimpleValue for id
+[DEBUG] 2022-08-17 17:29:34.954 [main] SimpleValueBinder - Starting fillSimpleValue for dob
+[DEBUG] 2022-08-17 17:29:34.954 [main] SimpleValueBinder - Starting fillSimpleValue for fullName
+[DEBUG] 2022-08-17 17:29:34.954 [main] SimpleValueBinder - Starting fillSimpleValue for isAdmin
+[DEBUG] 2022-08-17 17:29:34.954 [main] SimpleValueBinder - Starting fillSimpleValue for userPassword
+[DEBUG] 2022-08-17 17:29:34.956 [main] PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [members]
+[DEBUG] 2022-08-17 17:29:34.989 [main] SessionFactoryImpl - Building session factory
+[DEBUG] 2022-08-17 17:29:34.990 [main] Settings - SessionFactory name : null
+[DEBUG] 2022-08-17 17:29:34.990 [main] Settings - Automatic flush during beforeCompletion(): enabled
+[DEBUG] 2022-08-17 17:29:34.991 [main] Settings - Automatic session close at end of transaction: disabled
+[DEBUG] 2022-08-17 17:29:34.991 [main] Settings - Statistics: disabled
+[DEBUG] 2022-08-17 17:29:34.991 [main] Settings - Deleted entity synthetic identifier rollback: disabled
+[DEBUG] 2022-08-17 17:29:34.991 [main] Settings - Default entity-mode: pojo
+[DEBUG] 2022-08-17 17:29:34.991 [main] Settings - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[DEBUG] 2022-08-17 17:29:34.991 [main] Settings - Allow initialization of lazy state outside session : disabled
+[DEBUG] 2022-08-17 17:29:34.991 [main] Settings - Using BatchFetchStyle : LEGACY
+[DEBUG] 2022-08-17 17:29:34.991 [main] Settings - Default batch fetch size: -1
+[DEBUG] 2022-08-17 17:29:34.991 [main] Settings - Maximum outer join fetch depth: null
+[DEBUG] 2022-08-17 17:29:34.991 [main] Settings - Default null ordering: NONE
+[DEBUG] 2022-08-17 17:29:34.992 [main] Settings - Order SQL updates by primary key: disabled
+[DEBUG] 2022-08-17 17:29:34.992 [main] Settings - Order SQL inserts for batching: disabled
+[DEBUG] 2022-08-17 17:29:34.992 [main] Settings - multi-tenancy strategy : NONE
+[DEBUG] 2022-08-17 17:29:34.992 [main] Settings - JTA Track by Thread: enabled
+[DEBUG] 2022-08-17 17:29:34.992 [main] Settings - Query language substitutions: {}
+[DEBUG] 2022-08-17 17:29:34.992 [main] Settings - Named query checking : enabled
+[DEBUG] 2022-08-17 17:29:34.992 [main] Settings - Second-level cache: disabled
+[DEBUG] 2022-08-17 17:29:34.992 [main] Settings - Second-level query cache: disabled
+[DEBUG] 2022-08-17 17:29:34.992 [main] Settings - Second-level query cache factory: null
+[DEBUG] 2022-08-17 17:29:34.992 [main] Settings - Second-level cache region prefix: null
+[DEBUG] 2022-08-17 17:29:34.992 [main] Settings - Optimize second-level cache for minimal puts: disabled
+[DEBUG] 2022-08-17 17:29:34.993 [main] Settings - Structured second-level cache entries: disabled
+[DEBUG] 2022-08-17 17:29:34.993 [main] Settings - Second-level cache direct-reference entries: disabled
+[DEBUG] 2022-08-17 17:29:34.993 [main] Settings - Automatic eviction of collection cache: disabled
+[DEBUG] 2022-08-17 17:29:34.993 [main] Settings - JDBC batch size: 15
+[DEBUG] 2022-08-17 17:29:34.993 [main] Settings - JDBC batch updates for versioned data: enabled
+[DEBUG] 2022-08-17 17:29:34.993 [main] Settings - Scrollable result sets: enabled
+[DEBUG] 2022-08-17 17:29:34.993 [main] Settings - Wrap result sets: disabled
+[DEBUG] 2022-08-17 17:29:34.993 [main] Settings - JDBC3 getGeneratedKeys(): enabled
+[DEBUG] 2022-08-17 17:29:34.993 [main] Settings - JDBC result set fetch size: null
+[DEBUG] 2022-08-17 17:29:34.993 [main] Settings - Connection release mode: AFTER_TRANSACTION
+[DEBUG] 2022-08-17 17:29:34.994 [main] Settings - Generate SQL with comments: disabled
+[DEBUG] 2022-08-17 17:29:34.994 [main] Settings - JPA compliance - query : disabled
+[DEBUG] 2022-08-17 17:29:34.994 [main] Settings - JPA compliance - closed-handling : disabled
+[DEBUG] 2022-08-17 17:29:34.994 [main] Settings - JPA compliance - lists : disabled
+[DEBUG] 2022-08-17 17:29:34.994 [main] Settings - JPA compliance - transactions : disabled
+[DEBUG] 2022-08-17 17:29:35.050 [main] SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+[DEBUG] 2022-08-17 17:29:35.051 [main] SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+[DEBUG] 2022-08-17 17:29:35.068 [main] SessionFactoryImpl - Session factory constructed with filter configurations : {}
+[DEBUG] 2022-08-17 17:29:35.069 [main] SessionFactoryImpl - Instantiating session factory with properties: {sun.desktop=windows, awt.toolkit=sun.awt.windows.WToolkit, file.encoding.pkg=sun.io, java.specification.version=1.8, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1252, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, java.class.path=C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\charsets.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\cldrdata.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\dnsns.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\jaccess.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\localedata.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\nashorn.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\sunec.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\sunmscapi.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\zipfs.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\jce.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\jfr.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\jsse.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\management-agent.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\resources.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\rt.jar;C:\Users\Caleb A Beck\Desktop\SoftwareDevelopment\revature\java_projects\pokebowl_API_BFCB\target\classes;C:\Users\Caleb A Beck\.m2\repository\org\postgresql\postgresql\42.3.3\postgresql-42.3.3.jar;C:\Users\Caleb A Beck\.m2\repository\org\checkerframework\checker-qual\3.5.0\checker-qual-3.5.0.jar;C:\Users\Caleb A Beck\.m2\repository\net\bytebuddy\byte-buddy\1.12.10\byte-buddy-1.12.10.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\8.5.23\tomcat-embed-core-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-annotations-api\8.5.23\tomcat-annotations-api-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\embed\tomcat-embed-jasper\8.5.23\tomcat-embed-jasper-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\8.5.23\tomcat-embed-el-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\eclipse\jdt\ecj\3.12.3\ecj-3.12.3.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-jasper\8.5.23\tomcat-jasper-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-servlet-api\8.5.23\tomcat-servlet-api-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-juli\8.5.23\tomcat-juli-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-el-api\8.5.23\tomcat-el-api-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-api\8.5.23\tomcat-api-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-util-scan\8.5.23\tomcat-util-scan-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-util\8.5.23\tomcat-util-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-jasper-el\8.5.23\tomcat-jasper-el-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-jsp-api\8.5.23\tomcat-jsp-api-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.3\jackson-databind-2.13.3.jar;C:\Users\Caleb A Beck\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.3\jackson-annotations-2.13.3.jar;C:\Users\Caleb A Beck\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.3\jackson-core-2.13.3.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.1\log4j-core-2.17.1.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.1\log4j-api-2.17.1.jar;C:\Users\Caleb A Beck\.m2\repository\org\hibernate\hibernate-core\5.6.10.Final\hibernate-core-5.6.10.Final.jar;C:\Users\Caleb A Beck\.m2\repository\org\jboss\logging\jboss-logging\3.4.3.Final\jboss-logging-3.4.3.Final.jar;C:\Users\Caleb A Beck\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\Caleb A Beck\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Caleb A Beck\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\Caleb A Beck\.m2\repository\org\jboss\jandex\2.4.2.Final\jandex-2.4.2.Final.jar;C:\Users\Caleb A Beck\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\Caleb A Beck\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\Caleb A Beck\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\Caleb A Beck\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\Caleb A Beck\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.1\jaxb-runtime-2.3.1.jar;C:\Users\Caleb A Beck\.m2\repository\org\glassfish\jaxb\txw2\2.3.1\txw2-2.3.1.jar;C:\Users\Caleb A Beck\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.7\istack-commons-runtime-3.0.7.jar;C:\Users\Caleb A Beck\.m2\repository\org\jvnet\staxex\stax-ex\1.8\stax-ex-1.8.jar;C:\Users\Caleb A Beck\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.15\FastInfoset-1.2.15.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.4\lib\idea_rt.jar, java.vm.vendor=Temurin, sun.arch.data.model=64, user.variant=, java.vendor.url=https://adoptium.net/, user.timezone=America/New_York, os.name=Windows 10, java.vm.specification.version=1.8, user.country=US, sun.java.launcher=SUN_STANDARD, sun.boot.library.path=C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\bin, sun.java.command=com.revature.pokebowl.MainDriver, sun.cpu.endian=little, user.home=C:\Users\Caleb A Beck, user.language=en, java.specification.vendor=Oracle Corporation, java.home=C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre, file.separator=\, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, sun.boot.class.path=C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\resources.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\rt.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\sunrsasign.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\jsse.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\jce.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\charsets.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\jfr.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\classes, hibernate.hbm2ddl.auto=update, user.script=, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=1.8.0_332-b09, user.name=Caleb A Beck, path.separator=;, hibernate.connection.username=****, os.version=10.0, java.endorsed.dirs=C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\endorsed, java.runtime.name=OpenJDK Runtime Environment, hibernate.connection.url=jdbc:postgresql://beck-db-instance.cewwl2d9shzm.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=pokebowl, file.encoding=UTF-8, java.vm.name=OpenJDK 64-Bit Server VM, hibernate.show_sql=true, hibernate.connection.driver_class=org.postgresql.Driver, java.vendor.url.bug=https://github.com/adoptium/adoptium-support/issues, java.io.tmpdir=C:\Users\CALEBA~1\AppData\Local\Temp\, java.version=1.8.0_332, user.dir=C:\Users\Caleb A Beck\Desktop\SoftwareDevelopment\revature\java_projects\pokebowl_API_BFCB, os.arch=amd64, java.vm.specification.name=Java Virtual Machine Specification, hibernate.connection.password=****, java.awt.printerjob=sun.awt.windows.WPrinterJob, sun.os.patch.level=, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@72b16078, java.library.path=C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\D\nodejs\;C:\Program Files\Git\cmd;C:\Users\Caleb A Beck\AppData\Local\Microsoft\WindowsApps;;C:\Users\Caleb A Beck\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Caleb A Beck\.dotnet\tools;C:\Users\Caleb A Beck\AppData\Roaming\npm;., java.vm.info=mixed mode, java.vendor=Temurin, java.vm.version=25.332-b09, hibernate.bytecode.use_reflection_optimizer=false, java.ext.dirs=C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext, sun.io.unicode.encoding=UnicodeLittle, java.class.version=52.0}
+[DEBUG] 2022-08-17 17:29:35.082 [main] JaccIntegrator - Skipping JACC integration as it was not enabled
+[DEBUG] 2022-08-17 17:29:35.084 [main] SessionFactoryImpl - Instantiated session factory
+[DEBUG] 2022-08-17 17:29:35.084 [main] TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@18920cc] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@7db534f2]
+[DEBUG] 2022-08-17 17:29:35.167 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.member.Member] is safe
+[DEBUG] 2022-08-17 17:29:35.167 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-17 17:29:35.392 [main] AbstractEntityPersister - Static SQL for entity: com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-17 17:29:35.392 [main] AbstractEntityPersister -  Version select: select id from members where id =?
+[DEBUG] 2022-08-17 17:29:35.392 [main] AbstractEntityPersister -  Snapshot select: select member_.id, member_.dob as dob2_0_, member_.full_name as full_nam3_0_, member_.is_admin as is_admin4_0_, member_.user_password as user_pas5_0_ from members member_ where member_.id=?
+[DEBUG] 2022-08-17 17:29:35.393 [main] AbstractEntityPersister -  Insert 0: insert into members (dob, full_name, is_admin, user_password, id) values (?, ?, ?, ?, ?)
+[DEBUG] 2022-08-17 17:29:35.393 [main] AbstractEntityPersister -  Update 0: update members set dob=?, full_name=?, is_admin=?, user_password=? where id=?
+[DEBUG] 2022-08-17 17:29:35.393 [main] AbstractEntityPersister -  Delete 0: delete from members where id=?
+[DEBUG] 2022-08-17 17:29:35.420 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@25c5e994]
+[DEBUG] 2022-08-17 17:29:35.421 [main] MetamodelGraphWalker - Visiting attribute path : dob
+[DEBUG] 2022-08-17 17:29:35.421 [main] MetamodelGraphWalker - Visiting attribute path : fullName
+[DEBUG] 2022-08-17 17:29:35.421 [main] MetamodelGraphWalker - Visiting attribute path : isAdmin
+[DEBUG] 2022-08-17 17:29:35.422 [main] MetamodelGraphWalker - Visiting attribute path : userPassword
+[DEBUG] 2022-08-17 17:29:35.422 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-17 17:29:35.435 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-17 17:29:35.440 [main] LoadPlanTreePrinter - LoadPlan(entity=com.revature.pokebowl.member.Member)
+    - Returns
+       - EntityReturnImpl(entity=com.revature.pokebowl.member.Member, querySpaceUid=<gen:0>, path=com.revature.pokebowl.member.Member)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.revature.pokebowl.member.Member)
+          - SQL table alias mapping - member0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[DEBUG] 2022-08-17 17:29:35.442 [main] EntityLoader - Static select for entity com.revature.pokebowl.member.Member [NONE]: select member0_.id as id1_0_0_, member0_.dob as dob2_0_0_, member0_.full_name as full_nam3_0_0_, member0_.is_admin as is_admin4_0_0_, member0_.user_password as user_pas5_0_0_ from members member0_ where member0_.id=?
+[INFO ] 2022-08-17 17:29:35.497 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4c0884e8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 2022-08-17 17:29:35.642 [main] Table - No alter strings for table : members
+[DEBUG] 2022-08-17 17:29:35.643 [main] JtaPlatformInitiator - No JtaPlatform was specified, checking resolver
+[DEBUG] 2022-08-17 17:29:35.643 [main] JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+[DEBUG] 2022-08-17 17:29:35.648 [main] StandardJtaPlatformResolver - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2022-08-17 17:29:35.649 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 2022-08-17 17:29:35.650 [main] NamedQueryRepository - Checking 0 named HQL queries
+[DEBUG] 2022-08-17 17:29:35.650 [main] NamedQueryRepository - Checking 0 named SQL queries
+[DEBUG] 2022-08-17 17:29:35.654 [main] SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+[DEBUG] 2022-08-17 17:29:35.660 [main] SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@3a4ba480
+[DEBUG] 2022-08-17 17:29:35.662 [main] SessionFactoryRegistry - Registering SessionFactory: 2e4f8f97-5780-4754-870f-370da1ffa38e (<unnamed>)
+[DEBUG] 2022-08-17 17:29:35.662 [main] SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
+[DEBUG] 2022-08-17 17:29:35.729 [main] StatisticsInitiator - Statistics initialized [enabled=false]
+[DEBUG] 2022-08-17 17:29:35.735 [main] TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[DEBUG] 2022-08-17 17:29:35.735 [main] TransactionImpl - begin
+[DEBUG] 2022-08-17 17:29:35.740 [main] AbstractSaveEventListener - Generated identifier: 13a11ae9-4d6a-414c-b22a-838936edffc0, using strategy: org.hibernate.id.Assigned
+[DEBUG] 2022-08-17 17:29:35.756 [main] TransactionImpl - committing
+[DEBUG] 2022-08-17 17:29:35.757 [main] AbstractFlushingEventListener - Processing flush-time cascades
+[DEBUG] 2022-08-17 17:29:35.758 [main] AbstractFlushingEventListener - Dirty checking collections
+[DEBUG] 2022-08-17 17:29:35.762 [main] AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+[DEBUG] 2022-08-17 17:29:35.762 [main] AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+[DEBUG] 2022-08-17 17:29:35.763 [main] EntityPrinter - Listing entities:
+[DEBUG] 2022-08-17 17:29:35.764 [main] EntityPrinter - com.revature.pokebowl.member.Member{userPassword=test mcTester, dob=2022-08-17, fullName=test mcTester, id=13a11ae9-4d6a-414c-b22a-838936edffc0, isAdmin=false}
+[DEBUG] 2022-08-17 17:29:35.771 [main] SQL - insert into members (dob, full_name, is_admin, user_password, id) values (?, ?, ?, ?, ?)
+[DEBUG] 2022-08-17 17:29:35.858 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2022-08-17 17:29:35.859 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2022-08-17 17:29:35.859 [main] JdbcCoordinatorImpl - HHH000420: Closing un-released batch
