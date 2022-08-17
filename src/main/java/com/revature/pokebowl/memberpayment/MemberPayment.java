@@ -40,4 +40,77 @@ public class MemberPayment {
         this.provider = provider;
         this.customerUserName = customerUserName;
     }
+
+    public MemberPayment() {
+        super();
+    }
+
+    public String getPaymentId() {
+        return paymentId;
+    }
+
+    public void setPaymentId(String paymentId) {
+        this.paymentId = paymentId;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+    public Date getExpDate() {
+        return expDate;
+    }
+
+    public void setExpDate(Date expDate) {
+        this.expDate = expDate;
+    }
+
+    public String getCcv() {
+        return ccv;
+    }
+
+    public void setCcv(String ccv) {
+        this.ccv = ccv;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
+
+    public String getProvider() {
+        return provider;
+    }
+
+    public void setProvider(String provider) {
+        this.provider = provider;
+    }
+
+    public String getCustomerUserName() {
+        return customerUserName;
+    }
+
+    public void setCustomerUserName(String customerUserName) {
+        this.customerUserName = customerUserName;
+    }
+
+    @Override
+    public String toString() {
+        return "MemberPayment{" +
+                "paymentId='" + paymentId + '\'' +
+                ", balance=" + balance +
+                ", expDate=" + expDate +
+                ", ccv='" + ccv + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                ", provider='" + provider + '\'' +
+                ", customerUserName='" + customerUserName + '\'' +
+                '}';
+    }
 }
