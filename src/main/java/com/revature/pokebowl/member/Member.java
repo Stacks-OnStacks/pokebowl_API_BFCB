@@ -35,6 +35,10 @@ public class Member {
         this.is_admin = is_admin;
     }
 
+    public Member() {
+        super();
+    }
+
     public void setId(String id) {
         this.id = id;
     }
