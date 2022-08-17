@@ -11,7 +11,8 @@ import java.sql.Date;
 public class Member {
 
     @Id
-    private String id;
+    @Column(name="member_id")
+    private String memberId;
 
     @Column(name="full_name",nullable=false)
     private String fullName;
@@ -26,8 +27,8 @@ public class Member {
     @Column(name="is_admin",nullable=false)
     private boolean isAdmin;
 
-    public Member(String id, String fullName, String userPassword, Date dob, boolean isAdmin) {
-        this.id = id;
+    public Member(String memberId, String fullName, String userPassword, Date dob, boolean isAdmin) {
+        this.memberId = memberId;
         this.fullName = fullName;
         this.userPassword = userPassword;
         this.dob = dob;
@@ -38,12 +39,12 @@ public class Member {
         super();
     }
 
-    public String getId() {
-        return id;
+    public String getMemberId() {
+        return memberId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setMemberId(String memberId) {
+        this.memberId = memberId;
     }
 
     public String getFullName() {
@@ -81,7 +82,7 @@ public class Member {
     @Override
     public String toString() {
         return "Member{" +
-                "id='" + id + '\'' +
+                "memberId='" + memberId + '\'' +
                 ", fullName='" + fullName + '\'' +
                 ", userPassword='" + userPassword + '\'' +
                 ", dob=" + dob +

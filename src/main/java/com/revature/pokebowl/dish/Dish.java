@@ -11,7 +11,8 @@ import java.sql.Date;
 public class Dish {
 
     @Id
-    private String id;
+    @Column(name="dish_id")
+    private String dishId;
 
     @Column(name="dish_name",nullable=false)
     private String dishName;
@@ -25,8 +26,8 @@ public class Dish {
     @Column(name="is_admin",nullable=false)
     private boolean isVegetarian;
 
-    public Dish(String id, String dishName, int dishCost, String description, boolean isVegetarian) {
-        this.id = id;
+    public Dish(String dishId, String dishName, int dishCost, String description, boolean isVegetarian) {
+        this.dishId = dishId;
         this.dishName = dishName;
         this.dishCost = dishCost;
         this.description = description;
@@ -37,12 +38,12 @@ public class Dish {
         super();
     }
 
-    public String getId() {
-        return id;
+    public String getDishId() {
+        return dishId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setDishId(String id) {
+        this.dishId = dishId;
     }
 
     public String getDishName() {
@@ -80,7 +81,7 @@ public class Dish {
     @Override
     public String toString() {
         return "Dish{" +
-                "id='" + id + '\'' +
+                "dishId='" + dishId + '\'' +
                 ", dishName='" + dishName + '\'' +
                 ", dishCost=" + dishCost +
                 ", description='" + description + '\'' +
