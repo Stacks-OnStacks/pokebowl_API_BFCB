@@ -4,6 +4,7 @@ import com.revature.pokebowl.dish.Dish;
 
 //import com.revature.pokebowl.member.Member;// no member class yet
 
+import com.revature.pokebowl.member.Member;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -29,7 +30,7 @@ public class HibernateUtil {
             properties.load(new FileReader("src/main/resources/hibernate.properties"));
 
             //HERE IS WHERE WE ADD OUR CLASSES
-            configuration.addAnnotatedClass(Dish.class);
+            configuration.addAnnotatedClass(Member.class);
 
 
             // ServiceRegistry
