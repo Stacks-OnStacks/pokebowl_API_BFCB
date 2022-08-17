@@ -10,6 +10,5 @@ public class MainDriver {
         // Instantiate the ServletContext (run the program)
         ServletContext sc = new ServletContext();
         sc.run();
-
     }
 }

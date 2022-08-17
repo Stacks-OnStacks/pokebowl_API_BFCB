@@ -10,7 +10,6 @@ import java.sql.SQLException;
 import static com.revature.pokebowl.util.HibernateUtil.getSession;
 
 public class HibernateUtilTestSuite {
-
     @Test
     public void test_getConnection_returnValidConnection_givenProvidedCredentialsAreCorrect(){
         try(Session session = getSession()) {
@@ -19,6 +18,5 @@ public class HibernateUtilTestSuite {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
     }
 }
