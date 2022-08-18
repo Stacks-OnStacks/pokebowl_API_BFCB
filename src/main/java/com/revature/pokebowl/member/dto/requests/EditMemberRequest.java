@@ -1,6 +1,6 @@
 package com.revature.pokebowl.member.dto.requests;
 
-import com.revature.pokebowl.util.web.DTO.EditResourceRequests;
+import com.revature.pokebowl.util.web.dto.EditResourceRequests;
 
 public class EditMemberRequest extends EditResourceRequests {
 
