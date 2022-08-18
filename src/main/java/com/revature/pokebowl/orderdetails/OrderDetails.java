@@ -1,5 +1,8 @@
 package com.revature.pokebowl.orderdetails;
 
+import com.revature.pokebowl.dish.Dish;
+import com.revature.pokebowl.order.Order;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,22 +13,22 @@ public class OrderDetails {
     @Column(name="order_details_id")
     private String orderDetailsId;
 
-    @Column(name="dish_id",nullable=false)
-    private String dishId;
-
-    @Column(name="order_id",nullable=false)
-    private String orderId;
-
     @Column(name="quantity",nullable=false)
     private int quantity;
 
     @Column(name="comments",nullable=false)
     private String comments;
 
-    public OrderDetails(String orderDetailsId, String dishId, String orderId, int quantity, String comments) {
+    @ManyToOne
+    @JoinColumn(name="dish_id")
+    private Dish dish;
+
+    @ManyToOne
+    @JoinColumn(name="order_id")
+    private Order order;
+
+    public OrderDetails(String orderDetailsId, int quantity, String comments) {
         this.orderDetailsId = orderDetailsId;
-        this.dishId = dishId;
-        this.orderId = orderId;
         this.quantity = quantity;
         this.comments = comments;
     }
@@ -40,22 +43,6 @@ public class OrderDetails {
 
     public void setOrderDetailsId(String orderDetailsId) {
         this.orderDetailsId = orderDetailsId;
-    }
-
-    public String getDishId() {
-        return dishId;
-    }
-
-    public void setDishId(String dishId) {
-        this.dishId = dishId;
-    }
-
-    public String getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(String orderId) {
-        this.orderId = orderId;
     }
 
     public int getQuantity() {
@@ -74,12 +61,26 @@ public class OrderDetails {
         this.comments = comments;
     }
 
+    public Dish getDish() {
+        return dish;
+    }
+
+    public void setDish(Dish dish) {
+        this.dish = dish;
+    }
+
+    public Order getOrder() {
+        return order;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
+    }
+
     @Override
     public String toString() {
         return "OrderDetails{" +
                 "orderDetailsId='" + orderDetailsId + '\'' +
-                ", dishId='" + dishId + '\'' +
-                ", orderId='" + orderId + '\'' +
                 ", quantity=" + quantity +
                 ", comments='" + comments + '\'' +
                 '}';
