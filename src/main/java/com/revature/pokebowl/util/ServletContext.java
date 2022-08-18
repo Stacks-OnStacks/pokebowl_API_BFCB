@@ -66,7 +66,7 @@ public class ServletContext {
             tomcat.addServlet("","MemberServlet", new MemberServlet(memberService, objectMapper));
             standardContext.addServletMappingDecoded("/member","MemberServlet");
 
-            tomcat.addServlet("","DishServlet", new DishServlet(dishService, objectMapper);
+            tomcat.addServlet("","DishServlet", new DishServlet(dishService, objectMapper));
             standardContext.addServletMappingDecoded("/dish","DishServlet");
 
             // Start the Server and run til termination
