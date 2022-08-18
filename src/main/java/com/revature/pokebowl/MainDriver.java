@@ -18,8 +18,8 @@ public class MainDriver {
     public static void main(String[] args) {
 
         // Instantiate the ServletContext (run the program)
-        // ServletContext sc = new ServletContext();
-        // sc.run();
+        ServletContext sc = new ServletContext();
+        sc.run();
 
     }
 }

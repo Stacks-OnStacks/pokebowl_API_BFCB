@@ -7,6 +7,7 @@ import com.revature.pokebowl.order.Order;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -34,10 +35,10 @@ public class Member {
     private boolean isAdmin;
 
     @OneToMany(mappedBy="member",cascade=CascadeType.ALL)
-    private Set<MemberPayment> memberPaymentSet;
+    private List<MemberPayment> memberPaymentList;
 
     @OneToMany(mappedBy="member",cascade=CascadeType.ALL)
-    private Set<Order> orders;
+    private List<Order> orders;
 
     public Member(String memberId, String username, String fullName, String userPassword, Date dob, boolean isAdmin) {
         this.memberId = memberId;
@@ -100,19 +101,19 @@ public class Member {
         isAdmin = admin;
     }
 
-    public Set<MemberPayment> getMemberPaymentSet() {
-        return memberPaymentSet;
+    public List<MemberPayment> getMemberPaymentList() {
+        return memberPaymentList;
     }
 
-    public void setMemberPaymentSet(Set<MemberPayment> memberPaymentSet) {
-        this.memberPaymentSet = memberPaymentSet;
+    public void setMemberPaymentList(List<MemberPayment> memberPaymentList) {
+        this.memberPaymentList = memberPaymentList;
     }
 
-    public Set<Order> getOrders() {
+    public List<Order> getOrders() {
         return orders;
     }
 
-    public void setOrders(Set<Order> orders) {
+    public void setOrders(List<Order> orders) {
         this.orders = orders;
     }
 

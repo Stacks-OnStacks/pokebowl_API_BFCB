@@ -37,10 +37,6 @@ public class MemberServlet extends HttpServlet implements Authable {
         String member_id = req.getParameter("member_id"); //CHANGED THIS TO member_id instead of member_id
         Member authMember = (Member) req.getSession().getAttribute("authMember"); // cast the returned object to a member
 
-
-
-
-
 //        } else
         if(member_id != null) {
             logger.info("member_id entered {}", member_id);
@@ -57,9 +53,7 @@ public class MemberServlet extends HttpServlet implements Authable {
             }
         } else {
             List<MemberResponse> members = memberService.readAll();
-
             String payload = objectMapper.writeValueAsString(members); // mapper parsing from Java Object to JSON
-
             resp.getWriter().write(payload);
         }
     }
