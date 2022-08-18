@@ -2667,3 +2667,1109 @@ java.lang.Exception: exception just for purpose of providing stack trace
 [DEBUG] 2022-08-18 00:43:05.153 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
 [DEBUG] 2022-08-18 00:43:05.153 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
 [DEBUG] 2022-08-18 00:43:05.154 [main] JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+[DEBUG] 2022-08-18 11:21:13.515 [main] logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[DEBUG] 2022-08-18 11:21:13.529 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2022-08-18 11:21:13.531 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[DEBUG] 2022-08-18 11:21:13.538 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[INFO ] 2022-08-18 11:21:13.567 [main] Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+[INFO ] 2022-08-18 11:21:13.570 [main] Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=postgres, hibernate.connection.password=****, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.show_sql=true, hibernate.connection.url=jdbc:postgresql://beck-db-instance.cewwl2d9shzm.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=pokebowl, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=org.postgresql.Driver, hibernate.hbm2ddl.auto=update}
+[DEBUG] 2022-08-18 11:21:13.791 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2022-08-18 11:21:13.792 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[DEBUG] 2022-08-18 11:21:13.792 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[DEBUG] 2022-08-18 11:21:13.799 [main] ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+[DEBUG] 2022-08-18 11:21:13.800 [main] Configuration - Building session factory using provided StandardServiceRegistry
+[DEBUG] 2022-08-18 11:21:13.818 [main] RegionFactoryInitiator - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+[DEBUG] 2022-08-18 11:21:13.820 [main] RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[INFO ] 2022-08-18 11:21:13.850 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[DEBUG] 2022-08-18 11:21:14.024 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@4b520ea8
+[DEBUG] 2022-08-18 11:21:14.025 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@4b520ea8
+[DEBUG] 2022-08-18 11:21:14.025 [main] BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@4b520ea8
+[DEBUG] 2022-08-18 11:21:14.026 [main] BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@624ea235
+[DEBUG] 2022-08-18 11:21:14.027 [main] BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@23f5b5dc
+[DEBUG] 2022-08-18 11:21:14.027 [main] BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@821330f
+[DEBUG] 2022-08-18 11:21:14.028 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@7857fe2
+[DEBUG] 2022-08-18 11:21:14.029 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@7857fe2
+[DEBUG] 2022-08-18 11:21:14.029 [main] BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@7857fe2
+[DEBUG] 2022-08-18 11:21:14.030 [main] BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@446a1e84
+[DEBUG] 2022-08-18 11:21:14.030 [main] BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@446a1e84
+[DEBUG] 2022-08-18 11:21:14.030 [main] BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@446a1e84
+[DEBUG] 2022-08-18 11:21:14.031 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@7139992f
+[DEBUG] 2022-08-18 11:21:14.031 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@7139992f
+[DEBUG] 2022-08-18 11:21:14.031 [main] BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@7139992f
+[DEBUG] 2022-08-18 11:21:14.032 [main] BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@7eecb5b8
+[DEBUG] 2022-08-18 11:21:14.032 [main] BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@7eecb5b8
+[DEBUG] 2022-08-18 11:21:14.033 [main] BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@7eecb5b8
+[DEBUG] 2022-08-18 11:21:14.034 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@5c7bfdc1
+[DEBUG] 2022-08-18 11:21:14.034 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@5c7bfdc1
+[DEBUG] 2022-08-18 11:21:14.034 [main] BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@5c7bfdc1
+[DEBUG] 2022-08-18 11:21:14.035 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@7fb4f2a9
+[DEBUG] 2022-08-18 11:21:14.035 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@7fb4f2a9
+[DEBUG] 2022-08-18 11:21:14.035 [main] BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@7fb4f2a9
+[DEBUG] 2022-08-18 11:21:14.036 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@7bbc8656
+[DEBUG] 2022-08-18 11:21:14.036 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@7bbc8656
+[DEBUG] 2022-08-18 11:21:14.036 [main] BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@7bbc8656
+[DEBUG] 2022-08-18 11:21:14.037 [main] BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@169bb4dd
+[DEBUG] 2022-08-18 11:21:14.037 [main] BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@169bb4dd
+[DEBUG] 2022-08-18 11:21:14.038 [main] BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@2d0399f4
+[DEBUG] 2022-08-18 11:21:14.039 [main] BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@2d0399f4
+[DEBUG] 2022-08-18 11:21:14.040 [main] BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@2254127a
+[DEBUG] 2022-08-18 11:21:14.040 [main] BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@2254127a
+[DEBUG] 2022-08-18 11:21:14.041 [main] BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@f68f0dc
+[DEBUG] 2022-08-18 11:21:14.041 [main] BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@12591ac8
+[DEBUG] 2022-08-18 11:21:14.042 [main] BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@3e0e1046
+[DEBUG] 2022-08-18 11:21:14.042 [main] BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@3e0e1046
+[DEBUG] 2022-08-18 11:21:14.043 [main] BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@37313c65
+[DEBUG] 2022-08-18 11:21:14.044 [main] BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@37313c65
+[DEBUG] 2022-08-18 11:21:14.056 [main] BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@7dc3712
+[DEBUG] 2022-08-18 11:21:14.056 [main] BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@7dc3712
+[DEBUG] 2022-08-18 11:21:14.058 [main] BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@5be1d0a4
+[DEBUG] 2022-08-18 11:21:14.058 [main] BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@5be1d0a4
+[DEBUG] 2022-08-18 11:21:14.059 [main] BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@7d322cad
+[DEBUG] 2022-08-18 11:21:14.059 [main] BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@7d322cad
+[DEBUG] 2022-08-18 11:21:14.060 [main] BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@448c8166
+[DEBUG] 2022-08-18 11:21:14.060 [main] BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@448c8166
+[DEBUG] 2022-08-18 11:21:14.062 [main] BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@13526e59
+[DEBUG] 2022-08-18 11:21:14.062 [main] BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@13526e59
+[DEBUG] 2022-08-18 11:21:14.063 [main] BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@36804139
+[DEBUG] 2022-08-18 11:21:14.063 [main] BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@36804139
+[DEBUG] 2022-08-18 11:21:14.066 [main] BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@64b0598
+[DEBUG] 2022-08-18 11:21:14.066 [main] BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@64b0598
+[DEBUG] 2022-08-18 11:21:14.068 [main] BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@28194a50
+[DEBUG] 2022-08-18 11:21:14.068 [main] BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@28194a50
+[DEBUG] 2022-08-18 11:21:14.069 [main] BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@2ad48653
+[DEBUG] 2022-08-18 11:21:14.069 [main] BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@2ad48653
+[DEBUG] 2022-08-18 11:21:14.071 [main] BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@61710c6
+[DEBUG] 2022-08-18 11:21:14.071 [main] BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@61710c6
+[DEBUG] 2022-08-18 11:21:14.071 [main] BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@61710c6
+[DEBUG] 2022-08-18 11:21:14.072 [main] BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@4a07d605
+[DEBUG] 2022-08-18 11:21:14.073 [main] BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@68746f22
+[DEBUG] 2022-08-18 11:21:14.074 [main] BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@68746f22
+[DEBUG] 2022-08-18 11:21:14.074 [main] BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@68746f22
+[DEBUG] 2022-08-18 11:21:14.074 [main] BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@41488b16
+[DEBUG] 2022-08-18 11:21:14.075 [main] BasicTypeRegistry - Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@22f59fa
+[DEBUG] 2022-08-18 11:21:14.076 [main] BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@79defdc
+[DEBUG] 2022-08-18 11:21:14.076 [main] BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@79defdc
+[DEBUG] 2022-08-18 11:21:14.077 [main] BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@5852c06f
+[DEBUG] 2022-08-18 11:21:14.077 [main] BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@5852c06f
+[DEBUG] 2022-08-18 11:21:14.078 [main] BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@376a0d86
+[DEBUG] 2022-08-18 11:21:14.078 [main] BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@376a0d86
+[DEBUG] 2022-08-18 11:21:14.079 [main] BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@7d61eb55
+[DEBUG] 2022-08-18 11:21:14.079 [main] BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@7d61eb55
+[DEBUG] 2022-08-18 11:21:14.080 [main] BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@4ef74c30
+[DEBUG] 2022-08-18 11:21:14.080 [main] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@4ef74c30
+[DEBUG] 2022-08-18 11:21:14.081 [main] BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@4bff7da0
+[DEBUG] 2022-08-18 11:21:14.082 [main] BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@21d03963
+[DEBUG] 2022-08-18 11:21:14.082 [main] BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@21d03963
+[DEBUG] 2022-08-18 11:21:14.082 [main] BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@21d03963
+[DEBUG] 2022-08-18 11:21:14.083 [main] BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@33f676f6
+[DEBUG] 2022-08-18 11:21:14.083 [main] BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@33f676f6
+[DEBUG] 2022-08-18 11:21:14.083 [main] BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@33f676f6
+[DEBUG] 2022-08-18 11:21:14.084 [main] BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@2e570ded
+[DEBUG] 2022-08-18 11:21:14.085 [main] BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@747f281
+[DEBUG] 2022-08-18 11:21:14.086 [main] BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@2ca923bb
+[DEBUG] 2022-08-18 11:21:14.086 [main] BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@2ca923bb
+[DEBUG] 2022-08-18 11:21:14.086 [main] BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@2ca923bb
+[DEBUG] 2022-08-18 11:21:14.087 [main] BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@7de62196
+[DEBUG] 2022-08-18 11:21:14.088 [main] BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@7de62196
+[DEBUG] 2022-08-18 11:21:14.088 [main] BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@7de62196
+[DEBUG] 2022-08-18 11:21:14.088 [main] BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@7905a0b8
+[DEBUG] 2022-08-18 11:21:14.089 [main] BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@13d9cbf5
+[DEBUG] 2022-08-18 11:21:14.090 [main] BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@2462cb01
+[DEBUG] 2022-08-18 11:21:14.090 [main] BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@2462cb01
+[DEBUG] 2022-08-18 11:21:14.091 [main] BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@77659b30
+[DEBUG] 2022-08-18 11:21:14.092 [main] BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@3cfdd820
+[DEBUG] 2022-08-18 11:21:14.092 [main] BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@3cfdd820
+[DEBUG] 2022-08-18 11:21:14.093 [main] BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@19976a65
+[DEBUG] 2022-08-18 11:21:14.094 [main] BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@19976a65
+[DEBUG] 2022-08-18 11:21:14.094 [main] BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@57a3e26a
+[DEBUG] 2022-08-18 11:21:14.095 [main] BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@2dc9b0f5
+[DEBUG] 2022-08-18 11:21:14.096 [main] BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@74f6c5d8
+[DEBUG] 2022-08-18 11:21:14.099 [main] BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@1890516e
+[DEBUG] 2022-08-18 11:21:14.099 [main] BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@1890516e
+[DEBUG] 2022-08-18 11:21:14.100 [main] BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@2bec854f
+[DEBUG] 2022-08-18 11:21:14.100 [main] BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@31edaa7d
+[DEBUG] 2022-08-18 11:21:14.100 [main] BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@26adfd2d
+[DEBUG] 2022-08-18 11:21:14.100 [main] BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@3336e6b6
+[DEBUG] 2022-08-18 11:21:14.100 [main] BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@7c3fdb62
+[DEBUG] 2022-08-18 11:21:14.100 [main] BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@205d38da
+[DEBUG] 2022-08-18 11:21:14.100 [main] BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@6950ed69
+[DEBUG] 2022-08-18 11:21:14.101 [main] BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@6dd7b5a3
+[DEBUG] 2022-08-18 11:21:14.132 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[DEBUG] 2022-08-18 11:21:14.133 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[DEBUG] 2022-08-18 11:21:14.134 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2022-08-18 11:21:14.134 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2022-08-18 11:21:14.135 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[DEBUG] 2022-08-18 11:21:14.136 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[DEBUG] 2022-08-18 11:21:14.136 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[DEBUG] 2022-08-18 11:21:14.137 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2022-08-18 11:21:14.138 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+[DEBUG] 2022-08-18 11:21:14.139 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[DEBUG] 2022-08-18 11:21:14.139 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[DEBUG] 2022-08-18 11:21:14.139 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+[DEBUG] 2022-08-18 11:21:14.140 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2022-08-18 11:21:14.140 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[WARN ] 2022-08-18 11:21:14.146 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2022-08-18 11:21:14.150 [main] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://beck-db-instance.cewwl2d9shzm.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=pokebowl]
+[INFO ] 2022-08-18 11:21:14.150 [main] pooling - HHH10001001: Connection properties: {user=postgres, password=WSo3vUcu75t39dnr9GPfWt}
+[INFO ] 2022-08-18 11:21:14.151 [main] pooling - HHH10001003: Autocommit mode: false
+[DEBUG] 2022-08-18 11:21:14.154 [main] DriverManagerConnectionProviderImpl - Initializing Connection pool with 1 Connections
+[INFO ] 2022-08-18 11:21:14.154 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[DEBUG] 2022-08-18 11:21:14.991 [main] JdbcEnvironmentInitiator - Database ->
+       name : PostgreSQL
+    version : 13.4
+      major : 13
+      minor : 4
+[DEBUG] 2022-08-18 11:21:14.992 [main] JdbcEnvironmentInitiator - Driver ->
+       name : PostgreSQL JDBC Driver
+    version : 42.3.3
+      major : 42
+      minor : 3
+[DEBUG] 2022-08-18 11:21:14.992 [main] JdbcEnvironmentInitiator - JDBC version : 4.2
+[INFO ] 2022-08-18 11:21:15.004 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[DEBUG] 2022-08-18 11:21:15.019 [main] IdentifierHelperBuilder - JDBC driver metadata reported database stores quoted identifiers in neither upper, lower nor mixed case
+[DEBUG] 2022-08-18 11:21:15.165 [main] BasicTypeRegistry - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@fade1fc
+[DEBUG] 2022-08-18 11:21:15.165 [main] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.PostgresUUIDType@fade1fc
+[DEBUG] 2022-08-18 11:21:15.165 [main] BasicTypeRegistry - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@4ef74c30
+[DEBUG] 2022-08-18 11:21:15.167 [main] TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@2807bdeb] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@72c28d64]
+[DEBUG] 2022-08-18 11:21:15.203 [main] Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[DEBUG] 2022-08-18 11:21:15.217 [main] AnnotationBinder - Binding entity from annotated class: com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-18 11:21:15.238 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2022-08-18 11:21:15.244 [main] EntityBinder - Import with entity name Member
+[DEBUG] 2022-08-18 11:21:15.248 [main] EntityBinder - Bind entity com.revature.pokebowl.member.Member on table members
+[DEBUG] 2022-08-18 11:21:15.274 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=member_id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.277 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.member.Member] is safe
+[DEBUG] 2022-08-18 11:21:15.277 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-18 11:21:15.278 [main] PropertyBinder - MetadataSourceProcessor property memberId with lazy=false
+[DEBUG] 2022-08-18 11:21:15.279 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:memberId]
+[DEBUG] 2022-08-18 11:21:15.281 [main] SimpleValueBinder - building SimpleValue for memberId
+[DEBUG] 2022-08-18 11:21:15.283 [main] PropertyBinder - Building property memberId
+[DEBUG] 2022-08-18 11:21:15.286 [main] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(member_id)]), memberId, assigned, , ...)
+[DEBUG] 2022-08-18 11:21:15.286 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=dob, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.286 [main] PropertyBinder - MetadataSourceProcessor property dob with lazy=false
+[DEBUG] 2022-08-18 11:21:15.286 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:dob]
+[DEBUG] 2022-08-18 11:21:15.287 [main] SimpleValueBinder - building SimpleValue for dob
+[DEBUG] 2022-08-18 11:21:15.287 [main] PropertyBinder - Building property dob
+[DEBUG] 2022-08-18 11:21:15.287 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=full_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.287 [main] PropertyBinder - MetadataSourceProcessor property fullName with lazy=false
+[DEBUG] 2022-08-18 11:21:15.287 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:fullName]
+[DEBUG] 2022-08-18 11:21:15.287 [main] SimpleValueBinder - building SimpleValue for fullName
+[DEBUG] 2022-08-18 11:21:15.287 [main] PropertyBinder - Building property fullName
+[DEBUG] 2022-08-18 11:21:15.288 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=is_admin, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.288 [main] PropertyBinder - MetadataSourceProcessor property isAdmin with lazy=false
+[DEBUG] 2022-08-18 11:21:15.288 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:isAdmin]
+[DEBUG] 2022-08-18 11:21:15.288 [main] SimpleValueBinder - building SimpleValue for isAdmin
+[DEBUG] 2022-08-18 11:21:15.288 [main] PropertyBinder - Building property isAdmin
+[DEBUG] 2022-08-18 11:21:15.290 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='member'}
+[DEBUG] 2022-08-18 11:21:15.292 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=memberPaymentSet, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.294 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.302 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.303 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=memberPaymentSet_KEY, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.303 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='memberPaymentSet_KEY', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2022-08-18 11:21:15.305 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='member'}
+[DEBUG] 2022-08-18 11:21:15.306 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='member'}
+[DEBUG] 2022-08-18 11:21:15.307 [main] CollectionBinder - Collection role: com.revature.pokebowl.member.Member.memberPaymentSet
+[DEBUG] 2022-08-18 11:21:15.309 [main] PropertyBinder - Building property memberPaymentSet
+[DEBUG] 2022-08-18 11:21:15.310 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='member'}
+[DEBUG] 2022-08-18 11:21:15.310 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=orders, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.310 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.311 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.311 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=orders_KEY, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.311 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='orders_KEY', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2022-08-18 11:21:15.311 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='member'}
+[DEBUG] 2022-08-18 11:21:15.311 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='member'}
+[DEBUG] 2022-08-18 11:21:15.311 [main] CollectionBinder - Collection role: com.revature.pokebowl.member.Member.orders
+[DEBUG] 2022-08-18 11:21:15.311 [main] PropertyBinder - Building property orders
+[DEBUG] 2022-08-18 11:21:15.312 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=user_password, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.312 [main] PropertyBinder - MetadataSourceProcessor property userPassword with lazy=false
+[DEBUG] 2022-08-18 11:21:15.312 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:userPassword]
+[DEBUG] 2022-08-18 11:21:15.312 [main] SimpleValueBinder - building SimpleValue for userPassword
+[DEBUG] 2022-08-18 11:21:15.312 [main] PropertyBinder - Building property userPassword
+[DEBUG] 2022-08-18 11:21:15.313 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=username, insertable=true, updatable=true, unique=true}
+[DEBUG] 2022-08-18 11:21:15.313 [main] PropertyBinder - MetadataSourceProcessor property username with lazy=false
+[DEBUG] 2022-08-18 11:21:15.313 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:username]
+[DEBUG] 2022-08-18 11:21:15.314 [main] SimpleValueBinder - building SimpleValue for username
+[DEBUG] 2022-08-18 11:21:15.314 [main] PropertyBinder - Building property username
+[DEBUG] 2022-08-18 11:21:15.322 [main] AnnotationBinder - Binding entity from annotated class: com.revature.pokebowl.order.Order
+[DEBUG] 2022-08-18 11:21:15.322 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2022-08-18 11:21:15.322 [main] EntityBinder - Import with entity name Order
+[DEBUG] 2022-08-18 11:21:15.322 [main] EntityBinder - Bind entity com.revature.pokebowl.order.Order on table orders
+[DEBUG] 2022-08-18 11:21:15.326 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=order_id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.327 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.order.Order] is safe
+[DEBUG] 2022-08-18 11:21:15.327 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.order.Order
+[DEBUG] 2022-08-18 11:21:15.327 [main] PropertyBinder - MetadataSourceProcessor property orderId with lazy=false
+[DEBUG] 2022-08-18 11:21:15.328 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.order.Order:orderId]
+[DEBUG] 2022-08-18 11:21:15.328 [main] SimpleValueBinder - building SimpleValue for orderId
+[DEBUG] 2022-08-18 11:21:15.328 [main] PropertyBinder - Building property orderId
+[DEBUG] 2022-08-18 11:21:15.328 [main] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(order_id)]), orderId, assigned, , ...)
+[DEBUG] 2022-08-18 11:21:15.328 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=amount, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.329 [main] PropertyBinder - MetadataSourceProcessor property amount with lazy=false
+[DEBUG] 2022-08-18 11:21:15.329 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.order.Order:amount]
+[DEBUG] 2022-08-18 11:21:15.329 [main] SimpleValueBinder - building SimpleValue for amount
+[DEBUG] 2022-08-18 11:21:15.329 [main] PropertyBinder - Building property amount
+[DEBUG] 2022-08-18 11:21:15.330 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='member_id', referencedColumn='', mappedBy=''}
+[DEBUG] 2022-08-18 11:21:15.330 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=member, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.332 [main] PropertyBinder - Building property member
+[DEBUG] 2022-08-18 11:21:15.333 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='payment_id', referencedColumn='', mappedBy=''}
+[DEBUG] 2022-08-18 11:21:15.333 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=memberPayment, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.334 [main] PropertyBinder - Building property memberPayment
+[DEBUG] 2022-08-18 11:21:15.334 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=order_address, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.334 [main] PropertyBinder - MetadataSourceProcessor property orderAddress with lazy=false
+[DEBUG] 2022-08-18 11:21:15.334 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.order.Order:orderAddress]
+[DEBUG] 2022-08-18 11:21:15.334 [main] SimpleValueBinder - building SimpleValue for orderAddress
+[DEBUG] 2022-08-18 11:21:15.334 [main] PropertyBinder - Building property orderAddress
+[DEBUG] 2022-08-18 11:21:15.334 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=order_date, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.335 [main] PropertyBinder - MetadataSourceProcessor property orderDate with lazy=false
+[DEBUG] 2022-08-18 11:21:15.335 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.order.Order:orderDate]
+[DEBUG] 2022-08-18 11:21:15.335 [main] SimpleValueBinder - building SimpleValue for orderDate
+[DEBUG] 2022-08-18 11:21:15.335 [main] PropertyBinder - Building property orderDate
+[DEBUG] 2022-08-18 11:21:15.335 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=order_zip, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.335 [main] PropertyBinder - MetadataSourceProcessor property orderZip with lazy=false
+[DEBUG] 2022-08-18 11:21:15.335 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.order.Order:orderZip]
+[DEBUG] 2022-08-18 11:21:15.335 [main] SimpleValueBinder - building SimpleValue for orderZip
+[DEBUG] 2022-08-18 11:21:15.336 [main] PropertyBinder - Building property orderZip
+[DEBUG] 2022-08-18 11:21:15.337 [main] AnnotationBinder - Binding entity from annotated class: com.revature.pokebowl.memberpayment.MemberPayment
+[DEBUG] 2022-08-18 11:21:15.338 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2022-08-18 11:21:15.338 [main] EntityBinder - Import with entity name MemberPayment
+[DEBUG] 2022-08-18 11:21:15.338 [main] EntityBinder - Bind entity com.revature.pokebowl.memberpayment.MemberPayment on table member_payment
+[DEBUG] 2022-08-18 11:21:15.340 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=payment_id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.340 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.memberpayment.MemberPayment] is safe
+[DEBUG] 2022-08-18 11:21:15.340 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.memberpayment.MemberPayment
+[DEBUG] 2022-08-18 11:21:15.340 [main] PropertyBinder - MetadataSourceProcessor property paymentId with lazy=false
+[DEBUG] 2022-08-18 11:21:15.340 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.memberpayment.MemberPayment:paymentId]
+[DEBUG] 2022-08-18 11:21:15.340 [main] SimpleValueBinder - building SimpleValue for paymentId
+[DEBUG] 2022-08-18 11:21:15.341 [main] PropertyBinder - Building property paymentId
+[DEBUG] 2022-08-18 11:21:15.341 [main] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(payment_id)]), paymentId, assigned, , ...)
+[DEBUG] 2022-08-18 11:21:15.341 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=balance, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.341 [main] PropertyBinder - MetadataSourceProcessor property balance with lazy=false
+[DEBUG] 2022-08-18 11:21:15.341 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.memberpayment.MemberPayment:balance]
+[DEBUG] 2022-08-18 11:21:15.341 [main] SimpleValueBinder - building SimpleValue for balance
+[DEBUG] 2022-08-18 11:21:15.341 [main] PropertyBinder - Building property balance
+[DEBUG] 2022-08-18 11:21:15.342 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=ccv, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.342 [main] PropertyBinder - MetadataSourceProcessor property ccv with lazy=false
+[DEBUG] 2022-08-18 11:21:15.342 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.memberpayment.MemberPayment:ccv]
+[DEBUG] 2022-08-18 11:21:15.342 [main] SimpleValueBinder - building SimpleValue for ccv
+[DEBUG] 2022-08-18 11:21:15.342 [main] PropertyBinder - Building property ccv
+[DEBUG] 2022-08-18 11:21:15.342 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=exp_date, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.342 [main] PropertyBinder - MetadataSourceProcessor property expDate with lazy=false
+[DEBUG] 2022-08-18 11:21:15.342 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.memberpayment.MemberPayment:expDate]
+[DEBUG] 2022-08-18 11:21:15.342 [main] SimpleValueBinder - building SimpleValue for expDate
+[DEBUG] 2022-08-18 11:21:15.343 [main] PropertyBinder - Building property expDate
+[DEBUG] 2022-08-18 11:21:15.343 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='member_id', referencedColumn='', mappedBy=''}
+[DEBUG] 2022-08-18 11:21:15.343 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=member, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.343 [main] PropertyBinder - Building property member
+[DEBUG] 2022-08-18 11:21:15.343 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='memberpayment'}
+[DEBUG] 2022-08-18 11:21:15.343 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=orderSet, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.343 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.344 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.344 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=orderSet_KEY, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.344 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='orderSet_KEY', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2022-08-18 11:21:15.344 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='memberpayment'}
+[DEBUG] 2022-08-18 11:21:15.344 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='memberpayment'}
+[DEBUG] 2022-08-18 11:21:15.344 [main] CollectionBinder - Collection role: com.revature.pokebowl.memberpayment.MemberPayment.orderSet
+[DEBUG] 2022-08-18 11:21:15.344 [main] PropertyBinder - Building property orderSet
+[DEBUG] 2022-08-18 11:21:15.345 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=provider, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.345 [main] PropertyBinder - MetadataSourceProcessor property provider with lazy=false
+[DEBUG] 2022-08-18 11:21:15.345 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.memberpayment.MemberPayment:provider]
+[DEBUG] 2022-08-18 11:21:15.345 [main] SimpleValueBinder - building SimpleValue for provider
+[DEBUG] 2022-08-18 11:21:15.345 [main] PropertyBinder - Building property provider
+[DEBUG] 2022-08-18 11:21:15.345 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=zip_code, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:15.345 [main] PropertyBinder - MetadataSourceProcessor property zipCode with lazy=false
+[DEBUG] 2022-08-18 11:21:15.345 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.memberpayment.MemberPayment:zipCode]
+[DEBUG] 2022-08-18 11:21:15.345 [main] SimpleValueBinder - building SimpleValue for zipCode
+[DEBUG] 2022-08-18 11:21:15.345 [main] PropertyBinder - Building property zipCode
+[DEBUG] 2022-08-18 11:21:15.347 [main] SimpleValueBinder - Starting fillSimpleValue for memberId
+[DEBUG] 2022-08-18 11:21:15.347 [main] SimpleValueBinder - Starting fillSimpleValue for dob
+[DEBUG] 2022-08-18 11:21:15.347 [main] SimpleValueBinder - Starting fillSimpleValue for fullName
+[DEBUG] 2022-08-18 11:21:15.347 [main] SimpleValueBinder - Starting fillSimpleValue for isAdmin
+[DEBUG] 2022-08-18 11:21:15.347 [main] SimpleValueBinder - Starting fillSimpleValue for userPassword
+[DEBUG] 2022-08-18 11:21:15.347 [main] SimpleValueBinder - Starting fillSimpleValue for username
+[DEBUG] 2022-08-18 11:21:15.347 [main] SimpleValueBinder - Starting fillSimpleValue for orderId
+[DEBUG] 2022-08-18 11:21:15.348 [main] SimpleValueBinder - Starting fillSimpleValue for amount
+[DEBUG] 2022-08-18 11:21:15.348 [main] SimpleValueBinder - Starting fillSimpleValue for orderAddress
+[DEBUG] 2022-08-18 11:21:15.348 [main] SimpleValueBinder - Starting fillSimpleValue for orderDate
+[DEBUG] 2022-08-18 11:21:15.348 [main] SimpleValueBinder - Starting fillSimpleValue for orderZip
+[DEBUG] 2022-08-18 11:21:15.348 [main] SimpleValueBinder - Starting fillSimpleValue for paymentId
+[DEBUG] 2022-08-18 11:21:15.348 [main] SimpleValueBinder - Starting fillSimpleValue for balance
+[DEBUG] 2022-08-18 11:21:15.348 [main] SimpleValueBinder - Starting fillSimpleValue for ccv
+[DEBUG] 2022-08-18 11:21:15.348 [main] SimpleValueBinder - Starting fillSimpleValue for expDate
+[DEBUG] 2022-08-18 11:21:15.348 [main] SimpleValueBinder - Starting fillSimpleValue for provider
+[DEBUG] 2022-08-18 11:21:15.348 [main] SimpleValueBinder - Starting fillSimpleValue for zipCode
+[DEBUG] 2022-08-18 11:21:15.354 [main] PrimaryKey - Forcing column [member_id] to be non-null as it is part of the primary key for table [members]
+[DEBUG] 2022-08-18 11:21:15.354 [main] PrimaryKey - Forcing column [order_id] to be non-null as it is part of the primary key for table [orders]
+[DEBUG] 2022-08-18 11:21:15.354 [main] PrimaryKey - Forcing column [payment_id] to be non-null as it is part of the primary key for table [member_payment]
+[DEBUG] 2022-08-18 11:21:15.354 [main] CollectionSecondPass - Second pass for collection: com.revature.pokebowl.member.Member.memberPaymentSet
+[DEBUG] 2022-08-18 11:21:15.355 [main] CollectionBinder - Binding a OneToMany: com.revature.pokebowl.member.Member.memberPaymentSet through a foreign key
+[DEBUG] 2022-08-18 11:21:15.356 [main] CollectionBinder - Mapping collection: com.revature.pokebowl.member.Member.memberPaymentSet -> member_payment
+[DEBUG] 2022-08-18 11:21:15.358 [main] TableBinder - Retrieving property com.revature.pokebowl.memberpayment.MemberPayment.member
+[DEBUG] 2022-08-18 11:21:15.358 [main] CollectionSecondPass - Mapped collection key: member_id, one-to-many: com.revature.pokebowl.memberpayment.MemberPayment
+[DEBUG] 2022-08-18 11:21:15.358 [main] CollectionSecondPass - Second pass for collection: com.revature.pokebowl.member.Member.orders
+[DEBUG] 2022-08-18 11:21:15.358 [main] CollectionBinder - Binding a OneToMany: com.revature.pokebowl.member.Member.orders through a foreign key
+[DEBUG] 2022-08-18 11:21:15.358 [main] CollectionBinder - Mapping collection: com.revature.pokebowl.member.Member.orders -> orders
+[DEBUG] 2022-08-18 11:21:15.359 [main] TableBinder - Retrieving property com.revature.pokebowl.order.Order.member
+[DEBUG] 2022-08-18 11:21:15.359 [main] CollectionSecondPass - Mapped collection key: member_id, one-to-many: com.revature.pokebowl.order.Order
+[DEBUG] 2022-08-18 11:21:15.359 [main] CollectionSecondPass - Second pass for collection: com.revature.pokebowl.memberpayment.MemberPayment.orderSet
+[DEBUG] 2022-08-18 11:21:39.010 [main] logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[DEBUG] 2022-08-18 11:21:39.025 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2022-08-18 11:21:39.027 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[DEBUG] 2022-08-18 11:21:39.032 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[INFO ] 2022-08-18 11:21:39.057 [main] Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+[INFO ] 2022-08-18 11:21:39.059 [main] Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=postgres, hibernate.connection.password=****, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.show_sql=true, hibernate.connection.url=jdbc:postgresql://beck-db-instance.cewwl2d9shzm.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=pokebowl, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=org.postgresql.Driver, hibernate.hbm2ddl.auto=update}
+[DEBUG] 2022-08-18 11:21:39.316 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2022-08-18 11:21:39.316 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[DEBUG] 2022-08-18 11:21:39.316 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[DEBUG] 2022-08-18 11:21:39.324 [main] ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+[DEBUG] 2022-08-18 11:21:39.324 [main] Configuration - Building session factory using provided StandardServiceRegistry
+[DEBUG] 2022-08-18 11:21:39.338 [main] RegionFactoryInitiator - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+[DEBUG] 2022-08-18 11:21:39.339 [main] RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[INFO ] 2022-08-18 11:21:39.370 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[DEBUG] 2022-08-18 11:21:39.550 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@4b520ea8
+[DEBUG] 2022-08-18 11:21:39.551 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@4b520ea8
+[DEBUG] 2022-08-18 11:21:39.551 [main] BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@4b520ea8
+[DEBUG] 2022-08-18 11:21:39.552 [main] BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@624ea235
+[DEBUG] 2022-08-18 11:21:39.552 [main] BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@23f5b5dc
+[DEBUG] 2022-08-18 11:21:39.553 [main] BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@821330f
+[DEBUG] 2022-08-18 11:21:39.554 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@7857fe2
+[DEBUG] 2022-08-18 11:21:39.554 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@7857fe2
+[DEBUG] 2022-08-18 11:21:39.554 [main] BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@7857fe2
+[DEBUG] 2022-08-18 11:21:39.555 [main] BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@446a1e84
+[DEBUG] 2022-08-18 11:21:39.555 [main] BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@446a1e84
+[DEBUG] 2022-08-18 11:21:39.556 [main] BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@446a1e84
+[DEBUG] 2022-08-18 11:21:39.557 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@7139992f
+[DEBUG] 2022-08-18 11:21:39.557 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@7139992f
+[DEBUG] 2022-08-18 11:21:39.557 [main] BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@7139992f
+[DEBUG] 2022-08-18 11:21:39.558 [main] BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@7eecb5b8
+[DEBUG] 2022-08-18 11:21:39.558 [main] BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@7eecb5b8
+[DEBUG] 2022-08-18 11:21:39.558 [main] BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@7eecb5b8
+[DEBUG] 2022-08-18 11:21:39.559 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@5c7bfdc1
+[DEBUG] 2022-08-18 11:21:39.559 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@5c7bfdc1
+[DEBUG] 2022-08-18 11:21:39.560 [main] BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@5c7bfdc1
+[DEBUG] 2022-08-18 11:21:39.561 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@7fb4f2a9
+[DEBUG] 2022-08-18 11:21:39.561 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@7fb4f2a9
+[DEBUG] 2022-08-18 11:21:39.561 [main] BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@7fb4f2a9
+[DEBUG] 2022-08-18 11:21:39.562 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@7bbc8656
+[DEBUG] 2022-08-18 11:21:39.562 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@7bbc8656
+[DEBUG] 2022-08-18 11:21:39.562 [main] BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@7bbc8656
+[DEBUG] 2022-08-18 11:21:39.563 [main] BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@169bb4dd
+[DEBUG] 2022-08-18 11:21:39.563 [main] BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@169bb4dd
+[DEBUG] 2022-08-18 11:21:39.564 [main] BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@2d0399f4
+[DEBUG] 2022-08-18 11:21:39.564 [main] BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@2d0399f4
+[DEBUG] 2022-08-18 11:21:39.565 [main] BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@2254127a
+[DEBUG] 2022-08-18 11:21:39.566 [main] BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@2254127a
+[DEBUG] 2022-08-18 11:21:39.566 [main] BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@f68f0dc
+[DEBUG] 2022-08-18 11:21:39.567 [main] BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@12591ac8
+[DEBUG] 2022-08-18 11:21:39.568 [main] BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@3e0e1046
+[DEBUG] 2022-08-18 11:21:39.568 [main] BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@3e0e1046
+[DEBUG] 2022-08-18 11:21:39.569 [main] BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@37313c65
+[DEBUG] 2022-08-18 11:21:39.569 [main] BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@37313c65
+[DEBUG] 2022-08-18 11:21:39.581 [main] BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@7dc3712
+[DEBUG] 2022-08-18 11:21:39.581 [main] BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@7dc3712
+[DEBUG] 2022-08-18 11:21:39.583 [main] BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@5be1d0a4
+[DEBUG] 2022-08-18 11:21:39.583 [main] BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@5be1d0a4
+[DEBUG] 2022-08-18 11:21:39.584 [main] BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@7d322cad
+[DEBUG] 2022-08-18 11:21:39.584 [main] BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@7d322cad
+[DEBUG] 2022-08-18 11:21:39.586 [main] BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@448c8166
+[DEBUG] 2022-08-18 11:21:39.586 [main] BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@448c8166
+[DEBUG] 2022-08-18 11:21:39.587 [main] BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@13526e59
+[DEBUG] 2022-08-18 11:21:39.587 [main] BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@13526e59
+[DEBUG] 2022-08-18 11:21:39.589 [main] BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@36804139
+[DEBUG] 2022-08-18 11:21:39.589 [main] BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@36804139
+[DEBUG] 2022-08-18 11:21:39.592 [main] BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@64b0598
+[DEBUG] 2022-08-18 11:21:39.592 [main] BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@64b0598
+[DEBUG] 2022-08-18 11:21:39.593 [main] BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@28194a50
+[DEBUG] 2022-08-18 11:21:39.594 [main] BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@28194a50
+[DEBUG] 2022-08-18 11:21:39.595 [main] BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@2ad48653
+[DEBUG] 2022-08-18 11:21:39.595 [main] BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@2ad48653
+[DEBUG] 2022-08-18 11:21:39.596 [main] BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@61710c6
+[DEBUG] 2022-08-18 11:21:39.596 [main] BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@61710c6
+[DEBUG] 2022-08-18 11:21:39.596 [main] BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@61710c6
+[DEBUG] 2022-08-18 11:21:39.598 [main] BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@4a07d605
+[DEBUG] 2022-08-18 11:21:39.599 [main] BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@68746f22
+[DEBUG] 2022-08-18 11:21:39.599 [main] BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@68746f22
+[DEBUG] 2022-08-18 11:21:39.599 [main] BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@68746f22
+[DEBUG] 2022-08-18 11:21:39.600 [main] BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@41488b16
+[DEBUG] 2022-08-18 11:21:39.601 [main] BasicTypeRegistry - Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@22f59fa
+[DEBUG] 2022-08-18 11:21:39.602 [main] BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@79defdc
+[DEBUG] 2022-08-18 11:21:39.602 [main] BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@79defdc
+[DEBUG] 2022-08-18 11:21:39.603 [main] BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@5852c06f
+[DEBUG] 2022-08-18 11:21:39.603 [main] BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@5852c06f
+[DEBUG] 2022-08-18 11:21:39.604 [main] BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@376a0d86
+[DEBUG] 2022-08-18 11:21:39.604 [main] BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@376a0d86
+[DEBUG] 2022-08-18 11:21:39.605 [main] BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@7d61eb55
+[DEBUG] 2022-08-18 11:21:39.605 [main] BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@7d61eb55
+[DEBUG] 2022-08-18 11:21:39.606 [main] BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@4ef74c30
+[DEBUG] 2022-08-18 11:21:39.606 [main] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@4ef74c30
+[DEBUG] 2022-08-18 11:21:39.606 [main] BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@4bff7da0
+[DEBUG] 2022-08-18 11:21:39.607 [main] BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@21d03963
+[DEBUG] 2022-08-18 11:21:39.608 [main] BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@21d03963
+[DEBUG] 2022-08-18 11:21:39.608 [main] BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@21d03963
+[DEBUG] 2022-08-18 11:21:39.609 [main] BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@33f676f6
+[DEBUG] 2022-08-18 11:21:39.609 [main] BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@33f676f6
+[DEBUG] 2022-08-18 11:21:39.609 [main] BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@33f676f6
+[DEBUG] 2022-08-18 11:21:39.610 [main] BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@2e570ded
+[DEBUG] 2022-08-18 11:21:39.610 [main] BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@747f281
+[DEBUG] 2022-08-18 11:21:39.611 [main] BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@2ca923bb
+[DEBUG] 2022-08-18 11:21:39.611 [main] BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@2ca923bb
+[DEBUG] 2022-08-18 11:21:39.611 [main] BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@2ca923bb
+[DEBUG] 2022-08-18 11:21:39.612 [main] BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@7de62196
+[DEBUG] 2022-08-18 11:21:39.613 [main] BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@7de62196
+[DEBUG] 2022-08-18 11:21:39.613 [main] BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@7de62196
+[DEBUG] 2022-08-18 11:21:39.613 [main] BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@7905a0b8
+[DEBUG] 2022-08-18 11:21:39.614 [main] BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@13d9cbf5
+[DEBUG] 2022-08-18 11:21:39.615 [main] BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@2462cb01
+[DEBUG] 2022-08-18 11:21:39.615 [main] BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@2462cb01
+[DEBUG] 2022-08-18 11:21:39.616 [main] BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@77659b30
+[DEBUG] 2022-08-18 11:21:39.617 [main] BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@3cfdd820
+[DEBUG] 2022-08-18 11:21:39.617 [main] BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@3cfdd820
+[DEBUG] 2022-08-18 11:21:39.618 [main] BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@19976a65
+[DEBUG] 2022-08-18 11:21:39.619 [main] BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@19976a65
+[DEBUG] 2022-08-18 11:21:39.619 [main] BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@57a3e26a
+[DEBUG] 2022-08-18 11:21:39.619 [main] BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@2dc9b0f5
+[DEBUG] 2022-08-18 11:21:39.621 [main] BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@74f6c5d8
+[DEBUG] 2022-08-18 11:21:39.624 [main] BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@1890516e
+[DEBUG] 2022-08-18 11:21:39.624 [main] BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@1890516e
+[DEBUG] 2022-08-18 11:21:39.624 [main] BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@2bec854f
+[DEBUG] 2022-08-18 11:21:39.624 [main] BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@31edaa7d
+[DEBUG] 2022-08-18 11:21:39.625 [main] BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@26adfd2d
+[DEBUG] 2022-08-18 11:21:39.625 [main] BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@3336e6b6
+[DEBUG] 2022-08-18 11:21:39.625 [main] BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@7c3fdb62
+[DEBUG] 2022-08-18 11:21:39.625 [main] BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@205d38da
+[DEBUG] 2022-08-18 11:21:39.625 [main] BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@6950ed69
+[DEBUG] 2022-08-18 11:21:39.625 [main] BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@6dd7b5a3
+[DEBUG] 2022-08-18 11:21:39.657 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[DEBUG] 2022-08-18 11:21:39.658 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[DEBUG] 2022-08-18 11:21:39.658 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2022-08-18 11:21:39.659 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2022-08-18 11:21:39.659 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[DEBUG] 2022-08-18 11:21:39.661 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[DEBUG] 2022-08-18 11:21:39.662 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[DEBUG] 2022-08-18 11:21:39.663 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2022-08-18 11:21:39.664 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+[DEBUG] 2022-08-18 11:21:39.665 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[DEBUG] 2022-08-18 11:21:39.665 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[DEBUG] 2022-08-18 11:21:39.665 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+[DEBUG] 2022-08-18 11:21:39.666 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2022-08-18 11:21:39.667 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[WARN ] 2022-08-18 11:21:39.672 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2022-08-18 11:21:39.677 [main] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://beck-db-instance.cewwl2d9shzm.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=pokebowl]
+[INFO ] 2022-08-18 11:21:39.677 [main] pooling - HHH10001001: Connection properties: {user=postgres, password=WSo3vUcu75t39dnr9GPfWt}
+[INFO ] 2022-08-18 11:21:39.677 [main] pooling - HHH10001003: Autocommit mode: false
+[DEBUG] 2022-08-18 11:21:39.681 [main] DriverManagerConnectionProviderImpl - Initializing Connection pool with 1 Connections
+[INFO ] 2022-08-18 11:21:39.681 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[DEBUG] 2022-08-18 11:21:40.519 [main] JdbcEnvironmentInitiator - Database ->
+       name : PostgreSQL
+    version : 13.4
+      major : 13
+      minor : 4
+[DEBUG] 2022-08-18 11:21:40.519 [main] JdbcEnvironmentInitiator - Driver ->
+       name : PostgreSQL JDBC Driver
+    version : 42.3.3
+      major : 42
+      minor : 3
+[DEBUG] 2022-08-18 11:21:40.520 [main] JdbcEnvironmentInitiator - JDBC version : 4.2
+[INFO ] 2022-08-18 11:21:40.533 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[DEBUG] 2022-08-18 11:21:40.547 [main] IdentifierHelperBuilder - JDBC driver metadata reported database stores quoted identifiers in neither upper, lower nor mixed case
+[DEBUG] 2022-08-18 11:21:40.704 [main] BasicTypeRegistry - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@fade1fc
+[DEBUG] 2022-08-18 11:21:40.704 [main] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.PostgresUUIDType@fade1fc
+[DEBUG] 2022-08-18 11:21:40.705 [main] BasicTypeRegistry - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@4ef74c30
+[DEBUG] 2022-08-18 11:21:40.706 [main] TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@2807bdeb] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@72c28d64]
+[DEBUG] 2022-08-18 11:21:40.749 [main] Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[DEBUG] 2022-08-18 11:21:40.765 [main] AnnotationBinder - Binding entity from annotated class: com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-18 11:21:40.795 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2022-08-18 11:21:40.801 [main] EntityBinder - Import with entity name Member
+[DEBUG] 2022-08-18 11:21:40.804 [main] EntityBinder - Bind entity com.revature.pokebowl.member.Member on table members
+[DEBUG] 2022-08-18 11:21:40.830 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=member_id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.834 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.member.Member] is safe
+[DEBUG] 2022-08-18 11:21:40.834 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-18 11:21:40.835 [main] PropertyBinder - MetadataSourceProcessor property memberId with lazy=false
+[DEBUG] 2022-08-18 11:21:40.837 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:memberId]
+[DEBUG] 2022-08-18 11:21:40.839 [main] SimpleValueBinder - building SimpleValue for memberId
+[DEBUG] 2022-08-18 11:21:40.841 [main] PropertyBinder - Building property memberId
+[DEBUG] 2022-08-18 11:21:40.843 [main] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(member_id)]), memberId, assigned, , ...)
+[DEBUG] 2022-08-18 11:21:40.844 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=dob, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.844 [main] PropertyBinder - MetadataSourceProcessor property dob with lazy=false
+[DEBUG] 2022-08-18 11:21:40.844 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:dob]
+[DEBUG] 2022-08-18 11:21:40.844 [main] SimpleValueBinder - building SimpleValue for dob
+[DEBUG] 2022-08-18 11:21:40.844 [main] PropertyBinder - Building property dob
+[DEBUG] 2022-08-18 11:21:40.845 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=full_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.845 [main] PropertyBinder - MetadataSourceProcessor property fullName with lazy=false
+[DEBUG] 2022-08-18 11:21:40.845 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:fullName]
+[DEBUG] 2022-08-18 11:21:40.845 [main] SimpleValueBinder - building SimpleValue for fullName
+[DEBUG] 2022-08-18 11:21:40.845 [main] PropertyBinder - Building property fullName
+[DEBUG] 2022-08-18 11:21:40.845 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=is_admin, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.846 [main] PropertyBinder - MetadataSourceProcessor property isAdmin with lazy=false
+[DEBUG] 2022-08-18 11:21:40.846 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:isAdmin]
+[DEBUG] 2022-08-18 11:21:40.846 [main] SimpleValueBinder - building SimpleValue for isAdmin
+[DEBUG] 2022-08-18 11:21:40.846 [main] PropertyBinder - Building property isAdmin
+[DEBUG] 2022-08-18 11:21:40.849 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='member'}
+[DEBUG] 2022-08-18 11:21:40.851 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=memberPaymentSet, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.853 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.862 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.862 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=memberPaymentSet_KEY, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.863 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='memberPaymentSet_KEY', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2022-08-18 11:21:40.864 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='member'}
+[DEBUG] 2022-08-18 11:21:40.865 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='member'}
+[DEBUG] 2022-08-18 11:21:40.865 [main] CollectionBinder - Collection role: com.revature.pokebowl.member.Member.memberPaymentSet
+[DEBUG] 2022-08-18 11:21:40.868 [main] PropertyBinder - Building property memberPaymentSet
+[DEBUG] 2022-08-18 11:21:40.868 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='member'}
+[DEBUG] 2022-08-18 11:21:40.869 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=orders, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.869 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.869 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.869 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=orders_KEY, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.869 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='orders_KEY', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2022-08-18 11:21:40.869 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='member'}
+[DEBUG] 2022-08-18 11:21:40.869 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='member'}
+[DEBUG] 2022-08-18 11:21:40.870 [main] CollectionBinder - Collection role: com.revature.pokebowl.member.Member.orders
+[DEBUG] 2022-08-18 11:21:40.870 [main] PropertyBinder - Building property orders
+[DEBUG] 2022-08-18 11:21:40.870 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=user_password, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.870 [main] PropertyBinder - MetadataSourceProcessor property userPassword with lazy=false
+[DEBUG] 2022-08-18 11:21:40.870 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:userPassword]
+[DEBUG] 2022-08-18 11:21:40.870 [main] SimpleValueBinder - building SimpleValue for userPassword
+[DEBUG] 2022-08-18 11:21:40.870 [main] PropertyBinder - Building property userPassword
+[DEBUG] 2022-08-18 11:21:40.871 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=username, insertable=true, updatable=true, unique=true}
+[DEBUG] 2022-08-18 11:21:40.871 [main] PropertyBinder - MetadataSourceProcessor property username with lazy=false
+[DEBUG] 2022-08-18 11:21:40.872 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:username]
+[DEBUG] 2022-08-18 11:21:40.872 [main] SimpleValueBinder - building SimpleValue for username
+[DEBUG] 2022-08-18 11:21:40.872 [main] PropertyBinder - Building property username
+[DEBUG] 2022-08-18 11:21:40.879 [main] AnnotationBinder - Binding entity from annotated class: com.revature.pokebowl.order.Order
+[DEBUG] 2022-08-18 11:21:40.880 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2022-08-18 11:21:40.880 [main] EntityBinder - Import with entity name Order
+[DEBUG] 2022-08-18 11:21:40.880 [main] EntityBinder - Bind entity com.revature.pokebowl.order.Order on table orders
+[DEBUG] 2022-08-18 11:21:40.884 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=order_id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.885 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.order.Order] is safe
+[DEBUG] 2022-08-18 11:21:40.885 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.order.Order
+[DEBUG] 2022-08-18 11:21:40.885 [main] PropertyBinder - MetadataSourceProcessor property orderId with lazy=false
+[DEBUG] 2022-08-18 11:21:40.885 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.order.Order:orderId]
+[DEBUG] 2022-08-18 11:21:40.885 [main] SimpleValueBinder - building SimpleValue for orderId
+[DEBUG] 2022-08-18 11:21:40.885 [main] PropertyBinder - Building property orderId
+[DEBUG] 2022-08-18 11:21:40.885 [main] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(order_id)]), orderId, assigned, , ...)
+[DEBUG] 2022-08-18 11:21:40.885 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=amount, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.886 [main] PropertyBinder - MetadataSourceProcessor property amount with lazy=false
+[DEBUG] 2022-08-18 11:21:40.886 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.order.Order:amount]
+[DEBUG] 2022-08-18 11:21:40.886 [main] SimpleValueBinder - building SimpleValue for amount
+[DEBUG] 2022-08-18 11:21:40.886 [main] PropertyBinder - Building property amount
+[DEBUG] 2022-08-18 11:21:40.886 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='member_id', referencedColumn='', mappedBy=''}
+[DEBUG] 2022-08-18 11:21:40.886 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=member, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.888 [main] PropertyBinder - Building property member
+[DEBUG] 2022-08-18 11:21:40.889 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='payment_id', referencedColumn='', mappedBy=''}
+[DEBUG] 2022-08-18 11:21:40.889 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=memberPayment, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.889 [main] PropertyBinder - Building property memberPayment
+[DEBUG] 2022-08-18 11:21:40.890 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=order_address, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.890 [main] PropertyBinder - MetadataSourceProcessor property orderAddress with lazy=false
+[DEBUG] 2022-08-18 11:21:40.890 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.order.Order:orderAddress]
+[DEBUG] 2022-08-18 11:21:40.890 [main] SimpleValueBinder - building SimpleValue for orderAddress
+[DEBUG] 2022-08-18 11:21:40.890 [main] PropertyBinder - Building property orderAddress
+[DEBUG] 2022-08-18 11:21:40.890 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=order_date, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.890 [main] PropertyBinder - MetadataSourceProcessor property orderDate with lazy=false
+[DEBUG] 2022-08-18 11:21:40.890 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.order.Order:orderDate]
+[DEBUG] 2022-08-18 11:21:40.891 [main] SimpleValueBinder - building SimpleValue for orderDate
+[DEBUG] 2022-08-18 11:21:40.891 [main] PropertyBinder - Building property orderDate
+[DEBUG] 2022-08-18 11:21:40.891 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=order_zip, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.891 [main] PropertyBinder - MetadataSourceProcessor property orderZip with lazy=false
+[DEBUG] 2022-08-18 11:21:40.891 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.order.Order:orderZip]
+[DEBUG] 2022-08-18 11:21:40.891 [main] SimpleValueBinder - building SimpleValue for orderZip
+[DEBUG] 2022-08-18 11:21:40.891 [main] PropertyBinder - Building property orderZip
+[DEBUG] 2022-08-18 11:21:40.892 [main] AnnotationBinder - Binding entity from annotated class: com.revature.pokebowl.memberpayment.MemberPayment
+[DEBUG] 2022-08-18 11:21:40.892 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2022-08-18 11:21:40.892 [main] EntityBinder - Import with entity name MemberPayment
+[DEBUG] 2022-08-18 11:21:40.892 [main] EntityBinder - Bind entity com.revature.pokebowl.memberpayment.MemberPayment on table member_payment
+[DEBUG] 2022-08-18 11:21:40.894 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=payment_id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.894 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.memberpayment.MemberPayment] is safe
+[DEBUG] 2022-08-18 11:21:40.894 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.memberpayment.MemberPayment
+[DEBUG] 2022-08-18 11:21:40.894 [main] PropertyBinder - MetadataSourceProcessor property paymentId with lazy=false
+[DEBUG] 2022-08-18 11:21:40.894 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.memberpayment.MemberPayment:paymentId]
+[DEBUG] 2022-08-18 11:21:40.894 [main] SimpleValueBinder - building SimpleValue for paymentId
+[DEBUG] 2022-08-18 11:21:40.895 [main] PropertyBinder - Building property paymentId
+[DEBUG] 2022-08-18 11:21:40.895 [main] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(payment_id)]), paymentId, assigned, , ...)
+[DEBUG] 2022-08-18 11:21:40.895 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=balance, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.895 [main] PropertyBinder - MetadataSourceProcessor property balance with lazy=false
+[DEBUG] 2022-08-18 11:21:40.895 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.memberpayment.MemberPayment:balance]
+[DEBUG] 2022-08-18 11:21:40.895 [main] SimpleValueBinder - building SimpleValue for balance
+[DEBUG] 2022-08-18 11:21:40.895 [main] PropertyBinder - Building property balance
+[DEBUG] 2022-08-18 11:21:40.896 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=ccv, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.896 [main] PropertyBinder - MetadataSourceProcessor property ccv with lazy=false
+[DEBUG] 2022-08-18 11:21:40.896 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.memberpayment.MemberPayment:ccv]
+[DEBUG] 2022-08-18 11:21:40.896 [main] SimpleValueBinder - building SimpleValue for ccv
+[DEBUG] 2022-08-18 11:21:40.896 [main] PropertyBinder - Building property ccv
+[DEBUG] 2022-08-18 11:21:40.896 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=exp_date, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.896 [main] PropertyBinder - MetadataSourceProcessor property expDate with lazy=false
+[DEBUG] 2022-08-18 11:21:40.896 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.memberpayment.MemberPayment:expDate]
+[DEBUG] 2022-08-18 11:21:40.897 [main] SimpleValueBinder - building SimpleValue for expDate
+[DEBUG] 2022-08-18 11:21:40.897 [main] PropertyBinder - Building property expDate
+[DEBUG] 2022-08-18 11:21:40.897 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='member_id', referencedColumn='', mappedBy=''}
+[DEBUG] 2022-08-18 11:21:40.897 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=member, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.897 [main] PropertyBinder - Building property member
+[DEBUG] 2022-08-18 11:21:40.897 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='memberPayment'}
+[DEBUG] 2022-08-18 11:21:40.897 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=orderSet, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.898 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.898 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.898 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=orderSet_KEY, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.898 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='orderSet_KEY', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2022-08-18 11:21:40.898 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='memberPayment'}
+[DEBUG] 2022-08-18 11:21:40.898 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='memberPayment'}
+[DEBUG] 2022-08-18 11:21:40.898 [main] CollectionBinder - Collection role: com.revature.pokebowl.memberpayment.MemberPayment.orderSet
+[DEBUG] 2022-08-18 11:21:40.898 [main] PropertyBinder - Building property orderSet
+[DEBUG] 2022-08-18 11:21:40.899 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=provider, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.899 [main] PropertyBinder - MetadataSourceProcessor property provider with lazy=false
+[DEBUG] 2022-08-18 11:21:40.899 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.memberpayment.MemberPayment:provider]
+[DEBUG] 2022-08-18 11:21:40.899 [main] SimpleValueBinder - building SimpleValue for provider
+[DEBUG] 2022-08-18 11:21:40.899 [main] PropertyBinder - Building property provider
+[DEBUG] 2022-08-18 11:21:40.899 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payment), mappingColumn=zip_code, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 11:21:40.899 [main] PropertyBinder - MetadataSourceProcessor property zipCode with lazy=false
+[DEBUG] 2022-08-18 11:21:40.900 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.memberpayment.MemberPayment:zipCode]
+[DEBUG] 2022-08-18 11:21:40.900 [main] SimpleValueBinder - building SimpleValue for zipCode
+[DEBUG] 2022-08-18 11:21:40.900 [main] PropertyBinder - Building property zipCode
+[DEBUG] 2022-08-18 11:21:40.901 [main] SimpleValueBinder - Starting fillSimpleValue for memberId
+[DEBUG] 2022-08-18 11:21:40.901 [main] SimpleValueBinder - Starting fillSimpleValue for dob
+[DEBUG] 2022-08-18 11:21:40.901 [main] SimpleValueBinder - Starting fillSimpleValue for fullName
+[DEBUG] 2022-08-18 11:21:40.902 [main] SimpleValueBinder - Starting fillSimpleValue for isAdmin
+[DEBUG] 2022-08-18 11:21:40.902 [main] SimpleValueBinder - Starting fillSimpleValue for userPassword
+[DEBUG] 2022-08-18 11:21:40.902 [main] SimpleValueBinder - Starting fillSimpleValue for username
+[DEBUG] 2022-08-18 11:21:40.902 [main] SimpleValueBinder - Starting fillSimpleValue for orderId
+[DEBUG] 2022-08-18 11:21:40.902 [main] SimpleValueBinder - Starting fillSimpleValue for amount
+[DEBUG] 2022-08-18 11:21:40.902 [main] SimpleValueBinder - Starting fillSimpleValue for orderAddress
+[DEBUG] 2022-08-18 11:21:40.902 [main] SimpleValueBinder - Starting fillSimpleValue for orderDate
+[DEBUG] 2022-08-18 11:21:40.902 [main] SimpleValueBinder - Starting fillSimpleValue for orderZip
+[DEBUG] 2022-08-18 11:21:40.902 [main] SimpleValueBinder - Starting fillSimpleValue for paymentId
+[DEBUG] 2022-08-18 11:21:40.902 [main] SimpleValueBinder - Starting fillSimpleValue for balance
+[DEBUG] 2022-08-18 11:21:40.902 [main] SimpleValueBinder - Starting fillSimpleValue for ccv
+[DEBUG] 2022-08-18 11:21:40.903 [main] SimpleValueBinder - Starting fillSimpleValue for expDate
+[DEBUG] 2022-08-18 11:21:40.903 [main] SimpleValueBinder - Starting fillSimpleValue for provider
+[DEBUG] 2022-08-18 11:21:40.903 [main] SimpleValueBinder - Starting fillSimpleValue for zipCode
+[DEBUG] 2022-08-18 11:21:40.907 [main] PrimaryKey - Forcing column [member_id] to be non-null as it is part of the primary key for table [members]
+[DEBUG] 2022-08-18 11:21:40.908 [main] PrimaryKey - Forcing column [order_id] to be non-null as it is part of the primary key for table [orders]
+[DEBUG] 2022-08-18 11:21:40.908 [main] PrimaryKey - Forcing column [payment_id] to be non-null as it is part of the primary key for table [member_payment]
+[DEBUG] 2022-08-18 11:21:40.908 [main] CollectionSecondPass - Second pass for collection: com.revature.pokebowl.member.Member.memberPaymentSet
+[DEBUG] 2022-08-18 11:21:40.908 [main] CollectionBinder - Binding a OneToMany: com.revature.pokebowl.member.Member.memberPaymentSet through a foreign key
+[DEBUG] 2022-08-18 11:21:40.909 [main] CollectionBinder - Mapping collection: com.revature.pokebowl.member.Member.memberPaymentSet -> member_payment
+[DEBUG] 2022-08-18 11:21:40.910 [main] TableBinder - Retrieving property com.revature.pokebowl.memberpayment.MemberPayment.member
+[DEBUG] 2022-08-18 11:21:40.910 [main] CollectionSecondPass - Mapped collection key: member_id, one-to-many: com.revature.pokebowl.memberpayment.MemberPayment
+[DEBUG] 2022-08-18 11:21:40.910 [main] CollectionSecondPass - Second pass for collection: com.revature.pokebowl.member.Member.orders
+[DEBUG] 2022-08-18 11:21:40.910 [main] CollectionBinder - Binding a OneToMany: com.revature.pokebowl.member.Member.orders through a foreign key
+[DEBUG] 2022-08-18 11:21:40.911 [main] CollectionBinder - Mapping collection: com.revature.pokebowl.member.Member.orders -> orders
+[DEBUG] 2022-08-18 11:21:40.911 [main] TableBinder - Retrieving property com.revature.pokebowl.order.Order.member
+[DEBUG] 2022-08-18 11:21:40.911 [main] CollectionSecondPass - Mapped collection key: member_id, one-to-many: com.revature.pokebowl.order.Order
+[DEBUG] 2022-08-18 11:21:40.911 [main] CollectionSecondPass - Second pass for collection: com.revature.pokebowl.memberpayment.MemberPayment.orderSet
+[DEBUG] 2022-08-18 11:21:40.911 [main] CollectionBinder - Binding a OneToMany: com.revature.pokebowl.memberpayment.MemberPayment.orderSet through a foreign key
+[DEBUG] 2022-08-18 11:21:40.911 [main] CollectionBinder - Mapping collection: com.revature.pokebowl.memberpayment.MemberPayment.orderSet -> orders
+[DEBUG] 2022-08-18 11:21:40.911 [main] TableBinder - Retrieving property com.revature.pokebowl.order.Order.memberPayment
+[DEBUG] 2022-08-18 11:21:40.911 [main] CollectionSecondPass - Mapped collection key: payment_id, one-to-many: com.revature.pokebowl.order.Order
+[DEBUG] 2022-08-18 11:21:40.912 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-18 11:21:40.913 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-18 11:21:40.913 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.revature.pokebowl.memberpayment.MemberPayment
+[DEBUG] 2022-08-18 11:21:40.914 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-18 11:21:40.915 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-18 11:21:40.915 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.revature.pokebowl.memberpayment.MemberPayment
+[DEBUG] 2022-08-18 11:21:40.946 [main] SessionFactoryImpl - Building session factory
+[DEBUG] 2022-08-18 11:21:40.947 [main] Settings - SessionFactory name : null
+[DEBUG] 2022-08-18 11:21:40.947 [main] Settings - Automatic flush during beforeCompletion(): enabled
+[DEBUG] 2022-08-18 11:21:40.947 [main] Settings - Automatic session close at end of transaction: disabled
+[DEBUG] 2022-08-18 11:21:40.947 [main] Settings - Statistics: disabled
+[DEBUG] 2022-08-18 11:21:40.947 [main] Settings - Deleted entity synthetic identifier rollback: disabled
+[DEBUG] 2022-08-18 11:21:40.948 [main] Settings - Default entity-mode: pojo
+[DEBUG] 2022-08-18 11:21:40.948 [main] Settings - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[DEBUG] 2022-08-18 11:21:40.948 [main] Settings - Allow initialization of lazy state outside session : disabled
+[DEBUG] 2022-08-18 11:21:40.948 [main] Settings - Using BatchFetchStyle : LEGACY
+[DEBUG] 2022-08-18 11:21:40.948 [main] Settings - Default batch fetch size: -1
+[DEBUG] 2022-08-18 11:21:40.948 [main] Settings - Maximum outer join fetch depth: null
+[DEBUG] 2022-08-18 11:21:40.948 [main] Settings - Default null ordering: NONE
+[DEBUG] 2022-08-18 11:21:40.948 [main] Settings - Order SQL updates by primary key: disabled
+[DEBUG] 2022-08-18 11:21:40.948 [main] Settings - Order SQL inserts for batching: disabled
+[DEBUG] 2022-08-18 11:21:40.948 [main] Settings - multi-tenancy strategy : NONE
+[DEBUG] 2022-08-18 11:21:40.948 [main] Settings - JTA Track by Thread: enabled
+[DEBUG] 2022-08-18 11:21:40.948 [main] Settings - Query language substitutions: {}
+[DEBUG] 2022-08-18 11:21:40.948 [main] Settings - Named query checking : enabled
+[DEBUG] 2022-08-18 11:21:40.949 [main] Settings - Second-level cache: disabled
+[DEBUG] 2022-08-18 11:21:40.949 [main] Settings - Second-level query cache: disabled
+[DEBUG] 2022-08-18 11:21:40.949 [main] Settings - Second-level query cache factory: null
+[DEBUG] 2022-08-18 11:21:40.949 [main] Settings - Second-level cache region prefix: null
+[DEBUG] 2022-08-18 11:21:40.949 [main] Settings - Optimize second-level cache for minimal puts: disabled
+[DEBUG] 2022-08-18 11:21:40.949 [main] Settings - Structured second-level cache entries: disabled
+[DEBUG] 2022-08-18 11:21:40.949 [main] Settings - Second-level cache direct-reference entries: disabled
+[DEBUG] 2022-08-18 11:21:40.949 [main] Settings - Automatic eviction of collection cache: disabled
+[DEBUG] 2022-08-18 11:21:40.949 [main] Settings - JDBC batch size: 15
+[DEBUG] 2022-08-18 11:21:40.949 [main] Settings - JDBC batch updates for versioned data: enabled
+[DEBUG] 2022-08-18 11:21:40.949 [main] Settings - Scrollable result sets: enabled
+[DEBUG] 2022-08-18 11:21:40.949 [main] Settings - Wrap result sets: disabled
+[DEBUG] 2022-08-18 11:21:40.949 [main] Settings - JDBC3 getGeneratedKeys(): enabled
+[DEBUG] 2022-08-18 11:21:40.950 [main] Settings - JDBC result set fetch size: null
+[DEBUG] 2022-08-18 11:21:40.950 [main] Settings - Connection release mode: AFTER_TRANSACTION
+[DEBUG] 2022-08-18 11:21:40.950 [main] Settings - Generate SQL with comments: disabled
+[DEBUG] 2022-08-18 11:21:40.950 [main] Settings - JPA compliance - query : disabled
+[DEBUG] 2022-08-18 11:21:40.950 [main] Settings - JPA compliance - closed-handling : disabled
+[DEBUG] 2022-08-18 11:21:40.950 [main] Settings - JPA compliance - lists : disabled
+[DEBUG] 2022-08-18 11:21:40.950 [main] Settings - JPA compliance - transactions : disabled
+[DEBUG] 2022-08-18 11:21:41.019 [main] SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+[DEBUG] 2022-08-18 11:21:41.020 [main] SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+[DEBUG] 2022-08-18 11:21:41.039 [main] SessionFactoryImpl - Session factory constructed with filter configurations : {}
+[DEBUG] 2022-08-18 11:21:41.040 [main] SessionFactoryImpl - Instantiating session factory with properties: {sun.desktop=windows, awt.toolkit=sun.awt.windows.WToolkit, file.encoding.pkg=sun.io, java.specification.version=1.8, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1252, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, java.class.path=C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\charsets.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\cldrdata.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\dnsns.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\jaccess.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\localedata.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\nashorn.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\sunec.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\sunmscapi.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext\zipfs.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\jce.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\jfr.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\jsse.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\management-agent.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\resources.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\rt.jar;C:\Users\Caleb A Beck\Desktop\SoftwareDevelopment\revature\java_projects\pokebowl_API_BFCB\target\classes;C:\Users\Caleb A Beck\.m2\repository\org\postgresql\postgresql\42.3.3\postgresql-42.3.3.jar;C:\Users\Caleb A Beck\.m2\repository\org\checkerframework\checker-qual\3.5.0\checker-qual-3.5.0.jar;C:\Users\Caleb A Beck\.m2\repository\net\bytebuddy\byte-buddy\1.12.10\byte-buddy-1.12.10.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\8.5.23\tomcat-embed-core-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-annotations-api\8.5.23\tomcat-annotations-api-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\embed\tomcat-embed-jasper\8.5.23\tomcat-embed-jasper-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\8.5.23\tomcat-embed-el-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\eclipse\jdt\ecj\3.12.3\ecj-3.12.3.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-jasper\8.5.23\tomcat-jasper-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-servlet-api\8.5.23\tomcat-servlet-api-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-juli\8.5.23\tomcat-juli-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-el-api\8.5.23\tomcat-el-api-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-api\8.5.23\tomcat-api-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-util-scan\8.5.23\tomcat-util-scan-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-util\8.5.23\tomcat-util-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-jasper-el\8.5.23\tomcat-jasper-el-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\tomcat\tomcat-jsp-api\8.5.23\tomcat-jsp-api-8.5.23.jar;C:\Users\Caleb A Beck\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.3\jackson-databind-2.13.3.jar;C:\Users\Caleb A Beck\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.3\jackson-annotations-2.13.3.jar;C:\Users\Caleb A Beck\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.3\jackson-core-2.13.3.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.1\log4j-core-2.17.1.jar;C:\Users\Caleb A Beck\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.1\log4j-api-2.17.1.jar;C:\Users\Caleb A Beck\.m2\repository\org\hibernate\hibernate-core\5.6.10.Final\hibernate-core-5.6.10.Final.jar;C:\Users\Caleb A Beck\.m2\repository\org\jboss\logging\jboss-logging\3.4.3.Final\jboss-logging-3.4.3.Final.jar;C:\Users\Caleb A Beck\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\Caleb A Beck\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Caleb A Beck\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\Caleb A Beck\.m2\repository\org\jboss\jandex\2.4.2.Final\jandex-2.4.2.Final.jar;C:\Users\Caleb A Beck\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\Caleb A Beck\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\Caleb A Beck\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\Caleb A Beck\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\Caleb A Beck\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.1\jaxb-runtime-2.3.1.jar;C:\Users\Caleb A Beck\.m2\repository\org\glassfish\jaxb\txw2\2.3.1\txw2-2.3.1.jar;C:\Users\Caleb A Beck\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.7\istack-commons-runtime-3.0.7.jar;C:\Users\Caleb A Beck\.m2\repository\org\jvnet\staxex\stax-ex\1.8\stax-ex-1.8.jar;C:\Users\Caleb A Beck\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.15\FastInfoset-1.2.15.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.4\lib\idea_rt.jar, java.vm.vendor=Temurin, sun.arch.data.model=64, user.variant=, java.vendor.url=https://adoptium.net/, user.timezone=America/New_York, os.name=Windows 10, java.vm.specification.version=1.8, user.country=US, sun.java.launcher=SUN_STANDARD, sun.boot.library.path=C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\bin, sun.java.command=com.revature.pokebowl.MainDriver, sun.cpu.endian=little, user.home=C:\Users\Caleb A Beck, user.language=en, java.specification.vendor=Oracle Corporation, java.home=C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre, file.separator=\, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, sun.boot.class.path=C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\resources.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\rt.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\sunrsasign.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\jsse.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\jce.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\charsets.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\jfr.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\classes, hibernate.hbm2ddl.auto=update, user.script=, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=1.8.0_332-b09, user.name=Caleb A Beck, path.separator=;, hibernate.connection.username=****, os.version=10.0, java.endorsed.dirs=C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\endorsed, java.runtime.name=OpenJDK Runtime Environment, hibernate.connection.url=jdbc:postgresql://beck-db-instance.cewwl2d9shzm.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=pokebowl, file.encoding=UTF-8, java.vm.name=OpenJDK 64-Bit Server VM, hibernate.show_sql=true, hibernate.connection.driver_class=org.postgresql.Driver, java.vendor.url.bug=https://github.com/adoptium/adoptium-support/issues, java.io.tmpdir=C:\Users\CALEBA~1\AppData\Local\Temp\, java.version=1.8.0_332, user.dir=C:\Users\Caleb A Beck\Desktop\SoftwareDevelopment\revature\java_projects\pokebowl_API_BFCB, os.arch=amd64, java.vm.specification.name=Java Virtual Machine Specification, hibernate.connection.password=****, java.awt.printerjob=sun.awt.windows.WPrinterJob, sun.os.patch.level=, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@617fe9e1, java.library.path=C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\D\nodejs\;C:\Program Files\Git\cmd;C:\Users\Caleb A Beck\AppData\Local\Microsoft\WindowsApps;;C:\Users\Caleb A Beck\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Caleb A Beck\.dotnet\tools;C:\Users\Caleb A Beck\AppData\Roaming\npm;., java.vm.info=mixed mode, java.vendor=Temurin, java.vm.version=25.332-b09, hibernate.bytecode.use_reflection_optimizer=false, java.ext.dirs=C:\Program Files\Eclipse Adoptium\jdk-8.0.332.9-hotspot\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext, sun.io.unicode.encoding=UnicodeLittle, java.class.version=52.0}
+[DEBUG] 2022-08-18 11:21:41.059 [main] JaccIntegrator - Skipping JACC integration as it was not enabled
+[DEBUG] 2022-08-18 11:21:41.061 [main] SessionFactoryImpl - Instantiated session factory
+[DEBUG] 2022-08-18 11:21:41.062 [main] TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@2807bdeb] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@71a9b4c7]
+[DEBUG] 2022-08-18 11:21:41.152 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.member.Member] is safe
+[DEBUG] 2022-08-18 11:21:41.152 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-18 11:21:41.393 [main] interceptor - To-one property `com.revature.pokebowl.memberpayment.MemberPayment#member` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 11:21:41.394 [main] interceptor - To-one property `com.revature.pokebowl.memberpayment.MemberPayment#member` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 11:21:41.394 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.memberpayment.MemberPayment] is safe
+[DEBUG] 2022-08-18 11:21:41.394 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.memberpayment.MemberPayment
+[DEBUG] 2022-08-18 11:21:41.414 [main] interceptor - To-one property `com.revature.pokebowl.memberpayment.MemberPayment#member` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 11:21:41.414 [main] interceptor - To-one property `com.revature.pokebowl.memberpayment.MemberPayment#member` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 11:21:41.416 [main] interceptor - To-one property `com.revature.pokebowl.order.Order#member` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 11:21:41.416 [main] interceptor - To-one property `com.revature.pokebowl.order.Order#member` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 11:21:41.416 [main] interceptor - To-one property `com.revature.pokebowl.order.Order#memberPayment` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 11:21:41.416 [main] interceptor - To-one property `com.revature.pokebowl.order.Order#memberPayment` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 11:21:41.417 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.order.Order] is safe
+[DEBUG] 2022-08-18 11:21:41.417 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.order.Order
+[DEBUG] 2022-08-18 11:21:41.433 [main] interceptor - To-one property `com.revature.pokebowl.order.Order#member` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 11:21:41.434 [main] interceptor - To-one property `com.revature.pokebowl.order.Order#memberPayment` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 11:21:41.434 [main] interceptor - To-one property `com.revature.pokebowl.order.Order#member` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 11:21:41.434 [main] interceptor - To-one property `com.revature.pokebowl.order.Order#memberPayment` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 11:21:41.446 [main] AbstractCollectionPersister - Static SQL for collection: com.revature.pokebowl.member.Member.memberPaymentSet
+[DEBUG] 2022-08-18 11:21:41.446 [main] AbstractCollectionPersister -  Row insert: update member_payment set member_id=? where payment_id=?
+[DEBUG] 2022-08-18 11:21:41.446 [main] AbstractCollectionPersister -  Row update: update member_payment set  where payment_id=?
+[DEBUG] 2022-08-18 11:21:41.446 [main] AbstractCollectionPersister -  Row delete: update member_payment set member_id=null where member_id=? and payment_id=?
+[DEBUG] 2022-08-18 11:21:41.447 [main] AbstractCollectionPersister -  One-shot delete: update member_payment set member_id=null where member_id=?
+[DEBUG] 2022-08-18 11:21:41.447 [main] AbstractCollectionPersister - Static SQL for collection: com.revature.pokebowl.memberpayment.MemberPayment.orderSet
+[DEBUG] 2022-08-18 11:21:41.447 [main] AbstractCollectionPersister -  Row insert: update orders set payment_id=? where order_id=?
+[DEBUG] 2022-08-18 11:21:41.447 [main] AbstractCollectionPersister -  Row update: update orders set  where order_id=?
+[DEBUG] 2022-08-18 11:21:41.447 [main] AbstractCollectionPersister -  Row delete: update orders set payment_id=null where payment_id=? and order_id=?
+[DEBUG] 2022-08-18 11:21:41.448 [main] AbstractCollectionPersister -  One-shot delete: update orders set payment_id=null where payment_id=?
+[DEBUG] 2022-08-18 11:21:41.448 [main] AbstractCollectionPersister - Static SQL for collection: com.revature.pokebowl.member.Member.orders
+[DEBUG] 2022-08-18 11:21:41.448 [main] AbstractCollectionPersister -  Row insert: update orders set member_id=? where order_id=?
+[DEBUG] 2022-08-18 11:21:41.448 [main] AbstractCollectionPersister -  Row update: update orders set  where order_id=?
+[DEBUG] 2022-08-18 11:21:41.448 [main] AbstractCollectionPersister -  Row delete: update orders set member_id=null where member_id=? and order_id=?
+[DEBUG] 2022-08-18 11:21:41.448 [main] AbstractCollectionPersister -  One-shot delete: update orders set member_id=null where member_id=?
+[DEBUG] 2022-08-18 11:21:41.453 [main] AbstractEntityPersister - Static SQL for entity: com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-18 11:21:41.453 [main] AbstractEntityPersister -  Version select: select member_id from members where member_id =?
+[DEBUG] 2022-08-18 11:21:41.453 [main] AbstractEntityPersister -  Snapshot select: select member_.member_id, member_.dob as dob2_1_, member_.full_name as full_nam3_1_, member_.is_admin as is_admin4_1_, member_.user_password as user_pas5_1_, member_.username as username6_1_ from members member_ where member_.member_id=?
+[DEBUG] 2022-08-18 11:21:41.453 [main] AbstractEntityPersister -  Insert 0: insert into members (dob, full_name, is_admin, user_password, username, member_id) values (?, ?, ?, ?, ?, ?)
+[DEBUG] 2022-08-18 11:21:41.453 [main] AbstractEntityPersister -  Update 0: update members set dob=?, full_name=?, is_admin=?, user_password=?, username=? where member_id=?
+[DEBUG] 2022-08-18 11:21:41.458 [main] AbstractEntityPersister -  Delete 0: delete from members where member_id=?
+[DEBUG] 2022-08-18 11:21:41.485 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7a24eb3]
+[DEBUG] 2022-08-18 11:21:41.486 [main] MetamodelGraphWalker - Visiting attribute path : dob
+[DEBUG] 2022-08-18 11:21:41.487 [main] MetamodelGraphWalker - Visiting attribute path : fullName
+[DEBUG] 2022-08-18 11:21:41.487 [main] MetamodelGraphWalker - Visiting attribute path : isAdmin
+[DEBUG] 2022-08-18 11:21:41.487 [main] MetamodelGraphWalker - Visiting attribute path : memberPaymentSet
+[DEBUG] 2022-08-18 11:21:41.491 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@4d23015c]
+[DEBUG] 2022-08-18 11:21:41.493 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@55b8dbda]
+[DEBUG] 2022-08-18 11:21:41.493 [main] MetamodelGraphWalker - Visiting attribute path : orders
+[DEBUG] 2022-08-18 11:21:41.493 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@2dbd803f]
+[DEBUG] 2022-08-18 11:21:41.494 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3e48e859]
+[DEBUG] 2022-08-18 11:21:41.494 [main] MetamodelGraphWalker - Visiting attribute path : userPassword
+[DEBUG] 2022-08-18 11:21:41.494 [main] MetamodelGraphWalker - Visiting attribute path : username
+[DEBUG] 2022-08-18 11:21:41.494 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-18 11:21:41.505 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-18 11:21:41.510 [main] LoadPlanTreePrinter - LoadPlan(entity=com.revature.pokebowl.member.Member)
+    - Returns
+       - EntityReturnImpl(entity=com.revature.pokebowl.member.Member, querySpaceUid=<gen:0>, path=com.revature.pokebowl.member.Member)
+          - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.member.Member.memberPaymentSet, querySpaceUid=<gen:1>, path=com.revature.pokebowl.member.Member.memberPaymentSet)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.memberpayment.MemberPayment, querySpaceUid=<gen:2>, path=com.revature.pokebowl.member.Member.memberPaymentSet.<elements>)
+          - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.member.Member.orders, querySpaceUid=<gen:3>, path=com.revature.pokebowl.member.Member.orders)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.order.Order, querySpaceUid=<gen:4>, path=com.revature.pokebowl.member.Member.orders.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.revature.pokebowl.member.Member)
+          - SQL table alias mapping - member0_
+          - alias suffix - 0_
+          - suffixed key columns - {member_i1_1_0_}
+
+[DEBUG] 2022-08-18 11:21:41.512 [main] EntityLoader - Static select for entity com.revature.pokebowl.member.Member [NONE]: select member0_.member_id as member_i1_1_0_, member0_.dob as dob2_1_0_, member0_.full_name as full_nam3_1_0_, member0_.is_admin as is_admin4_1_0_, member0_.user_password as user_pas5_1_0_, member0_.username as username6_1_0_ from members member0_ where member0_.member_id=?
+[DEBUG] 2022-08-18 11:21:41.513 [main] AbstractEntityPersister - Static SQL for entity: com.revature.pokebowl.memberpayment.MemberPayment
+[DEBUG] 2022-08-18 11:21:41.513 [main] AbstractEntityPersister -  Version select: select payment_id from member_payment where payment_id =?
+[DEBUG] 2022-08-18 11:21:41.513 [main] AbstractEntityPersister -  Snapshot select: select memberpaym_.payment_id, memberpaym_.balance as balance2_0_, memberpaym_.ccv as ccv3_0_, memberpaym_.exp_date as exp_date4_0_, memberpaym_.member_id as member_i7_0_, memberpaym_.provider as provider5_0_, memberpaym_.zip_code as zip_code6_0_ from member_payment memberpaym_ where memberpaym_.payment_id=?
+[DEBUG] 2022-08-18 11:21:41.513 [main] AbstractEntityPersister -  Insert 0: insert into member_payment (balance, ccv, exp_date, member_id, provider, zip_code, payment_id) values (?, ?, ?, ?, ?, ?, ?)
+[DEBUG] 2022-08-18 11:21:41.513 [main] AbstractEntityPersister -  Update 0: update member_payment set balance=?, ccv=?, exp_date=?, member_id=?, provider=?, zip_code=? where payment_id=?
+[DEBUG] 2022-08-18 11:21:41.513 [main] AbstractEntityPersister -  Delete 0: delete from member_payment where payment_id=?
+[DEBUG] 2022-08-18 11:21:41.513 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@64138b0c]
+[DEBUG] 2022-08-18 11:21:41.513 [main] MetamodelGraphWalker - Visiting attribute path : balance
+[DEBUG] 2022-08-18 11:21:41.514 [main] MetamodelGraphWalker - Visiting attribute path : ccv
+[DEBUG] 2022-08-18 11:21:41.514 [main] MetamodelGraphWalker - Visiting attribute path : expDate
+[DEBUG] 2022-08-18 11:21:41.514 [main] MetamodelGraphWalker - Visiting attribute path : member
+[DEBUG] 2022-08-18 11:21:41.514 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@22d9c961]
+[DEBUG] 2022-08-18 11:21:41.516 [main] MetamodelGraphWalker - Visiting attribute path : member.dob
+[DEBUG] 2022-08-18 11:21:41.516 [main] MetamodelGraphWalker - Visiting attribute path : member.fullName
+[DEBUG] 2022-08-18 11:21:41.516 [main] MetamodelGraphWalker - Visiting attribute path : member.isAdmin
+[DEBUG] 2022-08-18 11:21:41.516 [main] MetamodelGraphWalker - Visiting attribute path : member.memberPaymentSet
+[DEBUG] 2022-08-18 11:21:41.516 [main] MetamodelGraphWalker - Property path deemed to be circular : member.memberPaymentSet
+[DEBUG] 2022-08-18 11:21:41.516 [main] MetamodelGraphWalker - Visiting attribute path : member.orders
+[DEBUG] 2022-08-18 11:21:41.516 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@782168b7]
+[DEBUG] 2022-08-18 11:21:41.517 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@29f0c4f2]
+[DEBUG] 2022-08-18 11:21:41.517 [main] MetamodelGraphWalker - Visiting attribute path : member.userPassword
+[DEBUG] 2022-08-18 11:21:41.517 [main] MetamodelGraphWalker - Visiting attribute path : member.username
+[DEBUG] 2022-08-18 11:21:41.517 [main] MetamodelGraphWalker - Visiting attribute path : orderSet
+[DEBUG] 2022-08-18 11:21:41.517 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@7435a578]
+[DEBUG] 2022-08-18 11:21:41.517 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6093d508]
+[DEBUG] 2022-08-18 11:21:41.517 [main] MetamodelGraphWalker - Visiting attribute path : provider
+[DEBUG] 2022-08-18 11:21:41.517 [main] MetamodelGraphWalker - Visiting attribute path : zipCode
+[DEBUG] 2022-08-18 11:21:41.517 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-18 11:21:41.518 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-18 11:21:41.519 [main] LoadPlanTreePrinter - LoadPlan(entity=com.revature.pokebowl.memberpayment.MemberPayment)
+    - Returns
+       - EntityReturnImpl(entity=com.revature.pokebowl.memberpayment.MemberPayment, querySpaceUid=<gen:0>, path=com.revature.pokebowl.memberpayment.MemberPayment)
+          - EntityAttributeFetchImpl(entity=com.revature.pokebowl.member.Member, querySpaceUid=<gen:1>, path=com.revature.pokebowl.memberpayment.MemberPayment.member)
+             - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.member.Member.orders, querySpaceUid=<gen:2>, path=com.revature.pokebowl.memberpayment.MemberPayment.member.orders)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.order.Order, querySpaceUid=<gen:3>, path=com.revature.pokebowl.memberpayment.MemberPayment.member.orders.<elements>)
+          - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.memberpayment.MemberPayment.orderSet, querySpaceUid=<gen:4>, path=com.revature.pokebowl.memberpayment.MemberPayment.orderSet)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.order.Order, querySpaceUid=<gen:5>, path=com.revature.pokebowl.memberpayment.MemberPayment.orderSet.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.revature.pokebowl.memberpayment.MemberPayment)
+          - SQL table alias mapping - memberpaym0_
+          - alias suffix - 0_
+          - suffixed key columns - {payment_1_0_0_}
+          - JOIN (JoinDefinedByMetadata(member)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.revature.pokebowl.member.Member)
+                - SQL table alias mapping - member1_
+                - alias suffix - 1_
+                - suffixed key columns - {member_i1_1_1_}
+
+[DEBUG] 2022-08-18 11:21:41.519 [main] EntityLoader - Static select for entity com.revature.pokebowl.memberpayment.MemberPayment [NONE]: select memberpaym0_.payment_id as payment_1_0_0_, memberpaym0_.balance as balance2_0_0_, memberpaym0_.ccv as ccv3_0_0_, memberpaym0_.exp_date as exp_date4_0_0_, memberpaym0_.member_id as member_i7_0_0_, memberpaym0_.provider as provider5_0_0_, memberpaym0_.zip_code as zip_code6_0_0_, member1_.member_id as member_i1_1_1_, member1_.dob as dob2_1_1_, member1_.full_name as full_nam3_1_1_, member1_.is_admin as is_admin4_1_1_, member1_.user_password as user_pas5_1_1_, member1_.username as username6_1_1_ from member_payment memberpaym0_ left outer join members member1_ on memberpaym0_.member_id=member1_.member_id where memberpaym0_.payment_id=?
+[DEBUG] 2022-08-18 11:21:41.519 [main] AbstractEntityPersister - Static SQL for entity: com.revature.pokebowl.order.Order
+[DEBUG] 2022-08-18 11:21:41.519 [main] AbstractEntityPersister -  Version select: select order_id from orders where order_id =?
+[DEBUG] 2022-08-18 11:21:41.519 [main] AbstractEntityPersister -  Snapshot select: select order_.order_id, order_.amount as amount2_2_, order_.member_id as member_i6_2_, order_.payment_id as payment_7_2_, order_.order_address as order_ad3_2_, order_.order_date as order_da4_2_, order_.order_zip as order_zi5_2_ from orders order_ where order_.order_id=?
+[DEBUG] 2022-08-18 11:21:41.519 [main] AbstractEntityPersister -  Insert 0: insert into orders (amount, member_id, payment_id, order_address, order_date, order_zip, order_id) values (?, ?, ?, ?, ?, ?, ?)
+[DEBUG] 2022-08-18 11:21:41.520 [main] AbstractEntityPersister -  Update 0: update orders set amount=?, member_id=?, payment_id=?, order_address=?, order_date=?, order_zip=? where order_id=?
+[DEBUG] 2022-08-18 11:21:41.520 [main] AbstractEntityPersister -  Delete 0: delete from orders where order_id=?
+[DEBUG] 2022-08-18 11:21:41.520 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@65bb9029]
+[DEBUG] 2022-08-18 11:21:41.520 [main] MetamodelGraphWalker - Visiting attribute path : amount
+[DEBUG] 2022-08-18 11:21:41.520 [main] MetamodelGraphWalker - Visiting attribute path : member
+[DEBUG] 2022-08-18 11:21:41.520 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2b214b94]
+[DEBUG] 2022-08-18 11:21:41.520 [main] MetamodelGraphWalker - Visiting attribute path : member.dob
+[DEBUG] 2022-08-18 11:21:41.520 [main] MetamodelGraphWalker - Visiting attribute path : member.fullName
+[DEBUG] 2022-08-18 11:21:41.521 [main] MetamodelGraphWalker - Visiting attribute path : member.isAdmin
+[DEBUG] 2022-08-18 11:21:41.521 [main] MetamodelGraphWalker - Visiting attribute path : member.memberPaymentSet
+[DEBUG] 2022-08-18 11:21:41.521 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@49601f82]
+[DEBUG] 2022-08-18 11:21:41.521 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@23e44287]
+[DEBUG] 2022-08-18 11:21:41.521 [main] MetamodelGraphWalker - Visiting attribute path : member.orders
+[DEBUG] 2022-08-18 11:21:41.521 [main] MetamodelGraphWalker - Property path deemed to be circular : member.orders
+[DEBUG] 2022-08-18 11:21:41.521 [main] MetamodelGraphWalker - Visiting attribute path : member.userPassword
+[DEBUG] 2022-08-18 11:21:41.521 [main] MetamodelGraphWalker - Visiting attribute path : member.username
+[DEBUG] 2022-08-18 11:21:41.521 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment
+[DEBUG] 2022-08-18 11:21:41.521 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2b8d084]
+[DEBUG] 2022-08-18 11:21:41.522 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.balance
+[DEBUG] 2022-08-18 11:21:41.522 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.ccv
+[DEBUG] 2022-08-18 11:21:41.522 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.expDate
+[DEBUG] 2022-08-18 11:21:41.522 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.member
+[DEBUG] 2022-08-18 11:21:41.522 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@24fabd0f]
+[DEBUG] 2022-08-18 11:21:41.522 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.dob
+[DEBUG] 2022-08-18 11:21:41.522 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.fullName
+[DEBUG] 2022-08-18 11:21:41.522 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.isAdmin
+[DEBUG] 2022-08-18 11:21:41.522 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.memberPaymentSet
+[DEBUG] 2022-08-18 11:21:41.523 [main] MetamodelGraphWalker - Property path deemed to be circular : memberPayment.member.memberPaymentSet
+[DEBUG] 2022-08-18 11:21:41.523 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.orders
+[DEBUG] 2022-08-18 11:21:41.523 [main] MetamodelGraphWalker - Property path deemed to be circular : memberPayment.member.orders
+[DEBUG] 2022-08-18 11:21:41.523 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.userPassword
+[DEBUG] 2022-08-18 11:21:41.523 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.username
+[DEBUG] 2022-08-18 11:21:41.524 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.orderSet
+[DEBUG] 2022-08-18 11:21:41.524 [main] MetamodelGraphWalker - Property path deemed to be circular : memberPayment.orderSet
+[DEBUG] 2022-08-18 11:21:41.524 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.provider
+[DEBUG] 2022-08-18 11:21:41.524 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.zipCode
+[DEBUG] 2022-08-18 11:21:41.524 [main] MetamodelGraphWalker - Visiting attribute path : orderAddress
+[DEBUG] 2022-08-18 11:21:41.524 [main] MetamodelGraphWalker - Visiting attribute path : orderDate
+[DEBUG] 2022-08-18 11:21:41.524 [main] MetamodelGraphWalker - Visiting attribute path : orderZip
+[DEBUG] 2022-08-18 11:21:41.525 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-18 11:21:41.525 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-18 11:21:41.526 [main] LoadPlanTreePrinter - LoadPlan(entity=com.revature.pokebowl.order.Order)
+    - Returns
+       - EntityReturnImpl(entity=com.revature.pokebowl.order.Order, querySpaceUid=<gen:0>, path=com.revature.pokebowl.order.Order)
+          - EntityAttributeFetchImpl(entity=com.revature.pokebowl.member.Member, querySpaceUid=<gen:1>, path=com.revature.pokebowl.order.Order.member)
+             - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.member.Member.memberPaymentSet, querySpaceUid=<gen:2>, path=com.revature.pokebowl.order.Order.member.memberPaymentSet)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.memberpayment.MemberPayment, querySpaceUid=<gen:3>, path=com.revature.pokebowl.order.Order.member.memberPaymentSet.<elements>)
+          - EntityAttributeFetchImpl(entity=com.revature.pokebowl.memberpayment.MemberPayment, querySpaceUid=<gen:4>, path=com.revature.pokebowl.order.Order.memberPayment)
+             - EntityAttributeFetchImpl(entity=com.revature.pokebowl.member.Member, querySpaceUid=<gen:5>, path=com.revature.pokebowl.order.Order.memberPayment.member)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.revature.pokebowl.order.Order)
+          - SQL table alias mapping - order0_
+          - alias suffix - 0_
+          - suffixed key columns - {order_id1_2_0_}
+          - JOIN (JoinDefinedByMetadata(member)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.revature.pokebowl.member.Member)
+                - SQL table alias mapping - member1_
+                - alias suffix - 1_
+                - suffixed key columns - {member_i1_1_1_}
+          - JOIN (JoinDefinedByMetadata(memberPayment)) : <gen:0> -> <gen:4>
+             - EntityQuerySpaceImpl(uid=<gen:4>, entity=com.revature.pokebowl.memberpayment.MemberPayment)
+                - SQL table alias mapping - memberpaym2_
+                - alias suffix - 2_
+                - suffixed key columns - {payment_1_0_2_}
+                - JOIN (JoinDefinedByMetadata(member)) : <gen:4> -> <gen:5>
+                   - EntityQuerySpaceImpl(uid=<gen:5>, entity=com.revature.pokebowl.member.Member)
+                      - SQL table alias mapping - member3_
+                      - alias suffix - 3_
+                      - suffixed key columns - {member_i1_1_3_}
+
+[DEBUG] 2022-08-18 11:21:41.526 [main] EntityLoader - Static select for entity com.revature.pokebowl.order.Order [NONE]: select order0_.order_id as order_id1_2_0_, order0_.amount as amount2_2_0_, order0_.member_id as member_i6_2_0_, order0_.payment_id as payment_7_2_0_, order0_.order_address as order_ad3_2_0_, order0_.order_date as order_da4_2_0_, order0_.order_zip as order_zi5_2_0_, member1_.member_id as member_i1_1_1_, member1_.dob as dob2_1_1_, member1_.full_name as full_nam3_1_1_, member1_.is_admin as is_admin4_1_1_, member1_.user_password as user_pas5_1_1_, member1_.username as username6_1_1_, memberpaym2_.payment_id as payment_1_0_2_, memberpaym2_.balance as balance2_0_2_, memberpaym2_.ccv as ccv3_0_2_, memberpaym2_.exp_date as exp_date4_0_2_, memberpaym2_.member_id as member_i7_0_2_, memberpaym2_.provider as provider5_0_2_, memberpaym2_.zip_code as zip_code6_0_2_, member3_.member_id as member_i1_1_3_, member3_.dob as dob2_1_3_, member3_.full_name as full_nam3_1_3_, member3_.is_admin as is_admin4_1_3_, member3_.user_password as user_pas5_1_3_, member3_.username as username6_1_3_ from orders order0_ left outer join members member1_ on order0_.member_id=member1_.member_id left outer join member_payment memberpaym2_ on order0_.payment_id=memberpaym2_.payment_id left outer join members member3_ on memberpaym2_.member_id=member3_.member_id where order0_.order_id=?
+[DEBUG] 2022-08-18 11:21:41.531 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@45792847]
+[DEBUG] 2022-08-18 11:21:41.531 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@706cb08]
+[DEBUG] 2022-08-18 11:21:41.532 [main] MetamodelGraphWalker - Visiting attribute path : balance
+[DEBUG] 2022-08-18 11:21:41.533 [main] MetamodelGraphWalker - Visiting attribute path : ccv
+[DEBUG] 2022-08-18 11:21:41.533 [main] MetamodelGraphWalker - Visiting attribute path : expDate
+[DEBUG] 2022-08-18 11:21:41.533 [main] MetamodelGraphWalker - Visiting attribute path : member
+[DEBUG] 2022-08-18 11:21:41.533 [main] MetamodelGraphWalker - Property path deemed to be circular : member
+[DEBUG] 2022-08-18 11:21:41.533 [main] MetamodelGraphWalker - Visiting attribute path : orderSet
+[DEBUG] 2022-08-18 11:21:41.533 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@5631962]
+[DEBUG] 2022-08-18 11:21:41.533 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@52a70627]
+[DEBUG] 2022-08-18 11:21:41.533 [main] MetamodelGraphWalker - Visiting attribute path : provider
+[DEBUG] 2022-08-18 11:21:41.533 [main] MetamodelGraphWalker - Visiting attribute path : zipCode
+[DEBUG] 2022-08-18 11:21:41.534 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-18 11:21:41.537 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-18 11:21:41.538 [main] LoadPlanTreePrinter - LoadPlan(collection=com.revature.pokebowl.member.Member.memberPaymentSet)
+    - Returns
+       - CollectionReturnImpl(collection=com.revature.pokebowl.member.Member.memberPaymentSet, querySpaceUid=<gen:0>, path=[com.revature.pokebowl.member.Member.memberPaymentSet])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.memberpayment.MemberPayment, querySpaceUid=<gen:1>, path=[com.revature.pokebowl.member.Member.memberPaymentSet].<elements>)
+             - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.memberpayment.MemberPayment.orderSet, querySpaceUid=<gen:2>, path=[com.revature.pokebowl.member.Member.memberPaymentSet].<elements>.orderSet)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.order.Order, querySpaceUid=<gen:3>, path=[com.revature.pokebowl.member.Member.memberPaymentSet].<elements>.orderSet.<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.revature.pokebowl.member.Member.memberPaymentSet)
+          - SQL table alias mapping - memberpaym0_
+          - alias suffix - 0_
+          - suffixed key columns - {member_i7_0_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - payment_1_0_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.revature.pokebowl.memberpayment.MemberPayment)
+                - SQL table alias mapping - memberpaym0_
+                - alias suffix - 1_
+                - suffixed key columns - {payment_1_0_1_}
+
+[DEBUG] 2022-08-18 11:21:41.538 [main] CollectionLoader - Static select for collection com.revature.pokebowl.member.Member.memberPaymentSet: select memberpaym0_.member_id as member_i7_0_0_, memberpaym0_.payment_id as payment_1_0_0_, memberpaym0_.payment_id as payment_1_0_1_, memberpaym0_.balance as balance2_0_1_, memberpaym0_.ccv as ccv3_0_1_, memberpaym0_.exp_date as exp_date4_0_1_, memberpaym0_.member_id as member_i7_0_1_, memberpaym0_.provider as provider5_0_1_, memberpaym0_.zip_code as zip_code6_0_1_ from member_payment memberpaym0_ where memberpaym0_.member_id=?
+[DEBUG] 2022-08-18 11:21:41.538 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@770b3be0]
+[DEBUG] 2022-08-18 11:21:41.538 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1eb6e1c]
+[DEBUG] 2022-08-18 11:21:41.538 [main] MetamodelGraphWalker - Visiting attribute path : amount
+[DEBUG] 2022-08-18 11:21:41.539 [main] MetamodelGraphWalker - Visiting attribute path : member
+[DEBUG] 2022-08-18 11:21:41.539 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5f13be1]
+[DEBUG] 2022-08-18 11:21:41.539 [main] MetamodelGraphWalker - Visiting attribute path : member.dob
+[DEBUG] 2022-08-18 11:21:41.539 [main] MetamodelGraphWalker - Visiting attribute path : member.fullName
+[DEBUG] 2022-08-18 11:21:41.539 [main] MetamodelGraphWalker - Visiting attribute path : member.isAdmin
+[DEBUG] 2022-08-18 11:21:41.539 [main] MetamodelGraphWalker - Visiting attribute path : member.memberPaymentSet
+[DEBUG] 2022-08-18 11:21:41.539 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@50d3bf39]
+[DEBUG] 2022-08-18 11:21:41.539 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@25a73de1]
+[DEBUG] 2022-08-18 11:21:41.539 [main] MetamodelGraphWalker - Visiting attribute path : member.orders
+[DEBUG] 2022-08-18 11:21:41.540 [main] MetamodelGraphWalker - Property path deemed to be circular : member.orders
+[DEBUG] 2022-08-18 11:21:41.540 [main] MetamodelGraphWalker - Visiting attribute path : member.userPassword
+[DEBUG] 2022-08-18 11:21:41.540 [main] MetamodelGraphWalker - Visiting attribute path : member.username
+[DEBUG] 2022-08-18 11:21:41.540 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment
+[DEBUG] 2022-08-18 11:21:41.540 [main] MetamodelGraphWalker - Property path deemed to be circular : memberPayment
+[DEBUG] 2022-08-18 11:21:41.540 [main] MetamodelGraphWalker - Visiting attribute path : orderAddress
+[DEBUG] 2022-08-18 11:21:41.540 [main] MetamodelGraphWalker - Visiting attribute path : orderDate
+[DEBUG] 2022-08-18 11:21:41.540 [main] MetamodelGraphWalker - Visiting attribute path : orderZip
+[DEBUG] 2022-08-18 11:21:41.540 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-18 11:21:41.540 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-18 11:21:41.541 [main] LoadPlanTreePrinter - LoadPlan(collection=com.revature.pokebowl.memberpayment.MemberPayment.orderSet)
+    - Returns
+       - CollectionReturnImpl(collection=com.revature.pokebowl.memberpayment.MemberPayment.orderSet, querySpaceUid=<gen:0>, path=[com.revature.pokebowl.memberpayment.MemberPayment.orderSet])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.order.Order, querySpaceUid=<gen:1>, path=[com.revature.pokebowl.memberpayment.MemberPayment.orderSet].<elements>)
+             - EntityAttributeFetchImpl(entity=com.revature.pokebowl.member.Member, querySpaceUid=<gen:2>, path=[com.revature.pokebowl.memberpayment.MemberPayment.orderSet].<elements>.member)
+                - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.member.Member.memberPaymentSet, querySpaceUid=<gen:3>, path=[com.revature.pokebowl.memberpayment.MemberPayment.orderSet].<elements>.member.memberPaymentSet)
+                   - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.memberpayment.MemberPayment, querySpaceUid=<gen:4>, path=[com.revature.pokebowl.memberpayment.MemberPayment.orderSet].<elements>.member.memberPaymentSet.<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.revature.pokebowl.memberpayment.MemberPayment.orderSet)
+          - SQL table alias mapping - orderset0_
+          - alias suffix - 0_
+          - suffixed key columns - {payment_7_2_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - order_id1_2_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.revature.pokebowl.order.Order)
+                - SQL table alias mapping - orderset0_
+                - alias suffix - 1_
+                - suffixed key columns - {order_id1_2_1_}
+                - JOIN (JoinDefinedByMetadata(member)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=com.revature.pokebowl.member.Member)
+                      - SQL table alias mapping - member1_
+                      - alias suffix - 2_
+                      - suffixed key columns - {member_i1_1_2_}
+
+[DEBUG] 2022-08-18 11:21:41.541 [main] CollectionLoader - Static select for collection com.revature.pokebowl.memberpayment.MemberPayment.orderSet: select orderset0_.payment_id as payment_7_2_0_, orderset0_.order_id as order_id1_2_0_, orderset0_.order_id as order_id1_2_1_, orderset0_.amount as amount2_2_1_, orderset0_.member_id as member_i6_2_1_, orderset0_.payment_id as payment_7_2_1_, orderset0_.order_address as order_ad3_2_1_, orderset0_.order_date as order_da4_2_1_, orderset0_.order_zip as order_zi5_2_1_, member1_.member_id as member_i1_1_2_, member1_.dob as dob2_1_2_, member1_.full_name as full_nam3_1_2_, member1_.is_admin as is_admin4_1_2_, member1_.user_password as user_pas5_1_2_, member1_.username as username6_1_2_ from orders orderset0_ left outer join members member1_ on orderset0_.member_id=member1_.member_id where orderset0_.payment_id=?
+[DEBUG] 2022-08-18 11:21:41.541 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@29852487]
+[DEBUG] 2022-08-18 11:21:41.541 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@771db12c]
+[DEBUG] 2022-08-18 11:21:41.542 [main] MetamodelGraphWalker - Visiting attribute path : amount
+[DEBUG] 2022-08-18 11:21:41.542 [main] MetamodelGraphWalker - Visiting attribute path : member
+[DEBUG] 2022-08-18 11:21:41.542 [main] MetamodelGraphWalker - Property path deemed to be circular : member
+[DEBUG] 2022-08-18 11:21:41.542 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment
+[DEBUG] 2022-08-18 11:21:41.542 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@260f2144]
+[DEBUG] 2022-08-18 11:21:41.542 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.balance
+[DEBUG] 2022-08-18 11:21:41.542 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.ccv
+[DEBUG] 2022-08-18 11:21:41.543 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.expDate
+[DEBUG] 2022-08-18 11:21:41.543 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.member
+[DEBUG] 2022-08-18 11:21:41.543 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@51827393]
+[DEBUG] 2022-08-18 11:21:41.543 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.dob
+[DEBUG] 2022-08-18 11:21:41.543 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.fullName
+[DEBUG] 2022-08-18 11:21:41.543 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.isAdmin
+[DEBUG] 2022-08-18 11:21:41.544 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.memberPaymentSet
+[DEBUG] 2022-08-18 11:21:41.544 [main] MetamodelGraphWalker - Property path deemed to be circular : memberPayment.member.memberPaymentSet
+[DEBUG] 2022-08-18 11:21:41.544 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.orders
+[DEBUG] 2022-08-18 11:21:41.544 [main] MetamodelGraphWalker - Property path deemed to be circular : memberPayment.member.orders
+[DEBUG] 2022-08-18 11:21:41.544 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.userPassword
+[DEBUG] 2022-08-18 11:21:41.544 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.username
+[DEBUG] 2022-08-18 11:21:41.544 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.orderSet
+[DEBUG] 2022-08-18 11:21:41.544 [main] MetamodelGraphWalker - Property path deemed to be circular : memberPayment.orderSet
+[DEBUG] 2022-08-18 11:21:41.544 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.provider
+[DEBUG] 2022-08-18 11:21:41.544 [main] MetamodelGraphWalker - Visiting attribute path : memberPayment.zipCode
+[DEBUG] 2022-08-18 11:21:41.545 [main] MetamodelGraphWalker - Visiting attribute path : orderAddress
+[DEBUG] 2022-08-18 11:21:41.545 [main] MetamodelGraphWalker - Visiting attribute path : orderDate
+[DEBUG] 2022-08-18 11:21:41.545 [main] MetamodelGraphWalker - Visiting attribute path : orderZip
+[DEBUG] 2022-08-18 11:21:41.545 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-18 11:21:41.545 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-18 11:21:41.546 [main] LoadPlanTreePrinter - LoadPlan(collection=com.revature.pokebowl.member.Member.orders)
+    - Returns
+       - CollectionReturnImpl(collection=com.revature.pokebowl.member.Member.orders, querySpaceUid=<gen:0>, path=[com.revature.pokebowl.member.Member.orders])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.order.Order, querySpaceUid=<gen:1>, path=[com.revature.pokebowl.member.Member.orders].<elements>)
+             - EntityAttributeFetchImpl(entity=com.revature.pokebowl.memberpayment.MemberPayment, querySpaceUid=<gen:2>, path=[com.revature.pokebowl.member.Member.orders].<elements>.memberPayment)
+                - EntityAttributeFetchImpl(entity=com.revature.pokebowl.member.Member, querySpaceUid=<gen:3>, path=[com.revature.pokebowl.member.Member.orders].<elements>.memberPayment.member)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.revature.pokebowl.member.Member.orders)
+          - SQL table alias mapping - orders0_
+          - alias suffix - 0_
+          - suffixed key columns - {member_i6_2_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - order_id1_2_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.revature.pokebowl.order.Order)
+                - SQL table alias mapping - orders0_
+                - alias suffix - 1_
+                - suffixed key columns - {order_id1_2_1_}
+                - JOIN (JoinDefinedByMetadata(memberPayment)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=com.revature.pokebowl.memberpayment.MemberPayment)
+                      - SQL table alias mapping - memberpaym1_
+                      - alias suffix - 2_
+                      - suffixed key columns - {payment_1_0_2_}
+                      - JOIN (JoinDefinedByMetadata(member)) : <gen:2> -> <gen:3>
+                         - EntityQuerySpaceImpl(uid=<gen:3>, entity=com.revature.pokebowl.member.Member)
+                            - SQL table alias mapping - member2_
+                            - alias suffix - 3_
+                            - suffixed key columns - {member_i1_1_3_}
+
+[DEBUG] 2022-08-18 11:21:41.546 [main] CollectionLoader - Static select for collection com.revature.pokebowl.member.Member.orders: select orders0_.member_id as member_i6_2_0_, orders0_.order_id as order_id1_2_0_, orders0_.order_id as order_id1_2_1_, orders0_.amount as amount2_2_1_, orders0_.member_id as member_i6_2_1_, orders0_.payment_id as payment_7_2_1_, orders0_.order_address as order_ad3_2_1_, orders0_.order_date as order_da4_2_1_, orders0_.order_zip as order_zi5_2_1_, memberpaym1_.payment_id as payment_1_0_2_, memberpaym1_.balance as balance2_0_2_, memberpaym1_.ccv as ccv3_0_2_, memberpaym1_.exp_date as exp_date4_0_2_, memberpaym1_.member_id as member_i7_0_2_, memberpaym1_.provider as provider5_0_2_, memberpaym1_.zip_code as zip_code6_0_2_, member2_.member_id as member_i1_1_3_, member2_.dob as dob2_1_3_, member2_.full_name as full_nam3_1_3_, member2_.is_admin as is_admin4_1_3_, member2_.user_password as user_pas5_1_3_, member2_.username as username6_1_3_ from orders orders0_ left outer join member_payment memberpaym1_ on orders0_.payment_id=memberpaym1_.payment_id left outer join members member2_ on memberpaym1_.member_id=member2_.member_id where orders0_.member_id=?
+[INFO ] 2022-08-18 11:21:41.600 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@29c2c826] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 2022-08-18 11:21:41.740 [main] SQL - create table member_payment (payment_id varchar(255) not null, balance int4 not null, ccv varchar(255) not null, exp_date date not null, provider varchar(255) not null, zip_code varchar(255) not null, member_id varchar(255), primary key (payment_id))
+[DEBUG] 2022-08-18 11:21:41.791 [main] SQL - create table members (member_id varchar(255) not null, dob date not null, full_name varchar(255) not null, is_admin boolean not null, user_password varchar(255) not null, username varchar(255) not null, primary key (member_id))
+[DEBUG] 2022-08-18 11:21:41.837 [main] SQL - create table orders (order_id varchar(255) not null, amount int4 not null, order_address varchar(255) not null, order_date date not null, order_zip varchar(255) not null, member_id varchar(255), payment_id varchar(255), primary key (order_id))
+[DEBUG] 2022-08-18 11:21:41.886 [main] SQL - alter table members drop constraint UK_lj4daw762ura5d2y6iu7g5n1i
+[DEBUG] 2022-08-18 11:21:41.929 [main] SQL - alter table members add constraint UK_lj4daw762ura5d2y6iu7g5n1i unique (username)
+[DEBUG] 2022-08-18 11:21:41.973 [main] SQL - alter table member_payment add constraint FK4qjmbknicx1cs0pqc7i5fbcj1 foreign key (member_id) references members
+[DEBUG] 2022-08-18 11:21:42.013 [main] SQL - alter table orders add constraint FK2vq7lo4gkknrmghj3rqpqqg6s foreign key (member_id) references members
+[DEBUG] 2022-08-18 11:21:42.055 [main] SQL - alter table orders add constraint FKoj3ioiycumqtsk1iq48k76pfl foreign key (payment_id) references member_payment
+[DEBUG] 2022-08-18 11:21:42.096 [main] JtaPlatformInitiator - No JtaPlatform was specified, checking resolver
+[DEBUG] 2022-08-18 11:21:42.097 [main] JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+[DEBUG] 2022-08-18 11:21:42.103 [main] StandardJtaPlatformResolver - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2022-08-18 11:21:42.103 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 2022-08-18 11:21:42.104 [main] NamedQueryRepository - Checking 0 named HQL queries
+[DEBUG] 2022-08-18 11:21:42.104 [main] NamedQueryRepository - Checking 0 named SQL queries
+[DEBUG] 2022-08-18 11:21:42.109 [main] SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+[DEBUG] 2022-08-18 11:21:42.115 [main] SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@63fdffcd
+[DEBUG] 2022-08-18 11:21:42.116 [main] SessionFactoryRegistry - Registering SessionFactory: 7b9f1341-93fb-4f01-b565-a967ceca9e37 (<unnamed>)
+[DEBUG] 2022-08-18 11:21:42.116 [main] SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
+[DEBUG] 2022-08-18 11:21:42.180 [main] StatisticsInitiator - Statistics initialized [enabled=false]
+[DEBUG] 2022-08-18 11:21:42.185 [main] TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[DEBUG] 2022-08-18 11:21:42.185 [main] TransactionImpl - begin
+[DEBUG] 2022-08-18 11:21:42.190 [main] AbstractSaveEventListener - Generated identifier: 7ef76d99-3dff-41ea-ac0b-f3f546ca65b9, using strategy: org.hibernate.id.Assigned
+[DEBUG] 2022-08-18 11:21:42.206 [main] TransactionImpl - committing
+[DEBUG] 2022-08-18 11:21:42.207 [main] AbstractFlushingEventListener - Processing flush-time cascades
+[DEBUG] 2022-08-18 11:21:42.208 [main] AbstractFlushingEventListener - Dirty checking collections
+[DEBUG] 2022-08-18 11:21:42.212 [main] AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+[DEBUG] 2022-08-18 11:21:42.212 [main] AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+[DEBUG] 2022-08-18 11:21:42.213 [main] EntityPrinter - Listing entities:
+[DEBUG] 2022-08-18 11:21:42.213 [main] EntityPrinter - com.revature.pokebowl.member.Member{userPassword=testPassword, memberPaymentSet=null, dob=2022-08-18, fullName=Test McTester, orders=null, isAdmin=false, memberId=7ef76d99-3dff-41ea-ac0b-f3f546ca65b9, username=testMcTester}
+[DEBUG] 2022-08-18 11:21:42.223 [main] SQL - insert into members (dob, full_name, is_admin, user_password, username, member_id) values (?, ?, ?, ?, ?, ?)
+[DEBUG] 2022-08-18 11:21:42.307 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2022-08-18 11:21:42.307 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2022-08-18 11:21:42.308 [main] JdbcCoordinatorImpl - HHH000420: Closing un-released batch

@@ -30,14 +30,16 @@ public class Order {
     @JoinColumn(name="member_id")
     private Member member;
 
-    public Order(String orderId, int amount, Date orderDate, String orderAddress, String orderZip, String customerUsername, String paymentId) {
+    @ManyToOne
+    @JoinColumn(name="payment_id")
+    private MemberPayment memberPayment;
+
+    public Order(String orderId, int amount, Date orderDate, String orderAddress, String orderZip) {
         this.orderId = orderId;
         this.amount = amount;
         this.orderDate = orderDate;
         this.orderAddress = orderAddress;
         this.orderZip = orderZip;
-        this.customerUsername = customerUsername;
-        this.paymentId = paymentId;
     }
 
     public Order() {
@@ -84,20 +86,20 @@ public class Order {
         this.orderZip = orderZip;
     }
 
-    public String getCustomerUsername() {
-        return customerUsername;
+    public Member getMember() {
+        return member;
     }
 
-    public void setCustomerUsername(String customerUsername) {
-        this.customerUsername = customerUsername;
+    public void setMember(Member member) {
+        this.member = member;
     }
 
-    public String getPaymentId() {
-        return paymentId;
+    public MemberPayment getMemberPayment() {
+        return memberPayment;
     }
 
-    public void setPaymentId(String paymentId) {
-        this.paymentId = paymentId;
+    public void setMemberPayment(MemberPayment memberPayment) {
+        this.memberPayment = memberPayment;
     }
 
     @Override
@@ -108,8 +110,6 @@ public class Order {
                 ", orderDate=" + orderDate +
                 ", orderAddress='" + orderAddress + '\'' +
                 ", orderZip='" + orderZip + '\'' +
-                ", customerUsername='" + customerUsername + '\'' +
-                ", paymentId='" + paymentId + '\'' +
                 '}';
     }
 }
