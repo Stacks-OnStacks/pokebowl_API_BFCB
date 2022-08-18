@@ -2,9 +2,11 @@ package com.revature.pokebowl.dish;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.revature.pokebowl.orderdetails.OrderDetails;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.Set;
 
 @Entity
 @Table(name="dishes")
@@ -25,6 +27,9 @@ public class Dish {
 
     @Column(name="is_admin",nullable=false)
     private boolean isVegetarian;
+
+    @OneToMany(mappedBy="dish",cascade=CascadeType.ALL)
+    private Set<OrderDetails> orderDetailsSet;
 
     public Dish(String dishId, String dishName, int dishCost, String description, boolean isVegetarian) {
         this.dishId = dishId;
@@ -76,6 +81,14 @@ public class Dish {
 
     public void setVegetarian(boolean vegetarian) {
         isVegetarian = vegetarian;
+    }
+
+    public Set<OrderDetails> getOrderDetailsSet() {
+        return orderDetailsSet;
+    }
+
+    public void setOrderDetailsSet(Set<OrderDetails> orderDetailsSet) {
+        this.orderDetailsSet = orderDetailsSet;
     }
 
     @Override
