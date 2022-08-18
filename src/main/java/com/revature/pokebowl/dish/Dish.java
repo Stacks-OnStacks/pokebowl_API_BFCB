@@ -16,7 +16,7 @@ public class Dish {
     @Column(name="dish_id")
     private String dishId;
 
-    @Column(name="dish_name",nullable=false)
+    @Column(name="dish_name",nullable=false,unique=true)
     private String dishName;
 
     @Column(name="dish_cost",nullable=false)
