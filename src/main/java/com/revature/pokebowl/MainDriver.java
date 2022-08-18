@@ -21,22 +21,5 @@ public class MainDriver {
         // ServletContext sc = new ServletContext();
         // sc.run();
 
-        //Test for members
-        try (Session session = getSession()) {
-            Transaction transaction = session.beginTransaction();
-            //Add new member object
-            Member member = new Member();
-            member.setMemberId(UUID.randomUUID().toString());
-            member.setUsername("testMcTester");
-            member.setFullName("Test McTester");
-            member.setUserPassword("testPassword");
-            member.setDob(new Date(System.currentTimeMillis()));
-            session.save(member);
-
-            transaction.commit();
-            HibernateUtil.closeSession();
-        } catch (HibernateException | IOException e) {
-            e.printStackTrace();
-        }
     }
 }
