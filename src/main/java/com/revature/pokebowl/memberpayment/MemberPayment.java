@@ -28,8 +28,9 @@ public class MemberPayment {
     @Column(name="provider",nullable=false)
     private String provider;
 
-    @Column(name="customer_username",nullable=false)
-    private String customerUserName;
+    @ManyToOne
+    @JoinColumn(name="member_id")
+    private Member member;
 
     public MemberPayment(String paymentId, int balance, Date expDate, String ccv, String zipCode, String provider, String customerUserName) {
         this.paymentId = paymentId;
@@ -38,7 +39,6 @@ public class MemberPayment {
         this.ccv = ccv;
         this.zipCode = zipCode;
         this.provider = provider;
-        this.customerUserName = customerUserName;
     }
 
     public MemberPayment() {
@@ -51,6 +51,14 @@ public class MemberPayment {
 
     public void setPaymentId(String paymentId) {
         this.paymentId = paymentId;
+    }
+
+    public Member getMember() {
+        return member;
+    }
+
+    public void setMember(Member member) {
+        this.member = member;
     }
 
     public int getBalance() {
@@ -93,14 +101,6 @@ public class MemberPayment {
         this.provider = provider;
     }
 
-    public String getCustomerUserName() {
-        return customerUserName;
-    }
-
-    public void setCustomerUserName(String customerUserName) {
-        this.customerUserName = customerUserName;
-    }
-
     @Override
     public String toString() {
         return "MemberPayment{" +
@@ -110,7 +110,6 @@ public class MemberPayment {
                 ", ccv='" + ccv + '\'' +
                 ", zipCode='" + zipCode + '\'' +
                 ", provider='" + provider + '\'' +
-                ", customerUserName='" + customerUserName + '\'' +
                 '}';
     }
 }

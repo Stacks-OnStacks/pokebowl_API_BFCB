@@ -37,10 +37,10 @@ public class HibernateUtil {
 
             //HERE IS WHERE WE ADD OUR CLASSES
             configuration.addAnnotatedClass(Member.class);
-            configuration.addAnnotatedClass(Dish.class);
+            // configuration.addAnnotatedClass(Dish.class);
             // configuration.addAnnotatedClass(Order.class);
             // configuration.addAnnotatedClass(OrderDetails.class);
-            // configuration.addAnnotatedClass(MemberPayment.class);
+            configuration.addAnnotatedClass(MemberPayment.class);
 
 
             // ServiceRegistry

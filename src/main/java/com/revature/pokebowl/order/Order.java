@@ -1,5 +1,8 @@
 package com.revature.pokebowl.order;
 
+import com.revature.pokebowl.member.Member;
+import com.revature.pokebowl.memberpayment.MemberPayment;
+
 import javax.persistence.*;
 import java.sql.Date;
 
@@ -23,11 +26,9 @@ public class Order {
     @Column(name="order_zip",nullable=false)
     private String orderZip;
 
-    @Column(name="customer_username",nullable=false)
-    private String customerUsername;
-
-    @Column(name="payment_id",nullable=false)
-    private String paymentId;
+    @ManyToOne
+    @JoinColumn(name="member_id")
+    private Member member;
 
     public Order(String orderId, int amount, Date orderDate, String orderAddress, String orderZip, String customerUsername, String paymentId) {
         this.orderId = orderId;
