@@ -2,9 +2,11 @@ package com.revature.pokebowl.order;
 
 import com.revature.pokebowl.member.Member;
 import com.revature.pokebowl.memberpayment.MemberPayment;
+import com.revature.pokebowl.orderdetails.OrderDetails;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.Set;
 
 @Entity
 @Table(name="orders")
@@ -33,6 +35,9 @@ public class Order {
     @ManyToOne
     @JoinColumn(name="payment_id")
     private MemberPayment memberPayment;
+
+    @OneToMany(mappedBy="order")
+    private Set<OrderDetails> orderDetailsSet;
 
     public Order(String orderId, int amount, Date orderDate, String orderAddress, String orderZip) {
         this.orderId = orderId;
@@ -100,6 +105,14 @@ public class Order {
 
     public void setMemberPayment(MemberPayment memberPayment) {
         this.memberPayment = memberPayment;
+    }
+
+    public Set<OrderDetails> getOrderDetailsSet() {
+        return orderDetailsSet;
+    }
+
+    public void setOrderDetailsSet(Set<OrderDetails> orderDetailsSet) {
+        this.orderDetailsSet = orderDetailsSet;
     }
 
     @Override
