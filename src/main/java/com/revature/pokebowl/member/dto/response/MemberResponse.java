@@ -1,4 +1,4 @@
-package com.revature.nabnak.member.dto.response;
+package com.revature.pokebowl.member.dto.response;
 
 import com.revature.pokebowl.member.Member;
 import java.sql.Date;
