@@ -19,8 +19,10 @@ public class MemberDao implements Crudable<Member> {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
+
             session.save(newMember);
             transaction.commit();
+
             return newMember;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
@@ -35,8 +37,10 @@ public class MemberDao implements Crudable<Member> {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
-            List<Member> members = session.createQuery("FROM Member").list();
+
+            List<Member> members = session.createQuery("FROM members").list();
             transaction.commit();
+
             return members;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
@@ -51,8 +55,10 @@ public class MemberDao implements Crudable<Member> {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
+
             Member member = session.get(Member.class, id);
             transaction.commit();
+
             return member;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
@@ -67,8 +73,10 @@ public class MemberDao implements Crudable<Member> {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
+
             session.merge(updatedMember);
             transaction.commit();
+
             return true;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
@@ -83,6 +91,7 @@ public class MemberDao implements Crudable<Member> {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
+
             Member member = session.load(Member.class, id);
             session.remove(member);
             transaction.commit();
@@ -95,14 +104,16 @@ public class MemberDao implements Crudable<Member> {
         }
     }
 
-    public Member loginCredentialCheck(String email, String password) {
+    public Member loginCredentialCheck(String username, String password) {
 
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
-            Query query = session.createQuery("from Member where email= :email and password= :password");
-            query.setParameter("email", email);
+
+            Query query = session.createQuery("from members where username= :username and password= :password");
+            query.setParameter("username", username);
             query.setParameter("password", password);
+
             Member member = (Member) query.uniqueResult();
             transaction.commit();
             return member;
@@ -114,14 +125,17 @@ public class MemberDao implements Crudable<Member> {
         }
     }
 
-    public boolean checkEmail(String email) {
+    public boolean checkUsername(String username) {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
-            Query query = session.createQuery("from Member where email= :email");
-            query.setParameter("email", email);
+
+            Query query = session.createQuery("from members where username= :username");
+            query.setParameter("username", username);
+
             Member member = (Member) query.uniqueResult();
             transaction.commit();
+
             if(member == null) return true;
             return false;
         } catch (HibernateException | IOException e) {
