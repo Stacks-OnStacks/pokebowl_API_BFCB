@@ -1,9 +1,9 @@
 package com.revature.pokebowl.member;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-//import com.revature.pokebowl.member.dto.requests.EditMemberRequest;
-//import com.revature.pokebowl.member.dto.requests.NewRegistrationRequest;
-//import com.revature.pokebowl.member.dto.response.MemberResponse;
+import com.revature.pokebowl.member.dto.requests.EditMemberRequest;
+import com.revature.pokebowl.member.dto.requests.NewRegistrationRequest;
+import com.revature.pokebowl.member.dto.response.MemberResponse;
 //import com.revature.pokebowl.util.exceptions.InvalidUserInputException;
 //import com.revature.pokebowl.util.exceptions.ResourcePersistanceException;
 import com.revature.pokebowl.util.interfaces.Authable;
