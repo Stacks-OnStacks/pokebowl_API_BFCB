@@ -1,16 +1,22 @@
 package com.revature.pokebowl.dish.dto.requests;
 
-import com.revature.pokebowl.util.web.dto.EditResourceRequests;
 
-public class EditDishRequest extends EditResourceRequests {
+public class CreateDishRequest {
 
     private String dishName;
     private int dishCost;
     private String description;
     private boolean isVegetarian;
 
-    public EditDishRequest() {
+    public CreateDishRequest() {
         super();
+    }
+
+    public CreateDishRequest(String dishName, int dishCost, String description, boolean isVegetarian) {
+        this.dishName = dishName;
+        this.dishCost = dishCost;
+        this.description = description;
+        this.isVegetarian = isVegetarian;
     }
 
     public String getDishName() {
@@ -47,7 +53,7 @@ public class EditDishRequest extends EditResourceRequests {
 
     @Override
     public String toString() {
-        return "EditDishRequest{" +
+        return "CreateDishRequest{" +
                 "dishName='" + dishName + '\'' +
                 ", dishCost=" + dishCost +
                 ", description='" + description + '\'' +

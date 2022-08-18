@@ -25,7 +25,7 @@ public class Dish {
     @Column(name="description",nullable=false)
     private String description;
 
-    @Column(name="is_admin",nullable=false)
+    @Column(name="is_vegetarian",nullable=false)
     private boolean isVegetarian;
 
     @OneToMany(mappedBy="dish",cascade=CascadeType.ALL)
