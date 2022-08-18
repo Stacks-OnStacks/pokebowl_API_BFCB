@@ -38,7 +38,7 @@ public class MemberDao implements Crudable<Member> {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
 
-            List<Member> members = session.createQuery("FROM members").list();
+            List<Member> members = session.createQuery("FROM Member").list();
             transaction.commit();
 
             return members;
