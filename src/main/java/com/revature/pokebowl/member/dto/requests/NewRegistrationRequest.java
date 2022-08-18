@@ -1,4 +1,5 @@
 package com.revature.pokebowl.member.dto.requests;
+import java.sql.Date;
 
 public class NewRegistrationRequest {
 
@@ -8,16 +9,16 @@ public class NewRegistrationRequest {
 
     private String password;
 
-    private int experienceMonths;
+    private Date dob;
 
     public NewRegistrationRequest() {
     }
 
-    public NewRegistrationRequest(String fullName, String email, String password, int experienceMonths) {
+    public NewRegistrationRequest(String fullName, String email, String password, Date dob) {
         this.fullName = fullName;
         this.email = email;
         this.password = password;
-        this.experienceMonths = experienceMonths;
+        this.dob = dob;
     }
 
     public String getFullName() {
@@ -28,11 +29,11 @@ public class NewRegistrationRequest {
         this.fullName = fullName;
     }
 
-    public String getEmail() {
+    public String getUsername() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setUsername(String email) {
         this.email = email;
     }
 
@@ -44,12 +45,12 @@ public class NewRegistrationRequest {
         this.password = password;
     }
 
-    public int getExperienceMonths() {
-        return experienceMonths;
+    public Date getDob() {
+        return dob;
     }
 
-    public void setExperienceMonths(int experienceMonths) {
-        this.experienceMonths = experienceMonths;
+    public void setDob(Date dob) {
+        this.dob = dob;
     }
 
     @Override
@@ -57,7 +58,7 @@ public class NewRegistrationRequest {
         return "NewRegistractionRequest{" +
                 "fullName='" + fullName + '\'' +
                 ", email='" + email + '\'' +
-                ", experienceMonths='" + experienceMonths + '\'' +
+                ", dob='" + dob + '\'' +
                 '}';
     }
 }
