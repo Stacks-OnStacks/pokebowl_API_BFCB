@@ -2,16 +2,19 @@ package com.revature.pokebowl.dish;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.revature.pokebowl.orderdetails.OrderDetails;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.Set;
 
 @Entity
 @Table(name="dishes")
 public class Dish {
 
     @Id
-    private String id;
+    @Column(name="dish_id")
+    private String dishId;
 
     @Column(name="dish_name",nullable=false)
     private String dishName;
@@ -25,8 +28,11 @@ public class Dish {
     @Column(name="is_admin",nullable=false)
     private boolean isVegetarian;
 
-    public Dish(String id, String dishName, int dishCost, String description, boolean isVegetarian) {
-        this.id = id;
+    @OneToMany(mappedBy="dish",cascade=CascadeType.ALL)
+    private Set<OrderDetails> orderDetailsSet;
+
+    public Dish(String dishId, String dishName, int dishCost, String description, boolean isVegetarian) {
+        this.dishId = dishId;
         this.dishName = dishName;
         this.dishCost = dishCost;
         this.description = description;
@@ -37,12 +43,12 @@ public class Dish {
         super();
     }
 
-    public String getId() {
-        return id;
+    public String getDishId() {
+        return dishId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setDishId(String id) {
+        this.dishId = dishId;
     }
 
     public String getDishName() {
@@ -77,10 +83,18 @@ public class Dish {
         isVegetarian = vegetarian;
     }
 
+    public Set<OrderDetails> getOrderDetailsSet() {
+        return orderDetailsSet;
+    }
+
+    public void setOrderDetailsSet(Set<OrderDetails> orderDetailsSet) {
+        this.orderDetailsSet = orderDetailsSet;
+    }
+
     @Override
     public String toString() {
         return "Dish{" +
-                "id='" + id + '\'' +
+                "dishId='" + dishId + '\'' +
                 ", dishName='" + dishName + '\'' +
                 ", dishCost=" + dishCost +
                 ", description='" + description + '\'' +

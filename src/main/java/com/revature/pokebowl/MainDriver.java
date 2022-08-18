@@ -26,9 +26,10 @@ public class MainDriver {
             Transaction transaction = session.beginTransaction();
             //Add new member object
             Member member = new Member();
-            member.setId(UUID.randomUUID().toString());
-            member.setFullName("test mcTester");
-            member.setUserPassword("test mcTester");
+            member.setMemberId(UUID.randomUUID().toString());
+            member.setUsername("testMcTester");
+            member.setFullName("Test McTester");
+            member.setUserPassword("testPassword");
             member.setDob(new Date(System.currentTimeMillis()));
             session.save(member);
 

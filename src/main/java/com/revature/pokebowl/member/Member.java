@@ -2,16 +2,23 @@ package com.revature.pokebowl.member;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.revature.pokebowl.memberpayment.MemberPayment;
+import com.revature.pokebowl.order.Order;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.Set;
 
 @Entity
 @Table(name="members")
 public class Member {
 
     @Id
-    private String id;
+    @Column(name="member_id")
+    private String memberId;
+
+    @Column(name="username",nullable=false,unique=true)
+    private String username;
 
     @Column(name="full_name",nullable=false)
     private String fullName;
@@ -26,8 +33,15 @@ public class Member {
     @Column(name="is_admin",nullable=false)
     private boolean isAdmin;
 
-    public Member(String id, String fullName, String userPassword, Date dob, boolean isAdmin) {
-        this.id = id;
+    @OneToMany(mappedBy="member",cascade=CascadeType.ALL)
+    private Set<MemberPayment> memberPaymentSet;
+
+    @OneToMany(mappedBy="member",cascade=CascadeType.ALL)
+    private Set<Order> orders;
+
+    public Member(String memberId, String username, String fullName, String userPassword, Date dob, boolean isAdmin) {
+        this.memberId = memberId;
+        this.username = username;
         this.fullName = fullName;
         this.userPassword = userPassword;
         this.dob = dob;
@@ -38,12 +52,20 @@ public class Member {
         super();
     }
 
-    public String getId() {
-        return id;
+    public String getMemberId() {
+        return memberId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setMemberId(String memberId) {
+        this.memberId = memberId;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getFullName() {
@@ -78,12 +100,28 @@ public class Member {
         isAdmin = admin;
     }
 
+    public Set<MemberPayment> getMemberPaymentSet() {
+        return memberPaymentSet;
+    }
+
+    public void setMemberPaymentSet(Set<MemberPayment> memberPaymentSet) {
+        this.memberPaymentSet = memberPaymentSet;
+    }
+
+    public Set<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(Set<Order> orders) {
+        this.orders = orders;
+    }
+
     @Override
     public String toString() {
         return "Member{" +
-                "id='" + id + '\'' +
+                "memberId='" + memberId + '\'' +
+                ", username='" + username + '\'' +
                 ", fullName='" + fullName + '\'' +
-                ", userPassword='" + userPassword + '\'' +
                 ", dob=" + dob +
                 ", isAdmin=" + isAdmin +
                 '}';
