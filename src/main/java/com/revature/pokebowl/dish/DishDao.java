@@ -36,7 +36,7 @@ public class DishDao implements Crudable<Dish> {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
 
-            List<Dish> dishes = session.createQuery("FROM dishes").list();
+            List<Dish> dishes = session.createQuery("FROM Dish").list();
             transaction.commit();
 
             return dishes;

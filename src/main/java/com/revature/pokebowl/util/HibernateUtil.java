@@ -1,13 +1,12 @@
 package com.revature.pokebowl.util;
 
-import com.revature.pokebowl.dish.Dish;
-
 //import com.revature.pokebowl.member.Member;// no member class yet
 
 import com.revature.pokebowl.member.Member;
 import com.revature.pokebowl.memberpayment.MemberPayment;
 import com.revature.pokebowl.order.Order;
 import com.revature.pokebowl.orderdetails.OrderDetails;
+import com.revature.pokebowl.dish.Dish;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
