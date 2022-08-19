@@ -37,7 +37,6 @@ public class MemberServlet extends HttpServlet implements Authable {
         String member_id = req.getParameter("member_id"); //CHANGED THIS TO member_id instead of member_id
         Member authMember = (Member) req.getSession().getAttribute("authMember"); // cast the returned object to a member
 
-//        } else
         if(member_id != null) {
             logger.info("member_id entered {}", member_id);
             try {

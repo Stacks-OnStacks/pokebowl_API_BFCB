@@ -30,17 +30,18 @@ public class ServletContext {
         // new File("src/main/webapp/").mkdirs();
         // new File("target/classes").mkdirs();
 
-        String webappDirLocation = new File("src/main/webapp/").getAbsolutePath();  // absolute path of webapp directory
-        String additionalClasses = new File("target/classes").getAbsolutePath();    // absolute path of java classes
+        String webappDirLocation = new File("src/main/webapp").getAbsolutePath();  // absolute path of webapp directory
+        String additionalClasses = new File("target/classes/").getAbsolutePath();    // absolute path of java classes
 
         // initialize Tomcat
         Tomcat tomcat = new Tomcat();
 
         try {
             // initialization of the Servlet Context and giving Tomcat access/knowledge of all pertinent classes in this project
-            StandardContext standardContext = (StandardContext) tomcat.addWebapp("/",webappDirLocation);
+            StandardContext standardContext = (StandardContext) tomcat.addWebapp("",webappDirLocation);
             WebResourceRoot resourceRoot = new StandardRoot(standardContext);
             resourceRoot.addPreResources(new DirResourceSet(resourceRoot,"/WEB-INF/classes", additionalClasses, "/"));
+
 
             standardContext.setResources(resourceRoot); // Give Tomcat access to all classes' information
 
