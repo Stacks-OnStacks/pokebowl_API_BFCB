@@ -15,7 +15,7 @@ import java.util.Set;
 public class Member {
 
     @Id
-    @Column(name="member_id")
+    @Column(name="member_id") // consider putting false and unique here. currently members can be created with "" and " " and null as member_id values
     private String memberId;
 
     @Column(name="username",nullable=false,unique=true)
