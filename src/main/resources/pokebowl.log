@@ -9948,3 +9948,1197 @@ java.lang.Exception: exception just for purpose of providing stack trace
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.23.jar:8.5.23]
 	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
 [DEBUG] 2022-08-18 17:27:02.038 [Hibernate Connection Pool Validation Thread] DriverManagerConnectionProviderImpl - Connection pool now considered primed; min-size will be maintained
+[DEBUG] 2022-08-18 18:40:18.178 [http-nio-8080-exec-4] logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[DEBUG] 2022-08-18 18:40:18.191 [http-nio-8080-exec-4] IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2022-08-18 18:40:18.192 [http-nio-8080-exec-4] IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[DEBUG] 2022-08-18 18:40:18.195 [http-nio-8080-exec-4] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[INFO ] 2022-08-18 18:40:18.220 [http-nio-8080-exec-4] Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+[INFO ] 2022-08-18 18:40:18.223 [http-nio-8080-exec-4] Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=postgres, hibernate.connection.password=****, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.show_sql=true, hibernate.connection.url=jdbc:postgresql://beck-db-instance.cewwl2d9shzm.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=pokebowl, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=org.postgresql.Driver, hibernate.hbm2ddl.auto=update}
+[DEBUG] 2022-08-18 18:40:18.365 [http-nio-8080-exec-4] IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2022-08-18 18:40:18.366 [http-nio-8080-exec-4] IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[DEBUG] 2022-08-18 18:40:18.367 [http-nio-8080-exec-4] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[DEBUG] 2022-08-18 18:40:18.371 [http-nio-8080-exec-4] ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+[DEBUG] 2022-08-18 18:40:18.372 [http-nio-8080-exec-4] Configuration - Building session factory using provided StandardServiceRegistry
+[DEBUG] 2022-08-18 18:40:18.378 [http-nio-8080-exec-4] RegionFactoryInitiator - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+[DEBUG] 2022-08-18 18:40:18.379 [http-nio-8080-exec-4] RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[INFO ] 2022-08-18 18:40:18.392 [http-nio-8080-exec-4] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[DEBUG] 2022-08-18 18:40:18.414 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@2709cfbe
+[DEBUG] 2022-08-18 18:40:18.414 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@2709cfbe
+[DEBUG] 2022-08-18 18:40:18.416 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@2709cfbe
+[DEBUG] 2022-08-18 18:40:18.419 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@62d96300
+[DEBUG] 2022-08-18 18:40:18.421 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@46d37c49
+[DEBUG] 2022-08-18 18:40:18.421 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@68c787dd
+[DEBUG] 2022-08-18 18:40:18.422 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@6245d955
+[DEBUG] 2022-08-18 18:40:18.423 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@6245d955
+[DEBUG] 2022-08-18 18:40:18.423 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@6245d955
+[DEBUG] 2022-08-18 18:40:18.424 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@3683d8be
+[DEBUG] 2022-08-18 18:40:18.424 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@3683d8be
+[DEBUG] 2022-08-18 18:40:18.424 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@3683d8be
+[DEBUG] 2022-08-18 18:40:18.425 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@ed00b7f
+[DEBUG] 2022-08-18 18:40:18.426 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@ed00b7f
+[DEBUG] 2022-08-18 18:40:18.426 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@ed00b7f
+[DEBUG] 2022-08-18 18:40:18.428 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@1b330ee7
+[DEBUG] 2022-08-18 18:40:18.429 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@1b330ee7
+[DEBUG] 2022-08-18 18:40:18.430 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@1b330ee7
+[DEBUG] 2022-08-18 18:40:18.431 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@1b00c6d0
+[DEBUG] 2022-08-18 18:40:18.431 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@1b00c6d0
+[DEBUG] 2022-08-18 18:40:18.432 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@1b00c6d0
+[DEBUG] 2022-08-18 18:40:18.432 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@2899138
+[DEBUG] 2022-08-18 18:40:18.432 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@2899138
+[DEBUG] 2022-08-18 18:40:18.433 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@2899138
+[DEBUG] 2022-08-18 18:40:18.434 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@46c01887
+[DEBUG] 2022-08-18 18:40:18.434 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@46c01887
+[DEBUG] 2022-08-18 18:40:18.434 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@46c01887
+[DEBUG] 2022-08-18 18:40:18.437 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@71d98a47
+[DEBUG] 2022-08-18 18:40:18.438 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@71d98a47
+[DEBUG] 2022-08-18 18:40:18.439 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@3cef60f6
+[DEBUG] 2022-08-18 18:40:18.439 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@3cef60f6
+[DEBUG] 2022-08-18 18:40:18.439 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@3f975866
+[DEBUG] 2022-08-18 18:40:18.439 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@3f975866
+[DEBUG] 2022-08-18 18:40:18.440 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@d96adce
+[DEBUG] 2022-08-18 18:40:18.440 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@612acd
+[DEBUG] 2022-08-18 18:40:18.441 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@18247ac
+[DEBUG] 2022-08-18 18:40:18.441 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@18247ac
+[DEBUG] 2022-08-18 18:40:18.442 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@492114e3
+[DEBUG] 2022-08-18 18:40:18.442 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@492114e3
+[DEBUG] 2022-08-18 18:40:18.459 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@31299ae2
+[DEBUG] 2022-08-18 18:40:18.460 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@31299ae2
+[DEBUG] 2022-08-18 18:40:18.462 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@466c83ee
+[DEBUG] 2022-08-18 18:40:18.463 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@466c83ee
+[DEBUG] 2022-08-18 18:40:18.463 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@25861b5e
+[DEBUG] 2022-08-18 18:40:18.464 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@25861b5e
+[DEBUG] 2022-08-18 18:40:18.464 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@3d4d0f6f
+[DEBUG] 2022-08-18 18:40:18.465 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@3d4d0f6f
+[DEBUG] 2022-08-18 18:40:18.468 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@69587691
+[DEBUG] 2022-08-18 18:40:18.469 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@69587691
+[DEBUG] 2022-08-18 18:40:18.471 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@58b59d9c
+[DEBUG] 2022-08-18 18:40:18.471 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@58b59d9c
+[DEBUG] 2022-08-18 18:40:18.475 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@47bc75d1
+[DEBUG] 2022-08-18 18:40:18.476 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@47bc75d1
+[DEBUG] 2022-08-18 18:40:18.477 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@494817e3
+[DEBUG] 2022-08-18 18:40:18.477 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@494817e3
+[DEBUG] 2022-08-18 18:40:18.478 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@476ce762
+[DEBUG] 2022-08-18 18:40:18.479 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@476ce762
+[DEBUG] 2022-08-18 18:40:18.480 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@7bbab80f
+[DEBUG] 2022-08-18 18:40:18.481 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@7bbab80f
+[DEBUG] 2022-08-18 18:40:18.482 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@7bbab80f
+[DEBUG] 2022-08-18 18:40:18.483 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@164adf10
+[DEBUG] 2022-08-18 18:40:18.484 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@45a227b7
+[DEBUG] 2022-08-18 18:40:18.484 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@45a227b7
+[DEBUG] 2022-08-18 18:40:18.484 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@45a227b7
+[DEBUG] 2022-08-18 18:40:18.484 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@63bb5d29
+[DEBUG] 2022-08-18 18:40:18.485 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@5a5289a
+[DEBUG] 2022-08-18 18:40:18.487 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@22fed59c
+[DEBUG] 2022-08-18 18:40:18.488 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@22fed59c
+[DEBUG] 2022-08-18 18:40:18.489 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@421276cb
+[DEBUG] 2022-08-18 18:40:18.489 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@421276cb
+[DEBUG] 2022-08-18 18:40:18.489 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@9376885
+[DEBUG] 2022-08-18 18:40:18.490 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@9376885
+[DEBUG] 2022-08-18 18:40:18.490 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@7c05f9ac
+[DEBUG] 2022-08-18 18:40:18.490 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@7c05f9ac
+[DEBUG] 2022-08-18 18:40:18.491 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@27d52b82
+[DEBUG] 2022-08-18 18:40:18.492 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@27d52b82
+[DEBUG] 2022-08-18 18:40:18.492 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@75865a7b
+[DEBUG] 2022-08-18 18:40:18.493 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@2120baef
+[DEBUG] 2022-08-18 18:40:18.495 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@2120baef
+[DEBUG] 2022-08-18 18:40:18.495 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@2120baef
+[DEBUG] 2022-08-18 18:40:18.496 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@2f03079a
+[DEBUG] 2022-08-18 18:40:18.497 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@2f03079a
+[DEBUG] 2022-08-18 18:40:18.497 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@2f03079a
+[DEBUG] 2022-08-18 18:40:18.499 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@4b30236a
+[DEBUG] 2022-08-18 18:40:18.499 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@4a628e49
+[DEBUG] 2022-08-18 18:40:18.500 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@6e4192d6
+[DEBUG] 2022-08-18 18:40:18.500 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@6e4192d6
+[DEBUG] 2022-08-18 18:40:18.500 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@6e4192d6
+[DEBUG] 2022-08-18 18:40:18.500 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@183af42e
+[DEBUG] 2022-08-18 18:40:18.501 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@183af42e
+[DEBUG] 2022-08-18 18:40:18.502 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@183af42e
+[DEBUG] 2022-08-18 18:40:18.502 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@5633f344
+[DEBUG] 2022-08-18 18:40:18.502 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@187b6e4c
+[DEBUG] 2022-08-18 18:40:18.503 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@4a9cd027
+[DEBUG] 2022-08-18 18:40:18.503 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@4a9cd027
+[DEBUG] 2022-08-18 18:40:18.504 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@360db2be
+[DEBUG] 2022-08-18 18:40:18.505 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@4df31912
+[DEBUG] 2022-08-18 18:40:18.506 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@4df31912
+[DEBUG] 2022-08-18 18:40:18.507 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@c27e460
+[DEBUG] 2022-08-18 18:40:18.507 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@c27e460
+[DEBUG] 2022-08-18 18:40:18.508 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@579869d
+[DEBUG] 2022-08-18 18:40:18.508 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@5d8d77df
+[DEBUG] 2022-08-18 18:40:18.509 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@56c56e68
+[DEBUG] 2022-08-18 18:40:18.511 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@3f78f27b
+[DEBUG] 2022-08-18 18:40:18.511 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@3f78f27b
+[DEBUG] 2022-08-18 18:40:18.512 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@1a6c0a0c
+[DEBUG] 2022-08-18 18:40:18.513 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@62ffd810
+[DEBUG] 2022-08-18 18:40:18.514 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@4290ddda
+[DEBUG] 2022-08-18 18:40:18.514 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@7a7c9ff9
+[DEBUG] 2022-08-18 18:40:18.515 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@bad6d0
+[DEBUG] 2022-08-18 18:40:18.515 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@1c99b18f
+[DEBUG] 2022-08-18 18:40:18.515 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@5823c1cb
+[DEBUG] 2022-08-18 18:40:18.515 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@46be0e61
+[DEBUG] 2022-08-18 18:40:18.541 [http-nio-8080-exec-4] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[DEBUG] 2022-08-18 18:40:18.545 [http-nio-8080-exec-4] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[DEBUG] 2022-08-18 18:40:18.548 [http-nio-8080-exec-4] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2022-08-18 18:40:18.548 [http-nio-8080-exec-4] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2022-08-18 18:40:18.548 [http-nio-8080-exec-4] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[DEBUG] 2022-08-18 18:40:18.549 [http-nio-8080-exec-4] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[DEBUG] 2022-08-18 18:40:18.549 [http-nio-8080-exec-4] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[DEBUG] 2022-08-18 18:40:18.550 [http-nio-8080-exec-4] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2022-08-18 18:40:18.552 [http-nio-8080-exec-4] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+[DEBUG] 2022-08-18 18:40:18.553 [http-nio-8080-exec-4] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[DEBUG] 2022-08-18 18:40:18.553 [http-nio-8080-exec-4] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[DEBUG] 2022-08-18 18:40:18.554 [http-nio-8080-exec-4] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+[DEBUG] 2022-08-18 18:40:18.554 [http-nio-8080-exec-4] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2022-08-18 18:40:18.554 [http-nio-8080-exec-4] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[WARN ] 2022-08-18 18:40:18.558 [http-nio-8080-exec-4] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2022-08-18 18:40:18.569 [http-nio-8080-exec-4] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://beck-db-instance.cewwl2d9shzm.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=pokebowl]
+[INFO ] 2022-08-18 18:40:18.570 [http-nio-8080-exec-4] pooling - HHH10001001: Connection properties: {user=postgres, password=WSo3vUcu75t39dnr9GPfWt}
+[INFO ] 2022-08-18 18:40:18.570 [http-nio-8080-exec-4] pooling - HHH10001003: Autocommit mode: false
+[DEBUG] 2022-08-18 18:40:18.575 [http-nio-8080-exec-4] DriverManagerConnectionProviderImpl - Initializing Connection pool with 1 Connections
+[INFO ] 2022-08-18 18:40:18.576 [http-nio-8080-exec-4] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[DEBUG] 2022-08-18 18:40:19.222 [http-nio-8080-exec-4] JdbcEnvironmentInitiator - Database ->
+       name : PostgreSQL
+    version : 13.4
+      major : 13
+      minor : 4
+[DEBUG] 2022-08-18 18:40:19.224 [http-nio-8080-exec-4] JdbcEnvironmentInitiator - Driver ->
+       name : PostgreSQL JDBC Driver
+    version : 42.3.3
+      major : 42
+      minor : 3
+[DEBUG] 2022-08-18 18:40:19.224 [http-nio-8080-exec-4] JdbcEnvironmentInitiator - JDBC version : 4.2
+[INFO ] 2022-08-18 18:40:19.233 [http-nio-8080-exec-4] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[DEBUG] 2022-08-18 18:40:19.241 [http-nio-8080-exec-4] IdentifierHelperBuilder - JDBC driver metadata reported database stores quoted identifiers in neither upper, lower nor mixed case
+[DEBUG] 2022-08-18 18:40:19.318 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@2b9bd18e
+[DEBUG] 2022-08-18 18:40:19.319 [http-nio-8080-exec-4] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.PostgresUUIDType@2b9bd18e
+[DEBUG] 2022-08-18 18:40:19.319 [http-nio-8080-exec-4] BasicTypeRegistry - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@27d52b82
+[DEBUG] 2022-08-18 18:40:19.321 [http-nio-8080-exec-4] TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@51ff3582] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@145ecfaf]
+[DEBUG] 2022-08-18 18:40:19.362 [http-nio-8080-exec-4] Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[DEBUG] 2022-08-18 18:40:19.370 [http-nio-8080-exec-4] AnnotationBinder - Binding entity from annotated class: com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-18 18:40:19.380 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2022-08-18 18:40:19.382 [http-nio-8080-exec-4] EntityBinder - Import with entity name Member
+[DEBUG] 2022-08-18 18:40:19.384 [http-nio-8080-exec-4] EntityBinder - Bind entity com.revature.pokebowl.member.Member on table members
+[DEBUG] 2022-08-18 18:40:19.403 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=member_id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.405 [http-nio-8080-exec-4] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.member.Member] is safe
+[DEBUG] 2022-08-18 18:40:19.405 [http-nio-8080-exec-4] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-18 18:40:19.405 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property memberId with lazy=false
+[DEBUG] 2022-08-18 18:40:19.407 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:memberId]
+[DEBUG] 2022-08-18 18:40:19.408 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for memberId
+[DEBUG] 2022-08-18 18:40:19.410 [http-nio-8080-exec-4] PropertyBinder - Building property memberId
+[DEBUG] 2022-08-18 18:40:19.411 [http-nio-8080-exec-4] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(member_id)]), memberId, assigned, , ...)
+[DEBUG] 2022-08-18 18:40:19.412 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=dob, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.412 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property dob with lazy=false
+[DEBUG] 2022-08-18 18:40:19.412 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:dob]
+[DEBUG] 2022-08-18 18:40:19.412 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for dob
+[DEBUG] 2022-08-18 18:40:19.412 [http-nio-8080-exec-4] PropertyBinder - Building property dob
+[DEBUG] 2022-08-18 18:40:19.412 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=full_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.413 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property fullName with lazy=false
+[DEBUG] 2022-08-18 18:40:19.413 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:fullName]
+[DEBUG] 2022-08-18 18:40:19.413 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for fullName
+[DEBUG] 2022-08-18 18:40:19.413 [http-nio-8080-exec-4] PropertyBinder - Building property fullName
+[DEBUG] 2022-08-18 18:40:19.413 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=is_admin, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.413 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property isAdmin with lazy=false
+[DEBUG] 2022-08-18 18:40:19.413 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:isAdmin]
+[DEBUG] 2022-08-18 18:40:19.413 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for isAdmin
+[DEBUG] 2022-08-18 18:40:19.414 [http-nio-8080-exec-4] PropertyBinder - Building property isAdmin
+[DEBUG] 2022-08-18 18:40:19.416 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='member'}
+[DEBUG] 2022-08-18 18:40:19.421 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=memberPaymentList, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.423 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.430 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.431 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=memberPaymentList_KEY, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.432 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='memberPaymentList_KEY', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2022-08-18 18:40:19.434 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='member'}
+[DEBUG] 2022-08-18 18:40:19.435 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='member'}
+[DEBUG] 2022-08-18 18:40:19.436 [http-nio-8080-exec-4] CollectionBinder - Collection role: com.revature.pokebowl.member.Member.memberPaymentList
+[DEBUG] 2022-08-18 18:40:19.439 [http-nio-8080-exec-4] PropertyBinder - Building property memberPaymentList
+[DEBUG] 2022-08-18 18:40:19.440 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='member'}
+[DEBUG] 2022-08-18 18:40:19.442 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=orders, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.444 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.445 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.445 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=orders_KEY, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.445 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='orders_KEY', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2022-08-18 18:40:19.445 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='member'}
+[DEBUG] 2022-08-18 18:40:19.445 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='member'}
+[DEBUG] 2022-08-18 18:40:19.446 [http-nio-8080-exec-4] CollectionBinder - Collection role: com.revature.pokebowl.member.Member.orders
+[DEBUG] 2022-08-18 18:40:19.446 [http-nio-8080-exec-4] PropertyBinder - Building property orders
+[DEBUG] 2022-08-18 18:40:19.446 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=user_password, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.447 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property userPassword with lazy=false
+[DEBUG] 2022-08-18 18:40:19.447 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:userPassword]
+[DEBUG] 2022-08-18 18:40:19.447 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for userPassword
+[DEBUG] 2022-08-18 18:40:19.447 [http-nio-8080-exec-4] PropertyBinder - Building property userPassword
+[DEBUG] 2022-08-18 18:40:19.451 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(members), mappingColumn=username, insertable=true, updatable=true, unique=true}
+[DEBUG] 2022-08-18 18:40:19.452 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property username with lazy=false
+[DEBUG] 2022-08-18 18:40:19.453 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.member.Member:username]
+[DEBUG] 2022-08-18 18:40:19.453 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for username
+[DEBUG] 2022-08-18 18:40:19.453 [http-nio-8080-exec-4] PropertyBinder - Building property username
+[DEBUG] 2022-08-18 18:40:19.463 [http-nio-8080-exec-4] AnnotationBinder - Binding entity from annotated class: com.revature.pokebowl.dish.Dish
+[DEBUG] 2022-08-18 18:40:19.464 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2022-08-18 18:40:19.465 [http-nio-8080-exec-4] EntityBinder - Import with entity name Dish
+[DEBUG] 2022-08-18 18:40:19.465 [http-nio-8080-exec-4] EntityBinder - Bind entity com.revature.pokebowl.dish.Dish on table dishes
+[DEBUG] 2022-08-18 18:40:19.470 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(dishes), mappingColumn=dish_id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.471 [http-nio-8080-exec-4] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.dish.Dish] is safe
+[DEBUG] 2022-08-18 18:40:19.471 [http-nio-8080-exec-4] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.dish.Dish
+[DEBUG] 2022-08-18 18:40:19.471 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property dishId with lazy=false
+[DEBUG] 2022-08-18 18:40:19.471 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.dish.Dish:dishId]
+[DEBUG] 2022-08-18 18:40:19.471 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for dishId
+[DEBUG] 2022-08-18 18:40:19.472 [http-nio-8080-exec-4] PropertyBinder - Building property dishId
+[DEBUG] 2022-08-18 18:40:19.473 [http-nio-8080-exec-4] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(dish_id)]), dishId, assigned, , ...)
+[DEBUG] 2022-08-18 18:40:19.473 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(dishes), mappingColumn=description, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.474 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property description with lazy=false
+[DEBUG] 2022-08-18 18:40:19.474 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.dish.Dish:description]
+[DEBUG] 2022-08-18 18:40:19.474 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for description
+[DEBUG] 2022-08-18 18:40:19.474 [http-nio-8080-exec-4] PropertyBinder - Building property description
+[DEBUG] 2022-08-18 18:40:19.474 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(dishes), mappingColumn=dish_cost, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.474 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property dishCost with lazy=false
+[DEBUG] 2022-08-18 18:40:19.474 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.dish.Dish:dishCost]
+[DEBUG] 2022-08-18 18:40:19.475 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for dishCost
+[DEBUG] 2022-08-18 18:40:19.476 [http-nio-8080-exec-4] PropertyBinder - Building property dishCost
+[DEBUG] 2022-08-18 18:40:19.476 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(dishes), mappingColumn=dish_name, insertable=true, updatable=true, unique=true}
+[DEBUG] 2022-08-18 18:40:19.477 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property dishName with lazy=false
+[DEBUG] 2022-08-18 18:40:19.478 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.dish.Dish:dishName]
+[DEBUG] 2022-08-18 18:40:19.478 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for dishName
+[DEBUG] 2022-08-18 18:40:19.478 [http-nio-8080-exec-4] PropertyBinder - Building property dishName
+[DEBUG] 2022-08-18 18:40:19.478 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(dishes), mappingColumn=is_vegetarian, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.478 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property isVegetarian with lazy=false
+[DEBUG] 2022-08-18 18:40:19.478 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.dish.Dish:isVegetarian]
+[DEBUG] 2022-08-18 18:40:19.478 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for isVegetarian
+[DEBUG] 2022-08-18 18:40:19.478 [http-nio-8080-exec-4] PropertyBinder - Building property isVegetarian
+[DEBUG] 2022-08-18 18:40:19.479 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='dish'}
+[DEBUG] 2022-08-18 18:40:19.479 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(dishes), mappingColumn=orderDetailsSet, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.479 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(dishes), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.479 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(dishes), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.479 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(dishes), mappingColumn=orderDetailsSet_KEY, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.479 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='orderDetailsSet_KEY', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2022-08-18 18:40:19.480 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='dish'}
+[DEBUG] 2022-08-18 18:40:19.480 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='dish'}
+[DEBUG] 2022-08-18 18:40:19.480 [http-nio-8080-exec-4] CollectionBinder - Collection role: com.revature.pokebowl.dish.Dish.orderDetailsSet
+[DEBUG] 2022-08-18 18:40:19.480 [http-nio-8080-exec-4] PropertyBinder - Building property orderDetailsSet
+[DEBUG] 2022-08-18 18:40:19.481 [http-nio-8080-exec-4] AnnotationBinder - Binding entity from annotated class: com.revature.pokebowl.order.Order
+[DEBUG] 2022-08-18 18:40:19.481 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2022-08-18 18:40:19.482 [http-nio-8080-exec-4] EntityBinder - Import with entity name Order
+[DEBUG] 2022-08-18 18:40:19.484 [http-nio-8080-exec-4] EntityBinder - Bind entity com.revature.pokebowl.order.Order on table orders
+[DEBUG] 2022-08-18 18:40:19.498 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=order_id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.499 [http-nio-8080-exec-4] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.order.Order] is safe
+[DEBUG] 2022-08-18 18:40:19.499 [http-nio-8080-exec-4] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.order.Order
+[DEBUG] 2022-08-18 18:40:19.499 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property orderId with lazy=false
+[DEBUG] 2022-08-18 18:40:19.499 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.order.Order:orderId]
+[DEBUG] 2022-08-18 18:40:19.499 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for orderId
+[DEBUG] 2022-08-18 18:40:19.499 [http-nio-8080-exec-4] PropertyBinder - Building property orderId
+[DEBUG] 2022-08-18 18:40:19.500 [http-nio-8080-exec-4] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(order_id)]), orderId, assigned, , ...)
+[DEBUG] 2022-08-18 18:40:19.500 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=amount, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.501 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property amount with lazy=false
+[DEBUG] 2022-08-18 18:40:19.502 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.order.Order:amount]
+[DEBUG] 2022-08-18 18:40:19.502 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for amount
+[DEBUG] 2022-08-18 18:40:19.502 [http-nio-8080-exec-4] PropertyBinder - Building property amount
+[DEBUG] 2022-08-18 18:40:19.502 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='member_id', referencedColumn='', mappedBy=''}
+[DEBUG] 2022-08-18 18:40:19.502 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=member, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.503 [http-nio-8080-exec-4] PropertyBinder - Building property member
+[DEBUG] 2022-08-18 18:40:19.506 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='payment_id', referencedColumn='', mappedBy=''}
+[DEBUG] 2022-08-18 18:40:19.506 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=memberPayment, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.506 [http-nio-8080-exec-4] PropertyBinder - Building property memberPayment
+[DEBUG] 2022-08-18 18:40:19.506 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=order_address, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.507 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property orderAddress with lazy=false
+[DEBUG] 2022-08-18 18:40:19.507 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.order.Order:orderAddress]
+[DEBUG] 2022-08-18 18:40:19.507 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for orderAddress
+[DEBUG] 2022-08-18 18:40:19.507 [http-nio-8080-exec-4] PropertyBinder - Building property orderAddress
+[DEBUG] 2022-08-18 18:40:19.507 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=order_date, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.507 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property orderDate with lazy=false
+[DEBUG] 2022-08-18 18:40:19.507 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.order.Order:orderDate]
+[DEBUG] 2022-08-18 18:40:19.508 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for orderDate
+[DEBUG] 2022-08-18 18:40:19.508 [http-nio-8080-exec-4] PropertyBinder - Building property orderDate
+[DEBUG] 2022-08-18 18:40:19.508 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='order'}
+[DEBUG] 2022-08-18 18:40:19.508 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=orderDetailsSet, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.509 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.509 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.509 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=orderDetailsSet_KEY, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.509 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='orderDetailsSet_KEY', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2022-08-18 18:40:19.509 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='order'}
+[DEBUG] 2022-08-18 18:40:19.509 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='order'}
+[DEBUG] 2022-08-18 18:40:19.509 [http-nio-8080-exec-4] CollectionBinder - Collection role: com.revature.pokebowl.order.Order.orderDetailsSet
+[DEBUG] 2022-08-18 18:40:19.510 [http-nio-8080-exec-4] PropertyBinder - Building property orderDetailsSet
+[DEBUG] 2022-08-18 18:40:19.510 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=order_zip, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.510 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property orderZip with lazy=false
+[DEBUG] 2022-08-18 18:40:19.511 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.order.Order:orderZip]
+[DEBUG] 2022-08-18 18:40:19.511 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for orderZip
+[DEBUG] 2022-08-18 18:40:19.511 [http-nio-8080-exec-4] PropertyBinder - Building property orderZip
+[DEBUG] 2022-08-18 18:40:19.511 [http-nio-8080-exec-4] AnnotationBinder - Binding entity from annotated class: com.revature.pokebowl.orderdetails.OrderDetails
+[DEBUG] 2022-08-18 18:40:19.513 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2022-08-18 18:40:19.513 [http-nio-8080-exec-4] EntityBinder - Import with entity name OrderDetails
+[DEBUG] 2022-08-18 18:40:19.513 [http-nio-8080-exec-4] EntityBinder - Bind entity com.revature.pokebowl.orderdetails.OrderDetails on table order_details
+[DEBUG] 2022-08-18 18:40:19.514 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(order_details), mappingColumn=order_details_id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.515 [http-nio-8080-exec-4] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.orderdetails.OrderDetails] is safe
+[DEBUG] 2022-08-18 18:40:19.515 [http-nio-8080-exec-4] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.orderdetails.OrderDetails
+[DEBUG] 2022-08-18 18:40:19.515 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property orderDetailsId with lazy=false
+[DEBUG] 2022-08-18 18:40:19.515 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.orderdetails.OrderDetails:orderDetailsId]
+[DEBUG] 2022-08-18 18:40:19.515 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for orderDetailsId
+[DEBUG] 2022-08-18 18:40:19.515 [http-nio-8080-exec-4] PropertyBinder - Building property orderDetailsId
+[DEBUG] 2022-08-18 18:40:19.516 [http-nio-8080-exec-4] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(order_details_id)]), orderDetailsId, assigned, , ...)
+[DEBUG] 2022-08-18 18:40:19.516 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(order_details), mappingColumn=comments, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.516 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property comments with lazy=false
+[DEBUG] 2022-08-18 18:40:19.516 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.orderdetails.OrderDetails:comments]
+[DEBUG] 2022-08-18 18:40:19.516 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for comments
+[DEBUG] 2022-08-18 18:40:19.516 [http-nio-8080-exec-4] PropertyBinder - Building property comments
+[DEBUG] 2022-08-18 18:40:19.517 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='dish_id', referencedColumn='', mappedBy=''}
+[DEBUG] 2022-08-18 18:40:19.517 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(order_details), mappingColumn=dish, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.518 [http-nio-8080-exec-4] PropertyBinder - Building property dish
+[DEBUG] 2022-08-18 18:40:19.521 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='order_id', referencedColumn='', mappedBy=''}
+[DEBUG] 2022-08-18 18:40:19.522 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(order_details), mappingColumn=order, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.522 [http-nio-8080-exec-4] PropertyBinder - Building property order
+[DEBUG] 2022-08-18 18:40:19.523 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(order_details), mappingColumn=quantity, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.523 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property quantity with lazy=false
+[DEBUG] 2022-08-18 18:40:19.523 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.orderdetails.OrderDetails:quantity]
+[DEBUG] 2022-08-18 18:40:19.523 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for quantity
+[DEBUG] 2022-08-18 18:40:19.523 [http-nio-8080-exec-4] PropertyBinder - Building property quantity
+[DEBUG] 2022-08-18 18:40:19.525 [http-nio-8080-exec-4] AnnotationBinder - Binding entity from annotated class: com.revature.pokebowl.memberpayment.MemberPayment
+[DEBUG] 2022-08-18 18:40:19.525 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2022-08-18 18:40:19.525 [http-nio-8080-exec-4] EntityBinder - Import with entity name MemberPayment
+[DEBUG] 2022-08-18 18:40:19.525 [http-nio-8080-exec-4] EntityBinder - Bind entity com.revature.pokebowl.memberpayment.MemberPayment on table member_payments
+[DEBUG] 2022-08-18 18:40:19.527 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payments), mappingColumn=payment_id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.527 [http-nio-8080-exec-4] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.memberpayment.MemberPayment] is safe
+[DEBUG] 2022-08-18 18:40:19.527 [http-nio-8080-exec-4] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.memberpayment.MemberPayment
+[DEBUG] 2022-08-18 18:40:19.527 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property paymentId with lazy=false
+[DEBUG] 2022-08-18 18:40:19.527 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.memberpayment.MemberPayment:paymentId]
+[DEBUG] 2022-08-18 18:40:19.528 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for paymentId
+[DEBUG] 2022-08-18 18:40:19.528 [http-nio-8080-exec-4] PropertyBinder - Building property paymentId
+[DEBUG] 2022-08-18 18:40:19.528 [http-nio-8080-exec-4] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(payment_id)]), paymentId, assigned, , ...)
+[DEBUG] 2022-08-18 18:40:19.528 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payments), mappingColumn=balance, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.528 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property balance with lazy=false
+[DEBUG] 2022-08-18 18:40:19.528 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.memberpayment.MemberPayment:balance]
+[DEBUG] 2022-08-18 18:40:19.528 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for balance
+[DEBUG] 2022-08-18 18:40:19.528 [http-nio-8080-exec-4] PropertyBinder - Building property balance
+[DEBUG] 2022-08-18 18:40:19.528 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payments), mappingColumn=ccv, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.528 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property ccv with lazy=false
+[DEBUG] 2022-08-18 18:40:19.529 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.memberpayment.MemberPayment:ccv]
+[DEBUG] 2022-08-18 18:40:19.529 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for ccv
+[DEBUG] 2022-08-18 18:40:19.529 [http-nio-8080-exec-4] PropertyBinder - Building property ccv
+[DEBUG] 2022-08-18 18:40:19.529 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payments), mappingColumn=exp_date, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.529 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property expDate with lazy=false
+[DEBUG] 2022-08-18 18:40:19.529 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.memberpayment.MemberPayment:expDate]
+[DEBUG] 2022-08-18 18:40:19.529 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for expDate
+[DEBUG] 2022-08-18 18:40:19.529 [http-nio-8080-exec-4] PropertyBinder - Building property expDate
+[DEBUG] 2022-08-18 18:40:19.530 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='member_id', referencedColumn='', mappedBy=''}
+[DEBUG] 2022-08-18 18:40:19.533 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payments), mappingColumn=member, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.537 [http-nio-8080-exec-4] PropertyBinder - Building property member
+[DEBUG] 2022-08-18 18:40:19.540 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='memberPayment'}
+[DEBUG] 2022-08-18 18:40:19.541 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payments), mappingColumn=orderSet, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.541 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payments), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.541 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payments), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.541 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payments), mappingColumn=orderSet_KEY, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.542 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='orderSet_KEY', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2022-08-18 18:40:19.542 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='memberPayment'}
+[DEBUG] 2022-08-18 18:40:19.542 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='memberPayment'}
+[DEBUG] 2022-08-18 18:40:19.542 [http-nio-8080-exec-4] CollectionBinder - Collection role: com.revature.pokebowl.memberpayment.MemberPayment.orderSet
+[DEBUG] 2022-08-18 18:40:19.542 [http-nio-8080-exec-4] PropertyBinder - Building property orderSet
+[DEBUG] 2022-08-18 18:40:19.542 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payments), mappingColumn=provider, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.543 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property provider with lazy=false
+[DEBUG] 2022-08-18 18:40:19.543 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.memberpayment.MemberPayment:provider]
+[DEBUG] 2022-08-18 18:40:19.544 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for provider
+[DEBUG] 2022-08-18 18:40:19.544 [http-nio-8080-exec-4] PropertyBinder - Building property provider
+[DEBUG] 2022-08-18 18:40:19.545 [http-nio-8080-exec-4] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(member_payments), mappingColumn=zip_code, insertable=true, updatable=true, unique=false}
+[DEBUG] 2022-08-18 18:40:19.545 [http-nio-8080-exec-4] PropertyBinder - MetadataSourceProcessor property zipCode with lazy=false
+[DEBUG] 2022-08-18 18:40:19.545 [http-nio-8080-exec-4] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.revature.pokebowl.memberpayment.MemberPayment:zipCode]
+[DEBUG] 2022-08-18 18:40:19.545 [http-nio-8080-exec-4] SimpleValueBinder - building SimpleValue for zipCode
+[DEBUG] 2022-08-18 18:40:19.545 [http-nio-8080-exec-4] PropertyBinder - Building property zipCode
+[DEBUG] 2022-08-18 18:40:19.548 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for memberId
+[DEBUG] 2022-08-18 18:40:19.549 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for dob
+[DEBUG] 2022-08-18 18:40:19.549 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for fullName
+[DEBUG] 2022-08-18 18:40:19.549 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for isAdmin
+[DEBUG] 2022-08-18 18:40:19.551 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for userPassword
+[DEBUG] 2022-08-18 18:40:19.554 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for username
+[DEBUG] 2022-08-18 18:40:19.555 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for dishId
+[DEBUG] 2022-08-18 18:40:19.555 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for description
+[DEBUG] 2022-08-18 18:40:19.555 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for dishCost
+[DEBUG] 2022-08-18 18:40:19.555 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for dishName
+[DEBUG] 2022-08-18 18:40:19.555 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for isVegetarian
+[DEBUG] 2022-08-18 18:40:19.555 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for orderId
+[DEBUG] 2022-08-18 18:40:19.555 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for amount
+[DEBUG] 2022-08-18 18:40:19.555 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for orderAddress
+[DEBUG] 2022-08-18 18:40:19.555 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for orderDate
+[DEBUG] 2022-08-18 18:40:19.555 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for orderZip
+[DEBUG] 2022-08-18 18:40:19.555 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for orderDetailsId
+[DEBUG] 2022-08-18 18:40:19.555 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for comments
+[DEBUG] 2022-08-18 18:40:19.555 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for quantity
+[DEBUG] 2022-08-18 18:40:19.556 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for paymentId
+[DEBUG] 2022-08-18 18:40:19.556 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for balance
+[DEBUG] 2022-08-18 18:40:19.556 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for ccv
+[DEBUG] 2022-08-18 18:40:19.556 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for expDate
+[DEBUG] 2022-08-18 18:40:19.556 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for provider
+[DEBUG] 2022-08-18 18:40:19.556 [http-nio-8080-exec-4] SimpleValueBinder - Starting fillSimpleValue for zipCode
+[DEBUG] 2022-08-18 18:40:19.560 [http-nio-8080-exec-4] PrimaryKey - Forcing column [member_id] to be non-null as it is part of the primary key for table [members]
+[DEBUG] 2022-08-18 18:40:19.561 [http-nio-8080-exec-4] PrimaryKey - Forcing column [dish_id] to be non-null as it is part of the primary key for table [dishes]
+[DEBUG] 2022-08-18 18:40:19.561 [http-nio-8080-exec-4] PrimaryKey - Forcing column [order_id] to be non-null as it is part of the primary key for table [orders]
+[DEBUG] 2022-08-18 18:40:19.562 [http-nio-8080-exec-4] PrimaryKey - Forcing column [order_details_id] to be non-null as it is part of the primary key for table [order_details]
+[DEBUG] 2022-08-18 18:40:19.563 [http-nio-8080-exec-4] PrimaryKey - Forcing column [payment_id] to be non-null as it is part of the primary key for table [member_payments]
+[DEBUG] 2022-08-18 18:40:19.563 [http-nio-8080-exec-4] CollectionSecondPass - Second pass for collection: com.revature.pokebowl.member.Member.memberPaymentList
+[DEBUG] 2022-08-18 18:40:19.565 [http-nio-8080-exec-4] CollectionBinder - Binding a OneToMany: com.revature.pokebowl.member.Member.memberPaymentList through a foreign key
+[DEBUG] 2022-08-18 18:40:19.567 [http-nio-8080-exec-4] CollectionBinder - Mapping collection: com.revature.pokebowl.member.Member.memberPaymentList -> member_payments
+[DEBUG] 2022-08-18 18:40:19.568 [http-nio-8080-exec-4] TableBinder - Retrieving property com.revature.pokebowl.memberpayment.MemberPayment.member
+[DEBUG] 2022-08-18 18:40:19.569 [http-nio-8080-exec-4] CollectionSecondPass - Mapped collection key: member_id, one-to-many: com.revature.pokebowl.memberpayment.MemberPayment
+[DEBUG] 2022-08-18 18:40:19.569 [http-nio-8080-exec-4] CollectionSecondPass - Second pass for collection: com.revature.pokebowl.member.Member.orders
+[DEBUG] 2022-08-18 18:40:19.569 [http-nio-8080-exec-4] CollectionBinder - Binding a OneToMany: com.revature.pokebowl.member.Member.orders through a foreign key
+[DEBUG] 2022-08-18 18:40:19.569 [http-nio-8080-exec-4] CollectionBinder - Mapping collection: com.revature.pokebowl.member.Member.orders -> orders
+[DEBUG] 2022-08-18 18:40:19.569 [http-nio-8080-exec-4] TableBinder - Retrieving property com.revature.pokebowl.order.Order.member
+[DEBUG] 2022-08-18 18:40:19.570 [http-nio-8080-exec-4] CollectionSecondPass - Mapped collection key: member_id, one-to-many: com.revature.pokebowl.order.Order
+[DEBUG] 2022-08-18 18:40:19.570 [http-nio-8080-exec-4] CollectionSecondPass - Second pass for collection: com.revature.pokebowl.dish.Dish.orderDetailsSet
+[DEBUG] 2022-08-18 18:40:19.570 [http-nio-8080-exec-4] CollectionBinder - Binding a OneToMany: com.revature.pokebowl.dish.Dish.orderDetailsSet through a foreign key
+[DEBUG] 2022-08-18 18:40:19.570 [http-nio-8080-exec-4] CollectionBinder - Mapping collection: com.revature.pokebowl.dish.Dish.orderDetailsSet -> order_details
+[DEBUG] 2022-08-18 18:40:19.570 [http-nio-8080-exec-4] TableBinder - Retrieving property com.revature.pokebowl.orderdetails.OrderDetails.dish
+[DEBUG] 2022-08-18 18:40:19.570 [http-nio-8080-exec-4] CollectionSecondPass - Mapped collection key: dish_id, one-to-many: com.revature.pokebowl.orderdetails.OrderDetails
+[DEBUG] 2022-08-18 18:40:19.570 [http-nio-8080-exec-4] CollectionSecondPass - Second pass for collection: com.revature.pokebowl.order.Order.orderDetailsSet
+[DEBUG] 2022-08-18 18:40:19.570 [http-nio-8080-exec-4] CollectionBinder - Binding a OneToMany: com.revature.pokebowl.order.Order.orderDetailsSet through a foreign key
+[DEBUG] 2022-08-18 18:40:19.570 [http-nio-8080-exec-4] CollectionBinder - Mapping collection: com.revature.pokebowl.order.Order.orderDetailsSet -> order_details
+[DEBUG] 2022-08-18 18:40:19.570 [http-nio-8080-exec-4] TableBinder - Retrieving property com.revature.pokebowl.orderdetails.OrderDetails.order
+[DEBUG] 2022-08-18 18:40:19.570 [http-nio-8080-exec-4] CollectionSecondPass - Mapped collection key: order_id, one-to-many: com.revature.pokebowl.orderdetails.OrderDetails
+[DEBUG] 2022-08-18 18:40:19.570 [http-nio-8080-exec-4] CollectionSecondPass - Second pass for collection: com.revature.pokebowl.memberpayment.MemberPayment.orderSet
+[DEBUG] 2022-08-18 18:40:19.571 [http-nio-8080-exec-4] CollectionBinder - Binding a OneToMany: com.revature.pokebowl.memberpayment.MemberPayment.orderSet through a foreign key
+[DEBUG] 2022-08-18 18:40:19.571 [http-nio-8080-exec-4] CollectionBinder - Mapping collection: com.revature.pokebowl.memberpayment.MemberPayment.orderSet -> orders
+[DEBUG] 2022-08-18 18:40:19.571 [http-nio-8080-exec-4] TableBinder - Retrieving property com.revature.pokebowl.order.Order.memberPayment
+[DEBUG] 2022-08-18 18:40:19.571 [http-nio-8080-exec-4] CollectionSecondPass - Mapped collection key: payment_id, one-to-many: com.revature.pokebowl.order.Order
+[DEBUG] 2022-08-18 18:40:19.571 [http-nio-8080-exec-4] InFlightMetadataCollectorImpl - Resolving reference to class: com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-18 18:40:19.574 [http-nio-8080-exec-4] InFlightMetadataCollectorImpl - Resolving reference to class: com.revature.pokebowl.dish.Dish
+[DEBUG] 2022-08-18 18:40:19.575 [http-nio-8080-exec-4] InFlightMetadataCollectorImpl - Resolving reference to class: com.revature.pokebowl.order.Order
+[DEBUG] 2022-08-18 18:40:19.576 [http-nio-8080-exec-4] InFlightMetadataCollectorImpl - Resolving reference to class: com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-18 18:40:19.576 [http-nio-8080-exec-4] InFlightMetadataCollectorImpl - Resolving reference to class: com.revature.pokebowl.memberpayment.MemberPayment
+[DEBUG] 2022-08-18 18:40:19.577 [http-nio-8080-exec-4] InFlightMetadataCollectorImpl - Resolving reference to class: com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-18 18:40:19.577 [http-nio-8080-exec-4] InFlightMetadataCollectorImpl - Resolving reference to class: com.revature.pokebowl.dish.Dish
+[DEBUG] 2022-08-18 18:40:19.578 [http-nio-8080-exec-4] InFlightMetadataCollectorImpl - Resolving reference to class: com.revature.pokebowl.order.Order
+[DEBUG] 2022-08-18 18:40:19.578 [http-nio-8080-exec-4] InFlightMetadataCollectorImpl - Resolving reference to class: com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-18 18:40:19.578 [http-nio-8080-exec-4] InFlightMetadataCollectorImpl - Resolving reference to class: com.revature.pokebowl.memberpayment.MemberPayment
+[DEBUG] 2022-08-18 18:40:19.703 [http-nio-8080-exec-4] SessionFactoryImpl - Building session factory
+[DEBUG] 2022-08-18 18:40:19.709 [http-nio-8080-exec-4] Settings - SessionFactory name : null
+[DEBUG] 2022-08-18 18:40:19.713 [http-nio-8080-exec-4] Settings - Automatic flush during beforeCompletion(): enabled
+[DEBUG] 2022-08-18 18:40:19.713 [http-nio-8080-exec-4] Settings - Automatic session close at end of transaction: disabled
+[DEBUG] 2022-08-18 18:40:19.714 [http-nio-8080-exec-4] Settings - Statistics: disabled
+[DEBUG] 2022-08-18 18:40:19.714 [http-nio-8080-exec-4] Settings - Deleted entity synthetic identifier rollback: disabled
+[DEBUG] 2022-08-18 18:40:19.714 [http-nio-8080-exec-4] Settings - Default entity-mode: pojo
+[DEBUG] 2022-08-18 18:40:19.714 [http-nio-8080-exec-4] Settings - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[DEBUG] 2022-08-18 18:40:19.714 [http-nio-8080-exec-4] Settings - Allow initialization of lazy state outside session : disabled
+[DEBUG] 2022-08-18 18:40:19.714 [http-nio-8080-exec-4] Settings - Using BatchFetchStyle : LEGACY
+[DEBUG] 2022-08-18 18:40:19.714 [http-nio-8080-exec-4] Settings - Default batch fetch size: -1
+[DEBUG] 2022-08-18 18:40:19.714 [http-nio-8080-exec-4] Settings - Maximum outer join fetch depth: null
+[DEBUG] 2022-08-18 18:40:19.714 [http-nio-8080-exec-4] Settings - Default null ordering: NONE
+[DEBUG] 2022-08-18 18:40:19.714 [http-nio-8080-exec-4] Settings - Order SQL updates by primary key: disabled
+[DEBUG] 2022-08-18 18:40:19.715 [http-nio-8080-exec-4] Settings - Order SQL inserts for batching: disabled
+[DEBUG] 2022-08-18 18:40:19.715 [http-nio-8080-exec-4] Settings - multi-tenancy strategy : NONE
+[DEBUG] 2022-08-18 18:40:19.715 [http-nio-8080-exec-4] Settings - JTA Track by Thread: enabled
+[DEBUG] 2022-08-18 18:40:19.715 [http-nio-8080-exec-4] Settings - Query language substitutions: {}
+[DEBUG] 2022-08-18 18:40:19.715 [http-nio-8080-exec-4] Settings - Named query checking : enabled
+[DEBUG] 2022-08-18 18:40:19.715 [http-nio-8080-exec-4] Settings - Second-level cache: disabled
+[DEBUG] 2022-08-18 18:40:19.715 [http-nio-8080-exec-4] Settings - Second-level query cache: disabled
+[DEBUG] 2022-08-18 18:40:19.715 [http-nio-8080-exec-4] Settings - Second-level query cache factory: null
+[DEBUG] 2022-08-18 18:40:19.715 [http-nio-8080-exec-4] Settings - Second-level cache region prefix: null
+[DEBUG] 2022-08-18 18:40:19.715 [http-nio-8080-exec-4] Settings - Optimize second-level cache for minimal puts: disabled
+[DEBUG] 2022-08-18 18:40:19.715 [http-nio-8080-exec-4] Settings - Structured second-level cache entries: disabled
+[DEBUG] 2022-08-18 18:40:19.715 [http-nio-8080-exec-4] Settings - Second-level cache direct-reference entries: disabled
+[DEBUG] 2022-08-18 18:40:19.715 [http-nio-8080-exec-4] Settings - Automatic eviction of collection cache: disabled
+[DEBUG] 2022-08-18 18:40:19.716 [http-nio-8080-exec-4] Settings - JDBC batch size: 15
+[DEBUG] 2022-08-18 18:40:19.716 [http-nio-8080-exec-4] Settings - JDBC batch updates for versioned data: enabled
+[DEBUG] 2022-08-18 18:40:19.717 [http-nio-8080-exec-4] Settings - Scrollable result sets: enabled
+[DEBUG] 2022-08-18 18:40:19.717 [http-nio-8080-exec-4] Settings - Wrap result sets: disabled
+[DEBUG] 2022-08-18 18:40:19.717 [http-nio-8080-exec-4] Settings - JDBC3 getGeneratedKeys(): enabled
+[DEBUG] 2022-08-18 18:40:19.717 [http-nio-8080-exec-4] Settings - JDBC result set fetch size: null
+[DEBUG] 2022-08-18 18:40:19.717 [http-nio-8080-exec-4] Settings - Connection release mode: AFTER_TRANSACTION
+[DEBUG] 2022-08-18 18:40:19.717 [http-nio-8080-exec-4] Settings - Generate SQL with comments: disabled
+[DEBUG] 2022-08-18 18:40:19.717 [http-nio-8080-exec-4] Settings - JPA compliance - query : disabled
+[DEBUG] 2022-08-18 18:40:19.717 [http-nio-8080-exec-4] Settings - JPA compliance - closed-handling : disabled
+[DEBUG] 2022-08-18 18:40:19.717 [http-nio-8080-exec-4] Settings - JPA compliance - lists : disabled
+[DEBUG] 2022-08-18 18:40:19.717 [http-nio-8080-exec-4] Settings - JPA compliance - transactions : disabled
+[DEBUG] 2022-08-18 18:40:19.775 [http-nio-8080-exec-4] SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+[DEBUG] 2022-08-18 18:40:19.781 [http-nio-8080-exec-4] SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+[DEBUG] 2022-08-18 18:40:19.792 [http-nio-8080-exec-4] SessionFactoryImpl - Session factory constructed with filter configurations : {}
+[DEBUG] 2022-08-18 18:40:19.792 [http-nio-8080-exec-4] SessionFactoryImpl - Instantiating session factory with properties: {gopherProxySet=false, awt.toolkit=sun.lwawt.macosx.LWCToolkit, file.encoding.pkg=sun.io, java.specification.version=1.8, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, java.class.path=/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/rt.jar:/Users/byronfedele/pokebowl_API_BFCB/target/classes:/Users/byronfedele/.m2/repository/org/postgresql/postgresql/42.3.3/postgresql-42.3.3.jar:/Users/byronfedele/.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar:/Users/byronfedele/.m2/repository/net/bytebuddy/byte-buddy/1.12.10/byte-buddy-1.12.10.jar:/Users/byronfedele/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.23/tomcat-embed-core-8.5.23.jar:/Users/byronfedele/.m2/repository/org/apache/tomcat/tomcat-annotations-api/8.5.23/tomcat-annotations-api-8.5.23.jar:/Users/byronfedele/.m2/repository/org/apache/tomcat/embed/tomcat-embed-jasper/8.5.23/tomcat-embed-jasper-8.5.23.jar:/Users/byronfedele/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/8.5.23/tomcat-embed-el-8.5.23.jar:/Users/byronfedele/.m2/repository/org/eclipse/jdt/ecj/3.12.3/ecj-3.12.3.jar:/Users/byronfedele/.m2/repository/org/apache/tomcat/tomcat-jasper/8.5.23/tomcat-jasper-8.5.23.jar:/Users/byronfedele/.m2/repository/org/apache/tomcat/tomcat-servlet-api/8.5.23/tomcat-servlet-api-8.5.23.jar:/Users/byronfedele/.m2/repository/org/apache/tomcat/tomcat-juli/8.5.23/tomcat-juli-8.5.23.jar:/Users/byronfedele/.m2/repository/org/apache/tomcat/tomcat-el-api/8.5.23/tomcat-el-api-8.5.23.jar:/Users/byronfedele/.m2/repository/org/apache/tomcat/tomcat-api/8.5.23/tomcat-api-8.5.23.jar:/Users/byronfedele/.m2/repository/org/apache/tomcat/tomcat-util-scan/8.5.23/tomcat-util-scan-8.5.23.jar:/Users/byronfedele/.m2/repository/org/apache/tomcat/tomcat-util/8.5.23/tomcat-util-8.5.23.jar:/Users/byronfedele/.m2/repository/org/apache/tomcat/tomcat-jasper-el/8.5.23/tomcat-jasper-el-8.5.23.jar:/Users/byronfedele/.m2/repository/org/apache/tomcat/tomcat-jsp-api/8.5.23/tomcat-jsp-api-8.5.23.jar:/Users/byronfedele/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.13.3/jackson-databind-2.13.3.jar:/Users/byronfedele/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.13.3/jackson-annotations-2.13.3.jar:/Users/byronfedele/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.13.3/jackson-core-2.13.3.jar:/Users/byronfedele/.m2/repository/org/apache/logging/log4j/log4j-core/2.17.1/log4j-core-2.17.1.jar:/Users/byronfedele/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar:/Users/byronfedele/.m2/repository/org/hibernate/hibernate-core/5.6.10.Final/hibernate-core-5.6.10.Final.jar:/Users/byronfedele/.m2/repository/org/jboss/logging/jboss-logging/3.4.3.Final/jboss-logging-3.4.3.Final.jar:/Users/byronfedele/.m2/repository/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar:/Users/byronfedele/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/byronfedele/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.1.1.Final/jboss-transaction-api_1.2_spec-1.1.1.Final.jar:/Users/byronfedele/.m2/repository/org/jboss/jandex/2.4.2.Final/jandex-2.4.2.Final.jar:/Users/byronfedele/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/byronfedele/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/Users/byronfedele/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar:/Users/byronfedele/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/Users/byronfedele/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.jar:/Users/byronfedele/.m2/repository/org/glassfish/jaxb/txw2/2.3.1/txw2-2.3.1.jar:/Users/byronfedele/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.jar:/Users/byronfedele/.m2/repository/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8.jar:/Users/byronfedele/.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15.jar:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar, java.vm.vendor=Temurin, sun.arch.data.model=64, java.vendor.url=https://adoptium.net/, catalina.useNaming=false, user.timezone=America/New_York, os.name=Mac OS X, java.vm.specification.version=1.8, user.country=US, sun.java.launcher=SUN_STANDARD, sun.boot.library.path=/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib, sun.java.command=com.revature.pokebowl.MainDriver, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, sun.cpu.endian=little, user.home=/Users/byronfedele, user.language=en, java.specification.vendor=Oracle Corporation, java.home=/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre, file.separator=/, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, sun.boot.class.path=/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/classes, hibernate.hbm2ddl.auto=update, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.runtime.version=1.8.0_332-b09, user.name=byronfedele, path.separator=:, hibernate.connection.username=****, os.version=10.16, java.endorsed.dirs=/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/endorsed, java.runtime.name=OpenJDK Runtime Environment, hibernate.connection.url=jdbc:postgresql://beck-db-instance.cewwl2d9shzm.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=pokebowl, file.encoding=UTF-8, java.vm.name=OpenJDK 64-Bit Server VM, hibernate.show_sql=true, hibernate.connection.driver_class=org.postgresql.Driver, java.vendor.url.bug=https://github.com/adoptium/adoptium-support/issues, java.io.tmpdir=/var/folders/1f/8kjb0fqd5rq1y_r85nvlr0gc0000gn/T/, catalina.home=/Users/byronfedele/pokebowl_API_BFCB/tomcat.8080, java.version=1.8.0_332, user.dir=/Users/byronfedele/pokebowl_API_BFCB, os.arch=x86_64, java.vm.specification.name=Java Virtual Machine Specification, hibernate.connection.password=****, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, sun.os.patch.level=unknown, catalina.base=/Users/byronfedele/pokebowl_API_BFCB/tomcat.8080, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@66cc1e6d, java.library.path=/Users/byronfedele/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., java.vm.info=mixed mode, java.vendor=Temurin, java.vm.version=25.332-b09, hibernate.bytecode.use_reflection_optimizer=false, java.ext.dirs=/Users/byronfedele/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, sun.io.unicode.encoding=UnicodeBig, java.class.version=52.0, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16}
+[DEBUG] 2022-08-18 18:40:19.802 [http-nio-8080-exec-4] JaccIntegrator - Skipping JACC integration as it was not enabled
+[DEBUG] 2022-08-18 18:40:19.805 [http-nio-8080-exec-4] SessionFactoryImpl - Instantiated session factory
+[DEBUG] 2022-08-18 18:40:19.806 [http-nio-8080-exec-4] TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@51ff3582] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@6891a473]
+[DEBUG] 2022-08-18 18:40:19.844 [http-nio-8080-exec-4] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.member.Member] is safe
+[DEBUG] 2022-08-18 18:40:19.844 [http-nio-8080-exec-4] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-18 18:40:20.035 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.memberpayment.MemberPayment#member` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.036 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.memberpayment.MemberPayment#member` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.036 [http-nio-8080-exec-4] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.memberpayment.MemberPayment] is safe
+[DEBUG] 2022-08-18 18:40:20.036 [http-nio-8080-exec-4] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.memberpayment.MemberPayment
+[DEBUG] 2022-08-18 18:40:20.089 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.memberpayment.MemberPayment#member` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.089 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.memberpayment.MemberPayment#member` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.092 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.order.Order#member` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.092 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.order.Order#member` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.092 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.order.Order#memberPayment` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.092 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.order.Order#memberPayment` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.092 [http-nio-8080-exec-4] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.order.Order] is safe
+[DEBUG] 2022-08-18 18:40:20.092 [http-nio-8080-exec-4] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.order.Order
+[DEBUG] 2022-08-18 18:40:20.116 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.order.Order#member` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.118 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.order.Order#memberPayment` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.118 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.order.Order#member` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.119 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.order.Order#memberPayment` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.121 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.orderdetails.OrderDetails#dish` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.121 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.orderdetails.OrderDetails#dish` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.121 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.orderdetails.OrderDetails#order` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.122 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.orderdetails.OrderDetails#order` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.122 [http-nio-8080-exec-4] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.orderdetails.OrderDetails] is safe
+[DEBUG] 2022-08-18 18:40:20.122 [http-nio-8080-exec-4] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.orderdetails.OrderDetails
+[DEBUG] 2022-08-18 18:40:20.158 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.orderdetails.OrderDetails#dish` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.161 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.orderdetails.OrderDetails#order` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.161 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.orderdetails.OrderDetails#dish` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.161 [http-nio-8080-exec-4] interceptor - To-one property `com.revature.pokebowl.orderdetails.OrderDetails#order` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2022-08-18 18:40:20.162 [http-nio-8080-exec-4] ClassLoaderAccessImpl - Not known whether passed class name [com.revature.pokebowl.dish.Dish] is safe
+[DEBUG] 2022-08-18 18:40:20.162 [http-nio-8080-exec-4] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.revature.pokebowl.dish.Dish
+[DEBUG] 2022-08-18 18:40:20.215 [http-nio-8080-exec-4] AbstractCollectionPersister - Static SQL for collection: com.revature.pokebowl.memberpayment.MemberPayment.orderSet
+[DEBUG] 2022-08-18 18:40:20.217 [http-nio-8080-exec-4] AbstractCollectionPersister -  Row insert: update orders set payment_id=? where order_id=?
+[DEBUG] 2022-08-18 18:40:20.219 [http-nio-8080-exec-4] AbstractCollectionPersister -  Row update: update orders set  where order_id=?
+[DEBUG] 2022-08-18 18:40:20.219 [http-nio-8080-exec-4] AbstractCollectionPersister -  Row delete: update orders set payment_id=null where payment_id=? and order_id=?
+[DEBUG] 2022-08-18 18:40:20.219 [http-nio-8080-exec-4] AbstractCollectionPersister -  One-shot delete: update orders set payment_id=null where payment_id=?
+[DEBUG] 2022-08-18 18:40:20.219 [http-nio-8080-exec-4] AbstractCollectionPersister - Static SQL for collection: com.revature.pokebowl.member.Member.memberPaymentList
+[DEBUG] 2022-08-18 18:40:20.220 [http-nio-8080-exec-4] AbstractCollectionPersister -  Row insert: update member_payments set member_id=? where payment_id=?
+[DEBUG] 2022-08-18 18:40:20.220 [http-nio-8080-exec-4] AbstractCollectionPersister -  Row update: update member_payments set  where payment_id=?
+[DEBUG] 2022-08-18 18:40:20.220 [http-nio-8080-exec-4] AbstractCollectionPersister -  Row delete: update member_payments set member_id=null where member_id=? and payment_id=?
+[DEBUG] 2022-08-18 18:40:20.220 [http-nio-8080-exec-4] AbstractCollectionPersister -  One-shot delete: update member_payments set member_id=null where member_id=?
+[DEBUG] 2022-08-18 18:40:20.220 [http-nio-8080-exec-4] AbstractCollectionPersister - Static SQL for collection: com.revature.pokebowl.dish.Dish.orderDetailsSet
+[DEBUG] 2022-08-18 18:40:20.220 [http-nio-8080-exec-4] AbstractCollectionPersister -  Row insert: update order_details set dish_id=? where order_details_id=?
+[DEBUG] 2022-08-18 18:40:20.220 [http-nio-8080-exec-4] AbstractCollectionPersister -  Row update: update order_details set  where order_details_id=?
+[DEBUG] 2022-08-18 18:40:20.220 [http-nio-8080-exec-4] AbstractCollectionPersister -  Row delete: update order_details set dish_id=null where dish_id=? and order_details_id=?
+[DEBUG] 2022-08-18 18:40:20.220 [http-nio-8080-exec-4] AbstractCollectionPersister -  One-shot delete: update order_details set dish_id=null where dish_id=?
+[DEBUG] 2022-08-18 18:40:20.220 [http-nio-8080-exec-4] AbstractCollectionPersister - Static SQL for collection: com.revature.pokebowl.order.Order.orderDetailsSet
+[DEBUG] 2022-08-18 18:40:20.220 [http-nio-8080-exec-4] AbstractCollectionPersister -  Row insert: update order_details set order_id=? where order_details_id=?
+[DEBUG] 2022-08-18 18:40:20.220 [http-nio-8080-exec-4] AbstractCollectionPersister -  Row update: update order_details set  where order_details_id=?
+[DEBUG] 2022-08-18 18:40:20.220 [http-nio-8080-exec-4] AbstractCollectionPersister -  Row delete: update order_details set order_id=null where order_id=? and order_details_id=?
+[DEBUG] 2022-08-18 18:40:20.220 [http-nio-8080-exec-4] AbstractCollectionPersister -  One-shot delete: update order_details set order_id=null where order_id=?
+[DEBUG] 2022-08-18 18:40:20.221 [http-nio-8080-exec-4] AbstractCollectionPersister - Static SQL for collection: com.revature.pokebowl.member.Member.orders
+[DEBUG] 2022-08-18 18:40:20.221 [http-nio-8080-exec-4] AbstractCollectionPersister -  Row insert: update orders set member_id=? where order_id=?
+[DEBUG] 2022-08-18 18:40:20.221 [http-nio-8080-exec-4] AbstractCollectionPersister -  Row update: update orders set  where order_id=?
+[DEBUG] 2022-08-18 18:40:20.221 [http-nio-8080-exec-4] AbstractCollectionPersister -  Row delete: update orders set member_id=null where member_id=? and order_id=?
+[DEBUG] 2022-08-18 18:40:20.221 [http-nio-8080-exec-4] AbstractCollectionPersister -  One-shot delete: update orders set member_id=null where member_id=?
+[DEBUG] 2022-08-18 18:40:20.232 [http-nio-8080-exec-4] AbstractEntityPersister - Static SQL for entity: com.revature.pokebowl.member.Member
+[DEBUG] 2022-08-18 18:40:20.232 [http-nio-8080-exec-4] AbstractEntityPersister -  Version select: select member_id from members where member_id =?
+[DEBUG] 2022-08-18 18:40:20.233 [http-nio-8080-exec-4] AbstractEntityPersister -  Snapshot select: select member_.member_id, member_.dob as dob2_2_, member_.full_name as full_nam3_2_, member_.is_admin as is_admin4_2_, member_.user_password as user_pas5_2_, member_.username as username6_2_ from members member_ where member_.member_id=?
+[DEBUG] 2022-08-18 18:40:20.233 [http-nio-8080-exec-4] AbstractEntityPersister -  Insert 0: insert into members (dob, full_name, is_admin, user_password, username, member_id) values (?, ?, ?, ?, ?, ?)
+[DEBUG] 2022-08-18 18:40:20.233 [http-nio-8080-exec-4] AbstractEntityPersister -  Update 0: update members set dob=?, full_name=?, is_admin=?, user_password=?, username=? where member_id=?
+[DEBUG] 2022-08-18 18:40:20.233 [http-nio-8080-exec-4] AbstractEntityPersister -  Delete 0: delete from members where member_id=?
+[DEBUG] 2022-08-18 18:40:20.250 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5f818454]
+[DEBUG] 2022-08-18 18:40:20.251 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : dob
+[DEBUG] 2022-08-18 18:40:20.251 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : fullName
+[DEBUG] 2022-08-18 18:40:20.251 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : isAdmin
+[DEBUG] 2022-08-18 18:40:20.252 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPaymentList
+[DEBUG] 2022-08-18 18:40:20.254 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@50399a08]
+[DEBUG] 2022-08-18 18:40:20.256 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@13914700]
+[DEBUG] 2022-08-18 18:40:20.257 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : orders
+[DEBUG] 2022-08-18 18:40:20.257 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@12ba0944]
+[DEBUG] 2022-08-18 18:40:20.257 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@b0af554]
+[DEBUG] 2022-08-18 18:40:20.257 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : userPassword
+[DEBUG] 2022-08-18 18:40:20.257 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : username
+[DEBUG] 2022-08-18 18:40:20.258 [http-nio-8080-exec-4] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-18 18:40:20.265 [http-nio-8080-exec-4] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-18 18:40:20.270 [http-nio-8080-exec-4] LoadPlanTreePrinter - LoadPlan(entity=com.revature.pokebowl.member.Member)
+    - Returns
+       - EntityReturnImpl(entity=com.revature.pokebowl.member.Member, querySpaceUid=<gen:0>, path=com.revature.pokebowl.member.Member)
+          - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.member.Member.memberPaymentList, querySpaceUid=<gen:1>, path=com.revature.pokebowl.member.Member.memberPaymentList)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.memberpayment.MemberPayment, querySpaceUid=<gen:2>, path=com.revature.pokebowl.member.Member.memberPaymentList.<elements>)
+          - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.member.Member.orders, querySpaceUid=<gen:3>, path=com.revature.pokebowl.member.Member.orders)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.order.Order, querySpaceUid=<gen:4>, path=com.revature.pokebowl.member.Member.orders.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.revature.pokebowl.member.Member)
+          - SQL table alias mapping - member0_
+          - alias suffix - 0_
+          - suffixed key columns - {member_i1_2_0_}
+
+[DEBUG] 2022-08-18 18:40:20.272 [http-nio-8080-exec-4] EntityLoader - Static select for entity com.revature.pokebowl.member.Member [NONE]: select member0_.member_id as member_i1_2_0_, member0_.dob as dob2_2_0_, member0_.full_name as full_nam3_2_0_, member0_.is_admin as is_admin4_2_0_, member0_.user_password as user_pas5_2_0_, member0_.username as username6_2_0_ from members member0_ where member0_.member_id=?
+[DEBUG] 2022-08-18 18:40:20.273 [http-nio-8080-exec-4] AbstractEntityPersister - Static SQL for entity: com.revature.pokebowl.memberpayment.MemberPayment
+[DEBUG] 2022-08-18 18:40:20.273 [http-nio-8080-exec-4] AbstractEntityPersister -  Version select: select payment_id from member_payments where payment_id =?
+[DEBUG] 2022-08-18 18:40:20.273 [http-nio-8080-exec-4] AbstractEntityPersister -  Snapshot select: select memberpaym_.payment_id, memberpaym_.balance as balance2_1_, memberpaym_.ccv as ccv3_1_, memberpaym_.exp_date as exp_date4_1_, memberpaym_.member_id as member_i7_1_, memberpaym_.provider as provider5_1_, memberpaym_.zip_code as zip_code6_1_ from member_payments memberpaym_ where memberpaym_.payment_id=?
+[DEBUG] 2022-08-18 18:40:20.273 [http-nio-8080-exec-4] AbstractEntityPersister -  Insert 0: insert into member_payments (balance, ccv, exp_date, member_id, provider, zip_code, payment_id) values (?, ?, ?, ?, ?, ?, ?)
+[DEBUG] 2022-08-18 18:40:20.273 [http-nio-8080-exec-4] AbstractEntityPersister -  Update 0: update member_payments set balance=?, ccv=?, exp_date=?, member_id=?, provider=?, zip_code=? where payment_id=?
+[DEBUG] 2022-08-18 18:40:20.273 [http-nio-8080-exec-4] AbstractEntityPersister -  Delete 0: delete from member_payments where payment_id=?
+[DEBUG] 2022-08-18 18:40:20.273 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2ede12d1]
+[DEBUG] 2022-08-18 18:40:20.273 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : balance
+[DEBUG] 2022-08-18 18:40:20.273 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : ccv
+[DEBUG] 2022-08-18 18:40:20.273 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : expDate
+[DEBUG] 2022-08-18 18:40:20.274 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member
+[DEBUG] 2022-08-18 18:40:20.274 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2b371b12]
+[DEBUG] 2022-08-18 18:40:20.275 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.dob
+[DEBUG] 2022-08-18 18:40:20.275 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.fullName
+[DEBUG] 2022-08-18 18:40:20.275 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.isAdmin
+[DEBUG] 2022-08-18 18:40:20.275 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.memberPaymentList
+[DEBUG] 2022-08-18 18:40:20.275 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : member.memberPaymentList
+[DEBUG] 2022-08-18 18:40:20.275 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.orders
+[DEBUG] 2022-08-18 18:40:20.276 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@629c1ed8]
+[DEBUG] 2022-08-18 18:40:20.276 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@48e032ea]
+[DEBUG] 2022-08-18 18:40:20.276 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.userPassword
+[DEBUG] 2022-08-18 18:40:20.276 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.username
+[DEBUG] 2022-08-18 18:40:20.276 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : orderSet
+[DEBUG] 2022-08-18 18:40:20.276 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@51b58584]
+[DEBUG] 2022-08-18 18:40:20.277 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2b89a9f5]
+[DEBUG] 2022-08-18 18:40:20.277 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : provider
+[DEBUG] 2022-08-18 18:40:20.277 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : zipCode
+[DEBUG] 2022-08-18 18:40:20.277 [http-nio-8080-exec-4] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-18 18:40:20.278 [http-nio-8080-exec-4] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-18 18:40:20.279 [http-nio-8080-exec-4] LoadPlanTreePrinter - LoadPlan(entity=com.revature.pokebowl.memberpayment.MemberPayment)
+    - Returns
+       - EntityReturnImpl(entity=com.revature.pokebowl.memberpayment.MemberPayment, querySpaceUid=<gen:0>, path=com.revature.pokebowl.memberpayment.MemberPayment)
+          - EntityAttributeFetchImpl(entity=com.revature.pokebowl.member.Member, querySpaceUid=<gen:1>, path=com.revature.pokebowl.memberpayment.MemberPayment.member)
+             - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.member.Member.orders, querySpaceUid=<gen:2>, path=com.revature.pokebowl.memberpayment.MemberPayment.member.orders)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.order.Order, querySpaceUid=<gen:3>, path=com.revature.pokebowl.memberpayment.MemberPayment.member.orders.<elements>)
+          - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.memberpayment.MemberPayment.orderSet, querySpaceUid=<gen:4>, path=com.revature.pokebowl.memberpayment.MemberPayment.orderSet)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.order.Order, querySpaceUid=<gen:5>, path=com.revature.pokebowl.memberpayment.MemberPayment.orderSet.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.revature.pokebowl.memberpayment.MemberPayment)
+          - SQL table alias mapping - memberpaym0_
+          - alias suffix - 0_
+          - suffixed key columns - {payment_1_1_0_}
+          - JOIN (JoinDefinedByMetadata(member)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.revature.pokebowl.member.Member)
+                - SQL table alias mapping - member1_
+                - alias suffix - 1_
+                - suffixed key columns - {member_i1_2_1_}
+
+[DEBUG] 2022-08-18 18:40:20.281 [http-nio-8080-exec-4] EntityLoader - Static select for entity com.revature.pokebowl.memberpayment.MemberPayment [NONE]: select memberpaym0_.payment_id as payment_1_1_0_, memberpaym0_.balance as balance2_1_0_, memberpaym0_.ccv as ccv3_1_0_, memberpaym0_.exp_date as exp_date4_1_0_, memberpaym0_.member_id as member_i7_1_0_, memberpaym0_.provider as provider5_1_0_, memberpaym0_.zip_code as zip_code6_1_0_, member1_.member_id as member_i1_2_1_, member1_.dob as dob2_2_1_, member1_.full_name as full_nam3_2_1_, member1_.is_admin as is_admin4_2_1_, member1_.user_password as user_pas5_2_1_, member1_.username as username6_2_1_ from member_payments memberpaym0_ left outer join members member1_ on memberpaym0_.member_id=member1_.member_id where memberpaym0_.payment_id=?
+[DEBUG] 2022-08-18 18:40:20.281 [http-nio-8080-exec-4] AbstractEntityPersister - Static SQL for entity: com.revature.pokebowl.order.Order
+[DEBUG] 2022-08-18 18:40:20.281 [http-nio-8080-exec-4] AbstractEntityPersister -  Version select: select order_id from orders where order_id =?
+[DEBUG] 2022-08-18 18:40:20.282 [http-nio-8080-exec-4] AbstractEntityPersister -  Snapshot select: select order_.order_id, order_.amount as amount2_4_, order_.member_id as member_i6_4_, order_.payment_id as payment_7_4_, order_.order_address as order_ad3_4_, order_.order_date as order_da4_4_, order_.order_zip as order_zi5_4_ from orders order_ where order_.order_id=?
+[DEBUG] 2022-08-18 18:40:20.282 [http-nio-8080-exec-4] AbstractEntityPersister -  Insert 0: insert into orders (amount, member_id, payment_id, order_address, order_date, order_zip, order_id) values (?, ?, ?, ?, ?, ?, ?)
+[DEBUG] 2022-08-18 18:40:20.284 [http-nio-8080-exec-4] AbstractEntityPersister -  Update 0: update orders set amount=?, member_id=?, payment_id=?, order_address=?, order_date=?, order_zip=? where order_id=?
+[DEBUG] 2022-08-18 18:40:20.284 [http-nio-8080-exec-4] AbstractEntityPersister -  Delete 0: delete from orders where order_id=?
+[DEBUG] 2022-08-18 18:40:20.284 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1dbb381c]
+[DEBUG] 2022-08-18 18:40:20.284 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : amount
+[DEBUG] 2022-08-18 18:40:20.284 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member
+[DEBUG] 2022-08-18 18:40:20.285 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5a9f5eb6]
+[DEBUG] 2022-08-18 18:40:20.285 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.dob
+[DEBUG] 2022-08-18 18:40:20.285 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.fullName
+[DEBUG] 2022-08-18 18:40:20.285 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.isAdmin
+[DEBUG] 2022-08-18 18:40:20.285 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.memberPaymentList
+[DEBUG] 2022-08-18 18:40:20.285 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@6a648ec]
+[DEBUG] 2022-08-18 18:40:20.285 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@22fb3563]
+[DEBUG] 2022-08-18 18:40:20.285 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.orders
+[DEBUG] 2022-08-18 18:40:20.286 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : member.orders
+[DEBUG] 2022-08-18 18:40:20.286 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.userPassword
+[DEBUG] 2022-08-18 18:40:20.286 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.username
+[DEBUG] 2022-08-18 18:40:20.286 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment
+[DEBUG] 2022-08-18 18:40:20.286 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@231b564]
+[DEBUG] 2022-08-18 18:40:20.286 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.balance
+[DEBUG] 2022-08-18 18:40:20.286 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.ccv
+[DEBUG] 2022-08-18 18:40:20.286 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.expDate
+[DEBUG] 2022-08-18 18:40:20.287 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.member
+[DEBUG] 2022-08-18 18:40:20.287 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3b6b54d1]
+[DEBUG] 2022-08-18 18:40:20.287 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.dob
+[DEBUG] 2022-08-18 18:40:20.287 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.fullName
+[DEBUG] 2022-08-18 18:40:20.287 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.isAdmin
+[DEBUG] 2022-08-18 18:40:20.287 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.memberPaymentList
+[DEBUG] 2022-08-18 18:40:20.287 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : memberPayment.member.memberPaymentList
+[DEBUG] 2022-08-18 18:40:20.287 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.orders
+[DEBUG] 2022-08-18 18:40:20.287 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : memberPayment.member.orders
+[DEBUG] 2022-08-18 18:40:20.287 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.userPassword
+[DEBUG] 2022-08-18 18:40:20.288 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.username
+[DEBUG] 2022-08-18 18:40:20.288 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.orderSet
+[DEBUG] 2022-08-18 18:40:20.288 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : memberPayment.orderSet
+[DEBUG] 2022-08-18 18:40:20.288 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.provider
+[DEBUG] 2022-08-18 18:40:20.289 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.zipCode
+[DEBUG] 2022-08-18 18:40:20.289 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : orderAddress
+[DEBUG] 2022-08-18 18:40:20.289 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : orderDate
+[DEBUG] 2022-08-18 18:40:20.289 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : orderDetailsSet
+[DEBUG] 2022-08-18 18:40:20.289 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@4f55391b]
+[DEBUG] 2022-08-18 18:40:20.290 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:7> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@34f7758f]
+[DEBUG] 2022-08-18 18:40:20.292 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : orderZip
+[DEBUG] 2022-08-18 18:40:20.294 [http-nio-8080-exec-4] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-18 18:40:20.294 [http-nio-8080-exec-4] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-18 18:40:20.295 [http-nio-8080-exec-4] LoadPlanTreePrinter - LoadPlan(entity=com.revature.pokebowl.order.Order)
+    - Returns
+       - EntityReturnImpl(entity=com.revature.pokebowl.order.Order, querySpaceUid=<gen:0>, path=com.revature.pokebowl.order.Order)
+          - EntityAttributeFetchImpl(entity=com.revature.pokebowl.member.Member, querySpaceUid=<gen:1>, path=com.revature.pokebowl.order.Order.member)
+             - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.member.Member.memberPaymentList, querySpaceUid=<gen:2>, path=com.revature.pokebowl.order.Order.member.memberPaymentList)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.memberpayment.MemberPayment, querySpaceUid=<gen:3>, path=com.revature.pokebowl.order.Order.member.memberPaymentList.<elements>)
+          - EntityAttributeFetchImpl(entity=com.revature.pokebowl.memberpayment.MemberPayment, querySpaceUid=<gen:4>, path=com.revature.pokebowl.order.Order.memberPayment)
+             - EntityAttributeFetchImpl(entity=com.revature.pokebowl.member.Member, querySpaceUid=<gen:5>, path=com.revature.pokebowl.order.Order.memberPayment.member)
+          - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.order.Order.orderDetailsSet, querySpaceUid=<gen:6>, path=com.revature.pokebowl.order.Order.orderDetailsSet)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.orderdetails.OrderDetails, querySpaceUid=<gen:7>, path=com.revature.pokebowl.order.Order.orderDetailsSet.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.revature.pokebowl.order.Order)
+          - SQL table alias mapping - order0_
+          - alias suffix - 0_
+          - suffixed key columns - {order_id1_4_0_}
+          - JOIN (JoinDefinedByMetadata(member)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.revature.pokebowl.member.Member)
+                - SQL table alias mapping - member1_
+                - alias suffix - 1_
+                - suffixed key columns - {member_i1_2_1_}
+          - JOIN (JoinDefinedByMetadata(memberPayment)) : <gen:0> -> <gen:4>
+             - EntityQuerySpaceImpl(uid=<gen:4>, entity=com.revature.pokebowl.memberpayment.MemberPayment)
+                - SQL table alias mapping - memberpaym2_
+                - alias suffix - 2_
+                - suffixed key columns - {payment_1_1_2_}
+                - JOIN (JoinDefinedByMetadata(member)) : <gen:4> -> <gen:5>
+                   - EntityQuerySpaceImpl(uid=<gen:5>, entity=com.revature.pokebowl.member.Member)
+                      - SQL table alias mapping - member3_
+                      - alias suffix - 3_
+                      - suffixed key columns - {member_i1_2_3_}
+
+[DEBUG] 2022-08-18 18:40:20.295 [http-nio-8080-exec-4] EntityLoader - Static select for entity com.revature.pokebowl.order.Order [NONE]: select order0_.order_id as order_id1_4_0_, order0_.amount as amount2_4_0_, order0_.member_id as member_i6_4_0_, order0_.payment_id as payment_7_4_0_, order0_.order_address as order_ad3_4_0_, order0_.order_date as order_da4_4_0_, order0_.order_zip as order_zi5_4_0_, member1_.member_id as member_i1_2_1_, member1_.dob as dob2_2_1_, member1_.full_name as full_nam3_2_1_, member1_.is_admin as is_admin4_2_1_, member1_.user_password as user_pas5_2_1_, member1_.username as username6_2_1_, memberpaym2_.payment_id as payment_1_1_2_, memberpaym2_.balance as balance2_1_2_, memberpaym2_.ccv as ccv3_1_2_, memberpaym2_.exp_date as exp_date4_1_2_, memberpaym2_.member_id as member_i7_1_2_, memberpaym2_.provider as provider5_1_2_, memberpaym2_.zip_code as zip_code6_1_2_, member3_.member_id as member_i1_2_3_, member3_.dob as dob2_2_3_, member3_.full_name as full_nam3_2_3_, member3_.is_admin as is_admin4_2_3_, member3_.user_password as user_pas5_2_3_, member3_.username as username6_2_3_ from orders order0_ left outer join members member1_ on order0_.member_id=member1_.member_id left outer join member_payments memberpaym2_ on order0_.payment_id=memberpaym2_.payment_id left outer join members member3_ on memberpaym2_.member_id=member3_.member_id where order0_.order_id=?
+[DEBUG] 2022-08-18 18:40:20.295 [http-nio-8080-exec-4] AbstractEntityPersister - Static SQL for entity: com.revature.pokebowl.orderdetails.OrderDetails
+[DEBUG] 2022-08-18 18:40:20.295 [http-nio-8080-exec-4] AbstractEntityPersister -  Version select: select order_details_id from order_details where order_details_id =?
+[DEBUG] 2022-08-18 18:40:20.295 [http-nio-8080-exec-4] AbstractEntityPersister -  Snapshot select: select orderdetai_.order_details_id, orderdetai_.comments as comments2_3_, orderdetai_.dish_id as dish_id4_3_, orderdetai_.order_id as order_id5_3_, orderdetai_.quantity as quantity3_3_ from order_details orderdetai_ where orderdetai_.order_details_id=?
+[DEBUG] 2022-08-18 18:40:20.295 [http-nio-8080-exec-4] AbstractEntityPersister -  Insert 0: insert into order_details (comments, dish_id, order_id, quantity, order_details_id) values (?, ?, ?, ?, ?)
+[DEBUG] 2022-08-18 18:40:20.295 [http-nio-8080-exec-4] AbstractEntityPersister -  Update 0: update order_details set comments=?, dish_id=?, order_id=?, quantity=? where order_details_id=?
+[DEBUG] 2022-08-18 18:40:20.295 [http-nio-8080-exec-4] AbstractEntityPersister -  Delete 0: delete from order_details where order_details_id=?
+[DEBUG] 2022-08-18 18:40:20.295 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@55db621c]
+[DEBUG] 2022-08-18 18:40:20.296 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : comments
+[DEBUG] 2022-08-18 18:40:20.296 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : dish
+[DEBUG] 2022-08-18 18:40:20.296 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@72d68f94]
+[DEBUG] 2022-08-18 18:40:20.296 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : dish.description
+[DEBUG] 2022-08-18 18:40:20.296 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : dish.dishCost
+[DEBUG] 2022-08-18 18:40:20.296 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : dish.dishName
+[DEBUG] 2022-08-18 18:40:20.296 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : dish.isVegetarian
+[DEBUG] 2022-08-18 18:40:20.296 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : dish.orderDetailsSet
+[DEBUG] 2022-08-18 18:40:20.296 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : dish.orderDetailsSet
+[DEBUG] 2022-08-18 18:40:20.296 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order
+[DEBUG] 2022-08-18 18:40:20.297 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@73c78172]
+[DEBUG] 2022-08-18 18:40:20.297 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.amount
+[DEBUG] 2022-08-18 18:40:20.297 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.member
+[DEBUG] 2022-08-18 18:40:20.297 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4ef28060]
+[DEBUG] 2022-08-18 18:40:20.297 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.member.dob
+[DEBUG] 2022-08-18 18:40:20.297 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.member.fullName
+[DEBUG] 2022-08-18 18:40:20.297 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.member.isAdmin
+[DEBUG] 2022-08-18 18:40:20.297 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.member.memberPaymentList
+[DEBUG] 2022-08-18 18:40:20.298 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@6aa24f92]
+[DEBUG] 2022-08-18 18:40:20.298 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@12e2ae4a]
+[DEBUG] 2022-08-18 18:40:20.298 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.member.orders
+[DEBUG] 2022-08-18 18:40:20.298 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : order.member.orders
+[DEBUG] 2022-08-18 18:40:20.298 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.member.userPassword
+[DEBUG] 2022-08-18 18:40:20.298 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.member.username
+[DEBUG] 2022-08-18 18:40:20.298 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment
+[DEBUG] 2022-08-18 18:40:20.298 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4849ddf6]
+[DEBUG] 2022-08-18 18:40:20.298 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.balance
+[DEBUG] 2022-08-18 18:40:20.299 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.ccv
+[DEBUG] 2022-08-18 18:40:20.299 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.expDate
+[DEBUG] 2022-08-18 18:40:20.299 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.member
+[DEBUG] 2022-08-18 18:40:20.299 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:7> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@19557467]
+[DEBUG] 2022-08-18 18:40:20.299 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.member.dob
+[DEBUG] 2022-08-18 18:40:20.299 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.member.fullName
+[DEBUG] 2022-08-18 18:40:20.299 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.member.isAdmin
+[DEBUG] 2022-08-18 18:40:20.299 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.member.memberPaymentList
+[DEBUG] 2022-08-18 18:40:20.299 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : order.memberPayment.member.memberPaymentList
+[DEBUG] 2022-08-18 18:40:20.299 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.member.orders
+[DEBUG] 2022-08-18 18:40:20.300 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : order.memberPayment.member.orders
+[DEBUG] 2022-08-18 18:40:20.300 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.member.userPassword
+[DEBUG] 2022-08-18 18:40:20.300 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.member.username
+[DEBUG] 2022-08-18 18:40:20.300 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.orderSet
+[DEBUG] 2022-08-18 18:40:20.300 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : order.memberPayment.orderSet
+[DEBUG] 2022-08-18 18:40:20.300 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.provider
+[DEBUG] 2022-08-18 18:40:20.300 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.zipCode
+[DEBUG] 2022-08-18 18:40:20.301 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.orderAddress
+[DEBUG] 2022-08-18 18:40:20.301 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.orderDate
+[DEBUG] 2022-08-18 18:40:20.301 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.orderDetailsSet
+[DEBUG] 2022-08-18 18:40:20.301 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : order.orderDetailsSet
+[DEBUG] 2022-08-18 18:40:20.301 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.orderZip
+[DEBUG] 2022-08-18 18:40:20.301 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : quantity
+[DEBUG] 2022-08-18 18:40:20.302 [http-nio-8080-exec-4] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-18 18:40:20.302 [http-nio-8080-exec-4] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-18 18:40:20.303 [http-nio-8080-exec-4] LoadPlanTreePrinter - LoadPlan(entity=com.revature.pokebowl.orderdetails.OrderDetails)
+    - Returns
+       - EntityReturnImpl(entity=com.revature.pokebowl.orderdetails.OrderDetails, querySpaceUid=<gen:0>, path=com.revature.pokebowl.orderdetails.OrderDetails)
+          - EntityAttributeFetchImpl(entity=com.revature.pokebowl.dish.Dish, querySpaceUid=<gen:1>, path=com.revature.pokebowl.orderdetails.OrderDetails.dish)
+          - EntityAttributeFetchImpl(entity=com.revature.pokebowl.order.Order, querySpaceUid=<gen:2>, path=com.revature.pokebowl.orderdetails.OrderDetails.order)
+             - EntityAttributeFetchImpl(entity=com.revature.pokebowl.member.Member, querySpaceUid=<gen:3>, path=com.revature.pokebowl.orderdetails.OrderDetails.order.member)
+                - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.member.Member.memberPaymentList, querySpaceUid=<gen:4>, path=com.revature.pokebowl.orderdetails.OrderDetails.order.member.memberPaymentList)
+                   - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.memberpayment.MemberPayment, querySpaceUid=<gen:5>, path=com.revature.pokebowl.orderdetails.OrderDetails.order.member.memberPaymentList.<elements>)
+             - EntityAttributeFetchImpl(entity=com.revature.pokebowl.memberpayment.MemberPayment, querySpaceUid=<gen:6>, path=com.revature.pokebowl.orderdetails.OrderDetails.order.memberPayment)
+                - EntityAttributeFetchImpl(entity=com.revature.pokebowl.member.Member, querySpaceUid=<gen:7>, path=com.revature.pokebowl.orderdetails.OrderDetails.order.memberPayment.member)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.revature.pokebowl.orderdetails.OrderDetails)
+          - SQL table alias mapping - orderdetai0_
+          - alias suffix - 0_
+          - suffixed key columns - {order_de1_3_0_}
+          - JOIN (JoinDefinedByMetadata(dish)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.revature.pokebowl.dish.Dish)
+                - SQL table alias mapping - dish1_
+                - alias suffix - 1_
+                - suffixed key columns - {dish_id1_0_1_}
+          - JOIN (JoinDefinedByMetadata(order)) : <gen:0> -> <gen:2>
+             - EntityQuerySpaceImpl(uid=<gen:2>, entity=com.revature.pokebowl.order.Order)
+                - SQL table alias mapping - order2_
+                - alias suffix - 2_
+                - suffixed key columns - {order_id1_4_2_}
+                - JOIN (JoinDefinedByMetadata(member)) : <gen:2> -> <gen:3>
+                   - EntityQuerySpaceImpl(uid=<gen:3>, entity=com.revature.pokebowl.member.Member)
+                      - SQL table alias mapping - member3_
+                      - alias suffix - 3_
+                      - suffixed key columns - {member_i1_2_3_}
+                - JOIN (JoinDefinedByMetadata(memberPayment)) : <gen:2> -> <gen:6>
+                   - EntityQuerySpaceImpl(uid=<gen:6>, entity=com.revature.pokebowl.memberpayment.MemberPayment)
+                      - SQL table alias mapping - memberpaym4_
+                      - alias suffix - 4_
+                      - suffixed key columns - {payment_1_1_4_}
+                      - JOIN (JoinDefinedByMetadata(member)) : <gen:6> -> <gen:7>
+                         - EntityQuerySpaceImpl(uid=<gen:7>, entity=com.revature.pokebowl.member.Member)
+                            - SQL table alias mapping - member5_
+                            - alias suffix - 5_
+                            - suffixed key columns - {member_i1_2_5_}
+
+[DEBUG] 2022-08-18 18:40:20.303 [http-nio-8080-exec-4] EntityLoader - Static select for entity com.revature.pokebowl.orderdetails.OrderDetails [NONE]: select orderdetai0_.order_details_id as order_de1_3_0_, orderdetai0_.comments as comments2_3_0_, orderdetai0_.dish_id as dish_id4_3_0_, orderdetai0_.order_id as order_id5_3_0_, orderdetai0_.quantity as quantity3_3_0_, dish1_.dish_id as dish_id1_0_1_, dish1_.description as descript2_0_1_, dish1_.dish_cost as dish_cos3_0_1_, dish1_.dish_name as dish_nam4_0_1_, dish1_.is_vegetarian as is_veget5_0_1_, order2_.order_id as order_id1_4_2_, order2_.amount as amount2_4_2_, order2_.member_id as member_i6_4_2_, order2_.payment_id as payment_7_4_2_, order2_.order_address as order_ad3_4_2_, order2_.order_date as order_da4_4_2_, order2_.order_zip as order_zi5_4_2_, member3_.member_id as member_i1_2_3_, member3_.dob as dob2_2_3_, member3_.full_name as full_nam3_2_3_, member3_.is_admin as is_admin4_2_3_, member3_.user_password as user_pas5_2_3_, member3_.username as username6_2_3_, memberpaym4_.payment_id as payment_1_1_4_, memberpaym4_.balance as balance2_1_4_, memberpaym4_.ccv as ccv3_1_4_, memberpaym4_.exp_date as exp_date4_1_4_, memberpaym4_.member_id as member_i7_1_4_, memberpaym4_.provider as provider5_1_4_, memberpaym4_.zip_code as zip_code6_1_4_, member5_.member_id as member_i1_2_5_, member5_.dob as dob2_2_5_, member5_.full_name as full_nam3_2_5_, member5_.is_admin as is_admin4_2_5_, member5_.user_password as user_pas5_2_5_, member5_.username as username6_2_5_ from order_details orderdetai0_ left outer join dishes dish1_ on orderdetai0_.dish_id=dish1_.dish_id left outer join orders order2_ on orderdetai0_.order_id=order2_.order_id left outer join members member3_ on order2_.member_id=member3_.member_id left outer join member_payments memberpaym4_ on order2_.payment_id=memberpaym4_.payment_id left outer join members member5_ on memberpaym4_.member_id=member5_.member_id where orderdetai0_.order_details_id=?
+[DEBUG] 2022-08-18 18:40:20.303 [http-nio-8080-exec-4] AbstractEntityPersister - Static SQL for entity: com.revature.pokebowl.dish.Dish
+[DEBUG] 2022-08-18 18:40:20.303 [http-nio-8080-exec-4] AbstractEntityPersister -  Version select: select dish_id from dishes where dish_id =?
+[DEBUG] 2022-08-18 18:40:20.303 [http-nio-8080-exec-4] AbstractEntityPersister -  Snapshot select: select dish_.dish_id, dish_.description as descript2_0_, dish_.dish_cost as dish_cos3_0_, dish_.dish_name as dish_nam4_0_, dish_.is_vegetarian as is_veget5_0_ from dishes dish_ where dish_.dish_id=?
+[DEBUG] 2022-08-18 18:40:20.303 [http-nio-8080-exec-4] AbstractEntityPersister -  Insert 0: insert into dishes (description, dish_cost, dish_name, is_vegetarian, dish_id) values (?, ?, ?, ?, ?)
+[DEBUG] 2022-08-18 18:40:20.303 [http-nio-8080-exec-4] AbstractEntityPersister -  Update 0: update dishes set description=?, dish_cost=?, dish_name=?, is_vegetarian=? where dish_id=?
+[DEBUG] 2022-08-18 18:40:20.303 [http-nio-8080-exec-4] AbstractEntityPersister -  Delete 0: delete from dishes where dish_id=?
+[DEBUG] 2022-08-18 18:40:20.303 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1862d1ba]
+[DEBUG] 2022-08-18 18:40:20.303 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : description
+[DEBUG] 2022-08-18 18:40:20.303 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : dishCost
+[DEBUG] 2022-08-18 18:40:20.304 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : dishName
+[DEBUG] 2022-08-18 18:40:20.304 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : isVegetarian
+[DEBUG] 2022-08-18 18:40:20.304 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : orderDetailsSet
+[DEBUG] 2022-08-18 18:40:20.304 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@50e79684]
+[DEBUG] 2022-08-18 18:40:20.304 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5ee4d0a0]
+[DEBUG] 2022-08-18 18:40:20.304 [http-nio-8080-exec-4] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-18 18:40:20.304 [http-nio-8080-exec-4] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-18 18:40:20.305 [http-nio-8080-exec-4] LoadPlanTreePrinter - LoadPlan(entity=com.revature.pokebowl.dish.Dish)
+    - Returns
+       - EntityReturnImpl(entity=com.revature.pokebowl.dish.Dish, querySpaceUid=<gen:0>, path=com.revature.pokebowl.dish.Dish)
+          - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.dish.Dish.orderDetailsSet, querySpaceUid=<gen:1>, path=com.revature.pokebowl.dish.Dish.orderDetailsSet)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.orderdetails.OrderDetails, querySpaceUid=<gen:2>, path=com.revature.pokebowl.dish.Dish.orderDetailsSet.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.revature.pokebowl.dish.Dish)
+          - SQL table alias mapping - dish0_
+          - alias suffix - 0_
+          - suffixed key columns - {dish_id1_0_0_}
+
+[DEBUG] 2022-08-18 18:40:20.305 [http-nio-8080-exec-4] EntityLoader - Static select for entity com.revature.pokebowl.dish.Dish [NONE]: select dish0_.dish_id as dish_id1_0_0_, dish0_.description as descript2_0_0_, dish0_.dish_cost as dish_cos3_0_0_, dish0_.dish_name as dish_nam4_0_0_, dish0_.is_vegetarian as is_veget5_0_0_ from dishes dish0_ where dish0_.dish_id=?
+[DEBUG] 2022-08-18 18:40:20.311 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@7e8b238e]
+[DEBUG] 2022-08-18 18:40:20.311 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7896aeb5]
+[DEBUG] 2022-08-18 18:40:20.312 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : amount
+[DEBUG] 2022-08-18 18:40:20.312 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member
+[DEBUG] 2022-08-18 18:40:20.312 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@70574153]
+[DEBUG] 2022-08-18 18:40:20.312 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.dob
+[DEBUG] 2022-08-18 18:40:20.312 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.fullName
+[DEBUG] 2022-08-18 18:40:20.313 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.isAdmin
+[DEBUG] 2022-08-18 18:40:20.313 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.memberPaymentList
+[DEBUG] 2022-08-18 18:40:20.313 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@f691360]
+[DEBUG] 2022-08-18 18:40:20.313 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@c152ce5]
+[DEBUG] 2022-08-18 18:40:20.313 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.orders
+[DEBUG] 2022-08-18 18:40:20.313 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : member.orders
+[DEBUG] 2022-08-18 18:40:20.313 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.userPassword
+[DEBUG] 2022-08-18 18:40:20.313 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member.username
+[DEBUG] 2022-08-18 18:40:20.313 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment
+[DEBUG] 2022-08-18 18:40:20.314 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : memberPayment
+[DEBUG] 2022-08-18 18:40:20.314 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : orderAddress
+[DEBUG] 2022-08-18 18:40:20.314 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : orderDate
+[DEBUG] 2022-08-18 18:40:20.314 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : orderDetailsSet
+[DEBUG] 2022-08-18 18:40:20.314 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@4682b9ed]
+[DEBUG] 2022-08-18 18:40:20.314 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5c8412d8]
+[DEBUG] 2022-08-18 18:40:20.314 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : orderZip
+[DEBUG] 2022-08-18 18:40:20.314 [http-nio-8080-exec-4] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-18 18:40:20.316 [http-nio-8080-exec-4] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-18 18:40:20.317 [http-nio-8080-exec-4] LoadPlanTreePrinter - LoadPlan(collection=com.revature.pokebowl.memberpayment.MemberPayment.orderSet)
+    - Returns
+       - CollectionReturnImpl(collection=com.revature.pokebowl.memberpayment.MemberPayment.orderSet, querySpaceUid=<gen:0>, path=[com.revature.pokebowl.memberpayment.MemberPayment.orderSet])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.order.Order, querySpaceUid=<gen:1>, path=[com.revature.pokebowl.memberpayment.MemberPayment.orderSet].<elements>)
+             - EntityAttributeFetchImpl(entity=com.revature.pokebowl.member.Member, querySpaceUid=<gen:2>, path=[com.revature.pokebowl.memberpayment.MemberPayment.orderSet].<elements>.member)
+                - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.member.Member.memberPaymentList, querySpaceUid=<gen:3>, path=[com.revature.pokebowl.memberpayment.MemberPayment.orderSet].<elements>.member.memberPaymentList)
+                   - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.memberpayment.MemberPayment, querySpaceUid=<gen:4>, path=[com.revature.pokebowl.memberpayment.MemberPayment.orderSet].<elements>.member.memberPaymentList.<elements>)
+             - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.order.Order.orderDetailsSet, querySpaceUid=<gen:5>, path=[com.revature.pokebowl.memberpayment.MemberPayment.orderSet].<elements>.orderDetailsSet)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.orderdetails.OrderDetails, querySpaceUid=<gen:6>, path=[com.revature.pokebowl.memberpayment.MemberPayment.orderSet].<elements>.orderDetailsSet.<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.revature.pokebowl.memberpayment.MemberPayment.orderSet)
+          - SQL table alias mapping - orderset0_
+          - alias suffix - 0_
+          - suffixed key columns - {payment_7_4_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - order_id1_4_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.revature.pokebowl.order.Order)
+                - SQL table alias mapping - orderset0_
+                - alias suffix - 1_
+                - suffixed key columns - {order_id1_4_1_}
+                - JOIN (JoinDefinedByMetadata(member)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=com.revature.pokebowl.member.Member)
+                      - SQL table alias mapping - member1_
+                      - alias suffix - 2_
+                      - suffixed key columns - {member_i1_2_2_}
+
+[DEBUG] 2022-08-18 18:40:20.318 [http-nio-8080-exec-4] CollectionLoader - Static select for collection com.revature.pokebowl.memberpayment.MemberPayment.orderSet: select orderset0_.payment_id as payment_7_4_0_, orderset0_.order_id as order_id1_4_0_, orderset0_.order_id as order_id1_4_1_, orderset0_.amount as amount2_4_1_, orderset0_.member_id as member_i6_4_1_, orderset0_.payment_id as payment_7_4_1_, orderset0_.order_address as order_ad3_4_1_, orderset0_.order_date as order_da4_4_1_, orderset0_.order_zip as order_zi5_4_1_, member1_.member_id as member_i1_2_2_, member1_.dob as dob2_2_2_, member1_.full_name as full_nam3_2_2_, member1_.is_admin as is_admin4_2_2_, member1_.user_password as user_pas5_2_2_, member1_.username as username6_2_2_ from orders orderset0_ left outer join members member1_ on orderset0_.member_id=member1_.member_id where orderset0_.payment_id=?
+[DEBUG] 2022-08-18 18:40:20.318 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@714aa91d]
+[DEBUG] 2022-08-18 18:40:20.318 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@468c6c20]
+[DEBUG] 2022-08-18 18:40:20.318 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : balance
+[DEBUG] 2022-08-18 18:40:20.318 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : ccv
+[DEBUG] 2022-08-18 18:40:20.318 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : expDate
+[DEBUG] 2022-08-18 18:40:20.318 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member
+[DEBUG] 2022-08-18 18:40:20.319 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : member
+[DEBUG] 2022-08-18 18:40:20.319 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : orderSet
+[DEBUG] 2022-08-18 18:40:20.319 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@3bed1304]
+[DEBUG] 2022-08-18 18:40:20.319 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1ea58535]
+[DEBUG] 2022-08-18 18:40:20.321 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : provider
+[DEBUG] 2022-08-18 18:40:20.323 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : zipCode
+[DEBUG] 2022-08-18 18:40:20.325 [http-nio-8080-exec-4] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-18 18:40:20.327 [http-nio-8080-exec-4] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-18 18:40:20.329 [http-nio-8080-exec-4] LoadPlanTreePrinter - LoadPlan(collection=com.revature.pokebowl.member.Member.memberPaymentList)
+    - Returns
+       - CollectionReturnImpl(collection=com.revature.pokebowl.member.Member.memberPaymentList, querySpaceUid=<gen:0>, path=[com.revature.pokebowl.member.Member.memberPaymentList])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.memberpayment.MemberPayment, querySpaceUid=<gen:1>, path=[com.revature.pokebowl.member.Member.memberPaymentList].<elements>)
+             - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.memberpayment.MemberPayment.orderSet, querySpaceUid=<gen:2>, path=[com.revature.pokebowl.member.Member.memberPaymentList].<elements>.orderSet)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.order.Order, querySpaceUid=<gen:3>, path=[com.revature.pokebowl.member.Member.memberPaymentList].<elements>.orderSet.<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.revature.pokebowl.member.Member.memberPaymentList)
+          - SQL table alias mapping - memberpaym0_
+          - alias suffix - 0_
+          - suffixed key columns - {member_i7_1_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - payment_1_1_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.revature.pokebowl.memberpayment.MemberPayment)
+                - SQL table alias mapping - memberpaym0_
+                - alias suffix - 1_
+                - suffixed key columns - {payment_1_1_1_}
+
+[DEBUG] 2022-08-18 18:40:20.330 [http-nio-8080-exec-4] CollectionLoader - Static select for collection com.revature.pokebowl.member.Member.memberPaymentList: select memberpaym0_.member_id as member_i7_1_0_, memberpaym0_.payment_id as payment_1_1_0_, memberpaym0_.payment_id as payment_1_1_1_, memberpaym0_.balance as balance2_1_1_, memberpaym0_.ccv as ccv3_1_1_, memberpaym0_.exp_date as exp_date4_1_1_, memberpaym0_.member_id as member_i7_1_1_, memberpaym0_.provider as provider5_1_1_, memberpaym0_.zip_code as zip_code6_1_1_ from member_payments memberpaym0_ where memberpaym0_.member_id=?
+[DEBUG] 2022-08-18 18:40:20.330 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@7b43921f]
+[DEBUG] 2022-08-18 18:40:20.330 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3e50009d]
+[DEBUG] 2022-08-18 18:40:20.330 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : comments
+[DEBUG] 2022-08-18 18:40:20.330 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : dish
+[DEBUG] 2022-08-18 18:40:20.330 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : dish
+[DEBUG] 2022-08-18 18:40:20.331 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order
+[DEBUG] 2022-08-18 18:40:20.331 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@38fc4f5a]
+[DEBUG] 2022-08-18 18:40:20.331 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.amount
+[DEBUG] 2022-08-18 18:40:20.331 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.member
+[DEBUG] 2022-08-18 18:40:20.331 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5934d8d3]
+[DEBUG] 2022-08-18 18:40:20.332 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.member.dob
+[DEBUG] 2022-08-18 18:40:20.332 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.member.fullName
+[DEBUG] 2022-08-18 18:40:20.332 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.member.isAdmin
+[DEBUG] 2022-08-18 18:40:20.332 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.member.memberPaymentList
+[DEBUG] 2022-08-18 18:40:20.332 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@1bd6a90a]
+[DEBUG] 2022-08-18 18:40:20.333 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2a50e934]
+[DEBUG] 2022-08-18 18:40:20.333 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.member.orders
+[DEBUG] 2022-08-18 18:40:20.333 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : order.member.orders
+[DEBUG] 2022-08-18 18:40:20.333 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.member.userPassword
+[DEBUG] 2022-08-18 18:40:20.333 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.member.username
+[DEBUG] 2022-08-18 18:40:20.333 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment
+[DEBUG] 2022-08-18 18:40:20.333 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@55dd4eed]
+[DEBUG] 2022-08-18 18:40:20.333 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.balance
+[DEBUG] 2022-08-18 18:40:20.334 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.ccv
+[DEBUG] 2022-08-18 18:40:20.334 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.expDate
+[DEBUG] 2022-08-18 18:40:20.334 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.member
+[DEBUG] 2022-08-18 18:40:20.334 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:7> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6fb4ae33]
+[DEBUG] 2022-08-18 18:40:20.334 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.member.dob
+[DEBUG] 2022-08-18 18:40:20.334 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.member.fullName
+[DEBUG] 2022-08-18 18:40:20.334 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.member.isAdmin
+[DEBUG] 2022-08-18 18:40:20.335 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.member.memberPaymentList
+[DEBUG] 2022-08-18 18:40:20.335 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : order.memberPayment.member.memberPaymentList
+[DEBUG] 2022-08-18 18:40:20.335 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.member.orders
+[DEBUG] 2022-08-18 18:40:20.335 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : order.memberPayment.member.orders
+[DEBUG] 2022-08-18 18:40:20.335 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.member.userPassword
+[DEBUG] 2022-08-18 18:40:20.335 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.member.username
+[DEBUG] 2022-08-18 18:40:20.335 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.orderSet
+[DEBUG] 2022-08-18 18:40:20.335 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : order.memberPayment.orderSet
+[DEBUG] 2022-08-18 18:40:20.335 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.provider
+[DEBUG] 2022-08-18 18:40:20.335 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.memberPayment.zipCode
+[DEBUG] 2022-08-18 18:40:20.336 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.orderAddress
+[DEBUG] 2022-08-18 18:40:20.336 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.orderDate
+[DEBUG] 2022-08-18 18:40:20.336 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.orderDetailsSet
+[DEBUG] 2022-08-18 18:40:20.336 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : order.orderDetailsSet
+[DEBUG] 2022-08-18 18:40:20.336 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order.orderZip
+[DEBUG] 2022-08-18 18:40:20.337 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : quantity
+[DEBUG] 2022-08-18 18:40:20.337 [http-nio-8080-exec-4] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-18 18:40:20.337 [http-nio-8080-exec-4] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-18 18:40:20.338 [http-nio-8080-exec-4] LoadPlanTreePrinter - LoadPlan(collection=com.revature.pokebowl.dish.Dish.orderDetailsSet)
+    - Returns
+       - CollectionReturnImpl(collection=com.revature.pokebowl.dish.Dish.orderDetailsSet, querySpaceUid=<gen:0>, path=[com.revature.pokebowl.dish.Dish.orderDetailsSet])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.orderdetails.OrderDetails, querySpaceUid=<gen:1>, path=[com.revature.pokebowl.dish.Dish.orderDetailsSet].<elements>)
+             - EntityAttributeFetchImpl(entity=com.revature.pokebowl.order.Order, querySpaceUid=<gen:2>, path=[com.revature.pokebowl.dish.Dish.orderDetailsSet].<elements>.order)
+                - EntityAttributeFetchImpl(entity=com.revature.pokebowl.member.Member, querySpaceUid=<gen:3>, path=[com.revature.pokebowl.dish.Dish.orderDetailsSet].<elements>.order.member)
+                   - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.member.Member.memberPaymentList, querySpaceUid=<gen:4>, path=[com.revature.pokebowl.dish.Dish.orderDetailsSet].<elements>.order.member.memberPaymentList)
+                      - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.memberpayment.MemberPayment, querySpaceUid=<gen:5>, path=[com.revature.pokebowl.dish.Dish.orderDetailsSet].<elements>.order.member.memberPaymentList.<elements>)
+                - EntityAttributeFetchImpl(entity=com.revature.pokebowl.memberpayment.MemberPayment, querySpaceUid=<gen:6>, path=[com.revature.pokebowl.dish.Dish.orderDetailsSet].<elements>.order.memberPayment)
+                   - EntityAttributeFetchImpl(entity=com.revature.pokebowl.member.Member, querySpaceUid=<gen:7>, path=[com.revature.pokebowl.dish.Dish.orderDetailsSet].<elements>.order.memberPayment.member)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.revature.pokebowl.dish.Dish.orderDetailsSet)
+          - SQL table alias mapping - orderdetai0_
+          - alias suffix - 0_
+          - suffixed key columns - {dish_id4_3_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - order_de1_3_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.revature.pokebowl.orderdetails.OrderDetails)
+                - SQL table alias mapping - orderdetai0_
+                - alias suffix - 1_
+                - suffixed key columns - {order_de1_3_1_}
+                - JOIN (JoinDefinedByMetadata(order)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=com.revature.pokebowl.order.Order)
+                      - SQL table alias mapping - order1_
+                      - alias suffix - 2_
+                      - suffixed key columns - {order_id1_4_2_}
+                      - JOIN (JoinDefinedByMetadata(member)) : <gen:2> -> <gen:3>
+                         - EntityQuerySpaceImpl(uid=<gen:3>, entity=com.revature.pokebowl.member.Member)
+                            - SQL table alias mapping - member2_
+                            - alias suffix - 3_
+                            - suffixed key columns - {member_i1_2_3_}
+                      - JOIN (JoinDefinedByMetadata(memberPayment)) : <gen:2> -> <gen:6>
+                         - EntityQuerySpaceImpl(uid=<gen:6>, entity=com.revature.pokebowl.memberpayment.MemberPayment)
+                            - SQL table alias mapping - memberpaym3_
+                            - alias suffix - 4_
+                            - suffixed key columns - {payment_1_1_4_}
+                            - JOIN (JoinDefinedByMetadata(member)) : <gen:6> -> <gen:7>
+                               - EntityQuerySpaceImpl(uid=<gen:7>, entity=com.revature.pokebowl.member.Member)
+                                  - SQL table alias mapping - member4_
+                                  - alias suffix - 5_
+                                  - suffixed key columns - {member_i1_2_5_}
+
+[DEBUG] 2022-08-18 18:40:20.338 [http-nio-8080-exec-4] CollectionLoader - Static select for collection com.revature.pokebowl.dish.Dish.orderDetailsSet: select orderdetai0_.dish_id as dish_id4_3_0_, orderdetai0_.order_details_id as order_de1_3_0_, orderdetai0_.order_details_id as order_de1_3_1_, orderdetai0_.comments as comments2_3_1_, orderdetai0_.dish_id as dish_id4_3_1_, orderdetai0_.order_id as order_id5_3_1_, orderdetai0_.quantity as quantity3_3_1_, order1_.order_id as order_id1_4_2_, order1_.amount as amount2_4_2_, order1_.member_id as member_i6_4_2_, order1_.payment_id as payment_7_4_2_, order1_.order_address as order_ad3_4_2_, order1_.order_date as order_da4_4_2_, order1_.order_zip as order_zi5_4_2_, member2_.member_id as member_i1_2_3_, member2_.dob as dob2_2_3_, member2_.full_name as full_nam3_2_3_, member2_.is_admin as is_admin4_2_3_, member2_.user_password as user_pas5_2_3_, member2_.username as username6_2_3_, memberpaym3_.payment_id as payment_1_1_4_, memberpaym3_.balance as balance2_1_4_, memberpaym3_.ccv as ccv3_1_4_, memberpaym3_.exp_date as exp_date4_1_4_, memberpaym3_.member_id as member_i7_1_4_, memberpaym3_.provider as provider5_1_4_, memberpaym3_.zip_code as zip_code6_1_4_, member4_.member_id as member_i1_2_5_, member4_.dob as dob2_2_5_, member4_.full_name as full_nam3_2_5_, member4_.is_admin as is_admin4_2_5_, member4_.user_password as user_pas5_2_5_, member4_.username as username6_2_5_ from order_details orderdetai0_ left outer join orders order1_ on orderdetai0_.order_id=order1_.order_id left outer join members member2_ on order1_.member_id=member2_.member_id left outer join member_payments memberpaym3_ on order1_.payment_id=memberpaym3_.payment_id left outer join members member4_ on memberpaym3_.member_id=member4_.member_id where orderdetai0_.dish_id=?
+[DEBUG] 2022-08-18 18:40:20.338 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@7d157723]
+[DEBUG] 2022-08-18 18:40:20.338 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1af9a230]
+[DEBUG] 2022-08-18 18:40:20.338 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : comments
+[DEBUG] 2022-08-18 18:40:20.338 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : dish
+[DEBUG] 2022-08-18 18:40:20.338 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@43d42716]
+[DEBUG] 2022-08-18 18:40:20.338 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : dish.description
+[DEBUG] 2022-08-18 18:40:20.338 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : dish.dishCost
+[DEBUG] 2022-08-18 18:40:20.338 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : dish.dishName
+[DEBUG] 2022-08-18 18:40:20.339 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : dish.isVegetarian
+[DEBUG] 2022-08-18 18:40:20.339 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : dish.orderDetailsSet
+[DEBUG] 2022-08-18 18:40:20.339 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : dish.orderDetailsSet
+[DEBUG] 2022-08-18 18:40:20.339 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : order
+[DEBUG] 2022-08-18 18:40:20.339 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : order
+[DEBUG] 2022-08-18 18:40:20.339 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : quantity
+[DEBUG] 2022-08-18 18:40:20.340 [http-nio-8080-exec-4] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-18 18:40:20.341 [http-nio-8080-exec-4] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-18 18:40:20.342 [http-nio-8080-exec-4] LoadPlanTreePrinter - LoadPlan(collection=com.revature.pokebowl.order.Order.orderDetailsSet)
+    - Returns
+       - CollectionReturnImpl(collection=com.revature.pokebowl.order.Order.orderDetailsSet, querySpaceUid=<gen:0>, path=[com.revature.pokebowl.order.Order.orderDetailsSet])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.orderdetails.OrderDetails, querySpaceUid=<gen:1>, path=[com.revature.pokebowl.order.Order.orderDetailsSet].<elements>)
+             - EntityAttributeFetchImpl(entity=com.revature.pokebowl.dish.Dish, querySpaceUid=<gen:2>, path=[com.revature.pokebowl.order.Order.orderDetailsSet].<elements>.dish)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.revature.pokebowl.order.Order.orderDetailsSet)
+          - SQL table alias mapping - orderdetai0_
+          - alias suffix - 0_
+          - suffixed key columns - {order_id5_3_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - order_de1_3_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.revature.pokebowl.orderdetails.OrderDetails)
+                - SQL table alias mapping - orderdetai0_
+                - alias suffix - 1_
+                - suffixed key columns - {order_de1_3_1_}
+                - JOIN (JoinDefinedByMetadata(dish)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=com.revature.pokebowl.dish.Dish)
+                      - SQL table alias mapping - dish1_
+                      - alias suffix - 2_
+                      - suffixed key columns - {dish_id1_0_2_}
+
+[DEBUG] 2022-08-18 18:40:20.342 [http-nio-8080-exec-4] CollectionLoader - Static select for collection com.revature.pokebowl.order.Order.orderDetailsSet: select orderdetai0_.order_id as order_id5_3_0_, orderdetai0_.order_details_id as order_de1_3_0_, orderdetai0_.order_details_id as order_de1_3_1_, orderdetai0_.comments as comments2_3_1_, orderdetai0_.dish_id as dish_id4_3_1_, orderdetai0_.order_id as order_id5_3_1_, orderdetai0_.quantity as quantity3_3_1_, dish1_.dish_id as dish_id1_0_2_, dish1_.description as descript2_0_2_, dish1_.dish_cost as dish_cos3_0_2_, dish1_.dish_name as dish_nam4_0_2_, dish1_.is_vegetarian as is_veget5_0_2_ from order_details orderdetai0_ left outer join dishes dish1_ on orderdetai0_.dish_id=dish1_.dish_id where orderdetai0_.order_id=?
+[DEBUG] 2022-08-18 18:40:20.342 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@766c908b]
+[DEBUG] 2022-08-18 18:40:20.342 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@141799a7]
+[DEBUG] 2022-08-18 18:40:20.343 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : amount
+[DEBUG] 2022-08-18 18:40:20.343 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : member
+[DEBUG] 2022-08-18 18:40:20.343 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : member
+[DEBUG] 2022-08-18 18:40:20.343 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment
+[DEBUG] 2022-08-18 18:40:20.343 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2fe89ced]
+[DEBUG] 2022-08-18 18:40:20.343 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.balance
+[DEBUG] 2022-08-18 18:40:20.343 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.ccv
+[DEBUG] 2022-08-18 18:40:20.343 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.expDate
+[DEBUG] 2022-08-18 18:40:20.343 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.member
+[DEBUG] 2022-08-18 18:40:20.344 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3ebf2e81]
+[DEBUG] 2022-08-18 18:40:20.344 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.dob
+[DEBUG] 2022-08-18 18:40:20.344 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.fullName
+[DEBUG] 2022-08-18 18:40:20.344 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.isAdmin
+[DEBUG] 2022-08-18 18:40:20.344 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.memberPaymentList
+[DEBUG] 2022-08-18 18:40:20.344 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : memberPayment.member.memberPaymentList
+[DEBUG] 2022-08-18 18:40:20.344 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.orders
+[DEBUG] 2022-08-18 18:40:20.344 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : memberPayment.member.orders
+[DEBUG] 2022-08-18 18:40:20.344 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.userPassword
+[DEBUG] 2022-08-18 18:40:20.344 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.member.username
+[DEBUG] 2022-08-18 18:40:20.344 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.orderSet
+[DEBUG] 2022-08-18 18:40:20.344 [http-nio-8080-exec-4] MetamodelGraphWalker - Property path deemed to be circular : memberPayment.orderSet
+[DEBUG] 2022-08-18 18:40:20.345 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.provider
+[DEBUG] 2022-08-18 18:40:20.345 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : memberPayment.zipCode
+[DEBUG] 2022-08-18 18:40:20.345 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : orderAddress
+[DEBUG] 2022-08-18 18:40:20.345 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : orderDate
+[DEBUG] 2022-08-18 18:40:20.345 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : orderDetailsSet
+[DEBUG] 2022-08-18 18:40:20.345 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@7d395153]
+[DEBUG] 2022-08-18 18:40:20.345 [http-nio-8080-exec-4] QuerySpacesImpl - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2de306a0]
+[DEBUG] 2022-08-18 18:40:20.345 [http-nio-8080-exec-4] MetamodelGraphWalker - Visiting attribute path : orderZip
+[DEBUG] 2022-08-18 18:40:20.346 [http-nio-8080-exec-4] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2022-08-18 18:40:20.346 [http-nio-8080-exec-4] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2022-08-18 18:40:20.347 [http-nio-8080-exec-4] LoadPlanTreePrinter - LoadPlan(collection=com.revature.pokebowl.member.Member.orders)
+    - Returns
+       - CollectionReturnImpl(collection=com.revature.pokebowl.member.Member.orders, querySpaceUid=<gen:0>, path=[com.revature.pokebowl.member.Member.orders])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.order.Order, querySpaceUid=<gen:1>, path=[com.revature.pokebowl.member.Member.orders].<elements>)
+             - EntityAttributeFetchImpl(entity=com.revature.pokebowl.memberpayment.MemberPayment, querySpaceUid=<gen:2>, path=[com.revature.pokebowl.member.Member.orders].<elements>.memberPayment)
+                - EntityAttributeFetchImpl(entity=com.revature.pokebowl.member.Member, querySpaceUid=<gen:3>, path=[com.revature.pokebowl.member.Member.orders].<elements>.memberPayment.member)
+             - CollectionAttributeFetchImpl(collection=com.revature.pokebowl.order.Order.orderDetailsSet, querySpaceUid=<gen:4>, path=[com.revature.pokebowl.member.Member.orders].<elements>.orderDetailsSet)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.revature.pokebowl.orderdetails.OrderDetails, querySpaceUid=<gen:5>, path=[com.revature.pokebowl.member.Member.orders].<elements>.orderDetailsSet.<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.revature.pokebowl.member.Member.orders)
+          - SQL table alias mapping - orders0_
+          - alias suffix - 0_
+          - suffixed key columns - {member_i6_4_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - order_id1_4_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.revature.pokebowl.order.Order)
+                - SQL table alias mapping - orders0_
+                - alias suffix - 1_
+                - suffixed key columns - {order_id1_4_1_}
+                - JOIN (JoinDefinedByMetadata(memberPayment)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=com.revature.pokebowl.memberpayment.MemberPayment)
+                      - SQL table alias mapping - memberpaym1_
+                      - alias suffix - 2_
+                      - suffixed key columns - {payment_1_1_2_}
+                      - JOIN (JoinDefinedByMetadata(member)) : <gen:2> -> <gen:3>
+                         - EntityQuerySpaceImpl(uid=<gen:3>, entity=com.revature.pokebowl.member.Member)
+                            - SQL table alias mapping - member2_
+                            - alias suffix - 3_
+                            - suffixed key columns - {member_i1_2_3_}
+
+[DEBUG] 2022-08-18 18:40:20.347 [http-nio-8080-exec-4] CollectionLoader - Static select for collection com.revature.pokebowl.member.Member.orders: select orders0_.member_id as member_i6_4_0_, orders0_.order_id as order_id1_4_0_, orders0_.order_id as order_id1_4_1_, orders0_.amount as amount2_4_1_, orders0_.member_id as member_i6_4_1_, orders0_.payment_id as payment_7_4_1_, orders0_.order_address as order_ad3_4_1_, orders0_.order_date as order_da4_4_1_, orders0_.order_zip as order_zi5_4_1_, memberpaym1_.payment_id as payment_1_1_2_, memberpaym1_.balance as balance2_1_2_, memberpaym1_.ccv as ccv3_1_2_, memberpaym1_.exp_date as exp_date4_1_2_, memberpaym1_.member_id as member_i7_1_2_, memberpaym1_.provider as provider5_1_2_, memberpaym1_.zip_code as zip_code6_1_2_, member2_.member_id as member_i1_2_3_, member2_.dob as dob2_2_3_, member2_.full_name as full_nam3_2_3_, member2_.is_admin as is_admin4_2_3_, member2_.user_password as user_pas5_2_3_, member2_.username as username6_2_3_ from orders orders0_ left outer join member_payments memberpaym1_ on orders0_.payment_id=memberpaym1_.payment_id left outer join members member2_ on memberpaym1_.member_id=member2_.member_id where orders0_.member_id=?
+[INFO ] 2022-08-18 18:40:20.385 [http-nio-8080-exec-4] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@44d5a6a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 2022-08-18 18:40:20.472 [http-nio-8080-exec-4] Table - No alter strings for table : dishes
+[DEBUG] 2022-08-18 18:40:20.473 [http-nio-8080-exec-4] Table - No alter strings for table : member_payments
+[DEBUG] 2022-08-18 18:40:20.473 [http-nio-8080-exec-4] Table - No alter strings for table : members
+[DEBUG] 2022-08-18 18:40:20.473 [http-nio-8080-exec-4] Table - No alter strings for table : order_details
+[DEBUG] 2022-08-18 18:40:20.474 [http-nio-8080-exec-4] Table - No alter strings for table : orders
+[DEBUG] 2022-08-18 18:40:20.925 [http-nio-8080-exec-4] JtaPlatformInitiator - No JtaPlatform was specified, checking resolver
+[DEBUG] 2022-08-18 18:40:20.926 [http-nio-8080-exec-4] JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+[DEBUG] 2022-08-18 18:40:20.934 [http-nio-8080-exec-4] StandardJtaPlatformResolver - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2022-08-18 18:40:20.934 [http-nio-8080-exec-4] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 2022-08-18 18:40:20.934 [http-nio-8080-exec-4] NamedQueryRepository - Checking 0 named HQL queries
+[DEBUG] 2022-08-18 18:40:20.935 [http-nio-8080-exec-4] NamedQueryRepository - Checking 0 named SQL queries
+[DEBUG] 2022-08-18 18:40:20.939 [http-nio-8080-exec-4] SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+[DEBUG] 2022-08-18 18:40:20.942 [http-nio-8080-exec-4] SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@2ed0caba
+[DEBUG] 2022-08-18 18:40:20.943 [http-nio-8080-exec-4] SessionFactoryRegistry - Registering SessionFactory: 75ddc846-c237-4c1b-b3e1-c48960da3e2e (<unnamed>)
+[DEBUG] 2022-08-18 18:40:20.943 [http-nio-8080-exec-4] SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
+[DEBUG] 2022-08-18 18:40:20.987 [http-nio-8080-exec-4] StatisticsInitiator - Statistics initialized [enabled=false]
+[DEBUG] 2022-08-18 18:40:20.990 [http-nio-8080-exec-4] TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[DEBUG] 2022-08-18 18:40:20.990 [http-nio-8080-exec-4] TransactionImpl - begin
+[DEBUG] 2022-08-18 18:40:21.000 [http-nio-8080-exec-4] QueryTranslatorFactoryInitiator - QueryTranslatorFactory: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@76e20566
+[DEBUG] 2022-08-18 18:40:21.022 [http-nio-8080-exec-4] QueryTranslatorImpl - parse() - HQL: FROM members
+[DEBUG] 2022-08-18 18:40:21.028 [http-nio-8080-exec-4] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2022-08-18 18:40:21.034 [http-nio-8080-exec-4] QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       \-[FROM] Node: 'FROM'
+          \-[RANGE] Node: 'RANGE'
+             \-[IDENT] Node: 'members'
+
+[DEBUG] 2022-08-18 18:40:21.045 [http-nio-8080-exec-4] HqlSqlBaseWalker - select << begin [level=1, statement=select]
+[DEBUG] 2022-08-18 18:40:21.050 [http-nio-8080-exec-4] JdbcResourceLocalTransactionCoordinatorImpl - JDBC transaction marked for rollback-only (exception provided for stack trace)
+java.lang.Exception: exception just for purpose of providing stack trace
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.markRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:324) [hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.markRollbackOnly(TransactionImpl.java:203) [hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.markForRollbackOnly(AbstractSharedSessionContract.java:428) [hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:756) [hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114) [hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at com.revature.pokebowl.member.MemberDao.findAll(MemberDao.java:41) [classes/:?]
+	at com.revature.pokebowl.member.MemberService.readAll(MemberService.java:64) [classes/:?]
+	at com.revature.pokebowl.member.MemberServlet.doGet(MemberServlet.java:55) [classes/:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+[DEBUG] 2022-08-18 18:40:56.235 [Hibernate Connection Pool Validation Thread] DriverManagerConnectionProviderImpl - Connection pool now considered primed; min-size will be maintained
