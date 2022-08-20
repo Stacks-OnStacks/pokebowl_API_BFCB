@@ -10,16 +10,19 @@ public class CreatePaymentRequest {
     private String zipCode;
     private String provider;
 
+    private String memberId;
+
     public CreatePaymentRequest() {
         super();
     }
 
-    public CreatePaymentRequest(int balance, Date expDate, String ccv, String zipCode, String provider) {
+    public CreatePaymentRequest(int balance, Date expDate, String ccv, String zipCode, String provider, String memberId) {
         this.balance = balance;
         this.expDate = expDate;
         this.ccv = ccv;
         this.zipCode = zipCode;
         this.provider = provider;
+        this.memberId = memberId;
     }
 
     public int getBalance() {
@@ -62,6 +65,14 @@ public class CreatePaymentRequest {
         this.provider = provider;
     }
 
+    public String getMemberId() {
+        return memberId;
+    }
+
+    public void setMemberId(String memberId) {
+        this.memberId = memberId;
+    }
+
     @Override
     public String toString() {
         return "CreatePaymentRequest{" +
@@ -70,6 +81,7 @@ public class CreatePaymentRequest {
                 ", ccv='" + ccv + '\'' +
                 ", zipCode='" + zipCode + '\'' +
                 ", provider='" + provider + '\'' +
+                ", memberId='" + memberId + '\'' +
                 '}';
     }
 }

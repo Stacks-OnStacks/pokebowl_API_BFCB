@@ -12,6 +12,8 @@ public class EditPaymentRequest extends EditResourceRequests {
     private String zipCode;
     private String provider;
 
+    private String memberId;
+
     public EditPaymentRequest() {
         super();
     }
@@ -56,6 +58,14 @@ public class EditPaymentRequest extends EditResourceRequests {
         this.provider = provider;
     }
 
+    public String getMemberId() {
+        return memberId;
+    }
+
+    public void setMemberId(String memberId) {
+        this.memberId = memberId;
+    }
+
     @Override
     public String toString() {
         return "EditPaymentRequest{" +
@@ -64,6 +74,7 @@ public class EditPaymentRequest extends EditResourceRequests {
                 ", ccv='" + ccv + '\'' +
                 ", zipCode='" + zipCode + '\'' +
                 ", provider='" + provider + '\'' +
+                ", memberId='" + memberId + '\'' +
                 '}';
     }
 }
