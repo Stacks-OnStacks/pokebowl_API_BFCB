@@ -110,7 +110,6 @@ public class MemberServlet extends HttpServlet implements Authable {
 
                     editMember.setId(member.getMemberId());
 
-                    System.out.println("Just before update of editMember");
                     memberService.update(editMember);
 
                     logger.info("Successfully updated member: {}",editMember.getUsername());
@@ -127,8 +126,6 @@ public class MemberServlet extends HttpServlet implements Authable {
                 throw new InvalidUserInputException("Cannot update member, username is null");
             }
 
-            memberService.update(editMember);
-            resp.getWriter().write("Member has been successfully updated");
         } catch (InvalidUserInputException e){
             resp.getWriter().write(e.getMessage());
             resp.setStatus(404);
