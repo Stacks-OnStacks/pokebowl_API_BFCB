@@ -35,8 +35,8 @@ public class Payment {
     @JoinColumn(name="member_id")
     private Member member;
 
-    @OneToMany(mappedBy="memberPayment",cascade=CascadeType.ALL)
-    private List<Order> orders;
+    @OneToMany(mappedBy="payment",cascade=CascadeType.ALL)
+    private List<Order> orders = null;
 
     public Payment(String paymentId, int balance, Date expDate, String ccv, String zipCode, String provider, String customerUserName) {
         this.paymentId = paymentId;

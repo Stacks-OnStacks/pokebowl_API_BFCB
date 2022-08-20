@@ -3,6 +3,7 @@ package com.revature.pokebowl.util.web;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.pokebowl.member.Member;
 import com.revature.pokebowl.member.MemberService;
+import com.revature.pokebowl.util.exceptions.InvalidUserInputException;
 import com.revature.pokebowl.util.web.dto.LoginCreds;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,14 +28,21 @@ public class AuthServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        LoginCreds loginCreds = objectMapper.readValue(req.getInputStream(), LoginCreds.class);
+        try {
+            LoginCreds loginCreds = objectMapper.readValue(req.getInputStream(), LoginCreds.class);
 
-        Member member = memberService.login(loginCreds.getUsername(), loginCreds.getPassword());
+            Member member = memberService.login(loginCreds.getUsername(), loginCreds.getPassword());
+            if (member == null) throw new InvalidUserInputException("login credentials did not match any member in the database");
 
-        HttpSession httpSession = req.getSession(true);
-        httpSession.setAttribute("authMember",member);
+            HttpSession httpSession = req.getSession(true);
+            httpSession.setAttribute("authMember", member);
 
-        resp.getWriter().write(String.format("<h1>Welcome back to Pokebowl: Rapidash, %s!</h1>",member.getFullName()));
+            resp.getWriter().write(String.format("<h1>Welcome back to Pokebowl: Rapidash, %s!</h1>", member.getFullName()));
+        } catch (InvalidUserInputException e) {
+            logger.warn("User information entered was not reflective of any member in the database");
+            resp.getWriter().write(e.getMessage());
+            resp.setStatus(404);
+        }
     }
 
     @Override

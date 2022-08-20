@@ -40,14 +40,16 @@ public class MemberServlet extends HttpServlet implements Authable {
         if(username != null) {
             logger.info("username entered: {}", username);
             try {
-                MemberResponse member = memberService.findById(username);
+                MemberResponse member = memberService.findByUsername(username);
+
+                if (member == null) throw new InvalidUserInputException("entered username was not found in the database");
 
                 String payloadID = objectMapper.writeValueAsString(member);
 
                 resp.getWriter().write(payloadID);
             } catch (InvalidUserInputException e){
                 logger.warn("User information entered was not reflective of any member in the database. username provided was: {}", username);
-                resp.getWriter().write("username entered was not found in the database");
+                resp.getWriter().write(e.getMessage());
                 resp.setStatus(404);
             }
         } else {
@@ -66,9 +68,7 @@ public class MemberServlet extends HttpServlet implements Authable {
 //        Member member = memberService.login(loginCreds.getmember_id(), loginCreds.getPassword());
 //
 //        resp.getWriter().write("Welcome back to pokebowl " + member.getFullName());
-        System.out.println("HELLO1");
         PrintWriter respWriter = resp.getWriter(); // preference play, lot of folks enjoy this
-        System.out.println("HELLO2");
         NewRegistrationRequest member = objectMapper.readValue(req.getInputStream(), NewRegistrationRequest.class);
         //something wrong with above line
 

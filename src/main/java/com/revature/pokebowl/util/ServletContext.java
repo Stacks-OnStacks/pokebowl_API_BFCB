@@ -84,7 +84,7 @@ public class ServletContext {
             standardContext.addServletMappingDecoded("/order","OrderServlet");
 
             tomcat.addServlet("","OrderDetailsServlet", new OrderDetailsServlet(orderDetailsService, objectMapper));
-            standardContext.addServletMappingDecoded("/order-details","OrderDetailsServlet");
+            standardContext.addServletMappingDecoded("/orderdetails","OrderDetailsServlet");
 
             tomcat.addServlet("","PaymentServlet", new PaymentServlet(paymentService, objectMapper));
             standardContext.addServletMappingDecoded("/payment","PaymentServlet");

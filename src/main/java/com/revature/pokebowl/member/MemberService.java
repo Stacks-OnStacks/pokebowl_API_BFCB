@@ -70,9 +70,11 @@ public class MemberService {
         ;
         return members;
     }
-    public MemberResponse findById(String username){
+    public MemberResponse findByUsername(String username){
 
-        Member member = memberDao.findById(username);
+        Member member = memberDao.findByUsername(username);
+        if (member == null) return null;
+
         MemberResponse responseMember = new MemberResponse(member);
         return responseMember;
     }
