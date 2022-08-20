@@ -95,6 +95,7 @@ public class MemberDao implements Crudable<Member> {
             Member member = session.load(Member.class, id);
             session.remove(member);
             transaction.commit();
+
             return true;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
@@ -116,6 +117,7 @@ public class MemberDao implements Crudable<Member> {
 
             Member member = (Member) query.uniqueResult();
             transaction.commit();
+
             return member;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();

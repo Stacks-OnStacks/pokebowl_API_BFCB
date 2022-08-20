@@ -1,54 +1,30 @@
-package com.revature.pokebowl.order;
+package com.revature.pokebowl.order.dto.responses;
 
-import com.revature.pokebowl.member.Member;
-import com.revature.pokebowl.memberpayment.Payment;
-import com.revature.pokebowl.orderdetails.OrderDetails;
-
-import javax.persistence.*;
 import java.sql.Date;
-import java.util.Set;
 
-@Entity
-@Table(name="orders")
-public class Order {
+public class OrderResponse {
 
-    @Id
-    @Column(name="order_id")
     private String orderId;
-
-    @Column(name="amount",nullable=false)
     private int amount;
-
-    @Column(name="order_date",nullable=false)
     private Date orderDate;
-
-    @Column(name="order_address",nullable=false)
     private String orderAddress;
-
-    @Column(name="order_zip",nullable=false)
     private String orderZip;
 
-    @ManyToOne
-    @JoinColumn(name="member_id")
-    private Member member;
+    private String memberId;
+    private String paymentId;
 
-    @ManyToOne
-    @JoinColumn(name="payment_id")
-    private Payment payment;
+    public OrderResponse() {
+        super();
+    }
 
-    @OneToMany(mappedBy="order")
-    private Set<OrderDetails> orderDetailsSet;
-
-    public Order(String orderId, int amount, Date orderDate, String orderAddress, String orderZip) {
+    public OrderResponse(String orderId, int amount, Date orderDate, String orderAddress, String orderZip, String memberId, String paymentId) {
         this.orderId = orderId;
         this.amount = amount;
         this.orderDate = orderDate;
         this.orderAddress = orderAddress;
         this.orderZip = orderZip;
-    }
-
-    public Order() {
-        super();
+        this.memberId = memberId;
+        this.paymentId = paymentId;
     }
 
     public String getOrderId() {
@@ -91,38 +67,32 @@ public class Order {
         this.orderZip = orderZip;
     }
 
-    public Member getMember() {
-        return member;
+    public String getMemberId() {
+        return memberId;
     }
 
-    public void setMember(Member member) {
-        this.member = member;
+    public void setMemberId(String memberId) {
+        this.memberId = memberId;
     }
 
-    public Payment getPayment() {
-        return payment;
+    public String getPaymentId() {
+        return paymentId;
     }
 
-    public void setPayment(Payment payment) {
-        this.payment = payment;
-    }
-
-    public Set<OrderDetails> getOrderDetailsSet() {
-        return orderDetailsSet;
-    }
-
-    public void setOrderDetailsSet(Set<OrderDetails> orderDetailsSet) {
-        this.orderDetailsSet = orderDetailsSet;
+    public void setPaymentId(String paymentId) {
+        this.paymentId = paymentId;
     }
 
     @Override
     public String toString() {
-        return "Order{" +
+        return "OrderResponse{" +
                 "orderId='" + orderId + '\'' +
                 ", amount=" + amount +
                 ", orderDate=" + orderDate +
                 ", orderAddress='" + orderAddress + '\'' +
                 ", orderZip='" + orderZip + '\'' +
+                ", memberId='" + memberId + '\'' +
+                ", paymentId='" + paymentId + '\'' +
                 '}';
     }
 }

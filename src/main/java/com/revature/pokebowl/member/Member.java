@@ -1,14 +1,12 @@
 package com.revature.pokebowl.member;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.revature.pokebowl.memberpayment.MemberPayment;
+import com.revature.pokebowl.memberpayment.Payment;
 import com.revature.pokebowl.order.Order;
 
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name="members")
@@ -35,7 +33,7 @@ public class Member {
     private boolean isAdmin;
 
     @OneToMany(mappedBy="member",cascade=CascadeType.ALL)
-    private List<MemberPayment> memberPaymentList;
+    private List<Payment> paymentList;
 
     @OneToMany(mappedBy="member",cascade=CascadeType.ALL)
     private List<Order> orders;
@@ -101,12 +99,12 @@ public class Member {
         isAdmin = admin;
     }
 
-    public List<MemberPayment> getMemberPaymentList() {
-        return memberPaymentList;
+    public List<Payment> getMemberPaymentList() {
+        return paymentList;
     }
 
-    public void setMemberPaymentList(List<MemberPayment> memberPaymentList) {
-        this.memberPaymentList = memberPaymentList;
+    public void setMemberPaymentList(List<Payment> paymentList) {
+        this.paymentList = paymentList;
     }
 
     public List<Order> getOrders() {

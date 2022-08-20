@@ -9,7 +9,7 @@ import java.util.Set;
 
 @Entity
 @Table(name="member_payments")
-public class MemberPayment {
+public class Payment {
 
     @Id
     @Column(name="payment_id")
@@ -37,7 +37,7 @@ public class MemberPayment {
     @OneToMany(mappedBy="memberPayment",cascade=CascadeType.ALL)
     private Set<Order> orderSet;
 
-    public MemberPayment(String paymentId, int balance, Date expDate, String ccv, String zipCode, String provider, String customerUserName) {
+    public Payment(String paymentId, int balance, Date expDate, String ccv, String zipCode, String provider, String customerUserName) {
         this.paymentId = paymentId;
         this.balance = balance;
         this.expDate = expDate;
@@ -46,7 +46,7 @@ public class MemberPayment {
         this.provider = provider;
     }
 
-    public MemberPayment() {
+    public Payment() {
         super();
     }
 
