@@ -65,8 +65,11 @@ public class MemberServlet extends HttpServlet implements Authable {
 //        Member member = memberService.login(loginCreds.getmember_id(), loginCreds.getPassword());
 //
 //        resp.getWriter().write("Welcome back to pokebowl " + member.getFullName());
+        System.out.println("HELLO1");
         PrintWriter respWriter = resp.getWriter(); // preference play, lot of folks enjoy this
+        System.out.println("HELLO2");
         NewRegistrationRequest member = objectMapper.readValue(req.getInputStream(), NewRegistrationRequest.class);
+        //something wrong with above line
 
 
         try {
