@@ -6,6 +6,7 @@ import com.revature.pokebowl.member.dto.requests.NewRegistrationRequest;
 import com.revature.pokebowl.member.dto.response.MemberResponse;
 import com.revature.pokebowl.util.exceptions.InvalidUserInputException;
 import com.revature.pokebowl.util.exceptions.ResourcePersistanceException;
+import com.revature.pokebowl.util.exceptions.UnauthorizedException;
 import com.revature.pokebowl.util.interfaces.Authable;
 
 import org.apache.logging.log4j.LogManager;
@@ -34,7 +35,7 @@ public class MemberServlet extends HttpServlet implements Authable {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
-        String username = req.getParameter("username"); //CHANGED THIS TO member_id instead of member_id
+        String username = req.getParameter("username"); //CHANGED THIS TO username instead of member_id
         Member authMember = (Member) req.getSession().getAttribute("authMember"); // cast the returned object to a member
 
         if(username != null) {
@@ -95,9 +96,37 @@ public class MemberServlet extends HttpServlet implements Authable {
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        EditMemberRequest editMember = objectMapper.readValue(req.getInputStream(), EditMemberRequest.class);
+
 
         try {
+            String username = req.getParameter("username");
+            EditMemberRequest editMember = objectMapper.readValue(req.getInputStream(), EditMemberRequest.class);
+
+            if(username != null) {
+                logger.info("username entered: {}", username);
+                try {
+                    MemberResponse member = memberService.findByUsername(username);
+                    if (member == null) throw new InvalidUserInputException("entered username was not found in the database");
+
+                    editMember.setId(member.getMemberId());
+
+                    System.out.println("Just before update of editMember");
+                    memberService.update(editMember);
+
+                    logger.info("Successfully updated member: {}",editMember.getUsername());
+                    String payload = objectMapper.writeValueAsString(editMember);
+                    resp.getWriter().write(payload);
+                    resp.setStatus(200);
+
+                } catch (InvalidUserInputException e){
+                    logger.warn("User information entered was not reflective of any member in the database. username provided was: {}", username);
+                    resp.getWriter().write(e.getMessage());
+                    resp.setStatus(404);
+                }
+            } else {
+                throw new InvalidUserInputException("Cannot update member, username is null");
+            }
+
             memberService.update(editMember);
             resp.getWriter().write("Member has been successfully updated");
         } catch (InvalidUserInputException e){

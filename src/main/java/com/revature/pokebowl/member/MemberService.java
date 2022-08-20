@@ -98,6 +98,7 @@ public class MemberService {
     }
 
     public boolean update(EditMemberRequest editMember) throws InvalidUserInputException{
+        System.out.println("Inside update Member");
         Member foundMember = memberDao.findById(editMember.getId());
         // Predicate - to evaluate a true or false given a lambda expression
         // Lambda expression (arrow notation) - a syntax for a SINGULAR function
@@ -106,12 +107,14 @@ public class MemberService {
         if(notNullOrEmpty.test(editMember.getFullName())){
             foundMember.setFullName(editMember.getFullName());
         }
+
         if(notNullOrEmpty.test(editMember.getPassword())){
             foundMember.setUserPassword(editMember.getPassword());
         }
+
         if(notNullOrEmpty.test(editMember.getUsername())){
             if(!isUsernameAvailable(editMember.getUsername())){
-                throw new ResourcePersistanceException("The provided email is already registered");
+                throw new ResourcePersistanceException("The provided username is already registered");
             }
             foundMember.setUsername(editMember.getUsername());
         }
