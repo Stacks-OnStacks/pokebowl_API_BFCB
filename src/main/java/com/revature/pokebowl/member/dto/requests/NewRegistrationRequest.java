@@ -2,10 +2,8 @@ package com.revature.pokebowl.member.dto.requests;
 import java.sql.Date;
 
 public class NewRegistrationRequest {
-
+    private String username;
     private String fullName;
-
-    private String email;
 
     private String password;
 
@@ -14,9 +12,9 @@ public class NewRegistrationRequest {
     public NewRegistrationRequest() {
     }
 
-    public NewRegistrationRequest(String fullName, String email, String password, Date dob) {
+    public NewRegistrationRequest(String username, String fullName, String password, Date dob) {
+        this.username=username;
         this.fullName = fullName;
-        this.email = email;
         this.password = password;
         this.dob = dob;
     }
@@ -30,11 +28,11 @@ public class NewRegistrationRequest {
     }
 
     public String getUsername() {
-        return email;
+        return username;
     }
 
     public void setUsername(String email) {
-        this.email = email;
+        this.username = email;
     }
 
     public String getPassword() {
@@ -57,7 +55,7 @@ public class NewRegistrationRequest {
     public String toString() {
         return "NewRegistractionRequest{" +
                 "fullName='" + fullName + '\'' +
-                ", email='" + email + '\'' +
+                ", username='" + username + '\'' +
                 ", dob='" + dob + '\'' +
                 '}';
     }
