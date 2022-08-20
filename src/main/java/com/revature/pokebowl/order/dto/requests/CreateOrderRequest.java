@@ -9,15 +9,20 @@ public class CreateOrderRequest {
     private String orderAddress;
     private String orderZip;
 
+    private String memberId;
+    private String paymentId;
+
     public CreateOrderRequest() {
         super();
     }
 
-    public CreateOrderRequest(int amount, Date orderDate, String orderAddress, String orderZip) {
+    public CreateOrderRequest(int amount, Date orderDate, String orderAddress, String orderZip, String memberId, String paymentId) {
         this.amount = amount;
         this.orderDate = orderDate;
         this.orderAddress = orderAddress;
         this.orderZip = orderZip;
+        this.memberId = memberId;
+        this.paymentId = paymentId;
     }
 
     public int getAmount() {
@@ -52,6 +57,22 @@ public class CreateOrderRequest {
         this.orderZip = orderZip;
     }
 
+    public String getMemberId() {
+        return memberId;
+    }
+
+    public void setMemberId(String memberId) {
+        this.memberId = memberId;
+    }
+
+    public String getPaymentId() {
+        return paymentId;
+    }
+
+    public void setPaymentId(String paymentId) {
+        this.paymentId = paymentId;
+    }
+
     @Override
     public String toString() {
         return "CreateOrderRequest{" +
@@ -59,6 +80,8 @@ public class CreateOrderRequest {
                 ", orderDate=" + orderDate +
                 ", orderAddress='" + orderAddress + '\'' +
                 ", orderZip='" + orderZip + '\'' +
+                ", memberId='" + memberId + '\'' +
+                ", paymentId='" + paymentId + '\'' +
                 '}';
     }
 }

@@ -11,6 +11,9 @@ public class EditOrderRequest extends EditResourceRequests {
     private String orderAddress;
     private String orderZip;
 
+    private String memberId;
+    private String paymentId;
+
     public EditOrderRequest() {
         super();
     }
@@ -47,6 +50,22 @@ public class EditOrderRequest extends EditResourceRequests {
         this.orderZip = orderZip;
     }
 
+    public String getMemberId() {
+        return memberId;
+    }
+
+    public void setMemberId(String memberId) {
+        this.memberId = memberId;
+    }
+
+    public String getPaymentId() {
+        return paymentId;
+    }
+
+    public void setPaymentId(String paymentId) {
+        this.paymentId = paymentId;
+    }
+
     @Override
     public String toString() {
         return "EditOrderRequest{" +
@@ -54,6 +73,8 @@ public class EditOrderRequest extends EditResourceRequests {
                 ", orderDate=" + orderDate +
                 ", orderAddress='" + orderAddress + '\'' +
                 ", orderZip='" + orderZip + '\'' +
+                ", memberId='" + memberId + '\'' +
+                ", paymentId='" + paymentId + '\'' +
                 '}';
     }
 }
