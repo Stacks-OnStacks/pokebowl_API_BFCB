@@ -6,7 +6,7 @@ import com.revature.pokebowl.member.dto.requests.NewRegistrationRequest;
 import com.revature.pokebowl.member.dto.response.MemberResponse;
 import com.revature.pokebowl.util.exceptions.InvalidUserInputException;
 import com.revature.pokebowl.util.exceptions.ResourcePersistanceException;
-import com.revature.pokebowl.util.interfaces.Authable;
+import com.revature.pokebowl.member.interfaces.Authable;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -108,12 +108,12 @@ public class MemberServlet extends HttpServlet implements Authable {
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         if(!checkAuth(req, resp)) return;
-        String member_id = req.getParameter("member_id");
-        if(member_id != null){
-            memberService.remove(member_id);
-            resp.getWriter().write("Member with " + member_id + " has been deleted");
+        String username = req.getParameter("username");
+        if(username != null){
+            memberService.remove(username);
+            resp.getWriter().write(String.format("Member: %s has been deleted",username));
         } else {
-            resp.getWriter().write("This request requires an member_id parameter in the path ?member_id=example@mail.com");
+            resp.getWriter().write("This request requires an username parameter in the path ?username=YOUR-USERNAME");
             resp.setStatus(400);
         }
     }

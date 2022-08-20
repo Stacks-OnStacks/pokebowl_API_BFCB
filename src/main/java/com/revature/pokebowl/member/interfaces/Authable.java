@@ -1,4 +1,4 @@
-package com.revature.pokebowl.util.interfaces;
+package com.revature.pokebowl.member.interfaces;
 import com.revature.pokebowl.member.Member;
 
 import javax.servlet.http.HttpServletRequest;

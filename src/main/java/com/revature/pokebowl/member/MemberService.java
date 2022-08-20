@@ -88,8 +88,9 @@ public class MemberService {
     public boolean isUsernameAvailable(String username){
         return memberDao.checkUsername(username);
     }
-    public boolean remove(String email){
-        return memberDao.delete(email);
+    public boolean remove(String username){
+        Member
+        return memberDao.delete(memberId);
     }
     public boolean update(EditMemberRequest editMember) throws InvalidUserInputException{
         Member foundMember = memberDao.findById(editMember.getId());

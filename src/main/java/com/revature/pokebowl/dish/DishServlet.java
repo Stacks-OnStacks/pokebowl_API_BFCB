@@ -1,7 +1,7 @@
 package com.revature.pokebowl.dish;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.revature.pokebowl.util.interfaces.Authable;
+import com.revature.pokebowl.member.interfaces.Authable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

@@ -3,7 +3,6 @@ package com.revature.pokebowl.util.web;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.pokebowl.member.Member;
 import com.revature.pokebowl.member.MemberService;
-import com.revature.pokebowl.util.interfaces.Authable;
 import com.revature.pokebowl.util.web.dto.LoginCreds;
 
 import javax.servlet.ServletException;
@@ -13,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-public class AuthServlet extends HttpServlet implements Authable {
+public class AuthServlet extends HttpServlet {
 
     private final MemberService memberService;
     private final ObjectMapper objectMapper;

@@ -1,7 +1,7 @@
 package com.revature.pokebowl.member;
 
 import com.revature.pokebowl.util.HibernateUtil;
-import com.revature.pokebowl.util.interfaces.Crudable;
+import com.revature.pokebowl.member.interfaces.Crudable;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -52,6 +52,23 @@ public class MemberDao implements Crudable<Member> {
 
     @Override
     public Member findById(String id) {
+        try {
+            Session session = HibernateUtil.getSession();
+            Transaction transaction = session.beginTransaction();
+
+            Member member = session.get(Member.class, id);
+            transaction.commit();
+
+            return member;
+        } catch (HibernateException | IOException e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            HibernateUtil.closeSession();
+        }
+    }
+
+    public Member findByEmail(String email) {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
