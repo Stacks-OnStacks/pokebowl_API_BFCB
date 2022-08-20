@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-//@WebServlet("/member")
+
 public class MemberServlet extends HttpServlet implements Authable {
 
     private final MemberService memberService;

@@ -23,7 +23,7 @@ public interface Authable {
     default boolean checkAdmin(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         HttpSession httpSession = req.getSession();
         Member member = (Member) httpSession.getAttribute("authMember");
-        if(member.getFullName() == null){
+        if(!member.isAdmin()){
             resp.getWriter().write("Unauthorized request - not logged in as an admin");
             resp.setStatus(401);
             return false;
