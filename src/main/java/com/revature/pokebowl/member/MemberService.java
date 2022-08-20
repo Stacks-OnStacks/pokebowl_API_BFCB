@@ -70,9 +70,9 @@ public class MemberService {
         ;
         return members;
     }
-    public MemberResponse findById(String email){
+    public MemberResponse findById(String username){
 
-        Member member = memberDao.findById(email);
+        Member member = memberDao.findById(username);
         MemberResponse responseMember = new MemberResponse(member);
         return responseMember;
     }

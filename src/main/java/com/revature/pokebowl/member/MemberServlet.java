@@ -34,23 +34,24 @@ public class MemberServlet extends HttpServlet implements Authable {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
-        String member_id = req.getParameter("member_id"); //CHANGED THIS TO member_id instead of member_id
+        String username = req.getParameter("username"); //CHANGED THIS TO member_id instead of member_id
         Member authMember = (Member) req.getSession().getAttribute("authMember"); // cast the returned object to a member
 
-        if(member_id != null) {
-            logger.info("member_id entered {}", member_id);
+        if(username != null) {
+            logger.info("username entered: {}", username);
             try {
-                MemberResponse member = memberService.findById(member_id);
+                MemberResponse member = memberService.findById(username);
 
                 String payloadID = objectMapper.writeValueAsString(member);
 
                 resp.getWriter().write(payloadID);
             } catch (InvalidUserInputException e){
-                logger.warn("User information entered was not reflective of any member in the databse. member_id provided was: {}", member_id);
-                resp.getWriter().write("member_id entered was not found in the database");
+                logger.warn("User information entered was not reflective of any member in the database. username provided was: {}", username);
+                resp.getWriter().write("username entered was not found in the database");
                 resp.setStatus(404);
             }
         } else {
+            logger.info("no member entered, getting all members");
             List<MemberResponse> members = memberService.readAll();
             String payload = objectMapper.writeValueAsString(members); // mapper parsing from Java Object to JSON
             resp.getWriter().write(payload);

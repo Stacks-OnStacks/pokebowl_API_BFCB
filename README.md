@@ -3,4 +3,5 @@
 
 ## SERVLET OUTLINE:
 ### /member
-- [ ] **/member** **(** doGet **):** Obtains complete list of members if **ADMIN**, or tells users how to 
+- [ ] **(doGet /member):** Obtains complete list of members
+- [ ] **(doGet /member?username=username):** Obtains a single member's information (username, fullName, dob)

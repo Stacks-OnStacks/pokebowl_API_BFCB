@@ -5,6 +5,7 @@ import com.revature.pokebowl.order.Order;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -35,7 +36,7 @@ public class Payment {
     private Member member;
 
     @OneToMany(mappedBy="memberPayment",cascade=CascadeType.ALL)
-    private Set<Order> orderSet;
+    private List<Order> orders;
 
     public Payment(String paymentId, int balance, Date expDate, String ccv, String zipCode, String provider, String customerUserName) {
         this.paymentId = paymentId;
@@ -106,12 +107,12 @@ public class Payment {
         this.provider = provider;
     }
 
-    public Set<Order> getOrderSet() {
-        return orderSet;
+    public List<Order> getOrders() {
+        return orders;
     }
 
-    public void setOrderSet(Set<Order> orderSet) {
-        this.orderSet = orderSet;
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
     }
 
     @Override
