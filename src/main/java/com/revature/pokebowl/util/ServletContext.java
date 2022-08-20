@@ -9,6 +9,16 @@ import com.revature.pokebowl.member.MemberDao;
 import com.revature.pokebowl.member.MemberService;
 import com.revature.pokebowl.member.MemberServlet;
 
+import com.revature.pokebowl.memberpayment.PaymentDao;
+import com.revature.pokebowl.memberpayment.PaymentService;
+import com.revature.pokebowl.memberpayment.PaymentServlet;
+import com.revature.pokebowl.order.OrderDao;
+import com.revature.pokebowl.order.OrderService;
+import com.revature.pokebowl.order.OrderServlet;
+import com.revature.pokebowl.orderdetails.OrderDetailsDao;
+import com.revature.pokebowl.orderdetails.OrderDetailsService;
+import com.revature.pokebowl.orderdetails.OrderDetailsServlet;
+import com.revature.pokebowl.util.web.AuthServlet;
 import com.revature.pokebowl.util.web.TestServlet;
 
 import org.apache.catalina.LifecycleException;
@@ -48,16 +58,16 @@ public class ServletContext {
             // TODO: IMPLEMENT DEPENDENCIES (SERVICES AND DAOS)
 
             MemberDao memberDao = new MemberDao();
-            // PaymentDao paymentDao = new PaymentDao();
+            PaymentDao paymentDao = new PaymentDao();
             DishDao dishDao = new DishDao();
-            // OrdersDao ordersDao = new OrdersDao();
-            // OrderDetailsDao orderDetailsDao = new OrderDetailsDao();
+            OrderDao orderDao = new OrderDao();
+            OrderDetailsDao orderDetailsDao = new OrderDetailsDao();
 
             MemberService memberService = new MemberService(memberDao);
-            // PaymentService paymentService = new PaymentService(paymentDao);
+            PaymentService paymentService = new PaymentService(paymentDao);
             DishService dishService = new DishService(dishDao);
-            // OrdersService ordersService = new OrdersService(ordersDao);
-            // OrderDetailsService orderDetailsService = new OrderDetailsService(orderDetailsDao);
+            OrderService orderService = new OrderService(orderDao);
+            OrderDetailsService orderDetailsService = new OrderDetailsService(orderDetailsDao);
 
             ObjectMapper objectMapper = new ObjectMapper();   // instantiate the ObjectMapper dependency for JSON marshalling
 
@@ -69,6 +79,18 @@ public class ServletContext {
 
             tomcat.addServlet("","DishServlet", new DishServlet(dishService, objectMapper));
             standardContext.addServletMappingDecoded("/dish","DishServlet");
+
+            tomcat.addServlet("","OrderServlet", new OrderServlet(orderService, objectMapper));
+            standardContext.addServletMappingDecoded("/order","OrderServlet");
+
+            tomcat.addServlet("","OrderDetailsServlet", new OrderDetailsServlet(orderDetailsService, objectMapper));
+            standardContext.addServletMappingDecoded("/order-details","OrderDetailsServlet");
+
+            tomcat.addServlet("","PaymentServlet", new PaymentServlet(paymentService, objectMapper));
+            standardContext.addServletMappingDecoded("/payment","PaymentServlet");
+
+            tomcat.addServlet("","AuthServlet", new AuthServlet(memberService, objectMapper));
+            standardContext.addServletMappingDecoded("/auth","AuthServlet");
 
             // Start the Server and run til termination
             tomcat.start();

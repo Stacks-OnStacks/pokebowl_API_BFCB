@@ -1,7 +1,7 @@
 package com.revature.pokebowl.dish;
 
 import com.revature.pokebowl.util.HibernateUtil;
-import com.revature.pokebowl.member.interfaces.Crudable;
+import com.revature.pokebowl.util.interfaces.Crudable;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

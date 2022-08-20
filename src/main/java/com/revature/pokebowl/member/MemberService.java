@@ -35,7 +35,7 @@ public class MemberService {
         newMember.setDob(newRegistration.getDob());
         newMember.setUserPassword(newRegistration.getPassword());
         newMember.setMemberId(UUID.randomUUID().toString());
-        newMember.setDob(newRegistration.getDob()); //
+        newMember.setDob(newRegistration.getDob());
 
         logger.info("Member registration service has begun with the provide: {}", newMember);
         if (!isMemberValid(newMember)) {
@@ -76,6 +76,7 @@ public class MemberService {
         MemberResponse responseMember = new MemberResponse(member);
         return responseMember;
     }
+
     public boolean isMemberValid(Member newMember){
         if(newMember == null) return false;
         // this || is the expression to signify to the conditional that if either of these are true then perform the action
@@ -85,13 +86,15 @@ public class MemberService {
         if(newMember.getUserPassword() == null || newMember.getUserPassword().trim().equals("")) return false;
         return true;
     }
+
     public boolean isUsernameAvailable(String username){
         return memberDao.checkUsername(username);
     }
+
     public boolean remove(String username){
-        Member
-        return memberDao.delete(memberId);
+        return memberDao.delete(username);
     }
+
     public boolean update(EditMemberRequest editMember) throws InvalidUserInputException{
         Member foundMember = memberDao.findById(editMember.getId());
         // Predicate - to evaluate a true or false given a lambda expression
@@ -112,6 +115,7 @@ public class MemberService {
         }
         return memberDao.update(foundMember);
     }
+
     public Member getSessionMember(){
         return sessionMember;
     }

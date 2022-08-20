@@ -1,7 +1,7 @@
 package com.revature.pokebowl.member;
 
 import com.revature.pokebowl.util.HibernateUtil;
-import com.revature.pokebowl.member.interfaces.Crudable;
+import com.revature.pokebowl.util.interfaces.Crudable;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -68,23 +68,6 @@ public class MemberDao implements Crudable<Member> {
         }
     }
 
-    public Member findByEmail(String email) {
-        try {
-            Session session = HibernateUtil.getSession();
-            Transaction transaction = session.beginTransaction();
-
-            Member member = session.get(Member.class, id);
-            transaction.commit();
-
-            return member;
-        } catch (HibernateException | IOException e) {
-            e.printStackTrace();
-            return null;
-        } finally {
-            HibernateUtil.closeSession();
-        }
-    }
-
     @Override
     public boolean update(Member updatedMember) {
         try {
@@ -112,6 +95,7 @@ public class MemberDao implements Crudable<Member> {
             Member member = session.load(Member.class, id);
             session.remove(member);
             transaction.commit();
+
             return true;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
@@ -133,6 +117,7 @@ public class MemberDao implements Crudable<Member> {
 
             Member member = (Member) query.uniqueResult();
             transaction.commit();
+
             return member;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();

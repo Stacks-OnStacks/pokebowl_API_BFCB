@@ -1,7 +1,7 @@
 package com.revature.pokebowl.order;
 
 import com.revature.pokebowl.member.Member;
-import com.revature.pokebowl.memberpayment.MemberPayment;
+import com.revature.pokebowl.memberpayment.Payment;
 import com.revature.pokebowl.orderdetails.OrderDetails;
 
 import javax.persistence.*;
@@ -34,7 +34,7 @@ public class Order {
 
     @ManyToOne
     @JoinColumn(name="payment_id")
-    private MemberPayment memberPayment;
+    private Payment payment;
 
     @OneToMany(mappedBy="order")
     private Set<OrderDetails> orderDetailsSet;
@@ -99,12 +99,12 @@ public class Order {
         this.member = member;
     }
 
-    public MemberPayment getMemberPayment() {
-        return memberPayment;
+    public Payment getPayment() {
+        return payment;
     }
 
-    public void setMemberPayment(MemberPayment memberPayment) {
-        this.memberPayment = memberPayment;
+    public void setPayment(Payment payment) {
+        this.payment = payment;
     }
 
     public Set<OrderDetails> getOrderDetailsSet() {

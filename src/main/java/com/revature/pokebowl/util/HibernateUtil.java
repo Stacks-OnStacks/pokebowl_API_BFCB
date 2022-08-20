@@ -3,7 +3,7 @@ package com.revature.pokebowl.util;
 //import com.revature.pokebowl.member.Member;// no member class yet
 
 import com.revature.pokebowl.member.Member;
-import com.revature.pokebowl.memberpayment.MemberPayment;
+import com.revature.pokebowl.memberpayment.Payment;
 import com.revature.pokebowl.order.Order;
 import com.revature.pokebowl.orderdetails.OrderDetails;
 import com.revature.pokebowl.dish.Dish;
@@ -39,7 +39,7 @@ public class HibernateUtil {
             configuration.addAnnotatedClass(Dish.class);
             configuration.addAnnotatedClass(Order.class);
             configuration.addAnnotatedClass(OrderDetails.class);
-            configuration.addAnnotatedClass(MemberPayment.class);
+            configuration.addAnnotatedClass(Payment.class);
 
 
             // ServiceRegistry
