@@ -1,19 +1,35 @@
-package com.revature.pokebowl.memberpayment.dto.requests;
-
-import com.revature.pokebowl.util.web.dto.EditResourceRequests;
+package com.revature.pokebowl.memberpayment.dto.responses;
 
 import java.sql.Date;
 
-public class EditPaymentRequest extends EditResourceRequests {
+public class PaymentResponse {
 
+    private String paymentId;
     private int balance;
     private Date expDate;
     private String ccv;
     private String zipCode;
     private String provider;
 
-    public EditPaymentRequest() {
+    public PaymentResponse() {
         super();
+    }
+
+    public PaymentResponse(String paymentId, int balance, Date expDate, String ccv, String zipCode, String provider) {
+        this.paymentId = paymentId;
+        this.balance = balance;
+        this.expDate = expDate;
+        this.ccv = ccv;
+        this.zipCode = zipCode;
+        this.provider = provider;
+    }
+
+    public String getPaymentId() {
+        return paymentId;
+    }
+
+    public void setPaymentId(String paymentId) {
+        this.paymentId = paymentId;
     }
 
     public int getBalance() {
@@ -58,8 +74,9 @@ public class EditPaymentRequest extends EditResourceRequests {
 
     @Override
     public String toString() {
-        return "EditPaymentRequest{" +
-                "balance=" + balance +
+        return "PaymentResponse{" +
+                "paymentId='" + paymentId + '\'' +
+                ", balance=" + balance +
                 ", expDate=" + expDate +
                 ", ccv='" + ccv + '\'' +
                 ", zipCode='" + zipCode + '\'' +
