@@ -137,7 +137,7 @@ public class MemberServlet extends HttpServlet implements Authable {
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        if(!checkAuth(req, resp)) return;
+        if(!checkAdmin(req, resp)) return;
         String username = req.getParameter("username");
         if(username != null){
             memberService.remove(username);

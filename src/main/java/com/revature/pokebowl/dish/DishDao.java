@@ -1,10 +1,12 @@
 package com.revature.pokebowl.dish;
 
+import com.revature.pokebowl.member.Member;
 import com.revature.pokebowl.util.HibernateUtil;
 import com.revature.pokebowl.util.interfaces.Crudable;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import java.io.IOException;
 import java.util.List;
@@ -54,6 +56,26 @@ public class DishDao implements Crudable<Dish> {
             Transaction transaction = session.beginTransaction();
 
             Dish dish = session.get(Dish.class, id);
+            transaction.commit();
+
+            return dish;
+        } catch (HibernateException | IOException e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            HibernateUtil.closeSession();
+        }
+    }
+
+    public Dish findByName(String dishName) {
+        try {
+            Session session = HibernateUtil.getSession();
+            Transaction transaction = session.beginTransaction();
+
+            Query query = session.createQuery("from Dish where dishName = :dishName");
+            query.setParameter("dishName", dishName);
+
+            Dish dish = (Dish) query.uniqueResult();
             transaction.commit();
 
             return dish;
