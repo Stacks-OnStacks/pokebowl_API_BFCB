@@ -74,6 +74,22 @@
 
 
     </style>
+    <script>
+function logSubmit() {
+    var username = String(document.getElementById('username').value);
+    var fullname = document.getElementById('fullname').value;
+    var password = document.getElementById('password').value;
+    var dob = document.getElementById('dob').value;
+    const newMember = {username:username, fullname:fullname, password:password, dob: dob};
+    var json = JSON.stringify(newMember);
+    alert(json);
+    var request = new XMLHttpRequest();
+    request.open("POST", "http://localhost:8080/register");
+    request.send(json);
+    event.preventDefault();
+}
+
+    </script>
 </head>
 <body>
 <div class ="header">
@@ -91,7 +107,7 @@
 <div class="menuWrapper">
 
     <div class="dish">
-        <form action="/member" method="post">
+        <form  onsubmit="logSubmit()" id="register">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username"><br><br>
             <label for="fullname">Full Name:</label>
@@ -100,7 +116,7 @@
             <input type="text" id="password" name="password"><br><br>
             <label for="dob">Date of Birth:</label>
             <input type="date" id="dob" name="dob"><br><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="submit">
         </form>
     </div>
     </div>
