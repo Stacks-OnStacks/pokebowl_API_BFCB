@@ -6,7 +6,6 @@ import com.revature.pokebowl.order.Order;
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name="member_payments")
@@ -15,6 +14,9 @@ public class Payment {
     @Id
     @Column(name="payment_id")
     private String paymentId;
+
+    @Column(name="payment_name",nullable=false,unique=true)
+    private String paymentName;
 
     @Column(name="balance",nullable=false)
     private int balance;
@@ -38,8 +40,9 @@ public class Payment {
     @OneToMany(mappedBy="payment",cascade=CascadeType.ALL)
     private List<Order> orders = null;
 
-    public Payment(String paymentId, int balance, Date expDate, String ccv, String zipCode, String provider, String customerUserName) {
+    public Payment(String paymentId, String paymentName, int balance, Date expDate, String ccv, String zipCode, String provider) {
         this.paymentId = paymentId;
+        this.paymentName = paymentName;
         this.balance = balance;
         this.expDate = expDate;
         this.ccv = ccv;
@@ -115,10 +118,19 @@ public class Payment {
         this.orders = orders;
     }
 
+    public String getPaymentName() {
+        return paymentName;
+    }
+
+    public void setPaymentName(String paymentName) {
+        this.paymentName = paymentName;
+    }
+
     @Override
     public String toString() {
-        return "MemberPayment{" +
+        return "Payment{" +
                 "paymentId='" + paymentId + '\'' +
+                ", paymentName='" + paymentName + '\'' +
                 ", balance=" + balance +
                 ", expDate=" + expDate +
                 ", ccv='" + ccv + '\'' +

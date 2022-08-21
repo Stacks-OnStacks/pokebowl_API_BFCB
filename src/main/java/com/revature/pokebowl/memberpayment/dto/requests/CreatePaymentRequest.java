@@ -4,6 +4,7 @@ import java.sql.Date;
 
 public class CreatePaymentRequest {
 
+    private String paymentName;
     private int balance;
     private Date expDate;
     private String ccv;
@@ -16,7 +17,8 @@ public class CreatePaymentRequest {
         super();
     }
 
-    public CreatePaymentRequest(int balance, Date expDate, String ccv, String zipCode, String provider, String memberId) {
+    public CreatePaymentRequest(String paymentName, int balance, Date expDate, String ccv, String zipCode, String provider, String memberId) {
+        this.paymentName = paymentName;
         this.balance = balance;
         this.expDate = expDate;
         this.ccv = ccv;
@@ -73,10 +75,19 @@ public class CreatePaymentRequest {
         this.memberId = memberId;
     }
 
+    public String getPaymentName() {
+        return paymentName;
+    }
+
+    public void setPaymentName(String paymentName) {
+        this.paymentName = paymentName;
+    }
+
     @Override
     public String toString() {
         return "CreatePaymentRequest{" +
-                "balance=" + balance +
+                "paymentName='" + paymentName + '\'' +
+                ", balance=" + balance +
                 ", expDate=" + expDate +
                 ", ccv='" + ccv + '\'' +
                 ", zipCode='" + zipCode + '\'' +

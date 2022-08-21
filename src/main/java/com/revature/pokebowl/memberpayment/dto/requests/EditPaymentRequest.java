@@ -6,6 +6,7 @@ import java.sql.Date;
 
 public class EditPaymentRequest extends EditResourceRequests {
 
+    private String paymentName;
     private int balance;
     private Date expDate;
     private String ccv;
@@ -66,15 +67,25 @@ public class EditPaymentRequest extends EditResourceRequests {
         this.memberId = memberId;
     }
 
+    public String getPaymentName() {
+        return paymentName;
+    }
+
+    public void setPaymentName(String paymentName) {
+        this.paymentName = paymentName;
+    }
+
     @Override
     public String toString() {
         return "EditPaymentRequest{" +
-                "balance=" + balance +
+                "paymentName='" + paymentName + '\'' +
+                ", balance=" + balance +
                 ", expDate=" + expDate +
                 ", ccv='" + ccv + '\'' +
                 ", zipCode='" + zipCode + '\'' +
                 ", provider='" + provider + '\'' +
                 ", memberId='" + memberId + '\'' +
+                ", id='" + id + '\'' +
                 '}';
     }
 }

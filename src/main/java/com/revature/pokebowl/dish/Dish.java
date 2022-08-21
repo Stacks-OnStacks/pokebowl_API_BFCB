@@ -6,7 +6,7 @@ import com.revature.pokebowl.orderdetails.OrderDetails;
 
 import javax.persistence.*;
 import java.sql.Date;
-import java.util.Set;
+import java.util.List;
 
 @Entity
 @Table(name="dishes")
@@ -29,7 +29,7 @@ public class Dish {
     private boolean isVegetarian;
 
     @OneToMany(mappedBy="dish",cascade=CascadeType.ALL)
-    private Set<OrderDetails> orderDetailsSet;
+    private List<OrderDetails> orderDetailsList;
 
     public Dish(String dishId, String dishName, int dishCost, String description, boolean isVegetarian) {
         this.dishId = dishId;
@@ -83,12 +83,12 @@ public class Dish {
         isVegetarian = vegetarian;
     }
 
-    public Set<OrderDetails> getOrderDetailsSet() {
-        return orderDetailsSet;
+    public List<OrderDetails> getOrderDetailsList() {
+        return orderDetailsList;
     }
 
-    public void setOrderDetailsSet(Set<OrderDetails> orderDetailsSet) {
-        this.orderDetailsSet = orderDetailsSet;
+    public void setOrderDetailsList(List<OrderDetails> orderDetailsList) {
+        this.orderDetailsList = orderDetailsList;
     }
 
     @Override

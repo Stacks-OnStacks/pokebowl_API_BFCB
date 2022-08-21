@@ -5,6 +5,7 @@ import java.sql.Date;
 public class PaymentResponse {
 
     private String paymentId;
+    private String paymentName;
     private int balance;
     private Date expDate;
     private String ccv;
@@ -17,8 +18,9 @@ public class PaymentResponse {
         super();
     }
 
-    public PaymentResponse(String paymentId, int balance, Date expDate, String ccv, String zipCode, String provider, String memberId) {
+    public PaymentResponse(String paymentId, String paymentName, int balance, Date expDate, String ccv, String zipCode, String provider, String memberId) {
         this.paymentId = paymentId;
+        this.paymentName = paymentName;
         this.balance = balance;
         this.expDate = expDate;
         this.ccv = ccv;
@@ -83,10 +85,19 @@ public class PaymentResponse {
         this.memberId = memberId;
     }
 
+    public String getPaymentName() {
+        return paymentName;
+    }
+
+    public void setPaymentName(String paymentName) {
+        this.paymentName = paymentName;
+    }
+
     @Override
     public String toString() {
         return "PaymentResponse{" +
                 "paymentId='" + paymentId + '\'' +
+                ", paymentName='" + paymentName + '\'' +
                 ", balance=" + balance +
                 ", expDate=" + expDate +
                 ", ccv='" + ccv + '\'' +
