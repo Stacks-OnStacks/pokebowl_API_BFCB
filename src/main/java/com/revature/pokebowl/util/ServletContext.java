@@ -2,22 +2,12 @@ package com.revature.pokebowl.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import com.revature.pokebowl.dish.DishDao;
-import com.revature.pokebowl.dish.DishService;
-import com.revature.pokebowl.dish.DishServlet;
-import com.revature.pokebowl.member.MemberDao;
-import com.revature.pokebowl.member.MemberService;
-import com.revature.pokebowl.member.MemberServlet;
+import com.revature.pokebowl.dish.*;
+import com.revature.pokebowl.member.*;
+import com.revature.pokebowl.memberpayment.*;
+import com.revature.pokebowl.order.*;
+import com.revature.pokebowl.orderdetails.*;
 
-import com.revature.pokebowl.memberpayment.PaymentDao;
-import com.revature.pokebowl.memberpayment.PaymentService;
-import com.revature.pokebowl.memberpayment.PaymentServlet;
-import com.revature.pokebowl.order.OrderDao;
-import com.revature.pokebowl.order.OrderService;
-import com.revature.pokebowl.order.OrderServlet;
-import com.revature.pokebowl.orderdetails.OrderDetailsDao;
-import com.revature.pokebowl.orderdetails.OrderDetailsService;
-import com.revature.pokebowl.orderdetails.OrderDetailsServlet;
 import com.revature.pokebowl.util.web.AuthServlet;
 import com.revature.pokebowl.util.web.TestServlet;
 
