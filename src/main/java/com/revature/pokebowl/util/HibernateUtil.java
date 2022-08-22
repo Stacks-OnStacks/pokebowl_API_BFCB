@@ -1,7 +1,5 @@
 package com.revature.pokebowl.util;
 
-//import com.revature.pokebowl.member.Member;// no member class yet
-
 import com.revature.pokebowl.member.Member;
 import com.revature.pokebowl.memberpayment.Payment;
 import com.revature.pokebowl.order.Order;
@@ -13,7 +11,6 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -30,9 +27,8 @@ public class HibernateUtil {
             Properties properties = new Properties();
 
             // for Elastic Beanstalk
-            // ClassLoader loader = Thread.currentThread().getContextClassLoader();
-            // properties.load(loader.getResourceAsStream("hibernate.properties"));
-            properties.load(new FileReader("src/main/resources/hibernate.properties"));
+            ClassLoader loader = Thread.currentThread().getContextClassLoader();
+            properties.load(loader.getResourceAsStream("hibernate.properties"));
 
             //HERE IS WHERE WE ADD OUR CLASSES
             configuration.addAnnotatedClass(Member.class);
