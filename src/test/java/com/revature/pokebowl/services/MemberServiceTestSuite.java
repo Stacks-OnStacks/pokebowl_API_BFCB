@@ -1,22 +1,14 @@
-package com.revature.pokebowl.member;
+package com.revature.pokebowl.services;
 
-import com.revature.pokebowl.member.MemberDao;
-import com.revature.pokebowl.member.Member;
-import com.revature.pokebowl.member.MemberService;
-
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import com.revature.pokebowl.member.*;
+import org.junit.jupiter.api.*;
 import java.sql.Date;
-
 
 import static org.mockito.Mockito.*;
 
 public class MemberServiceTestSuite {
 
     MemberService sut ;
-    //MemberDao memberDao;
     MemberDao mockMemberDao;
 
     @BeforeEach // this goes ahead and re-creates our sut every single test, so we are working with a fresh instance
