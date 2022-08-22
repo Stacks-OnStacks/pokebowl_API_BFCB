@@ -40,18 +40,54 @@
 
 ### { /payment }
 - [ ] **<u>(doGet)</u>:**
-    - **[ADMIN] -** Obtains all current **authMember's payments'** information or a single **payment's** information *(?dishName=DISH_NAME)* {dishName, dishCost, description, isVegetarian}
-    - **[MEMBER] -** Obtains all **dishes'** information or a single **dish's** information *(?dishName=DISH_NAME)* {dishName, dishCost, description, isVegetarian}
-    - **[ANON] -** Obtains all **dishes'** information or a single **dish's** information *(?dishName=DISH_NAME)* {dishName, dishCost, description, isVegetarian}
+    - **[ADMIN] -** Obtains all current **authMember's payments'** information or a single **payment's** information *(?paymentName=PAYMENT_NAME)* {paymentName,balance,expDate,ccv,zipCode,provider}
+    - **[MEMBER] -** Obtains all current **authMember's payments'** information or a single **payment's** information *(?paymentName=PAYMENT_NAME)* {paymentName,balance,expDate,ccv,zipCode,provider}
+    - **[ANON] -** *CANNOT READ ANY* ***PAYMENTS***
 - [ ] **<u>(doPost)</u>:**
-    - **[ADMIN] -** Creates a new **dish** from info in the request body {dishName, dishCost, description, isVegetarian}
-    - **[MEMBER] -** *CANNOT CREATE* ***DISHES*** *IN DATABASE*
-    - **[ANON] -** *CANNOT CREATE* ***DISHES*** *IN DATABASE*
+    - **[ADMIN] -** Creates a new **payment** from info in the request body for current **authMember** {paymentName,balance,expDate,ccv,zipCode,provider}
+    - **[MEMBER] -** Creates a new **payment** from info in the request body for current **authMember** {paymentName,balance,expDate,ccv,zipCode,provider}
+    - **[ANON] -** *CANNOT CREATE ANY* ***PAYMENTS***
 - [ ] **<u>(doPut)</u>:**
-    - **[ADMIN] -** Updates a **dish** *(?dishName=UPDATED_DISH_NAME)* using info in the request body {dishName, dishCost, description, isVegetarian}
-    - **[MEMBER] -** *CANNOT UPDATE* ***DISHES*** *IN DATABASE*
-    - **[ANON] -** *CANNOT UPDATE* ***DISHES*** *IN DATABASE*
+    - **[ADMIN] -** Updates a **payment** *(?paymentName=UPDATED_PAYMENT_NAME)* using info in the request body for current **authMember** {paymentName,balance,expDate,ccv,zipCode,provider}
+    - **[MEMBER] -** Updates a **payment** *(?paymentName=UPDATED_PAYMENT_NAME)* using info in the request body for current **authMember** {paymentName,balance,expDate,ccv,zipCode,provider}
+    - **[ANON] -** *CANNOT UPDATE ANY* ***PAYMENTS***
 - [ ] **<u>(doDelete)</u>:**
-    - **[ADMIN] -** Deletes any **dish** from the Database *{dishName}*
-    - **[MEMBER] -** *CANNOT DELETE* ***DISHES*** *FROM DATABASE*
-    - **[ANON] -** *CANNOT DELETE* ***DISHES*** *FROM DATABASE*
+    - **[ADMIN] -** Deletes a **payment** from the Database for current **authMember** *{paymentName,password}*
+    - **[MEMBER] -** Deletes a **payment** from the Database for current **authMember** *{paymentName,password}*
+    - **[ANON] -** *CANNOT DELETE ANY* ***PAYMENTS***
+
+### { /order }
+- [ ] **<u>(doGet)</u>:**
+    - **[ADMIN] -** Obtains all current **authMember's orders'** information or a single **order's** information *(?orderId=ORDER_ID)* {amount,orderDate,orderAddress,orderZip,paymentId,orderDetailsList}
+    - **[MEMBER] -** Obtains all current **authMember's orders'** information or a single **order's** information *(?orderId=ORDER_ID)* {amount,orderDate,orderAddress,orderZip,paymentId,orderDetailsList}
+    - **[ANON] -** *CANNOT READ ANY* ***ORDERS***
+- [ ] **<u>(doPost)</u>:**
+    - **[ADMIN] -** Creates a new **order** from info in the request body for current **authMember** {amount,orderDate,orderAddress,orderZip,paymentId}
+    - **[MEMBER] -** Creates a new **order** from info in the request body for current **authMember** {amount,orderDate,orderAddress,orderZip,paymentId}
+    - **[ANON] -** *CANNOT CREATE ANY* ***ORDERS***
+- [ ] **<u>(doPut)</u>:**
+    - **[ADMIN] -** *CANNOT UPDATE ANY* ***ORDERS***
+    - **[MEMBER] -** *CANNOT UPDATE ANY* ***ORDERS***
+    - **[ANON] -** *CANNOT UPDATE ANY* ***ORDERS***
+- [ ] **<u>(doDelete)</u>:**
+    - **[ADMIN] -** *CANNOT DELETE ANY* ***ORDERS***
+    - **[MEMBER] -** *CANNOT DELETE ANY* ***ORDERS***
+    - **[ANON] -** *CANNOT DELETE ANY* ***ORDERS***
+
+### { /order }
+- [ ] **<u>(doGet)</u>:**
+  - **[ADMIN] -** Obtains all current **authMember's orders'** information or a single **order's** information *(?orderId=ORDER_ID)* {amount,orderDate,orderAddress,orderZip,paymentId,orderDetailsList}
+  - **[MEMBER] -** Obtains all current **authMember's orders'** information or a single **order's** information *(?orderId=ORDER_ID)* {amount,orderDate,orderAddress,orderZip,paymentId,orderDetailsList}
+  - **[ANON] -** *CANNOT READ ANY* ***ORDERS***
+- [ ] **<u>(doPost)</u>:**
+  - **[ADMIN] -** Creates a new **order** from info in the request body for current **authMember** {amount,orderDate,orderAddress,orderZip,paymentId}
+  - **[MEMBER] -** Creates a new **order** from info in the request body for current **authMember** {amount,orderDate,orderAddress,orderZip,paymentId}
+  - **[ANON] -** *CANNOT CREATE ANY* ***ORDERS***
+- [ ] **<u>(doPut)</u>:**
+  - **[ADMIN] -** *CANNOT UPDATE ANY* ***ORDERS***
+  - **[MEMBER] -** *CANNOT UPDATE ANY* ***ORDERS***
+  - **[ANON] -** *CANNOT UPDATE ANY* ***ORDERS***
+- [ ] **<u>(doDelete)</u>:**
+  - **[ADMIN] -** *CANNOT DELETE ANY* ***ORDERS***
+  - **[MEMBER] -** *CANNOT DELETE ANY* ***ORDERS***
+  - **[ANON] -** *CANNOT DELETE ANY* ***ORDERS***
