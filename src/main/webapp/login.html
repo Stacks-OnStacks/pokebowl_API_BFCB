@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+ ______      _          _                 _
+(_____ \    | |        | |               | |
+ _____) )__ | |  _ ____| | _   ___  _ _ _| |
+|  ____/ _ \| | / ) _  ) || \ / _ \| | | | |
+| |   | |_| | |< ( (/ /| |_) ) |_| | | | | |
+|_|    \___/|_| \_)____)____/ \___/ \____|_|
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>Pokebowl</title>
+    <!--    This entire style tag can be moved to a separate .css file in webapp folder, and we can call it from there.-->
+    <style>
+        body {
+  background-color: coral;
+}
+.header{
+  text-align: center;
+  align-content: center;
+  position: relative;
+  width: 100%;
+  height:10%;
+  border: 3px solid green;
+}
+.lineBelowHeader{
+  position:relative;
+  width:100%;
+  border: 15px outset red;
+}
+.spaceBetweenDishes{
+  position:relative;
+  width:100%;
+  height: 30px;
+  border: 50px;
+}
+        .menuSections{
+        position: relative;
+          font-weight: 100;
+          font-size: 1rem;
+          letter-spacing: 1px;
+          padding-left: 150px;
+        }
+        .dishName{
+        width: 200px;
+        display: inline-block;
+        position: relative;
+        border: 5px dotted cyan;
+        font-size: 3rem;
+        font-family: 'MS PGothic', Osaka, Arial, sans-serif;
+
+        }
+        .dishEmoji{
+        width: 100px;
+        display: inline-block;
+        position: relative;
+        font-size: 4rem;
+        border: 5px dotted cyan;
+        }
+        .dish{
+        display: inline-block;
+        width: calc(100%-30px);
+        text-align: center;
+        align-content: center;
+        position: relative;
+        border: 5px dotted black;
+        border-color: blue;
+        }
+        .menuWrapper {
+        border: 5px dotted yellow;
+        text-align: center;
+}
+
+
+    </style>
+    <script>
+function logSubmit() {
+    var username = String(document.getElementById('username').value);
+    var password = String(document.getElementById('password').value);
+    const newMember = {username:username, password:password };
+    var json = JSON.stringify(newMember);
+    alert(json);
+    var request = new XMLHttpRequest();
+    request.open("POST", "/auth");
+    request.send(json);
+    event.preventDefault();
+}
+
+    </script>
+</head>
+<body>
+<div class ="header">
+<pre>
+<!--This header is temporary. Will be replaced with something cool with Processing.js in here -->
+ ______      _          _                 _
+(_____ \    | |        | |               | |
+ _____) )__ | |  _ ____| | _   ___  _ _ _| |
+|  ____/ _ \| | / ) _  ) || \ / _ \| | | | |
+| |   | |_| | |< ( (/ /| |_) ) |_| | | | | |
+|_|    \___/|_| \_)____)____/ \___/ \____|_|
+</pre></div>
+<div class="lineBelowHeader">
+</div>
+<div class="menuWrapper">
+
+    <div class="dish">
+        <form  onsubmit="logSubmit()" id="login">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">password:</label>
+            <input type="text" id="password" name="password"><br><br>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+    </div>
+</div>
+</body>
+</html>
