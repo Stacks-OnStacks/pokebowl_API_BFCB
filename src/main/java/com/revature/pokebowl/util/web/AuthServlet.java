@@ -36,7 +36,7 @@ public class AuthServlet extends HttpServlet {
 
             HttpSession httpSession = req.getSession(true);
             httpSession.setAttribute("authMember", member);
-
+            resp.sendRedirect("/auth");
             resp.getWriter().write(String.format("<h1>Welcome back to Pokebowl: Rapidash, %s!</h1>", member.getFullName()));
         } catch (InvalidUserInputException e) {
             logger.warn("User information entered was not reflective of any member in the database");
