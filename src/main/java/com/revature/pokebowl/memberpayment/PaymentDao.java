@@ -124,14 +124,12 @@ public class PaymentDao implements Crudable<Payment> {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
-
             Payment payment = session.load(Payment.class, id);
             System.out.println("HELLO---1");
             session.remove(payment);
             System.out.println("HELLO---2");
             transaction.commit();
             System.out.println("HELLO---3");
-
             return true;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();

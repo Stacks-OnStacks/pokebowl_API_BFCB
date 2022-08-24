@@ -58,12 +58,6 @@ public class PaymentServlet extends HttpServlet implements Authable {
     }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        // DO NOT DO LOGIN INSIDE OF YOUR MEMBER SERVLET
-//        LoginCreds loginCreds = objectMapper.readValue(req.getInputStream(), LoginCreds.class); // this provides the body from the request as a JSON, leveraging Reflections
-//
-//        Member member = memberService.login(loginCreds.getmember_id(), loginCreds.getPassword());
-//
-//        resp.getWriter().write("Welcome back to pokebowl " + member.getFullName());
         PrintWriter respWriter = resp.getWriter();
         CreatePaymentRequest payment = objectMapper.readValue(req.getInputStream(), CreatePaymentRequest.class);
         try {
@@ -71,6 +65,7 @@ public class PaymentServlet extends HttpServlet implements Authable {
             PaymentResponse newPayment = paymentService.registerPayment(payment);
             String payload = objectMapper.writeValueAsString(newPayment);
             respWriter.write(payload);
+            //payload shows up with null values here.... to be fixed later
             resp.setStatus(201);
         } catch (InvalidUserInputException | ResourcePersistanceException e){
             logger.warn("Exception thrown when trying to persist. Message from exception: {}", e.getMessage());
@@ -119,7 +114,7 @@ public class PaymentServlet extends HttpServlet implements Authable {
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         if(!checkAdmin(req, resp)) return;
-        String paymentName = req.getParameter("payment_name");
+        String paymentName = req.getParameter("paymentName");
         if(paymentName != null){
             paymentService.remove(paymentName);
             resp.getWriter().write(String.format("Payment: %s has been deleted",paymentName));
