@@ -32,8 +32,8 @@ public class PaymentServlet extends HttpServlet implements Authable {
     }
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        if (!checkAuth(req,resp)) return;
         String paymentName = req.getParameter("payment_name");
-        String memberId= req.getParameter("member_id");
         Member authMember = (Member) req.getSession().getAttribute("authMember"); // cast the returned object to a member
         if(paymentName != null) {
             logger.info("username entered: {}", paymentName);
@@ -50,15 +50,14 @@ public class PaymentServlet extends HttpServlet implements Authable {
                 resp.getWriter().write(e.getMessage());
                 resp.setStatus(404);
             }
-        } else if(memberId!=null){
-            logger.info("no payment entered, getting all payments");
-            List<PaymentResponse> payments = paymentService.readAllByMember(memberId);
-            String payload = objectMapper.writeValueAsString(payments); // mapper parsing from Java Object to JSON
-            resp.getWriter().write(payload);
-        }
-        else{
+        } else if (checkAdmin(req,resp)) {
             logger.info("no payment entered, getting all payments");
             List<PaymentResponse> payments = paymentService.readAll();
+            String payload = objectMapper.writeValueAsString(payments); // mapper parsing from Java Object to JSON
+            resp.getWriter().write(payload);
+        } else{
+            logger.info("no payment entered, getting all payments");
+            List<PaymentResponse> payments = paymentService.readAllByMember();
             String payload = objectMapper.writeValueAsString(payments); // mapper parsing from Java Object to JSON
             resp.getWriter().write(payload);
         }

@@ -66,4 +66,7 @@ public class OrderService {
     public OrderResponse startOrder(CreateOrderRequest order) {
         return null;
     }
+    public OrderResponse submitOrder() {
+        return null;
+    }
 }
