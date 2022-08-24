@@ -73,6 +73,12 @@ newPayment.setMember(memberService.getSessionMember());
                 .collect(Collectors.toList());
         return payments;
     }
+
+    public Payment findById(String paymentId) {
+        Payment payment = paymentDao.findById(paymentId);
+        return payment;
+    }
+
     public PaymentResponse findByPaymentName(String paymentName){
         Payment payment = paymentDao.findByName(paymentName);
         if (payment == null) return null;
