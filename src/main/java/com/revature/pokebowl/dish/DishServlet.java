@@ -130,6 +130,7 @@ public class DishServlet extends HttpServlet implements Authable {
                 resp.setStatus(404);
             }
         } else {
+            logger.warn("No dishId query for doDelete");
             respWriter.write("This request requires a dishId parameter in the path ?dishId=DISH_ID");
             resp.setStatus(400);
         }

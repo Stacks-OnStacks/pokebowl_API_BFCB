@@ -131,6 +131,7 @@ public class MemberServlet extends HttpServlet implements Authable {
                 resp.setStatus(404);
             }
         } else {
+            logger.warn("No memberId query for doDelete");
             respWriter.write("This request requires a memberId parameter in the path ?memberId=MEMBER_ID");
             resp.setStatus(400);
         }
