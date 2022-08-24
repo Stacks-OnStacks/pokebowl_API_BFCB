@@ -103,4 +103,25 @@ public class DishDao implements Crudable<Dish> {
             HibernateUtil.closeSession();
         }
     }
+
+    public boolean checkDishName(String dishName) {
+        try {
+            Session session = HibernateUtil.getSession();
+            Transaction transaction = session.beginTransaction();
+
+            Query query = session.createQuery("from Dish where dish_name = :dishName");
+            query.setParameter("dishName", dishName);
+
+            Dish dish = (Dish) query.uniqueResult();
+            transaction.commit();
+
+            if(dish == null) return true;
+            return false;
+        } catch (HibernateException | IOException e) {
+            e.printStackTrace();
+            return false;
+        } finally {
+            HibernateUtil.closeSession();
+        }
+    }
 }
