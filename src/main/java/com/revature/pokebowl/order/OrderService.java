@@ -78,11 +78,14 @@ public class OrderService {
     public boolean isOrderValid(boolean firstCheck, Order newOrder) {
         Predicate<String> notNullOrEmpty = (str) -> str != null && !str.trim().equals("");
         if (newOrder == null) return false;
-        if(!notNullOrEmpty.test(newOrder.getOrderId())) return false;
-        if(!notNullOrEmpty.test(newOrder.getOrderAddress())) return false;
-        if(!notNullOrEmpty.test(newOrder.getOrderAddress())) return false;
+        if (newOrder.getMember() == null) return false;
+        if (newOrder.getPayment() == null) return false;
+        if (!notNullOrEmpty.test(newOrder.getOrderId())) return false;
+        if (!notNullOrEmpty.test(newOrder.getOrderAddress())) return false;
+        if (!notNullOrEmpty.test(newOrder.getOrderZip())) return false;
         if (!firstCheck) {
-
+            if (newOrder.getOrderDate() == null) return false;
+            if (newOrder.getAmount() < 1) return false;
         }
         return true;
     }
