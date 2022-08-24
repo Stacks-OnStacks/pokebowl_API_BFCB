@@ -15,6 +15,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class OrderService {
@@ -63,9 +64,26 @@ public class OrderService {
         newOrder.setOrderZip(order.getOrderZip());
         newOrder.setPayment(paymentService.findById(order.getPaymentId()));
         newOrder.setMember(memberService.getSessionMember());
+
+        logger.info("Order Creation service has begun with the provided: {}",newOrder);
+        if (!isOrderValid(true,newOrder)) {
+
+        }
     }
 
     public OrderResponse submitOrder() {
         return null;
+    }
+
+    public boolean isOrderValid(boolean firstCheck, Order newOrder) {
+        Predicate<String> notNullOrEmpty = (str) -> str != null && !str.trim().equals("");
+        if (newOrder == null) return false;
+        if(!notNullOrEmpty.test(newOrder.getOrderId())) return false;
+        if(!notNullOrEmpty.test(newOrder.getOrderAddress())) return false;
+        if(!notNullOrEmpty.test(newOrder.getOrderAddress())) return false;
+        if (!firstCheck) {
+
+        }
+        return true;
     }
 }
