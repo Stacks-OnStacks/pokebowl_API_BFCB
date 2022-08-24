@@ -54,12 +54,7 @@ public class OrderService {
         return orders;
     }
 
-    public boolean startNewOrder() {
-        if (currentOrder != null) return false;
-        currentOrder = new Order();
-        return true;
-    }
-    public OrderResponse postFinishedOrder() {
+    public OrderResponse submitOrder() {
         return null;
     }
 
