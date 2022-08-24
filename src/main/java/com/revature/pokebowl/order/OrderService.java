@@ -25,7 +25,7 @@ public class OrderService {
     private final Logger logger = LogManager.getLogger();
 
     // CONSTRUCTOR
-    public OrderService(MemberService memberService,PaymentService paymentService,OrderDao orderDao){
+    public OrderService(MemberService memberService, PaymentService paymentService, OrderDao orderDao) {
         this.orderDao = orderDao;
         this.paymentService = paymentService;
         this.memberService = memberService;
@@ -40,6 +40,7 @@ public class OrderService {
         String sessionMemberId = memberService.getSessionMember().getMemberId();
         Order order = orderDao.findByIdAndMember(orderId,sessionMemberId);
         if (order == null) throw new InvalidUserInputException("Order Id associated with authMember was not found in the database");
+
         return new OrderResponse(order);
     }
 
@@ -58,12 +59,11 @@ public class OrderService {
         currentOrder = new Order();
         return true;
     }
-
     public OrderResponse postFinishedOrder() {
         return null;
     }
 
     public OrderResponse startOrder(CreateOrderRequest order) {
-
+        return null;
     }
 }

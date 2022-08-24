@@ -108,6 +108,7 @@ public class PaymentServlet extends HttpServlet implements Authable {
             resp.setStatus(404);
         } catch (Exception e){
             resp.getWriter().write(e.getMessage() + " " + e.getClass().getName());
+            e.printStackTrace();
             resp.setStatus(500);
         }
     }
