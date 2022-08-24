@@ -14,6 +14,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class OrderService {
@@ -54,12 +55,15 @@ public class OrderService {
         return orders;
     }
 
-    public OrderResponse submitOrder() {
-        return null;
-    }
+    public OrderResponse startOrder(CreateOrderRequest order) throws IOException {
+        Order newOrder = new Order();
 
-    public OrderResponse startOrder(CreateOrderRequest order) {
-        return null;
+        newOrder.setOrderId(UUID.randomUUID().toString());
+        newOrder.setOrderAddress(order.getOrderAddress());
+        newOrder.setOrderZip(order.getOrderZip());
+        newOrder.setPayment(paymentService.findById(order.getPaymentId()));
+        newOrder.setMember(memberService.getSessionMember());
+        return new OrderResponse(newOrder);
     }
 
 }
