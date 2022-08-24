@@ -129,5 +129,9 @@ public class OrderServlet extends HttpServlet implements Authable {
 
         PrintWriter respWriter = resp.getWriter();
 
+        if (orderService.getCurrentOrder() != null) {
+
+        }
+
     }
 }

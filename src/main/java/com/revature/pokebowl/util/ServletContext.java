@@ -79,7 +79,7 @@ public class ServletContext {
             tomcat.addServlet("","PaymentServlet", new PaymentServlet(paymentService, objectMapper));
             standardContext.addServletMappingDecoded("/payment","PaymentServlet");
 
-            tomcat.addServlet("","AuthServlet", new AuthServlet(memberService, objectMapper));
+            tomcat.addServlet("","AuthServlet", new AuthServlet(memberService, orderService, objectMapper));
             standardContext.addServletMappingDecoded("/auth","AuthServlet");
 
             // Start the Server and run til termination

@@ -6,6 +6,7 @@ import com.revature.pokebowl.dish.dto.responses.DishResponse;
 import com.revature.pokebowl.member.Member;
 import com.revature.pokebowl.member.MemberService;
 import com.revature.pokebowl.memberpayment.PaymentService;
+import com.revature.pokebowl.memberpayment.dto.requests.EditPaymentRequest;
 import com.revature.pokebowl.order.dto.requests.CreateOrderRequest;
 import com.revature.pokebowl.order.dto.requests.EditOrderRequest;
 import com.revature.pokebowl.order.dto.responses.OrderResponse;
@@ -86,8 +87,17 @@ public class OrderService {
             amount += (orderDetails.getQuantity() * orderDetails.getDish().getDishCost());
         }
 
+        int newBalance = currentOrder.getPayment().getBalance() - amount;
+        if (newBalance < 0) throw new IOException("Insufficient Funds, please add more funds or remove some items from your order");
+
+        EditPaymentRequest editPayment = new EditPaymentRequest();
+        editPayment.setPaymentId(currentOrder.getPayment().getPaymentId());
+        editPayment.setBalance(newBalance);
+        paymentService.update(editPayment);
+
         currentOrder.setAmount(amount);
         currentOrder.setOrderDate(new Date(System.currentTimeMillis()));
+
         logger.info("Order Creation service is trying to submit the provided order: {}",currentOrder);
         if (!isOrderValid(false)) {
             throw new InvalidUserInputException("Submitted Order was invalid");
@@ -95,7 +105,7 @@ public class OrderService {
 
         Order order = orderDao.create(currentOrder);
         if (order == null) throw new ResourcePersistanceException("Order could not be persisted to the database");
-        currentOrder = null;
+        nullifyCurrentOrder();
 
         return new OrderResponse(order);
 
@@ -118,6 +128,10 @@ public class OrderService {
 
     public Order getCurrentOrder() {
         return currentOrder;
+    }
+
+    public void nullifyCurrentOrder() {
+        currentOrder = null;
     }
 
     public OrderResponse update(EditOrderRequest editOrder) throws IOException {

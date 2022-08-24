@@ -3,6 +3,7 @@ package com.revature.pokebowl.util.web;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.pokebowl.member.Member;
 import com.revature.pokebowl.member.MemberService;
+import com.revature.pokebowl.order.OrderService;
 import com.revature.pokebowl.util.exceptions.InvalidUserInputException;
 import com.revature.pokebowl.util.web.dto.LoginCreds;
 import org.apache.logging.log4j.LogManager;
@@ -15,12 +16,14 @@ import java.io.IOException;
 public class AuthServlet extends HttpServlet {
 
     private final MemberService memberService;
+    private final OrderService orderService;
     private final ObjectMapper objectMapper;
     private final Logger logger = LogManager.getLogger();
 
-    public AuthServlet(MemberService memberService, ObjectMapper objectMapper) {
+    public AuthServlet(MemberService memberService, OrderService orderService, ObjectMapper objectMapper) {
         this.memberService = memberService;
         this.objectMapper = objectMapper;
+        this.orderService = orderService;
     }
 
     @Override
@@ -35,6 +38,7 @@ public class AuthServlet extends HttpServlet {
             httpSession.setAttribute("authMember", member);
             resp.addCookie(new Cookie("member_id", member.getMemberId()));// this sends a cookie to the user with their id
             resp.addCookie(new Cookie("full_name", member.getFullName().replaceAll("\\s+","")));// also sending back their full_name which cannot have any spaces in it.
+            orderService.nullifyCurrentOrder();
             resp.getWriter().write(String.format("<h1>Welcome back to Pokebowl: Rapidash, %s!</h1>", member.getFullName()));
         } catch (InvalidUserInputException e) {
             logger.warn("User information entered was not reflective of any member in the database");
@@ -46,6 +50,7 @@ public class AuthServlet extends HttpServlet {
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         memberService.logout();
+        orderService.nullifyCurrentOrder();
         req.getSession().invalidate();
         resp.getWriter().write("<h1>You have successfully logged out, <i>Seadra</i> next time!</h1>");
     }
