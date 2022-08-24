@@ -69,7 +69,6 @@ public class MemberService {
                 // this is leveraging (::) which is know as the method reference operator, it's taking the method from MemberReponse and applying to all objects in the stream
                 .map(MemberResponse::new)
                 .collect(Collectors.toList());
-        ;
         return members;
     }
     public MemberResponse findByUsername(String username){

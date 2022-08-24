@@ -67,26 +67,6 @@ public class DishDao implements Crudable<Dish> {
         }
     }
 
-    public Dish findByName(String dishName) {
-        try {
-            Session session = HibernateUtil.getSession();
-            Transaction transaction = session.beginTransaction();
-
-            Query query = session.createQuery("from Dish where dish_name = :dishName");
-            query.setParameter("dishName", dishName);
-
-            Dish dish = (Dish) query.uniqueResult();
-            transaction.commit();
-
-            return dish;
-        } catch (HibernateException | IOException e) {
-            e.printStackTrace();
-            return null;
-        } finally {
-            HibernateUtil.closeSession();
-        }
-    }
-
     @Override
     public boolean update(Dish updatedDish) {
         try {

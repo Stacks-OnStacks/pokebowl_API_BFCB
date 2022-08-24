@@ -32,9 +32,9 @@ public class MemberServlet extends HttpServlet implements Authable {
     }
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        if(!checkAdmin(req, resp)) return;
 
         String username = req.getParameter("username"); //CHANGED THIS TO username instead of member_id
-        Member authMember = (Member) req.getSession().getAttribute("authMember"); // cast the returned object to a member
 
         if(username != null) {
             logger.info("username entered: {}", username);
@@ -46,6 +46,7 @@ public class MemberServlet extends HttpServlet implements Authable {
                 String payloadID = objectMapper.writeValueAsString(member);
 
                 resp.getWriter().write(payloadID);
+                resp.setStatus(200);
             } catch (InvalidUserInputException e){
                 logger.warn("User information entered was not reflective of any member in the database. username provided was: {}", username);
                 resp.getWriter().write(e.getMessage());
