@@ -174,4 +174,21 @@ public class PaymentDao implements Crudable<Payment> {
             HibernateUtil.closeSession();
         }
     }
+    public Payment findByIdAndMember(String paymentId, String memberId) {
+        try {
+            Session session = HibernateUtil.getSession();
+            Transaction transaction = session.beginTransaction();
+            Query query = session.createQuery("from Payment where payment_id = :paymentId and member_id = :memberId");
+            query.setParameter("paymentId", paymentId);
+            query.setParameter("memberId", memberId);
+            Payment payment = (Payment) query.uniqueResult();
+            transaction.commit();
+            return payment;
+        } catch (HibernateException | IOException e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            HibernateUtil.closeSession();
+        }
+    }
 }

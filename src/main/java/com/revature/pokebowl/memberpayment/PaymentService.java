@@ -4,11 +4,14 @@ import com.revature.pokebowl.member.MemberService;
 import com.revature.pokebowl.memberpayment.dto.requests.EditPaymentRequest;
 import com.revature.pokebowl.memberpayment.dto.requests.CreatePaymentRequest;
 import com.revature.pokebowl.memberpayment.dto.responses.PaymentResponse;
+import com.revature.pokebowl.order.Order;
 import com.revature.pokebowl.order.dto.responses.OrderResponse;
 import com.revature.pokebowl.util.exceptions.InvalidUserInputException;
 import com.revature.pokebowl.util.exceptions.ResourcePersistanceException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 import java.util.function.Predicate;
@@ -111,13 +114,21 @@ newPayment.setMember(memberService.getSessionMember());
         }
         return paymentDao.update(foundPayment);
     }
-    public List<PaymentResponse> readAllByMember(String memberId) {
-        List<PaymentResponse> orders = paymentDao.findAllByMemberId(memberId)
+    public List<PaymentResponse> readAllByMember() {
+        String sessionMemberId = memberService.getSessionMember().getMemberId();
+        List<PaymentResponse> orders = paymentDao.findAllByMemberId(sessionMemberId)
                 .stream()
                 .map(PaymentResponse::new)
                 .collect(Collectors.toList());
         return orders;
     }
+    public PaymentResponse findByIdAndMember(String paymentId) throws IOException {
+    String sessionMemberId = memberService.getSessionMember().getMemberId();
+    Payment payment = paymentDao.findByIdAndMember(paymentId,sessionMemberId);
+        if (payment == null) throw new InvalidUserInputException("Order Id associated with authMember was not found in the database");
+
+        return new PaymentResponse(payment);
+}
 
 
 } //end of class
