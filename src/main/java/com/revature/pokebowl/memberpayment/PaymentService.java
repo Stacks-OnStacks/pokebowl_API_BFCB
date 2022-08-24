@@ -1,8 +1,10 @@
 package com.revature.pokebowl.memberpayment;
+import com.revature.pokebowl.member.Member;
 import com.revature.pokebowl.member.MemberService;
 import com.revature.pokebowl.memberpayment.dto.requests.EditPaymentRequest;
 import com.revature.pokebowl.memberpayment.dto.requests.CreatePaymentRequest;
 import com.revature.pokebowl.memberpayment.dto.responses.PaymentResponse;
+import com.revature.pokebowl.order.dto.responses.OrderResponse;
 import com.revature.pokebowl.util.exceptions.InvalidUserInputException;
 import com.revature.pokebowl.util.exceptions.ResourcePersistanceException;
 import org.apache.logging.log4j.LogManager;
@@ -82,12 +84,9 @@ newPayment.setMember(memberService.getSessionMember());
     }
 
     public boolean update(EditPaymentRequest editPayment) throws InvalidUserInputException{
-        System.out.println("Inside update Member");
+        System.out.println("Inside update Payment");
         Payment foundPayment = paymentDao.findById(editPayment.getId());
-        // Predicate - to evaluate a true or false given a lambda expression
-        // Lambda expression (arrow notation) - a syntax for a SINGULAR function
         Predicate<String> notNullOrEmpty = (str) -> str != null && !str.trim().equals("");
-        // Example of Automatic Dirty Checking
         if(notNullOrEmpty.test(editPayment.getPaymentName())){
             if(!isPaymentNameAvailable(editPayment.getPaymentName())){
                 throw new ResourcePersistanceException("The provided payment name is already registered");
@@ -97,10 +96,11 @@ newPayment.setMember(memberService.getSessionMember());
         if(notNullOrEmpty.test(String.valueOf(editPayment.getBalance()))){
             foundPayment.setBalance(editPayment.getBalance());
         }
-        if(notNullOrEmpty.test(String.valueOf(editPayment.getExpDate()))){
+        if(editPayment.getExpDate()!=null){
             foundPayment.setExpDate(editPayment.getExpDate());
         }
         if(notNullOrEmpty.test(editPayment.getCcv())){
+
             foundPayment.setCcv(editPayment.getCcv());
         }
         if(notNullOrEmpty.test(editPayment.getZipCode())){
@@ -111,7 +111,13 @@ newPayment.setMember(memberService.getSessionMember());
         }
         return paymentDao.update(foundPayment);
     }
-
+    public List<PaymentResponse> readAllByMember(String memberId) {
+        List<PaymentResponse> orders = paymentDao.findAllByMemberId(memberId)
+                .stream()
+                .map(PaymentResponse::new)
+                .collect(Collectors.toList());
+        return orders;
+    }
 
 
 } //end of class

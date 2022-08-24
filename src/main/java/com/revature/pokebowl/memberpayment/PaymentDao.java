@@ -1,6 +1,7 @@
 package com.revature.pokebowl.memberpayment;
 
 import com.revature.pokebowl.member.Member;
+import com.revature.pokebowl.order.Order;
 import com.revature.pokebowl.util.HibernateUtil;
 import com.revature.pokebowl.util.interfaces.Crudable;
 import org.hibernate.HibernateException;
@@ -106,10 +107,8 @@ public class PaymentDao implements Crudable<Payment> {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
-
             session.merge(updatedPayment);
             transaction.commit();
-
             return true;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
@@ -154,6 +153,23 @@ public class PaymentDao implements Crudable<Payment> {
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
             return false;
+        } finally {
+            HibernateUtil.closeSession();
+        }
+    }
+    public List<Payment> findAllByMemberId(String memberId) {
+        try {
+            Session session = HibernateUtil.getSession();
+            Transaction transaction = session.beginTransaction();
+
+            Query query = session.createQuery("from Payment where member_id = :memberId");
+            query.setParameter("memberId", memberId);
+            List<Payment> paymentList = query.list();
+            transaction.commit();
+            return paymentList;
+        } catch (HibernateException | IOException e) {
+            e.printStackTrace();
+            return null;
         } finally {
             HibernateUtil.closeSession();
         }

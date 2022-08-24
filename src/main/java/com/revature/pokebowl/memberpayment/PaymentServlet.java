@@ -1,6 +1,8 @@
 package com.revature.pokebowl.memberpayment;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.revature.pokebowl.dish.dto.requests.EditDishRequest;
+import com.revature.pokebowl.member.Member;
 import com.revature.pokebowl.memberpayment.Payment;
 import com.revature.pokebowl.memberpayment.dto.requests.EditPaymentRequest;
 import com.revature.pokebowl.memberpayment.dto.requests.CreatePaymentRequest;
@@ -30,10 +32,9 @@ public class PaymentServlet extends HttpServlet implements Authable {
     }
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-
         String paymentName = req.getParameter("payment_name");
-        Payment authMember = (Payment) req.getSession().getAttribute("authMember"); // cast the returned object to a member
-
+        String memberId= req.getParameter("member_id");
+        Member authMember = (Member) req.getSession().getAttribute("authMember"); // cast the returned object to a member
         if(paymentName != null) {
             logger.info("username entered: {}", paymentName);
             try {
@@ -49,7 +50,13 @@ public class PaymentServlet extends HttpServlet implements Authable {
                 resp.getWriter().write(e.getMessage());
                 resp.setStatus(404);
             }
-        } else {
+        } else if(memberId!=null){
+            logger.info("no payment entered, getting all payments");
+            List<PaymentResponse> payments = paymentService.readAllByMember(memberId);
+            String payload = objectMapper.writeValueAsString(payments); // mapper parsing from Java Object to JSON
+            resp.getWriter().write(payload);
+        }
+        else{
             logger.info("no payment entered, getting all payments");
             List<PaymentResponse> payments = paymentService.readAll();
             String payload = objectMapper.writeValueAsString(payments); // mapper parsing from Java Object to JSON
@@ -80,29 +87,19 @@ public class PaymentServlet extends HttpServlet implements Authable {
     }
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        if(!checkAdmin(req, resp)) return;
+
+        PrintWriter respWriter = resp.getWriter();
         try {
-            String paymentName = req.getParameter("payment_name");
             EditPaymentRequest editPayment = objectMapper.readValue(req.getInputStream(), EditPaymentRequest.class);
-            if(paymentName != null) {
-                logger.info("paymentName entered: {}", paymentName);
-                try {
-                    PaymentResponse payment = paymentService.findByPaymentName(paymentName);
-                    if (payment == null) throw new InvalidUserInputException("entered paymentName was not found in the database");
-                    editPayment.setPaymentId(payment.getPaymentId());
+                String paymentId = editPayment.getId();
+                logger.info("paymentName entered: {}", paymentId);
                     paymentService.update(editPayment);// editPayment is a CreatePaymentRequest type of object, it
-                    logger.info("Successfully updated member: {}",editPayment.getPaymentName());
+                    logger.info("Successfully updated member: {}",paymentId);
                     String payload = objectMapper.writeValueAsString(editPayment);
                     resp.getWriter().write(payload);
                     resp.setStatus(200);// 200 means everything is OK, successfully updated payment method
 
-                } catch (InvalidUserInputException e){
-                    logger.warn("User information entered was not reflective of any member in the database. username provided was: {}", paymentName);
-                    resp.getWriter().write(e.getMessage());
-                    resp.setStatus(404);
-                }
-            } else {
-                throw new InvalidUserInputException("Cannot update member, username is null");
-            }
         } catch (InvalidUserInputException e){
             resp.getWriter().write(e.getMessage());
             resp.setStatus(404);

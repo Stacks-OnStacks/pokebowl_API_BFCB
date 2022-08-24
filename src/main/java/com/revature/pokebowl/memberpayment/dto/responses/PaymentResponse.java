@@ -30,16 +30,15 @@ public class PaymentResponse {
         this.provider = provider;
         this.memberId = memberId;
     }
-
     public PaymentResponse(Payment payment) {
-        this.paymentId = getPaymentId();
-        this.paymentName = getPaymentName();
-        this.balance = getBalance();
-        this.expDate = getExpDate();
-        this.ccv = getCcv();
-        this.zipCode = getZipCode();
-        this.provider = getProvider();
-        this.memberId = getMemberId();
+        this.paymentId = payment.getPaymentId();
+        this.paymentName = payment.getPaymentName();
+        this.balance = payment.getBalance();
+        this.expDate = payment.getExpDate();
+        this.ccv = payment.getCcv();
+        this.zipCode = payment.getZipCode();
+        this.provider = payment.getProvider();
+        this.memberId = payment.getMember().getMemberId();
         //set all this.attribute= paymment.getAttribute()
     }
 
