@@ -77,8 +77,8 @@ newPayment.setMember(memberService.getSessionMember());
     public boolean isPaymentNameAvailable(String paymentName){
         return paymentDao.checkPaymentName(paymentName);
     }
-    public boolean remove(String paymentName){
-        return paymentDao.delete(paymentName);
+    public boolean remove(String paymentId){
+        return paymentDao.delete(paymentId);
     }
 
     public boolean update(EditPaymentRequest editPayment) throws InvalidUserInputException{

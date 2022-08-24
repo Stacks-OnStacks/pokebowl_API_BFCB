@@ -114,10 +114,11 @@ public class PaymentServlet extends HttpServlet implements Authable {
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         if(!checkAdmin(req, resp)) return;
-        String paymentName = req.getParameter("paymentName");
-        if(paymentName != null){
-            paymentService.remove(paymentName);
-            resp.getWriter().write(String.format("Payment: %s has been deleted",paymentName));
+        String paymentId = req.getParameter("paymentId");
+        System.out.println(paymentId);
+        if(paymentId != null){
+            paymentService.remove(paymentId);
+            resp.getWriter().write(String.format("Payment: %s has been deleted",paymentId));
         } else {
             resp.getWriter().write("This request requires an paymentName parameter in the path ?payment_name=YOUR-PAYMENT_NAME");
             resp.setStatus(400);
