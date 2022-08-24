@@ -57,7 +57,7 @@ public class ServletContext {
             PaymentService paymentService = new PaymentService(memberService,paymentDao); //changed paymentService constructor to take in memberService as parameter to grab logged in member's details
             DishService dishService = new DishService(dishDao);
             OrderService orderService = new OrderService(memberService,paymentService,orderDao);
-            OrderDetailsService orderDetailsService = new OrderDetailsService(orderDetailsDao);
+            OrderDetailsService orderDetailsService = new OrderDetailsService(dishService,orderService,orderDetailsDao);
 
             ObjectMapper objectMapper = new ObjectMapper();   // instantiate the ObjectMapper dependency for JSON marshalling
 

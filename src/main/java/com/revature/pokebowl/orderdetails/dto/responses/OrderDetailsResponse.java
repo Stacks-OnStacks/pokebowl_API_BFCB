@@ -1,6 +1,8 @@
 package com.revature.pokebowl.orderdetails.dto.responses;
 
 
+import com.revature.pokebowl.orderdetails.OrderDetails;
+
 public class OrderDetailsResponse {
 
     private String orderDetailsId;
@@ -20,6 +22,13 @@ public class OrderDetailsResponse {
         this.comments = comments;
         this.dishId = dishId;
         this.orderId = orderId;
+    }
+    public OrderDetailsResponse(OrderDetails orderDetails) {
+        this.orderDetailsId = orderDetails.getOrderDetailsId();
+        this.quantity = orderDetails.getQuantity();
+        this.comments = orderDetails.getComments();
+        this.orderId = orderDetails.getOrder().getOrderId();
+        this.dishId = orderDetails.getDish().getDishId();
     }
 
     public String getOrderDetailsId() {

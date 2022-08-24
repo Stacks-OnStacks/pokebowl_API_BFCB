@@ -4,7 +4,6 @@ public class CreateOrderDetailsRequest {
 
     private int quantity;
     private String comments;
-
     private String dishId;
     private String orderId;
 
