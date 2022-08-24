@@ -35,7 +35,6 @@ public class OrderDetailsDao implements Crudable<OrderDetails> {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
-
             List<OrderDetails> orderDetailsList = session.createQuery("FROM OrderDetails").list();
             transaction.commit();
 
@@ -67,7 +66,6 @@ public class OrderDetailsDao implements Crudable<OrderDetails> {
             HibernateUtil.closeSession();
         }
     }
-
     @Override
     public OrderDetails findById(String id) {
         try {
@@ -85,7 +83,6 @@ public class OrderDetailsDao implements Crudable<OrderDetails> {
             HibernateUtil.closeSession();
         }
     }
-
     public OrderDetails findByDishId(String orderId, String dishId) {
         try {
             Session session = HibernateUtil.getSession();
