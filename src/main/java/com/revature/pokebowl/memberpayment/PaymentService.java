@@ -34,7 +34,7 @@ newPayment.setCcv(newPaymentRequest.getCcv());
 newPayment.setExpDate(newPaymentRequest.getExpDate());
 newPayment.setBalance(newPaymentRequest.getBalance());
 newPayment.setPaymentId(UUID.randomUUID().toString());
-
+newPayment.setMember(memberService.getSessionMember());
     logger.info("Payment registration service has begun with the provided: {}", newPayment);
     if (!isPaymentValid(newPayment)) {
         throw new InvalidUserInputException("User input was invalid");

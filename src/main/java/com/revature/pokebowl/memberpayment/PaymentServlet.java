@@ -39,7 +39,7 @@ public class PaymentServlet extends HttpServlet implements Authable {
             try {
                 PaymentResponse payment = paymentService.findByPaymentName(paymentName);
 
-                if (payment == null) throw new InvalidUserInputException("entered username was not found in the database");
+                if (payment == null) throw new InvalidUserInputException("entered paymentName was not found in the database");
 
                 String payloadID = objectMapper.writeValueAsString(payment);
 
