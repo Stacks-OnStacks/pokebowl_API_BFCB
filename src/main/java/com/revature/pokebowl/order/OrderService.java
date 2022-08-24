@@ -19,6 +19,7 @@ public class OrderService {
     private final OrderDao orderDao;
     private final PaymentService paymentService;
     private final MemberService memberService;
+    private Order currentOrder;
     private final Logger logger = LogManager.getLogger();
 
     // CONSTRUCTOR
@@ -45,4 +46,12 @@ public class OrderService {
                 .collect(Collectors.toList());
         return orders;
     }
+
+    public boolean startNewOrder() {
+        if (currentOrder != null) return false;
+        currentOrder = new Order();
+        return true;
+    }
+
+    public
 }
