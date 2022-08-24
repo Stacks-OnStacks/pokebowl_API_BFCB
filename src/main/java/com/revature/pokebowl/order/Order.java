@@ -6,6 +6,7 @@ import com.revature.pokebowl.orderdetails.OrderDetails;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -37,7 +38,7 @@ public class Order {
     private Payment payment;
 
     @OneToMany(mappedBy="order")
-    private Set<OrderDetails> orderDetailsSet;
+    private List<OrderDetails> orderDetailsList;
 
     public Order(String orderId, int amount, Date orderDate, String orderAddress, String orderZip) {
         this.orderId = orderId;
@@ -107,12 +108,12 @@ public class Order {
         this.payment = payment;
     }
 
-    public Set<OrderDetails> getOrderDetailsSet() {
-        return orderDetailsSet;
+    public List<OrderDetails> getOrderDetailsList() {
+        return orderDetailsList;
     }
 
-    public void setOrderDetailsSet(Set<OrderDetails> orderDetailsSet) {
-        this.orderDetailsSet = orderDetailsSet;
+    public void setOrderDetailsList(List<OrderDetails> orderDetailsList) {
+        this.orderDetailsList = orderDetailsList;
     }
 
     @Override

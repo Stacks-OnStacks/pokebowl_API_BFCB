@@ -76,7 +76,7 @@ public class DishService {
 
     }
 
-    public boolean update(EditDishRequest editDish) throws IOException {
+    public DishResponse update(EditDishRequest editDish) throws IOException {
         Dish foundDish = dishDao.findById(editDish.getId());
         if (foundDish == null) throw new InvalidUserInputException("Dish Id was not found in the database");
         Predicate<String> notNullOrEmpty = (str) -> str != null && !str.trim().equals("");
@@ -91,12 +91,13 @@ public class DishService {
             throw new InvalidUserInputException("Invalid cost (or no cost) entered, please try again");
         }
         foundDish.setVegetarian(editDish.isVegetarian());
+        if (!dishDao.update(foundDish)) throw new ResourcePersistanceException("New dish failed to persist to the database");
 
-        return dishDao.update(foundDish);
+        return new DishResponse(foundDish);
     }
 
     public boolean remove(String dishId) {
-        if (!dishDao.delete(dishId)) throw new InvalidUserInputException("dishId was not found in the database");
+        if (!dishDao.delete(dishId)) throw new InvalidUserInputException("dish Id was not found in the database");
         return true;
     }
 }

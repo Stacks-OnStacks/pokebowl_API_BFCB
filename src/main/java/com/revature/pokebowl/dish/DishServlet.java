@@ -91,10 +91,10 @@ public class DishServlet extends HttpServlet implements Authable {
         EditDishRequest editDish = objectMapper.readValue(req.getInputStream(), EditDishRequest.class);
 
         try {
-            dishService.update(editDish);
+            DishResponse dish = dishService.update(editDish);
 
-            logger.info("Successfully updated dish: {}",editDish);
-            String payload = objectMapper.writeValueAsString(editDish);
+            logger.info("Successfully updated dish: {}",dish);
+            String payload = objectMapper.writeValueAsString(dish);
             respWriter.write(payload);
             resp.setStatus(200);
         } catch (InvalidUserInputException | ResourcePersistanceException e) {
