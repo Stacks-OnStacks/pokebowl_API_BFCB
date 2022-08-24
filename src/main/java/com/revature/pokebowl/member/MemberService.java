@@ -8,6 +8,7 @@ import com.revature.pokebowl.util.exceptions.ResourcePersistanceException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.IOException;
 import java.sql.Date;
 import java.util.List;
 import java.util.UUID;
@@ -95,8 +96,7 @@ public class MemberService {
     public boolean remove(String username){
         return memberDao.delete(username);
     }
-    public boolean update(EditMemberRequest editMember) throws InvalidUserInputException{
-        System.out.println("Inside update Member");
+    public boolean update(EditMemberRequest editMember) throws IOException {
         Member foundMember = memberDao.findById(editMember.getId());
         // Predicate - to evaluate a true or false given a lambda expression
         // Lambda expression (arrow notation) - a syntax for a SINGULAR function
@@ -116,8 +116,13 @@ public class MemberService {
         }
         return memberDao.update(foundMember);
     }
+
     public Member getSessionMember(){
         return sessionMember;
+    }
+
+    public void logout() {
+        sessionMember = null;
     }
 
 }

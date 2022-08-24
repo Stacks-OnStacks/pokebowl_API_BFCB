@@ -45,6 +45,7 @@ public class AuthServlet extends HttpServlet {
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        memberService.logout();
         req.getSession().invalidate();
         resp.getWriter().write("<h1>You have successfully logged out, <i>Seadra</i> next time!</h1>");
     }

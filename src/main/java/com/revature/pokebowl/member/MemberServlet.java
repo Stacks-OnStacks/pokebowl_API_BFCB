@@ -89,7 +89,6 @@ public class MemberServlet extends HttpServlet implements Authable {
     // TODO: CHANGE THIS IMPLEMENTATION
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        if (!checkAdmin(req,resp)) return;
 
         PrintWriter respWriter = resp.getWriter();
         String username = req.getParameter("username");

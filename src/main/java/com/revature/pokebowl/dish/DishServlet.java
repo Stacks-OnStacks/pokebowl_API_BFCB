@@ -2,7 +2,9 @@ package com.revature.pokebowl.dish;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.pokebowl.dish.dto.requests.CreateDishRequest;
+import com.revature.pokebowl.dish.dto.requests.EditDishRequest;
 import com.revature.pokebowl.dish.dto.responses.DishResponse;
+import com.revature.pokebowl.member.dto.requests.EditMemberRequest;
 import com.revature.pokebowl.member.dto.requests.NewRegistrationRequest;
 import com.revature.pokebowl.member.dto.response.MemberResponse;
 import com.revature.pokebowl.util.exceptions.InvalidUserInputException;
@@ -78,13 +80,32 @@ public class DishServlet extends HttpServlet implements Authable {
             respWriter.write(e.getMessage() + " " + e.getClass().getName());
             resp.setStatus(500);
         }
-
-
     }
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPut(req, resp);
+        if(!checkAdmin(req, resp)) return;
+
+        PrintWriter respWriter = resp.getWriter();
+        EditDishRequest editDish = objectMapper.readValue(req.getInputStream(), EditDishRequest.class);
+
+        try {
+            dishService.update(editDish);
+
+            logger.info("Successfully updated dish: {}",editDish);
+            String payload = objectMapper.writeValueAsString(editDish);
+            respWriter.write(payload);
+            resp.setStatus(200);
+        } catch (InvalidUserInputException | ResourcePersistanceException e) {
+            logger.warn("Exception thrown when trying to persist. Message from exception: {}", e.getMessage());
+            respWriter.write(e.getMessage());
+            resp.setStatus(404);
+        }  catch (Exception e) {
+            logger.error("Something unexpected happened and this exception was thrown: {} with message: {}", e.getClass().getName(), e.getMessage());
+            respWriter.write(e.getMessage() + " " + e.getClass().getName());
+            resp.setStatus(500);
+        }
+
     }
 
     @Override

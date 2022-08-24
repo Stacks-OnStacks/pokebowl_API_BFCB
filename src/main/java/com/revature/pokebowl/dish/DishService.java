@@ -1,6 +1,7 @@
 package com.revature.pokebowl.dish;
 
 import com.revature.pokebowl.dish.dto.requests.CreateDishRequest;
+import com.revature.pokebowl.dish.dto.requests.EditDishRequest;
 import com.revature.pokebowl.dish.dto.responses.DishResponse;
 import com.revature.pokebowl.util.exceptions.InvalidUserInputException;
 import com.revature.pokebowl.util.exceptions.ResourcePersistanceException;
@@ -10,6 +11,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class DishService {
@@ -41,7 +43,7 @@ public class DishService {
         if(dish == null) return false;
         if(dish.getDishId() == null || dish.getDishId().trim().equals("")) return false;
         if(dish.getDishName() == null || dish.getDishName().trim().equals("")) return false;
-        if(dish.getDishCost() < 0) return false;
+        if(dish.getDishCost() < 1) return false;
         if(dish.getDescription() == null || dish.getDescription().trim().equals("")) return false;
         return true;
     }
@@ -72,5 +74,23 @@ public class DishService {
         dishDao.create(newDish);
         return new DishResponse(newDish);
 
+    }
+
+    public boolean update(EditDishRequest editDish) throws IOException {
+        Dish foundDish = dishDao.findById(editDish.getId());
+        Predicate<String> notNullOrEmpty = (str) -> str != null && !str.trim().equals("");
+        if (notNullOrEmpty.test(editDish.getDishName())) {
+            if (!isDishNameAvailable(editDish.getDishName().toUpperCase())) throw new ResourcePersistanceException("Dish Name already exists, please enter a different name");
+            foundDish.setDishName(editDish.getDishName().toUpperCase());
+        }
+        if (notNullOrEmpty.test(editDish.getDescription())) foundDish.setDescription(editDish.getDescription());
+        if (editDish.getDishCost() > 0) {
+            foundDish.setDishCost(editDish.getDishCost());
+        } else {
+            throw new InvalidUserInputException("Invalid cost (or no cost) entered, please try again");
+        }
+        foundDish.setVegetarian(editDish.isVegetarian());
+
+        return dishDao.update(foundDish);
     }
 }
