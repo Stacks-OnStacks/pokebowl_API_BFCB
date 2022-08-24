@@ -122,6 +122,7 @@ public class DishServlet extends HttpServlet implements Authable {
 
             try {
                 dishService.remove(dishId);
+                logger.info("Successfully deleted dish with id: {}",dishId);
                 respWriter.write(String.format("Dish with id '%s' has been deleted",dishId));
                 resp.setStatus(200);
             } catch (InvalidUserInputException e) {

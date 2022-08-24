@@ -74,11 +74,14 @@ public class OrderServlet extends HttpServlet implements Authable {
                 logger.info("User has requested to create a new order: {}", order);
                 OrderResponse newOrder = orderService.startOrder(order);
 
+                logger.info("User has successfully created their current order: {}",newOrder);
                 String payload = objectMapper.writeValueAsString(newOrder);
                 respWriter.write(payload);
             } else {
+                logger.info("User has requested to submit their current order");
                 OrderResponse newOrder = orderService.submitOrder();
-                logger.info("User has requested to submit their current order: {}",newOrder);
+
+                logger.info("User has successfully submitted their current order: {}",newOrder);
                 String payload = objectMapper.writeValueAsString(newOrder);
                 respWriter.write(payload);
             }
@@ -130,8 +133,14 @@ public class OrderServlet extends HttpServlet implements Authable {
         PrintWriter respWriter = resp.getWriter();
 
         if (orderService.getCurrentOrder() != null) {
-
+            orderService.nullifyCurrentOrder();
+            logger.info("Successfully deleted current order");
+            respWriter.write("deleted current order");
+            resp.setStatus(200);
+        } else {
+            logger.warn("No order in progress, nothing to delete");
+            respWriter.write("No order in progress, nothing to delete.");
+            resp.setStatus(400);
         }
-
     }
 }
