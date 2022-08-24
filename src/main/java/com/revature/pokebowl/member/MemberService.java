@@ -47,7 +47,6 @@ public class MemberService {
         }
 
         memberDao.create(newMember);
-
         return new MemberResponse(newMember);
 
     }
@@ -82,7 +81,7 @@ public class MemberService {
 
     public boolean isMemberValid(Member newMember){
         if(newMember == null) return false;
-        // this || is the expression to signify to the conditional that if either of these are true then perform the action
+        if(newMember.getMemberId() == null || newMember.getMemberId().trim().equals("")) return false;
         if(newMember.getUsername() == null || newMember.getUsername().trim().equals("")) return false;
         if(newMember.getFullName() == null || newMember.getFullName().trim().equals("")) return false;
         if(newMember.getDob() == null || newMember.getDob().toString().trim().equals("")) return false;

@@ -32,18 +32,18 @@ public class DishServlet extends HttpServlet implements Authable {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String dishName = req.getParameter("dishName");
+        String dishId = req.getParameter("dishId");
 
-        if (dishName != null) {
-            logger.info("dishName entered: {}",dishName);
+        if (dishId != null) {
+            logger.info("dishId entered: {}",dishId);
 
             try {
-                DishResponse dish = dishService.findById(dishName);
+                DishResponse dish = dishService.findById(dishId);
                 String payload = objectMapper.writeValueAsString(dish);
                 resp.getWriter().write(payload);
                 resp.setStatus(200);
             } catch (InvalidUserInputException e) {
-                logger.warn("Dish id entered was not reflective of any member in the database. dishId provided was: {}",dishName);
+                logger.warn("Dish id entered was not reflective of any dish in the database. dishId provided was: {}",dishId);
                 resp.getWriter().write(e.getMessage());
                 resp.setStatus(404);
             }

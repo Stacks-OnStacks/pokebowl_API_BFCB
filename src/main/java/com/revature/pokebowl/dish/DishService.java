@@ -1,10 +1,7 @@
 package com.revature.pokebowl.dish;
 
-import com.revature.pokebowl.dish.Dish;
-import com.revature.pokebowl.dish.DishDao;
 import com.revature.pokebowl.dish.dto.requests.CreateDishRequest;
 import com.revature.pokebowl.dish.dto.responses.DishResponse;
-import com.revature.pokebowl.member.dto.response.MemberResponse;
 import com.revature.pokebowl.util.exceptions.InvalidUserInputException;
 import com.revature.pokebowl.util.exceptions.ResourcePersistanceException;
 import org.apache.logging.log4j.LogManager;
@@ -27,7 +24,7 @@ public class DishService {
 
     public DishResponse findById(String dishId) throws IOException {
         Dish dish = dishDao.findById(dishId);
-        if (dish == null) throw new InvalidUserInputException("Dish Name was not found in the database");
+        if (dish == null) throw new InvalidUserInputException("Dish Id was not found in the database");
         return new DishResponse(dish);
     }
 
@@ -42,6 +39,7 @@ public class DishService {
 
     public boolean isDishValid(Dish dish) {
         if(dish == null) return false;
+        if(dish.getDishId() == null || dish.getDishId().trim().equals("")) return false;
         if(dish.getDishName() == null || dish.getDishName().trim().equals("")) return false;
         if(dish.getDishCost() < 0) return false;
         if(dish.getDescription() == null || dish.getDescription().trim().equals("")) return false;

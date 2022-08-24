@@ -47,7 +47,7 @@ public class Dish {
         return dishId;
     }
 
-    public void setDishId(String id) {
+    public void setDishId(String dishId) {
         this.dishId = dishId;
     }
 
