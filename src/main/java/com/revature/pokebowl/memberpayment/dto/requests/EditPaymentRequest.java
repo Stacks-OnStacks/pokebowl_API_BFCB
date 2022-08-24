@@ -59,11 +59,11 @@ public class EditPaymentRequest extends EditResourceRequests {
         this.provider = provider;
     }
 
-    public String getMemberId() {
+    public String getPaymentId() {
         return memberId;
     }
 
-    public void setMemberId(String memberId) {
+    public void setPaymentId(String memberId) {
         this.memberId = memberId;
     }
 

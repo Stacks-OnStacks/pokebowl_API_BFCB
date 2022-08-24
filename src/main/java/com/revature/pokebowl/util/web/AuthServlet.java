@@ -9,10 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
 
 public class AuthServlet extends HttpServlet {
@@ -36,7 +33,8 @@ public class AuthServlet extends HttpServlet {
 
             HttpSession httpSession = req.getSession(true);
             httpSession.setAttribute("authMember", member);
-            resp.sendRedirect("/auth");
+            resp.addCookie(new Cookie("member_id", member.getMemberId()));// this sends a cookie to the user with their id
+            resp.addCookie(new Cookie("full_name", member.getFullName().replaceAll("\\s+","")));// also sending back their full_name which cannot have any spaces in it.
             resp.getWriter().write(String.format("<h1>Welcome back to Pokebowl: Rapidash, %s!</h1>", member.getFullName()));
         } catch (InvalidUserInputException e) {
             logger.warn("User information entered was not reflective of any member in the database");

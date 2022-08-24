@@ -1,5 +1,6 @@
 package com.revature.pokebowl.memberpayment;
 
+import com.revature.pokebowl.member.Member;
 import com.revature.pokebowl.util.HibernateUtil;
 import com.revature.pokebowl.util.interfaces.Crudable;
 import org.hibernate.HibernateException;
@@ -17,10 +18,8 @@ public class PaymentDao implements Crudable<Payment> {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
-
             session.save(newPayment);
             transaction.commit();
-
             return newPayment;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
@@ -29,16 +28,13 @@ public class PaymentDao implements Crudable<Payment> {
             HibernateUtil.closeSession();
         }
     }
-
     @Override
     public List<Payment> findAll() {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
-
             List<Payment> paymentList = session.createQuery("FROM Payment").list();
             transaction.commit();
-
             return paymentList;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
@@ -47,14 +43,13 @@ public class PaymentDao implements Crudable<Payment> {
             HibernateUtil.closeSession();
         }
     }
-
-    public List<Payment> findAllByMemberId(String memberId) {
+    public List<Payment> findAllByPaymentId(String paymentId) {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
 
-            Query query = session.createQuery("from Payment where member_id = :memberId");
-            query.setParameter("memberId", memberId);
+            Query query = session.createQuery("from Payment where payment_id = :paymentId");
+            query.setParameter("paymentId", paymentId);
 
             List<Payment> paymentList = query.list();
             transaction.commit();
@@ -135,6 +130,26 @@ public class PaymentDao implements Crudable<Payment> {
             transaction.commit();
 
             return true;
+        } catch (HibernateException | IOException e) {
+            e.printStackTrace();
+            return false;
+        } finally {
+            HibernateUtil.closeSession();
+        }
+    }
+    public boolean checkPaymentName(String paymentName) {
+        try {
+            Session session = HibernateUtil.getSession();
+            Transaction transaction = session.beginTransaction();
+
+            Query query = session.createQuery("from Payment where payment_name = :paymentName");
+            query.setParameter("paymentName", paymentName);
+
+            Payment payment = (Payment) query.uniqueResult();
+            transaction.commit();
+
+            if(payment == null) return true;
+            return false;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
             return false;

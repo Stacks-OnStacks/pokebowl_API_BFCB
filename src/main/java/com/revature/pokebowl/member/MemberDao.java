@@ -19,10 +19,8 @@ public class MemberDao implements Crudable<Member> {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
-
             session.save(newMember);
             transaction.commit();
-
             return newMember;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();

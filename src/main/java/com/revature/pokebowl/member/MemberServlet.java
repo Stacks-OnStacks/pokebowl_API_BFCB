@@ -21,7 +21,6 @@ import java.util.List;
 
 
 public class MemberServlet extends HttpServlet implements Authable {
-
     private final MemberService memberService;
     private final ObjectMapper objectMapper;
     //private final Logger logger = Logger.getLogger(MemberServlet.class.getName());
@@ -31,7 +30,6 @@ public class MemberServlet extends HttpServlet implements Authable {
         this.memberService = memberService;
         this.objectMapper = objectMapper;
     }
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
@@ -60,7 +58,6 @@ public class MemberServlet extends HttpServlet implements Authable {
             resp.getWriter().write(payload);
         }
     }
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         // DO NOT DO LOGIN INSIDE OF YOUR MEMBER SERVLET
@@ -71,15 +68,10 @@ public class MemberServlet extends HttpServlet implements Authable {
 //        resp.getWriter().write("Welcome back to pokebowl " + member.getFullName());
         PrintWriter respWriter = resp.getWriter(); // preference play, lot of folks enjoy this
         NewRegistrationRequest member = objectMapper.readValue(req.getInputStream(), NewRegistrationRequest.class);
-        //something wrong with above line
-
-
         try {
             logger.info("User has request to add the following to the database {}", member);
             MemberResponse newMember = memberService.registerMember(member);
-
             String payload = objectMapper.writeValueAsString(newMember);
-
             respWriter.write(payload);
             resp.setStatus(201);
         } catch (InvalidUserInputException | ResourcePersistanceException e){
@@ -93,11 +85,8 @@ public class MemberServlet extends HttpServlet implements Authable {
         }
 
     }
-
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-
-
         try {
             String username = req.getParameter("username");
             EditMemberRequest editMember = objectMapper.readValue(req.getInputStream(), EditMemberRequest.class);
@@ -134,7 +123,6 @@ public class MemberServlet extends HttpServlet implements Authable {
             resp.setStatus(500);
         }
     }
-
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         if(!checkAdmin(req, resp)) return;
@@ -147,6 +135,4 @@ public class MemberServlet extends HttpServlet implements Authable {
             resp.setStatus(400);
         }
     }
-
-
 }
