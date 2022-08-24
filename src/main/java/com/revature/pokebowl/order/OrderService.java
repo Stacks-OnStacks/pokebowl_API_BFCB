@@ -53,4 +53,7 @@ public class OrderService {
         currentOrder = new Order();
         return true;
     }
+    public OrderResponse postFinishedOrder() {
+        return null;
+    }
 }

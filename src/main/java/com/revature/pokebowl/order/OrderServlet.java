@@ -62,17 +62,20 @@ public class OrderServlet extends HttpServlet implements Authable {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (checkAuth(req,resp)) return;
         PrintWriter respWriter = resp.getWriter();
+
     }
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (checkAuth(req,resp)) return;
         PrintWriter respWriter = resp.getWriter();
+
     }
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (checkAuth(req,resp)) return;
         PrintWriter respWriter = resp.getWriter();
+
     }
 }
