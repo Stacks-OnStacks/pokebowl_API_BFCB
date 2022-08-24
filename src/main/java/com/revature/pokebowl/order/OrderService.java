@@ -6,11 +6,13 @@ import com.revature.pokebowl.dish.dto.responses.DishResponse;
 import com.revature.pokebowl.member.Member;
 import com.revature.pokebowl.member.MemberService;
 import com.revature.pokebowl.memberpayment.PaymentService;
+import com.revature.pokebowl.order.dto.requests.CreateOrderRequest;
 import com.revature.pokebowl.order.dto.responses.OrderResponse;
 import com.revature.pokebowl.util.exceptions.InvalidUserInputException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -29,12 +31,16 @@ public class OrderService {
         this.memberService = memberService;
     }
 
-    public OrderResponse findByIdAndMember(String orderId) {
-        String sessionMemberId = memberService.getSessionMember().getMemberId();
+    public OrderResponse findByIdAndMember(String orderId) throws IOException {
+        if (orderId.equals("current")) {
+            if (currentOrder == null) throw new InvalidUserInputException("You must start a new order first");
+            return new OrderResponse(currentOrder);
+        }
 
-        Order order = orderDao.findByIdAndMember(orderId, sessionMemberId);
-        if (order == null)
-            throw new InvalidUserInputException("Order Id associated with authMember was not found in the database");
+        String sessionMemberId = memberService.getSessionMember().getMemberId();
+        Order order = orderDao.findByIdAndMember(orderId,sessionMemberId);
+        if (order == null) throw new InvalidUserInputException("Order Id associated with authMember was not found in the database");
+
         return new OrderResponse(order);
     }
 
@@ -54,6 +60,10 @@ public class OrderService {
         return true;
     }
     public OrderResponse postFinishedOrder() {
+        return null;
+    }
+
+    public OrderResponse startOrder(CreateOrderRequest order) {
         return null;
     }
 }
