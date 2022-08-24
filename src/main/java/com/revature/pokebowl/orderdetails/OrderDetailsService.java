@@ -1,11 +1,13 @@
 package com.revature.pokebowl.orderdetails;
 import com.revature.pokebowl.dish.DishService;
 import com.revature.pokebowl.dish.DishDao;
-import com.revature.pokebowl.memberpayment.Payment;
-import com.revature.pokebowl.memberpayment.dto.responses.PaymentResponse;
+import com.revature.pokebowl.orderdetails.OrderDetails;
+import com.revature.pokebowl.orderdetails.dto.requests.EditOrderDetailsRequest;
+import com.revature.pokebowl.orderdetails.dto.responses.OrderDetailsResponse;
 import com.revature.pokebowl.order.OrderService;
 import com.revature.pokebowl.orderdetails.OrderDetails;
 import com.revature.pokebowl.orderdetails.dto.requests.CreateOrderDetailsRequest;
+import com.revature.pokebowl.orderdetails.dto.requests.EditOrderDetailsRequest;
 import com.revature.pokebowl.orderdetails.dto.responses.OrderDetailsResponse;
 import com.revature.pokebowl.orderdetails.dto.requests.CreateOrderDetailsRequest;
 import com.revature.pokebowl.orderdetails.dto.responses.OrderDetailsResponse;
@@ -16,6 +18,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class OrderDetailsService {
@@ -59,4 +62,19 @@ public class OrderDetailsService {
     public boolean remove(String orderDetailsId){
         return orderDetailsDao.delete(orderDetailsId);
     }
+
+    public boolean update(EditOrderDetailsRequest editOrderDetails) throws InvalidUserInputException{
+        System.out.println("Inside update OrderDetails");
+        OrderDetails foundOrderDetails = orderDetailsDao.findById(editOrderDetails.getId());
+        Predicate<String> notNullOrEmpty = (str) -> str != null && !str.trim().equals("");
+        if(notNullOrEmpty.test(String.valueOf(editOrderDetails.getQuantity()))){
+            //Make sure quantity is at least 0 not "" or null
+            foundOrderDetails.setQuantity(editOrderDetails.getQuantity());
+        }
+        if(notNullOrEmpty.test(String.valueOf(editOrderDetails.getComments()))){
+            foundOrderDetails.setComments(editOrderDetails.getComments());
+        }
+        return orderDetailsDao.update(foundOrderDetails);
+    }
 }
+
