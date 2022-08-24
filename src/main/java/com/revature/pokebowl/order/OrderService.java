@@ -53,5 +53,7 @@ public class OrderService {
         return true;
     }
 
-    public
+    public OrderResponse postFinishedOrder() {
+        return null;
+    }
 }
