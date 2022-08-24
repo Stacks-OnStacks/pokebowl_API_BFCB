@@ -1,5 +1,7 @@
 package com.revature.pokebowl.member;
 
+import com.revature.pokebowl.dish.Dish;
+import com.revature.pokebowl.dish.dto.responses.DishResponse;
 import com.revature.pokebowl.member.dto.requests.EditMemberRequest;
 import com.revature.pokebowl.member.dto.requests.NewRegistrationRequest;
 import com.revature.pokebowl.member.dto.response.MemberResponse;
@@ -71,14 +73,6 @@ public class MemberService {
                 .collect(Collectors.toList());
         return members;
     }
-    public MemberResponse findByUsername(String username){
-
-        Member member = memberDao.findByUsername(username);
-        if (member == null) return null;
-
-        MemberResponse responseMember = new MemberResponse(member);
-        return responseMember;
-    }
 
     public boolean isMemberValid(Member newMember){
         if(newMember == null) return false;
@@ -93,9 +87,12 @@ public class MemberService {
     public boolean isUsernameAvailable(String username){
         return memberDao.checkUsername(username);
     }
-    public boolean remove(String username){
-        return memberDao.delete(username);
+
+    public boolean remove(String memberId) throws IOException {
+        if (!memberDao.delete(memberId)) throw new InvalidUserInputException("Member Id was not found in the database");
+        return true;
     }
+
     public boolean update(EditMemberRequest editMember) throws IOException {
         Member foundMember = memberDao.findById(editMember.getId());
         // Predicate - to evaluate a true or false given a lambda expression
@@ -125,4 +122,9 @@ public class MemberService {
         sessionMember = null;
     }
 
+    public MemberResponse findById(String memberId) throws IOException {
+        Member member = memberDao.findById(memberId);
+        if (member == null) throw new InvalidUserInputException("Member Id was not found in the database");
+        return new MemberResponse(member);
+    }
 }

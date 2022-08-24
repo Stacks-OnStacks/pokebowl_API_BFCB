@@ -34,6 +34,7 @@ public class DishServlet extends HttpServlet implements Authable {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        PrintWriter respWriter = resp.getWriter();
         String dishId = req.getParameter("dishId");
 
         if (dishId != null) {
@@ -42,18 +43,18 @@ public class DishServlet extends HttpServlet implements Authable {
             try {
                 DishResponse dish = dishService.findById(dishId);
                 String payload = objectMapper.writeValueAsString(dish);
-                resp.getWriter().write(payload);
+                respWriter.write(payload);
                 resp.setStatus(200);
             } catch (InvalidUserInputException e) {
                 logger.warn("Dish id entered was not reflective of any dish in the database. dishId provided was: {}",dishId);
-                resp.getWriter().write(e.getMessage());
+                respWriter.write(e.getMessage());
                 resp.setStatus(404);
             }
         } else {
             logger.info("Obtaining all dishes...");
             List<DishResponse> dishes = dishService.readAll();
             String payload = objectMapper.writeValueAsString(dishes);
-            resp.getWriter().write(payload);
+            respWriter.write(payload);
             resp.setStatus(200);
         }
     }
@@ -111,6 +112,26 @@ public class DishServlet extends HttpServlet implements Authable {
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doDelete(req, resp);
+        if(!checkAdmin(req, resp)) return;
+
+        PrintWriter respWriter = resp.getWriter();
+        String dishId = req.getParameter("dishId");
+
+        if(dishId != null){
+            logger.info("dishId entered: {}",dishId);
+
+            try {
+                dishService.remove(dishId);
+                respWriter.write(String.format("Dish with id '%s' has been deleted",dishId));
+                resp.setStatus(200);
+            } catch (InvalidUserInputException e) {
+                logger.warn("dishId entered was not reflective of any dish in the database. dishId provided was: {}",dishId);
+                respWriter.write(e.getMessage());
+                resp.setStatus(404);
+            }
+        } else {
+            respWriter.write("This request requires a dishId parameter in the path ?dishId=DISH_ID");
+            resp.setStatus(400);
+        }
     }
 }

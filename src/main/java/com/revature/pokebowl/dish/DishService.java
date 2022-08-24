@@ -94,4 +94,9 @@ public class DishService {
 
         return dishDao.update(foundDish);
     }
+
+    public boolean remove(String dishId) {
+        if (!dishDao.delete(dishId)) throw new InvalidUserInputException("Dish Id was not found in the database");
+        return true;
+    }
 }

@@ -66,26 +66,6 @@ public class MemberDao implements Crudable<Member> {
         }
     }
 
-    public Member findByUsername(String username) {
-        try {
-            Session session = HibernateUtil.getSession();
-            Transaction transaction = session.beginTransaction();
-
-            Query query = session.createQuery("from Member where username = :username");
-            query.setParameter("username", username);
-
-            Member member = (Member) query.uniqueResult();
-            transaction.commit();
-
-            return member;
-        } catch (HibernateException | IOException e) {
-            e.printStackTrace();
-            return null;
-        } finally {
-            HibernateUtil.closeSession();
-        }
-    }
-
     @Override
     public boolean update(Member updatedMember) {
         try {

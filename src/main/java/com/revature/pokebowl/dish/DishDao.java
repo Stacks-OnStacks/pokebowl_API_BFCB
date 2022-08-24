@@ -93,8 +93,8 @@ public class DishDao implements Crudable<Dish> {
 
             Dish dish = session.load(Dish.class, id);
             session.remove(dish);
-
             transaction.commit();
+
             return true;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
