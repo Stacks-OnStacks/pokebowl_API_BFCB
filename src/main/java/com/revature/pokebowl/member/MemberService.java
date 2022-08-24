@@ -37,13 +37,13 @@ public class MemberService {
         newMember.setMemberId(UUID.randomUUID().toString());
         newMember.setDob(newRegistration.getDob());
 
-        logger.info("Member registration service has begun with the provide: {}", newMember);
+        logger.info("Member registration service has begun with the provided info: {}", newMember);
         if (!isMemberValid(newMember)) {
             throw new InvalidUserInputException("User input was invalid");
         }
 
         if(!isUsernameAvailable(newMember.getUsername())){
-            throw new ResourcePersistanceException("Email is already registered please try logging in.");
+            throw new ResourcePersistanceException("Username is already registered please try logging in.");
         }
 
         memberDao.create(newMember);
@@ -51,18 +51,20 @@ public class MemberService {
         return new MemberResponse(newMember);
 
     }
+
     // TODO: NEW READ ME (Lines 43-73)
     public Member login(String email, String password){
         Member member = memberDao.loginCredentialCheck(email, password);
         sessionMember = member;
         return member;
     }
+
     // TODO: NEW READ ME (Lines 76 - 105)
     public List<MemberResponse> readAll(){
 
         // Streams are a form of functional programming this is form a declarative programming
         List<MemberResponse> members = memberDao.findAll()
-                .stream()//this reads through each value inside of the collection (aka our List)
+                .stream()//this reads through each value inside the collection
                 //.map(member -> new MemberResponse(member))
                 // this is leveraging (::) which is know as the method reference operator, it's taking the method from MemberReponse and applying to all objects in the stream
                 .map(MemberResponse::new)
