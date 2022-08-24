@@ -1,0 +1,58 @@
+body {
+  background-color: coral;
+}
+.header{
+  text-align: center;
+  align-content: center;
+  position: relative;
+  width: 100%;
+  height:10%;
+  border: 3px outset;
+}
+.lineBelowHeader{
+  position:relative;
+  width:100%;
+  height:20px;
+  border: 15px;
+}
+.spaceBetweenDishes{
+  position:relative;
+  width:100%;
+  height: 30px;
+  border: 50px;
+}
+        .menuSections{
+        position: relative;
+          font-weight: 100;
+          font-size: 1rem;
+          letter-spacing: 1px;
+          padding-left: 150px;
+        }
+        .dishName{
+        width: 200px;
+        display: inline-block;
+        position: relative;
+        border: 5px;
+        font-size: 3rem;
+        font-family: 'MS PGothic', Osaka, Arial, sans-serif;
+
+        }
+        .dishEmoji{
+        width: 100px;
+        display: inline-block;
+        position: relative;
+        font-size: 4rem;
+        border: 5px;
+        }
+        .dish{
+        display: inline-block;
+        width: calc(100%-30px);
+        text-align: center;
+        align-content: center;
+        position: relative;
+        border: 5px;
+        }
+        .menuWrapper {
+        border: 10px ;
+        text-align: center;
+        }

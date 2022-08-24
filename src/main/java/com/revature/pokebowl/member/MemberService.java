@@ -94,11 +94,9 @@ public class MemberService {
     public boolean isUsernameAvailable(String username){
         return memberDao.checkUsername(username);
     }
-
     public boolean remove(String username){
         return memberDao.delete(username);
     }
-
     public boolean update(EditMemberRequest editMember) throws InvalidUserInputException{
         System.out.println("Inside update Member");
         Member foundMember = memberDao.findById(editMember.getId());
@@ -109,11 +107,9 @@ public class MemberService {
         if(notNullOrEmpty.test(editMember.getFullName())){
             foundMember.setFullName(editMember.getFullName());
         }
-
         if(notNullOrEmpty.test(editMember.getPassword())){
             foundMember.setUserPassword(editMember.getPassword());
         }
-
         if(notNullOrEmpty.test(editMember.getUsername())){
             if(!isUsernameAvailable(editMember.getUsername())){
                 throw new ResourcePersistanceException("The provided username is already registered");
@@ -122,7 +118,6 @@ public class MemberService {
         }
         return memberDao.update(foundMember);
     }
-
     public Member getSessionMember(){
         return sessionMember;
     }

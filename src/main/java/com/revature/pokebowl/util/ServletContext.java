@@ -54,7 +54,7 @@ public class ServletContext {
             OrderDetailsDao orderDetailsDao = new OrderDetailsDao();
 
             MemberService memberService = new MemberService(memberDao);
-            PaymentService paymentService = new PaymentService(paymentDao);
+            PaymentService paymentService = new PaymentService(memberService,paymentDao); //changed paymentService constructor to take in memberService as parameter to grab logged in member's details
             DishService dishService = new DishService(dishDao);
             OrderService orderService = new OrderService(orderDao);
             OrderDetailsService orderDetailsService = new OrderDetailsService(orderDetailsDao);

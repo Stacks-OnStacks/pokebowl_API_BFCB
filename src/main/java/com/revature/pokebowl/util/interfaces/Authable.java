@@ -18,7 +18,6 @@ public interface Authable {
         }
         return true;
     }
-
     // here's another version if you had a hypothetical admin user
     default boolean checkAdmin(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         HttpSession httpSession = req.getSession();

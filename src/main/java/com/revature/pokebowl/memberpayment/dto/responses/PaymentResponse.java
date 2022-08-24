@@ -1,5 +1,7 @@
 package com.revature.pokebowl.memberpayment.dto.responses;
 
+import com.revature.pokebowl.memberpayment.Payment;
+
 import java.sql.Date;
 
 public class PaymentResponse {
@@ -27,6 +29,18 @@ public class PaymentResponse {
         this.zipCode = zipCode;
         this.provider = provider;
         this.memberId = memberId;
+    }
+
+    public PaymentResponse(Payment payment) {
+        this.paymentId = getPaymentId();
+        this.paymentName = getPaymentName();
+        this.balance = getBalance();
+        this.expDate = getExpDate();
+        this.ccv = getCcv();
+        this.zipCode = getZipCode();
+        this.provider = getProvider();
+        this.memberId = getMemberId();
+        //set all this.attribute= paymment.getAttribute()
     }
 
     public String getPaymentId() {
