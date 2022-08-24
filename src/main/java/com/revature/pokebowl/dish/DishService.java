@@ -78,6 +78,7 @@ public class DishService {
 
     public boolean update(EditDishRequest editDish) throws IOException {
         Dish foundDish = dishDao.findById(editDish.getId());
+        if (foundDish == null) throw new InvalidUserInputException("Dish Id was not found in the database");
         Predicate<String> notNullOrEmpty = (str) -> str != null && !str.trim().equals("");
         if (notNullOrEmpty.test(editDish.getDishName())) {
             if (!isDishNameAvailable(editDish.getDishName().toUpperCase())) throw new ResourcePersistanceException("Dish Name already exists, please enter a different name");

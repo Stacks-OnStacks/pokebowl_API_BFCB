@@ -103,6 +103,7 @@ public class DishServlet extends HttpServlet implements Authable {
         }  catch (Exception e) {
             logger.error("Something unexpected happened and this exception was thrown: {} with message: {}", e.getClass().getName(), e.getMessage());
             respWriter.write(e.getMessage() + " " + e.getClass().getName());
+            e.printStackTrace();
             resp.setStatus(500);
         }
 
