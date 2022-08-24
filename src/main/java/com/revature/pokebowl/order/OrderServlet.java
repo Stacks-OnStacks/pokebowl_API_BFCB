@@ -72,7 +72,15 @@ public class OrderServlet extends HttpServlet implements Authable {
             if (httpSession.getAttribute("currentOrder") == null) {
                 CreateOrderRequest order = objectMapper.readValue(req.getInputStream(), CreateOrderRequest.class);
                 logger.info("User has requested to create a new order {}", order);
-                OrderResponse newOrder = orderService.createOrder(order);
+                OrderResponse newOrder = orderService.startOrder(order);
+
+                httpSession.setAttribute("currentOrder",newOrder);
+
+                String payload = objectMapper.writeValueAsString(newOrder);
+                respWriter.write(payload);
+            } else {
+                logger.info("User has requested to submit their new order");
+                OrderResponse newOrder = orderService.submitOrder();
                 String payload = objectMapper.writeValueAsString(newOrder);
                 respWriter.write(payload);
             }
