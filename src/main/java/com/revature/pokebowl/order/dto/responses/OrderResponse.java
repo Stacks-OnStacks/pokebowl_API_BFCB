@@ -1,5 +1,7 @@
 package com.revature.pokebowl.order.dto.responses;
 
+import com.revature.pokebowl.order.Order;
+
 import java.sql.Date;
 
 public class OrderResponse {
@@ -17,14 +19,14 @@ public class OrderResponse {
         super();
     }
 
-    public OrderResponse(String orderId, int amount, Date orderDate, String orderAddress, String orderZip, String memberId, String paymentId) {
-        this.orderId = orderId;
-        this.amount = amount;
-        this.orderDate = orderDate;
-        this.orderAddress = orderAddress;
-        this.orderZip = orderZip;
-        this.memberId = memberId;
-        this.paymentId = paymentId;
+    public OrderResponse(Order order) {
+        this.orderId = order.getOrderId();
+        this.amount = order.getAmount();
+        this.orderDate = order.getOrderDate();
+        this.orderAddress = order.getOrderAddress();
+        this.orderZip = order.getOrderZip();
+        this.memberId = order.getMember().getMemberId();
+        this.paymentId = order.getPayment().getPaymentId();
     }
 
     public String getOrderId() {

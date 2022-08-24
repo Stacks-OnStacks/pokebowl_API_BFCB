@@ -96,7 +96,7 @@ public class DishService {
     }
 
     public boolean remove(String dishId) {
-        if (!dishDao.delete(dishId)) throw new InvalidUserInputException("Dish Id was not found in the database");
+        if (!dishDao.delete(dishId)) throw new InvalidUserInputException("dishId was not found in the database");
         return true;
     }
 }

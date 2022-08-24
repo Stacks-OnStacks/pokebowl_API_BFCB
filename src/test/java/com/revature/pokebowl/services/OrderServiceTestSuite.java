@@ -14,7 +14,7 @@ public class OrderServiceTestSuite {
     @BeforeEach // this goes ahead and re-creates our sut every single test, so we are working with a fresh instance
     public void testPrep(){
         mockOrderDao = mock(OrderDao.class); // mocktail of the MemberDao Class not an actual instance, prevents massive memory
-        sut = new OrderService(mockOrderDao);
+        //sut = new OrderService(mockOrderDao);
     }
 
     @Test

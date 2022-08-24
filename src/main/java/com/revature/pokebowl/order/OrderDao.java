@@ -122,4 +122,25 @@ public class OrderDao implements Crudable<Order> {
             HibernateUtil.closeSession();
         }
     }
+
+    public Order findByIdAndMember(String orderId, String memberId) {
+        try {
+            Session session = HibernateUtil.getSession();
+            Transaction transaction = session.beginTransaction();
+
+            Query query = session.createQuery("from Order where order_id = :orderId and member_id = :memberId");
+            query.setParameter("orderId", orderId);
+            query.setParameter("memberId", memberId);
+
+            Order order = (Order) query.uniqueResult();
+            transaction.commit();
+
+            return order;
+        } catch (HibernateException | IOException e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            HibernateUtil.closeSession();
+        }
+    }
 }
