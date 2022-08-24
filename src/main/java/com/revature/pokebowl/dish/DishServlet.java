@@ -1,8 +1,12 @@
 package com.revature.pokebowl.dish;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.revature.pokebowl.dish.dto.requests.CreateDishRequest;
 import com.revature.pokebowl.dish.dto.responses.DishResponse;
+import com.revature.pokebowl.member.dto.requests.NewRegistrationRequest;
+import com.revature.pokebowl.member.dto.response.MemberResponse;
 import com.revature.pokebowl.util.exceptions.InvalidUserInputException;
+import com.revature.pokebowl.util.exceptions.ResourcePersistanceException;
 import com.revature.pokebowl.util.interfaces.Authable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,6 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 public class DishServlet extends HttpServlet implements Authable {
@@ -52,8 +57,29 @@ public class DishServlet extends HttpServlet implements Authable {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        if(!checkAdmin(req, resp)) return;
+
+        PrintWriter respWriter = resp.getWriter();
+        CreateDishRequest dish = objectMapper.readValue(req.getInputStream(), CreateDishRequest.class);
+
+        try {
+            logger.info("Admin has requested to add the following dish to the database {}", dish);
+            DishResponse newDish = dishService.createDish(dish);
+            String payload = objectMapper.writeValueAsString(newDish);
+            respWriter.write(payload);
+            resp.setStatus(201);
+        } catch (InvalidUserInputException | ResourcePersistanceException e){
+            logger.warn("Exception thrown when trying to persist. Message from exception: {}", e.getMessage());
+            respWriter.write(e.getMessage());
+            resp.setStatus(404);
+        } catch (Exception e){
+            logger.error("Something unexpected happened and this exception was thrown: {} with message: {}", e.getClass().getName(), e.getMessage());
+            respWriter.write(e.getMessage() + " " + e.getClass().getName());
+            resp.setStatus(500);
+        }
+
+
     }
 
     @Override

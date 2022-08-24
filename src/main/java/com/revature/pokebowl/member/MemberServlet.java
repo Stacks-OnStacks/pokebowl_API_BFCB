@@ -32,8 +32,7 @@ public class MemberServlet extends HttpServlet implements Authable {
     }
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        if(!checkAdmin(req, resp)) return;
-
+        PrintWriter respWriter = resp.getWriter();
         String username = req.getParameter("username"); //CHANGED THIS TO username instead of member_id
 
         if(username != null) {
@@ -45,18 +44,18 @@ public class MemberServlet extends HttpServlet implements Authable {
 
                 String payloadID = objectMapper.writeValueAsString(member);
 
-                resp.getWriter().write(payloadID);
+                respWriter.write(payloadID);
                 resp.setStatus(200);
             } catch (InvalidUserInputException e){
                 logger.warn("User information entered was not reflective of any member in the database. username provided was: {}", username);
-                resp.getWriter().write(e.getMessage());
+                respWriter.write(e.getMessage());
                 resp.setStatus(404);
             }
         } else {
             logger.info("no member entered, getting all members");
             List<MemberResponse> members = memberService.readAll();
             String payload = objectMapper.writeValueAsString(members); // mapper parsing from Java Object to JSON
-            resp.getWriter().write(payload);
+            respWriter.write(payload);
         }
     }
     @Override
@@ -67,7 +66,7 @@ public class MemberServlet extends HttpServlet implements Authable {
 //        Member member = memberService.login(loginCreds.getmember_id(), loginCreds.getPassword());
 //
 //        resp.getWriter().write("Welcome back to pokebowl " + member.getFullName());
-        PrintWriter respWriter = resp.getWriter(); // preference play, lot of folks enjoy this
+        PrintWriter respWriter = resp.getWriter();
         NewRegistrationRequest member = objectMapper.readValue(req.getInputStream(), NewRegistrationRequest.class);
         try {
             logger.info("User has request to add the following to the database {}", member);
@@ -86,42 +85,39 @@ public class MemberServlet extends HttpServlet implements Authable {
         }
 
     }
+
+    // TODO: CHANGE THIS IMPLEMENTATION
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        try {
-            String username = req.getParameter("username");
-            EditMemberRequest editMember = objectMapper.readValue(req.getInputStream(), EditMemberRequest.class);
+        if (!checkAdmin(req,resp)) return;
 
-            if(username != null) {
-                logger.info("username entered: {}", username);
-                try {
-                    MemberResponse member = memberService.findByUsername(username);
-                    if (member == null) throw new InvalidUserInputException("entered username was not found in the database");
+        PrintWriter respWriter = resp.getWriter();
+        String username = req.getParameter("username");
+        EditMemberRequest editMember = objectMapper.readValue(req.getInputStream(), EditMemberRequest.class);
 
-                    editMember.setId(member.getMemberId());
+        if(username != null) {
+            logger.info("username entered: {}", username);
+            try {
+                MemberResponse member = memberService.findByUsername(username);
+                if (member == null) throw new InvalidUserInputException("entered username was not found in the database");
 
-                    memberService.update(editMember);
+                editMember.setId(member.getMemberId());
 
-                    logger.info("Successfully updated member: {}",editMember.getUsername());
-                    String payload = objectMapper.writeValueAsString(editMember);
-                    resp.getWriter().write(payload);
-                    resp.setStatus(200);
+                memberService.update(editMember);
 
-                } catch (InvalidUserInputException e){
-                    logger.warn("User information entered was not reflective of any member in the database. username provided was: {}", username);
-                    resp.getWriter().write(e.getMessage());
-                    resp.setStatus(404);
-                }
-            } else {
-                throw new InvalidUserInputException("Cannot update member, username is null");
+                logger.info("Successfully updated member: {}",editMember.getUsername());
+                String payload = objectMapper.writeValueAsString(editMember);
+                respWriter.write(payload);
+                resp.setStatus(200);
+
+            } catch (InvalidUserInputException e){
+                logger.warn("User information entered was not reflective of any member in the database. username provided was: {}", username);
+                respWriter.write(e.getMessage());
+                resp.setStatus(404);
             }
-
-        } catch (InvalidUserInputException e){
-            resp.getWriter().write(e.getMessage());
-            resp.setStatus(404);
-        } catch (Exception e){
-            resp.getWriter().write(e.getMessage() + " " + e.getClass().getName());
-            resp.setStatus(500);
+        } else {
+            resp.getWriter().write("ADJUST IMPLEMENTATION");
+            resp.setStatus(400);
         }
     }
     @Override

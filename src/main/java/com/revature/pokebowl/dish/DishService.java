@@ -2,7 +2,9 @@ package com.revature.pokebowl.dish;
 
 import com.revature.pokebowl.dish.Dish;
 import com.revature.pokebowl.dish.DishDao;
+import com.revature.pokebowl.dish.dto.requests.CreateDishRequest;
 import com.revature.pokebowl.dish.dto.responses.DishResponse;
+import com.revature.pokebowl.member.dto.response.MemberResponse;
 import com.revature.pokebowl.util.exceptions.InvalidUserInputException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -34,5 +36,10 @@ public class DishService {
                 .map(DishResponse::new)
                 .collect(Collectors.toList());
         return dishes;
+    }
+
+
+    public DishResponse createDish(CreateDishRequest dish) {
+
     }
 }
