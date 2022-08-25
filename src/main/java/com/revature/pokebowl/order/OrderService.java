@@ -116,6 +116,7 @@ public class OrderService {
         Order order = currentOrder;
         if (!orderDao.update(currentOrder)) throw new ResourcePersistanceException("Order could not be persisted to the database");
         currentOrder = null;
+        orderDetailsService.setCurrentOrder(null);
 
         return new OrderResponse(order);
 
