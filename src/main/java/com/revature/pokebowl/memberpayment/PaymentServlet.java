@@ -97,7 +97,7 @@ public class PaymentServlet extends HttpServlet implements Authable {
         try {
             EditPaymentRequest editPayment = objectMapper.readValue(req.getInputStream(), EditPaymentRequest.class);
                 String paymentId = editPayment.getId();
-                logger.info("paymentName entered: {}", paymentId);
+                logger.info("paymentId entered: {}", paymentId);
                     paymentService.update(editPayment);// editPayment is a CreatePaymentRequest type of object, it
                     logger.info("Successfully updated member: {}",paymentId);
                     String payload = objectMapper.writeValueAsString(editPayment);

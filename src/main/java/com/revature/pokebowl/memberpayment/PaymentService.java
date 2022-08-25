@@ -94,7 +94,7 @@ newPayment.setMember(memberService.getSessionMember());
 
     public boolean update(EditPaymentRequest editPayment) throws InvalidUserInputException{
         System.out.println("Inside update Payment");
-        Payment foundPayment = paymentDao.findById(editPayment.getId());
+        Payment foundPayment = paymentDao.findById(editPayment.getPaymentId());
         if(foundPayment==null){
             throw new InvalidUserInputException("found payment is null");
         }
