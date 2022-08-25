@@ -33,7 +33,8 @@ public class PaymentServlet extends HttpServlet implements Authable {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         if (!checkAuth(req,resp)) return;
-        String paymentName = req.getParameter("payment_name");
+
+        String paymentName = req.getParameter("paymentName");
         Member authMember = (Member) req.getSession().getAttribute("authMember"); // cast the returned object to a member
         if(paymentName != null) {
             logger.info("username entered: {}", paymentName);
@@ -92,6 +93,7 @@ public class PaymentServlet extends HttpServlet implements Authable {
         if(!checkAuth(req, resp)) return;
 
         PrintWriter respWriter = resp.getWriter();
+
         try {
             EditPaymentRequest editPayment = objectMapper.readValue(req.getInputStream(), EditPaymentRequest.class);
                 String paymentId = editPayment.getId();
