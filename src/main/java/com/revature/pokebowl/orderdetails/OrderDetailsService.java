@@ -37,8 +37,11 @@ public class OrderDetailsService {
     }
     public OrderDetailsResponse registerOrderDetails(CreateOrderDetailsRequest newOrderDetailsRequest) throws InvalidUserInputException, ResourcePersistanceException {
         OrderDetails newOrderDetails = new OrderDetails();
+        newOrderDetails.setOrder(orderService.getCurrentOrder());
+        newOrderDetails.setDish(dishService.findByDishName(newOrderDetailsRequest.getDishName()));
         newOrderDetails.setComments(newOrderDetailsRequest.getComments());
         newOrderDetails.setQuantity(newOrderDetailsRequest.getQuantity());
+        newOrderDetails.setOrderDetailsId(UUID.randomUUID().toString());
         logger.info("OrderDetails registration service has begun with the provided: {}", newOrderDetails);
         orderDetailsDao.create(newOrderDetails);
         return new OrderDetailsResponse(newOrderDetails);

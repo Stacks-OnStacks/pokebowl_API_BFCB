@@ -4,17 +4,17 @@ public class CreateOrderDetailsRequest {
 
     private int quantity;
     private String comments;
-    private String dishId;
+    private String dishName;
     private String orderId;
 
     public CreateOrderDetailsRequest() {
         super();
     }
 
-    public CreateOrderDetailsRequest(int quantity, String comments, String dishId, String orderId) {
+    public CreateOrderDetailsRequest(int quantity, String comments, String dishName, String orderId) {
         this.quantity = quantity;
         this.comments = comments;
-        this.dishId = dishId;
+        this.dishName = dishName;
         this.orderId = orderId;
     }
 
@@ -34,12 +34,12 @@ public class CreateOrderDetailsRequest {
         this.comments = comments;
     }
 
-    public String getDishId() {
-        return dishId;
+    public String getDishName() {
+        return dishName;
     }
 
-    public void setDishId(String dishId) {
-        this.dishId = dishId;
+    public void setDishName(String dishName) {
+        this.dishName = dishName;
     }
 
     public String getOrderId() {
@@ -55,7 +55,7 @@ public class CreateOrderDetailsRequest {
         return "CreateOrderDetailsRequest{" +
                 "quantity=" + quantity +
                 ", comments='" + comments + '\'' +
-                ", dishId='" + dishId + '\'' +
+                ", dishName='" + dishName + '\'' +
                 ", orderId='" + orderId + '\'' +
                 '}';
     }

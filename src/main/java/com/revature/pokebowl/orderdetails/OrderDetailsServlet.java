@@ -110,7 +110,7 @@ public class OrderDetailsServlet extends HttpServlet implements Authable {
     }
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        if(!checkAdmin(req, resp)) return;
+        if(!checkAuth(req, resp)) return;
         try {
             EditOrderDetailsRequest editOrderDetails = objectMapper.readValue(req.getInputStream(), EditOrderDetailsRequest.class);
             String orderDetailsId = editOrderDetails.getId();
@@ -132,7 +132,7 @@ public class OrderDetailsServlet extends HttpServlet implements Authable {
     }
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        if(!checkAdmin(req, resp)) return;
+        if(!checkAuth(req, resp)) return;
         String orderDetailsId = req.getParameter("orderDetailsId");
         if(orderDetailsId != null){
             orderDetailsService.remove(orderDetailsId);
