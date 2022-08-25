@@ -59,11 +59,15 @@ public class OrderDetailsService {
         return orderDetailsResponse;
     }
     public List<OrderDetailsResponse> findAllByOrderId(String orderId){
-        List<OrderDetails> orderDetails = orderDetailsDao.findAllByOrderId(orderId);
-        if (orderDetails == null) return null;
-        List<OrderDetailsResponse> orderDetailsResponses = new OrderDetailsResponse(orderDetails);
-        return orderDetailsResponses;
+        List<OrderDetailsResponse> orderDetails = orderDetailsDao.findAllByOrderId(orderId).stream().map(OrderDetailsResponse::new).collect(Collectors.toList());
+        return orderDetails;
     }
+    public OrderDetailsResponse findByIdAndOrder(String orderDetailsId,String orderId){
+        List<OrderDetailsResponse> orderDetails = orderDetailsDao.findByIdAndOrder(orderId).stream().map(OrderDetailsResponse::new).collect(Collectors.toList());
+        return orderDetails;
+    }
+
+
     public boolean remove(String orderDetailsId){
         return orderDetailsDao.delete(orderDetailsId);
     }
