@@ -38,7 +38,7 @@ public class AuthServlet extends HttpServlet {
             httpSession.setAttribute("authMember", member);
             resp.addCookie(new Cookie("member_id", member.getMemberId()));// this sends a cookie to the user with their id
             resp.addCookie(new Cookie("full_name", member.getFullName().replaceAll("\\s+","")));// also sending back their full_name which cannot have any spaces in it.
-            orderService.nullifyCurrentOrder();
+            orderService.cancelCurrentOrder();
             resp.getWriter().write(String.format("<h1>Welcome back to Pokebowl: Rapidash, %s!</h1>", member.getFullName()));
         } catch (InvalidUserInputException e) {
             logger.warn("User information entered was not reflective of any member in the database");
@@ -50,7 +50,7 @@ public class AuthServlet extends HttpServlet {
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         memberService.logout();
-        orderService.nullifyCurrentOrder();
+        orderService.cancelCurrentOrder();
         req.getSession().invalidate();
         resp.getWriter().write("<h1>You have successfully logged out, <i>Seadra</i> next time!</h1>");
     }

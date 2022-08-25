@@ -1,8 +1,6 @@
 package com.revature.pokebowl.order;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.revature.pokebowl.dish.dto.requests.CreateDishRequest;
-import com.revature.pokebowl.dish.dto.responses.DishResponse;
 import com.revature.pokebowl.member.Member;
 import com.revature.pokebowl.order.dto.requests.CreateOrderRequest;
 import com.revature.pokebowl.order.dto.requests.EditOrderRequest;
@@ -17,7 +15,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -133,7 +130,7 @@ public class OrderServlet extends HttpServlet implements Authable {
         PrintWriter respWriter = resp.getWriter();
 
         if (orderService.getCurrentOrder() != null) {
-            orderService.nullifyCurrentOrder();
+            orderService.cancelCurrentOrder();
             logger.info("Successfully deleted current order");
             respWriter.write("deleted current order");
             resp.setStatus(200);

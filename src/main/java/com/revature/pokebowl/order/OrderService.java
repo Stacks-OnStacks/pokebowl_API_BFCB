@@ -70,10 +70,15 @@ public class OrderService {
         currentOrder.setPayment(paymentService.findById(order.getPaymentId()));
         currentOrder.setMember(memberService.getSessionMember());
 
+        currentOrder.setOrderDate(new Date(System.currentTimeMillis()));
+
         logger.info("Order Creation service has begun with the provided: {}",currentOrder);
-        if (!isOrderValid(true)) {
+        if (!isOrderValid()) {
             throw new InvalidUserInputException("User input was invalid");
         }
+
+        currentOrder = orderDao.create(currentOrder);
+        if (currentOrder == null) throw new ResourcePersistanceException("New order could not be persisted to the database");
 
         return new OrderResponse(currentOrder);
     }
@@ -99,19 +104,19 @@ public class OrderService {
         currentOrder.setOrderDate(new Date(System.currentTimeMillis()));
 
         logger.info("Order Creation service is trying to submit the provided order: {}",currentOrder);
-        if (!isOrderValid(false)) {
+        if (!isOrderValid()) {
             throw new InvalidUserInputException("Submitted Order was invalid");
         }
 
-        Order order = orderDao.create(currentOrder);
-        if (order == null) throw new ResourcePersistanceException("Order could not be persisted to the database");
-        nullifyCurrentOrder();
+        Order order = currentOrder;
+        if (!orderDao.update(currentOrder)) throw new ResourcePersistanceException("Order could not be persisted to the database");
+        currentOrder = null;
 
         return new OrderResponse(order);
 
     }
 
-    public boolean isOrderValid(boolean firstCheck) {
+    public boolean isOrderValid() {
         Predicate<String> notNullOrEmpty = (str) -> str != null && !str.trim().equals("");
         if (currentOrder == null) return false;
         if (currentOrder.getMember() == null) return false;
@@ -119,10 +124,8 @@ public class OrderService {
         if (!notNullOrEmpty.test(currentOrder.getOrderId())) return false;
         if (!notNullOrEmpty.test(currentOrder.getOrderAddress())) return false;
         if (!notNullOrEmpty.test(currentOrder.getOrderZip())) return false;
-        if (!firstCheck) {
-            if (currentOrder.getOrderDate() == null) return false;
-            if (currentOrder.getAmount() < 1) return false;
-        }
+        if (currentOrder.getOrderDate() == null) return false;
+        if (currentOrder.getAmount() < 0) return false;
         return true;
     }
 
@@ -130,7 +133,9 @@ public class OrderService {
         return currentOrder;
     }
 
-    public void nullifyCurrentOrder() {
+    public void cancelCurrentOrder() {
+        if (currentOrder == null) return;
+        orderDao.delete(currentOrder.getOrderId());
         currentOrder = null;
     }
 
