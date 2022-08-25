@@ -67,7 +67,7 @@ public class OrderDetailsDao implements Crudable<OrderDetails> {
         }
     }
 
-    public OrderDetails findAllByIdAndOrder(String orderDetailsId, String orderId) {
+    public OrderDetails findByIdAndOrder(String orderDetailsId, String orderId) {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();

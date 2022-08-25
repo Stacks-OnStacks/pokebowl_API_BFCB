@@ -1,6 +1,7 @@
 package com.revature.pokebowl.orderdetails;
 import com.revature.pokebowl.dish.DishService;
 import com.revature.pokebowl.dish.DishDao;
+import com.revature.pokebowl.order.Order;
 import com.revature.pokebowl.orderdetails.OrderDetails;
 import com.revature.pokebowl.orderdetails.dto.requests.EditOrderDetailsRequest;
 import com.revature.pokebowl.orderdetails.dto.responses.OrderDetailsResponse;
@@ -62,9 +63,18 @@ public class OrderDetailsService {
         List<OrderDetailsResponse> orderDetails = orderDetailsDao.findAllByOrderId(orderId).stream().map(OrderDetailsResponse::new).collect(Collectors.toList());
         return orderDetails;
     }
-    public OrderDetailsResponse findByIdAndOrder(String orderDetailsId,String orderId){
-        List<OrderDetailsResponse> orderDetails = orderDetailsDao.findByIdAndOrder(orderId).stream().map(OrderDetailsResponse::new).collect(Collectors.toList());
+    public List<OrderDetailsResponse> readAllCurrentOrder(){
+        Order order = orderService.getCurrentOrder();
+        if (order == null) return null;
+        List<OrderDetailsResponse> orderDetails = orderDetailsDao.findAllByOrderId(order.getOrderId()).stream().map(OrderDetailsResponse::new).collect(Collectors.toList());
         return orderDetails;
+    }
+
+    public OrderDetailsResponse findByIdAndOrder(String orderDetailsId,String orderId){
+        OrderDetails orderDetails = orderDetailsDao.findByIdAndOrder(orderDetailsId,orderId);
+        if (orderDetails == null) return null;
+        OrderDetailsResponse orderDetailsResponse = new OrderDetailsResponse(orderDetails);
+        return orderDetailsResponse;
     }
 
 
