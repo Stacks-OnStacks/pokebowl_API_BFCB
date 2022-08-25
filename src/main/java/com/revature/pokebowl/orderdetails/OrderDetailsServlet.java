@@ -116,7 +116,7 @@ public class OrderDetailsServlet extends HttpServlet implements Authable {
             String orderDetailsId = editOrderDetails.getId();
             logger.info("OrderDetail entered: {}", orderDetailsId);
             orderDetailsService.update(editOrderDetails);// editPayment is a CreatePaymentRequest type of object, it
-            logger.info("Successfully updated member: {}",orderDetailsId);
+            logger.info("Successfully updated orderDetail: {}",orderDetailsId);
             String payload = objectMapper.writeValueAsString(editOrderDetails);
             resp.getWriter().write(payload);
             resp.setStatus(200);
