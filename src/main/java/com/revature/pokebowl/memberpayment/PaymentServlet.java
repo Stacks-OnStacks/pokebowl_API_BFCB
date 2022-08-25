@@ -45,6 +45,8 @@ public class PaymentServlet extends HttpServlet implements Authable {
                 String payloadID = objectMapper.writeValueAsString(payment);
 
                 resp.getWriter().write(payloadID);
+                resp.setStatus(200);
+
             } catch (InvalidUserInputException e){
                 logger.warn("Payment information entered was not reflective of any payment in the database. paymentName provided was: {}", paymentName);
                 resp.getWriter().write(e.getMessage());

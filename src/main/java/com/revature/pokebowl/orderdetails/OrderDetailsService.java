@@ -33,7 +33,6 @@ public class OrderDetailsService {
         this.dishService = dishService;
         this.orderService = orderService;
         this.orderDetailsDao = orderDetailsDao;
-
     }
     public OrderDetailsResponse registerOrderDetails(CreateOrderDetailsRequest newOrderDetailsRequest) throws InvalidUserInputException, ResourcePersistanceException {
         OrderDetails newOrderDetails = new OrderDetails();
