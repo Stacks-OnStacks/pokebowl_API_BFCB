@@ -11,6 +11,7 @@ import com.revature.pokebowl.order.dto.requests.CreateOrderRequest;
 import com.revature.pokebowl.order.dto.requests.EditOrderRequest;
 import com.revature.pokebowl.order.dto.responses.OrderResponse;
 import com.revature.pokebowl.orderdetails.OrderDetails;
+import com.revature.pokebowl.orderdetails.OrderDetailsService;
 import com.revature.pokebowl.util.exceptions.InvalidUserInputException;
 import com.revature.pokebowl.util.exceptions.ResourcePersistanceException;
 import org.apache.logging.log4j.LogManager;
@@ -28,14 +29,16 @@ public class OrderService {
     private final OrderDao orderDao;
     private final PaymentService paymentService;
     private final MemberService memberService;
+    private final OrderDetailsService orderDetailsService;
     private Order currentOrder;
     private final Logger logger = LogManager.getLogger();
 
     // CONSTRUCTOR
-    public OrderService(MemberService memberService, PaymentService paymentService, OrderDao orderDao) {
+    public OrderService(MemberService memberService, PaymentService paymentService, OrderDetailsService orderDetailsService, OrderDao orderDao) {
         this.orderDao = orderDao;
         this.paymentService = paymentService;
         this.memberService = memberService;
+        this.orderDetailsService = orderDetailsService;
     }
 
     public OrderResponse findByIdAndMember(String orderId) throws IOException {
@@ -84,7 +87,7 @@ public class OrderService {
     }
 
     public OrderResponse submitOrder() throws IOException {
-        List<OrderDetails> orderDetailsList = currentOrder.getOrderDetailsList();
+        List<OrderDetails> orderDetailsList = orderDetailsService;
         if (orderDetailsList == null) throw new InvalidUserInputException("Nothing has been added to this order yet, cannot submit the order");
 
         int amount = 0;
