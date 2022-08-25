@@ -66,6 +66,7 @@ public class PaymentServlet extends HttpServlet implements Authable {
     }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        if(!checkAuth(req, resp)) return;
         PrintWriter respWriter = resp.getWriter();
         CreatePaymentRequest payment = objectMapper.readValue(req.getInputStream(), CreatePaymentRequest.class);
         try {
@@ -88,7 +89,7 @@ public class PaymentServlet extends HttpServlet implements Authable {
     }
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        if(!checkAdmin(req, resp)) return;
+        if(!checkAuth(req, resp)) return;
 
         PrintWriter respWriter = resp.getWriter();
         try {
@@ -112,7 +113,7 @@ public class PaymentServlet extends HttpServlet implements Authable {
     }
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        if(!checkAdmin(req, resp)) return;
+        if(!checkAuth(req, resp)) return;
         String paymentId = req.getParameter("paymentId");
         System.out.println(paymentId);
         if(paymentId != null){
