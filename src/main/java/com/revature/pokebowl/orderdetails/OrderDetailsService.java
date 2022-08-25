@@ -55,8 +55,14 @@ public class OrderDetailsService {
     public OrderDetailsResponse findById(String orderDetailsId){
         OrderDetails orderDetails = orderDetailsDao.findById(orderDetailsId);
         if (orderDetails == null) return null;
-        OrderDetailsResponse paymentResponse = new OrderDetailsResponse(orderDetails);
-        return paymentResponse;
+        OrderDetailsResponse orderDetailsResponse = new OrderDetailsResponse(orderDetails);
+        return orderDetailsResponse;
+    }
+    public List<OrderDetailsResponse> findAllByOrderId(String orderId){
+        List<OrderDetails> orderDetails = orderDetailsDao.findAllByOrderId(orderId);
+        if (orderDetails == null) return null;
+        List<OrderDetailsResponse> orderDetailsResponses = new OrderDetailsResponse(orderDetails);
+        return orderDetailsResponses;
     }
     public boolean remove(String orderDetailsId){
         return orderDetailsDao.delete(orderDetailsId);
