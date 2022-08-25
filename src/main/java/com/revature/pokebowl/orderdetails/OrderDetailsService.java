@@ -1,6 +1,7 @@
 package com.revature.pokebowl.orderdetails;
 import com.revature.pokebowl.dish.DishService;
 import com.revature.pokebowl.dish.DishDao;
+import com.revature.pokebowl.order.Order;
 import com.revature.pokebowl.orderdetails.OrderDetails;
 import com.revature.pokebowl.orderdetails.dto.requests.EditOrderDetailsRequest;
 import com.revature.pokebowl.orderdetails.dto.responses.OrderDetailsResponse;
@@ -55,9 +56,28 @@ public class OrderDetailsService {
     public OrderDetailsResponse findById(String orderDetailsId){
         OrderDetails orderDetails = orderDetailsDao.findById(orderDetailsId);
         if (orderDetails == null) return null;
-        OrderDetailsResponse paymentResponse = new OrderDetailsResponse(orderDetails);
-        return paymentResponse;
+        OrderDetailsResponse orderDetailsResponse = new OrderDetailsResponse(orderDetails);
+        return orderDetailsResponse;
     }
+    public List<OrderDetailsResponse> findAllByOrderId(String orderId){
+        List<OrderDetailsResponse> orderDetails = orderDetailsDao.findAllByOrderId(orderId).stream().map(OrderDetailsResponse::new).collect(Collectors.toList());
+        return orderDetails;
+    }
+    public List<OrderDetailsResponse> readAllCurrentOrder(){
+        Order order = orderService.getCurrentOrder();
+        if (order == null) return null;
+        List<OrderDetailsResponse> orderDetails = orderDetailsDao.findAllByOrderId(order.getOrderId()).stream().map(OrderDetailsResponse::new).collect(Collectors.toList());
+        return orderDetails;
+    }
+
+    public OrderDetailsResponse findByIdAndOrder(String orderDetailsId,String orderId){
+        OrderDetails orderDetails = orderDetailsDao.findByIdAndOrder(orderDetailsId,orderId);
+        if (orderDetails == null) return null;
+        OrderDetailsResponse orderDetailsResponse = new OrderDetailsResponse(orderDetails);
+        return orderDetailsResponse;
+    }
+
+
     public boolean remove(String orderDetailsId){
         return orderDetailsDao.delete(orderDetailsId);
     }

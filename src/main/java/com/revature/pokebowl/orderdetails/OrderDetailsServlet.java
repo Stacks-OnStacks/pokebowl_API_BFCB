@@ -1,11 +1,6 @@
 package com.revature.pokebowl.orderdetails;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.pokebowl.member.Member;
-import com.revature.pokebowl.memberpayment.dto.requests.CreatePaymentRequest;
-import com.revature.pokebowl.memberpayment.dto.requests.EditPaymentRequest;
-import com.revature.pokebowl.memberpayment.dto.responses.PaymentResponse;
-import com.revature.pokebowl.order.OrderService;
 import com.revature.pokebowl.orderdetails.dto.requests.CreateOrderDetailsRequest;
 import com.revature.pokebowl.orderdetails.dto.requests.EditOrderDetailsRequest;
 import com.revature.pokebowl.orderdetails.dto.responses.OrderDetailsResponse;
@@ -14,7 +9,6 @@ import com.revature.pokebowl.util.exceptions.ResourcePersistanceException;
 import com.revature.pokebowl.util.interfaces.Authable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -49,7 +43,7 @@ public class OrderDetailsServlet extends HttpServlet implements Authable {
                 resp.setStatus(200);
             }
             catch (InvalidUserInputException e){
-                logger.warn("OrderDetailsId or OrderId information entered was not reflective of any payment in the database. OrderDetailsId provided was: {},{}", orderDetailsId,orderId);
+                logger.warn("OrderDetailsId or OrderId information entered was not reflective of any OrderDetail in the database. OrderDetailsId provided was: {},{}", orderDetailsId,orderId);
                 resp.getWriter().write(e.getMessage());
                 resp.setStatus(404);
             }
@@ -72,9 +66,9 @@ public class OrderDetailsServlet extends HttpServlet implements Authable {
         else if(orderId!=null){
             logger.info("orderId entered: {}", orderId);
             try {
-                List<OrderDetailsResponse> orderDetailsResp = orderDetailsService.findAllByOrderId(orderId);
-                if (orderDetailsResp== null) throw new InvalidUserInputException("entered orderId was not found in the database");
-                String payloadID = objectMapper.writeValueAsString(orderDetailsResp);
+                List<OrderDetailsResponse> orderDetailsResps = orderDetailsService.findAllByOrderId(orderId);
+                if (orderDetailsResps== null) throw new InvalidUserInputException("entered orderId was not found in the database");
+                String payloadID = objectMapper.writeValueAsString(orderDetailsResps);
                 resp.getWriter().write(payloadID);
                 resp.setStatus(200);
             }
@@ -86,7 +80,7 @@ public class OrderDetailsServlet extends HttpServlet implements Authable {
         }
         else{
             logger.info("no orderDetails entered, getting all orderDetails");
-            List<OrderDetailsResponse> orderDetails = orderDetailsService.readAllCurrentOrder();
+            List<OrderDetailsResponse> orderDetails = orderDetailsService.readAllCurrentOrder(); //Read all ?
             String payload = objectMapper.writeValueAsString(orderDetails); // mapper parsing from Java Object to JSON
             resp.getWriter().write(payload);
         }
@@ -120,12 +114,12 @@ public class OrderDetailsServlet extends HttpServlet implements Authable {
         try {
             EditOrderDetailsRequest editOrderDetails = objectMapper.readValue(req.getInputStream(), EditOrderDetailsRequest.class);
             String orderDetailsId = editOrderDetails.getId();
-            logger.info("paymentName entered: {}", orderDetailsId);
+            logger.info("OrderDetail entered: {}", orderDetailsId);
             orderDetailsService.update(editOrderDetails);// editPayment is a CreatePaymentRequest type of object, it
             logger.info("Successfully updated member: {}",orderDetailsId);
             String payload = objectMapper.writeValueAsString(editOrderDetails);
             resp.getWriter().write(payload);
-            resp.setStatus(200);// 200 means everything is OK, successfully updated payment method
+            resp.setStatus(200);
         }
         catch (InvalidUserInputException e){
             resp.getWriter().write(e.getMessage());
