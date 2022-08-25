@@ -14,13 +14,11 @@ public class OrderDetailsServiceTestSuite {
     OrderDetailsService sut ;
     OrderDetailsDao mockOrderDetailsDao;
     DishService mockDishService;
-    OrderService mockOrderService;
     @BeforeEach // this goes ahead and re-creates our sut every single test, so we are working with a fresh instance
     public void testPrep(){
         mockDishService = mock(DishService.class);
-        mockOrderService = mock(OrderService.class);
         mockOrderDetailsDao = mock(OrderDetailsDao.class); // mocktail of the MemberDao Class not an actual instance, prevents massive memory
-        sut = new OrderDetailsService(mockDishService,mockOrderService ,mockOrderDetailsDao);
+        sut = new OrderDetailsService(mockDishService,mockOrderDetailsDao);
     }
     @Test
     public void test_isOrderDetailsValid_returnTrue_givenValidOrderDetails(){

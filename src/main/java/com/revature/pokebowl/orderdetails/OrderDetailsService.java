@@ -23,21 +23,20 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class OrderDetailsService {
-    private final DishService dishService;
-    private final OrderService orderService;
 
+    private final DishService dishService;
     private final OrderDetailsDao orderDetailsDao;
     private final Logger logger = LogManager.getLogger();
+    private Order currentOrder;
 
     // CONSTRUCTOR
-    public OrderDetailsService(DishService dishService, OrderService orderService, OrderDetailsDao orderDetailsDao){
+    public OrderDetailsService(DishService dishService, OrderDetailsDao orderDetailsDao){
         this.dishService = dishService;
-        this.orderService = orderService;
         this.orderDetailsDao = orderDetailsDao;
     }
     public OrderDetailsResponse registerOrderDetails(CreateOrderDetailsRequest newOrderDetailsRequest) throws InvalidUserInputException, ResourcePersistanceException {
         OrderDetails newOrderDetails = new OrderDetails();
-        newOrderDetails.setOrder(orderService.getCurrentOrder());
+        newOrderDetails.setOrder(currentOrder);
         newOrderDetails.setDish(dishService.findByDishName(newOrderDetailsRequest.getDishName()));
         newOrderDetails.setComments(newOrderDetailsRequest.getComments());
         newOrderDetails.setQuantity(newOrderDetailsRequest.getQuantity());
@@ -66,10 +65,16 @@ public class OrderDetailsService {
         List<OrderDetailsResponse> orderDetails = orderDetailsDao.findAllByOrderId(orderId).stream().map(OrderDetailsResponse::new).collect(Collectors.toList());
         return orderDetails;
     }
+
     public List<OrderDetailsResponse> readAllCurrentOrder(){
-        Order order = orderService.getCurrentOrder();
-        if (order == null) return null;
-        List<OrderDetailsResponse> orderDetails = orderDetailsDao.findAllByOrderId(order.getOrderId()).stream().map(OrderDetailsResponse::new).collect(Collectors.toList());
+        if (currentOrder == null) return null;
+        List<OrderDetailsResponse> orderDetails = orderDetailsDao.findAllByOrderId(currentOrder.getOrderId()).stream().map(OrderDetailsResponse::new).collect(Collectors.toList());
+        return orderDetails;
+    }
+
+    public List<OrderDetails> readAllSubmitOrder(){
+        if (currentOrder == null) return null;
+        List<OrderDetails> orderDetails = orderDetailsDao.findAllByOrderId(currentOrder.getOrderId());
         return orderDetails;
     }
 
@@ -79,7 +84,6 @@ public class OrderDetailsService {
         OrderDetailsResponse orderDetailsResponse = new OrderDetailsResponse(orderDetails);
         return orderDetailsResponse;
     }
-
 
     public boolean remove(String orderDetailsId){
         return orderDetailsDao.delete(orderDetailsId);
@@ -97,6 +101,14 @@ public class OrderDetailsService {
             foundOrderDetails.setComments(editOrderDetails.getComments());
         }
         return orderDetailsDao.update(foundOrderDetails);
+    }
+
+    public void setCurrentOrder(Order order) {
+        currentOrder = order;
+    }
+
+    public Order getCurrentOrder() {
+        return currentOrder;
     }
 }
 

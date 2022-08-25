@@ -12,6 +12,7 @@ import com.revature.pokebowl.order.dto.requests.EditOrderRequest;
 import com.revature.pokebowl.order.dto.responses.OrderResponse;
 import com.revature.pokebowl.orderdetails.OrderDetails;
 import com.revature.pokebowl.orderdetails.OrderDetailsService;
+import com.revature.pokebowl.orderdetails.dto.responses.OrderDetailsResponse;
 import com.revature.pokebowl.util.exceptions.InvalidUserInputException;
 import com.revature.pokebowl.util.exceptions.ResourcePersistanceException;
 import org.apache.logging.log4j.LogManager;
@@ -82,12 +83,13 @@ public class OrderService {
 
         currentOrder = orderDao.create(currentOrder);
         if (currentOrder == null) throw new ResourcePersistanceException("New order could not be persisted to the database");
+        orderDetailsService.setCurrentOrder(currentOrder);
 
         return new OrderResponse(currentOrder);
     }
 
     public OrderResponse submitOrder() throws IOException {
-        List<OrderDetails> orderDetailsList = orderDetailsService;
+        List<OrderDetails> orderDetailsList = orderDetailsService.readAllSubmitOrder();
         if (orderDetailsList == null) throw new InvalidUserInputException("Nothing has been added to this order yet, cannot submit the order");
 
         int amount = 0;
@@ -138,6 +140,7 @@ public class OrderService {
 
     public void cancelCurrentOrder() {
         if (currentOrder == null) return;
+        orderDetailsService.setCurrentOrder(null);
         orderDao.delete(currentOrder.getOrderId());
         currentOrder = null;
     }
@@ -155,6 +158,8 @@ public class OrderService {
         if (notNullOrEmpty.test(editOrder.getPaymentId())) {
             currentOrder.setPayment(paymentService.findById(editOrder.getPaymentId()));
         }
+
+        orderDetailsService.setCurrentOrder(currentOrder);
 
         return new OrderResponse(currentOrder);
     }
