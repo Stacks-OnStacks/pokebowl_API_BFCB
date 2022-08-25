@@ -124,4 +124,24 @@ public class DishDao implements Crudable<Dish> {
             HibernateUtil.closeSession();
         }
     }
+
+    public Dish findByName(String dishName) {
+        try {
+            Session session = HibernateUtil.getSession();
+            Transaction transaction = session.beginTransaction();
+
+            Query query = session.createQuery("from Dish where dish_name = :dishName");
+            query.setParameter("dishName", dishName);
+
+            Dish dish = (Dish) query.uniqueResult();
+            transaction.commit();
+
+            return dish;
+        } catch (HibernateException | IOException e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            HibernateUtil.closeSession();
+        }
+    }
 }

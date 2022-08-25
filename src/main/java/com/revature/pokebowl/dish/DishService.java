@@ -48,6 +48,13 @@ public class DishService {
         return true;
     }
 
+    public Dish findByDishName(String dishName) {
+        Dish dish = dishDao.findByName(dishName);
+        if (dish == null) throw new InvalidUserInputException("Dish Id was not found in the database");
+        return dish;
+    }
+
+
     public boolean isDishNameAvailable(String dishName) {
         return dishDao.checkDishName(dishName);
     }
