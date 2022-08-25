@@ -66,6 +66,28 @@ public class OrderDetailsDao implements Crudable<OrderDetails> {
             HibernateUtil.closeSession();
         }
     }
+
+    public OrderDetails findAllByIdAndOrder(String orderDetailsId, String orderId) {
+        try {
+            Session session = HibernateUtil.getSession();
+            Transaction transaction = session.beginTransaction();
+
+            Query query = session.createQuery("from OrderDetails where order_id = :orderId and order_details_id = :orderDetailsId");
+            query.setParameter("orderId", orderId);
+            query.setParameter("orderDetailsId", orderDetailsId);
+
+            OrderDetails orderDetails = (OrderDetails) query.uniqueResult();
+            transaction.commit();
+
+            return orderDetails;
+        } catch (HibernateException | IOException e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            HibernateUtil.closeSession();
+        }
+    }
+
     @Override
     public OrderDetails findById(String id) {
         try {
