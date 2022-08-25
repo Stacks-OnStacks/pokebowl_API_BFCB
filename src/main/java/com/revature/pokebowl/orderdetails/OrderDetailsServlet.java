@@ -3,8 +3,11 @@ package com.revature.pokebowl.orderdetails;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.pokebowl.member.Member;
 import com.revature.pokebowl.memberpayment.dto.requests.CreatePaymentRequest;
+import com.revature.pokebowl.memberpayment.dto.requests.EditPaymentRequest;
 import com.revature.pokebowl.memberpayment.dto.responses.PaymentResponse;
+import com.revature.pokebowl.order.OrderService;
 import com.revature.pokebowl.orderdetails.dto.requests.CreateOrderDetailsRequest;
+import com.revature.pokebowl.orderdetails.dto.requests.EditOrderDetailsRequest;
 import com.revature.pokebowl.orderdetails.dto.responses.OrderDetailsResponse;
 import com.revature.pokebowl.util.exceptions.InvalidUserInputException;
 import com.revature.pokebowl.util.exceptions.ResourcePersistanceException;
@@ -110,5 +113,37 @@ public class OrderDetailsServlet extends HttpServlet implements Authable {
             e.printStackTrace();
             resp.setStatus(500);
         }
+    }
+    @Override
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        if(!checkAdmin(req, resp)) return;
+        try {
+            EditOrderDetailsRequest editOrderDetails = objectMapper.readValue(req.getInputStream(), EditOrderDetailsRequest.class);
+            String orderDetailsId = editOrderDetails.getId();
+            logger.info("paymentName entered: {}", orderDetailsId);
+            orderDetailsService.update(editOrderDetails);// editPayment is a CreatePaymentRequest type of object, it
+            logger.info("Successfully updated member: {}",orderDetailsId);
+            String payload = objectMapper.writeValueAsString(editOrderDetails);
+            resp.getWriter().write(payload);
+            resp.setStatus(200);// 200 means everything is OK, successfully updated payment method
+        }
+        catch (InvalidUserInputException e){
+            resp.getWriter().write(e.getMessage());
+            resp.setStatus(404);
+        } catch (Exception e){
+            resp.getWriter().write(e.getMessage() + " " + e.getClass().getName());
+            e.printStackTrace();
+            resp.setStatus(500);
+        }
+    }
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        if(!checkAdmin(req, resp)) return;
+        String orderDetailsId = req.getParameter("orderDetailsId");
+        if(orderDetailsId != null){
+            orderDetailsService.remove(orderDetailsId);
+            resp.getWriter().write(String.format("OrderDetails: %s has been deleted",orderDetailsId));
+        }
+
     }
 }
