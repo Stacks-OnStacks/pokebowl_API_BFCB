@@ -35,57 +35,29 @@ public class MemberServiceTestSuite {
     public void test_isMemberValid_returnFalse_givenInvalidInput(){
         // Arrange some invalid input
         Member invalidMember1 = null;
-
-        //Member invalidMember2 = new Member("", "valid", "valid", "valid" , new Date(1900,01,01), false);
-        //Member invalidMember3 = new Member(" ", "valid", "valid", "valid" , new Date(1900,01,01), false);
-        //Member invalidMember4 = new Member(null, "valid", "valid", "valid" , new Date(1900,01,01), false);
-        Member invalidMember5 = new Member("valid", "", "valid", "valid" , new Date(1900,01,01), false);
-        Member invalidMember6 = new Member("valid", " ", "valid", "valid" , new Date(1900,01,01), false);
-        Member invalidMember7 = new Member("valid", null, "valid", "valid" , new Date(1900,01,01), false);
-        Member invalidMember8 = new Member("valid", "valid", "", "valid" , new Date(1900,01,01), false);
-        Member invalidMember9 = new Member("valid", "valid", " ", "valid" , new Date(1900,01,01), false);
-        Member invalidMember10 = new Member("valid", "valid", null, "valid" , new Date(1900,01,01), false);
-        Member invalidMember11 = new Member("valid", "valid", "valid", "" , new Date(1900,01,01), false);
-        Member invalidMember12 = new Member("valid", "valid", "valid", " " , new Date(1900,01,01), false);
-        Member invalidMember13 = new Member("valid", "valid", "valid", null , new Date(1900,01,01), false);
-        Member invalidMember14 = new Member("valid", "valid", "valid", "valid" , null, false);
-        //Member invalidMember15 = new Member(..., (boolean) ???); <--- Can we test values in this last parameter of member called is_admin?
+        Member invalidMember2 = new Member(null, "valid", "valid", "valid" , new Date(1900,01,01), false);
+        Member invalidMember3 = new Member("valid", null, "valid", "valid" , new Date(1900,01,01), false);
+        Member invalidMember4 = new Member("valid", "valid", null, "valid" , new Date(1900,01,01), false);
+        Member invalidMember5 = new Member("valid", "valid", "valid", null , new Date(1900,01,01), false);
+        Member invalidMember6 = new Member("valid", "valid", "valid", null , null, false);
 
                             //How to test is_admin? It can either be true or false
 
         boolean actualResult1 = sut.isMemberValid(invalidMember1);
-        //boolean actualResult2 = sut.isMemberValid(invalidMember2);
-        //boolean actualResult3 = sut.isMemberValid(invalidMember3);
-        //boolean actualResult4 = sut.isMemberValid(invalidMember4);
+        boolean actualResult2 = sut.isMemberValid(invalidMember2);
+        boolean actualResult3 = sut.isMemberValid(invalidMember3);
+        boolean actualResult4 = sut.isMemberValid(invalidMember4);
         boolean actualResult5 = sut.isMemberValid(invalidMember5);
         boolean actualResult6 = sut.isMemberValid(invalidMember6);
-        boolean actualResult7 = sut.isMemberValid(invalidMember7);
-        boolean actualResult8 = sut.isMemberValid(invalidMember8);
-        boolean actualResult9 = sut.isMemberValid(invalidMember9);
-        boolean actualResult10 = sut.isMemberValid(invalidMember10);
-        boolean actualResult11 = sut.isMemberValid(invalidMember11);
-        boolean actualResult12 = sut.isMemberValid(invalidMember12);
-        boolean actualResult13 = sut.isMemberValid(invalidMember13);
-        boolean actualResult14 = sut.isMemberValid(invalidMember14);
-        //boolean actualResult15 = sut.isMemberValid(invalidMember15);
 
         // Asserts
 
         Assertions.assertFalse(actualResult1);
-        //Assertions.assertFalse(actualResult2);
-        //Assertions.assertFalse(actualResult3);
-        //Assertions.assertFalse(actualResult4);
+        Assertions.assertFalse(actualResult2);
+        Assertions.assertFalse(actualResult3);
+        Assertions.assertFalse(actualResult4);
         Assertions.assertFalse(actualResult5);
         Assertions.assertFalse(actualResult6);
-        Assertions.assertFalse(actualResult7);
-        Assertions.assertFalse(actualResult8);
-        Assertions.assertFalse(actualResult9);
-        Assertions.assertFalse(actualResult10);
-        Assertions.assertFalse(actualResult11);
-        Assertions.assertFalse(actualResult12);
-        Assertions.assertFalse(actualResult13);
-        Assertions.assertFalse(actualResult14);
-        //Assertions.assertFalse(actualResult15);
     }
     // This will be uncommented when I can figure out how to register member through Postman Post request
     // This will allow me to add a test user to the database to test login and register
