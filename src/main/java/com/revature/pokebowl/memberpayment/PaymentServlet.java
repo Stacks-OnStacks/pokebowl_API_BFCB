@@ -53,12 +53,7 @@ public class PaymentServlet extends HttpServlet implements Authable {
                 resp.getWriter().write(e.getMessage());
                 resp.setStatus(404);
             }
-        } else if (checkAdmin(req,resp)) {
-            logger.info("no payment entered, getting all payments");
-            List<PaymentResponse> payments = paymentService.readAll();
-            String payload = objectMapper.writeValueAsString(payments); // mapper parsing from Java Object to JSON
-            resp.getWriter().write(payload);
-        } else{
+        } else {
             logger.info("no payment entered, getting all payments");
             List<PaymentResponse> payments = paymentService.readAllByMember();
             String payload = objectMapper.writeValueAsString(payments); // mapper parsing from Java Object to JSON
