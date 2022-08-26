@@ -1,46 +1,26 @@
-package com.revature.pokebowl.dish;
+package com.revature.pokebowl.dish.dto.responses;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.revature.pokebowl.orderdetails.OrderDetails;
+import com.revature.pokebowl.dish.Dish;
 
-import javax.persistence.*;
-import java.sql.Date;
-import java.util.List;
 
-@Entity
-@Table(name="dishes")
-public class Dish {
+public class DishResponse {
 
-    @Id
-    @Column(name="dish_id")
     private String dishId;
-
-    @Column(name="dish_name",nullable=false,unique=true)
     private String dishName;
-
-    @Column(name="dish_cost",nullable=false)
     private int dishCost;
-
-    @Column(name="description",nullable=false)
     private String description;
-
-    @Column(name="is_vegetarian",nullable=false)
     private boolean isVegetarian;
 
-    @OneToMany(mappedBy="dish",cascade=CascadeType.ALL)
-    private List<OrderDetails> orderDetailsList;
-
-    public Dish(String dishId, String dishName, int dishCost, String description, boolean isVegetarian) {
-        this.dishId = dishId;
-        this.dishName = dishName;
-        this.dishCost = dishCost;
-        this.description = description;
-        this.isVegetarian = isVegetarian;
+    public DishResponse() {
+        super();
     }
 
-    public Dish() {
-        super();
+    public DishResponse(Dish dish) {
+        this.dishId = dish.getDishId();
+        this.dishName = dish.getDishName();
+        this.dishCost = dish.getDishCost();
+        this.description = dish.getDescription();
+        this.isVegetarian = dish.isVegetarian();
     }
 
     public String getDishId() {
@@ -83,17 +63,9 @@ public class Dish {
         isVegetarian = vegetarian;
     }
 
-    public List<OrderDetails> getOrderDetailsList() {
-        return orderDetailsList;
-    }
-
-    public void setOrderDetailsList(List<OrderDetails> orderDetailsList) {
-        this.orderDetailsList = orderDetailsList;
-    }
-
     @Override
     public String toString() {
-        return "Dish{" +
+        return "DishResponse{" +
                 "dishId='" + dishId + '\'' +
                 ", dishName='" + dishName + '\'' +
                 ", dishCost=" + dishCost +

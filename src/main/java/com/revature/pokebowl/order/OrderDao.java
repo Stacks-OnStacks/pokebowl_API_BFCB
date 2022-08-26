@@ -1,6 +1,5 @@
-package com.revature.pokebowl.dish;
+package com.revature.pokebowl.order;
 
-import com.revature.pokebowl.member.Member;
 import com.revature.pokebowl.util.HibernateUtil;
 import com.revature.pokebowl.util.interfaces.Crudable;
 import org.hibernate.HibernateException;
@@ -11,18 +10,18 @@ import org.hibernate.query.Query;
 import java.io.IOException;
 import java.util.List;
 
-public class DishDao implements Crudable<Dish> {
+public class OrderDao implements Crudable<Order> {
 
     @Override
-    public Dish create(Dish newDish) {
+    public Order create(Order newOrder) {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
 
-            session.save(newDish);
+            session.save(newOrder);
             transaction.commit();
 
-            return newDish;
+            return newOrder;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
             return null;
@@ -32,15 +31,35 @@ public class DishDao implements Crudable<Dish> {
     }
 
     @Override
-    public List<Dish> findAll() {
+    public List<Order> findAll() {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
 
-            List<Dish> dishes = session.createQuery("FROM Dish").list();
+            List<Order> orderList = session.createQuery("FROM Order").list();
             transaction.commit();
 
-            return dishes;
+            return orderList;
+        } catch (HibernateException | IOException e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            HibernateUtil.closeSession();
+        }
+    }
+
+    public List<Order> findAllByMemberId(String memberId) {
+        try {
+            Session session = HibernateUtil.getSession();
+            Transaction transaction = session.beginTransaction();
+
+            Query query = session.createQuery("from Order where member_id = :memberId");
+            query.setParameter("memberId", memberId);
+
+            List<Order> orderList = query.list();
+            transaction.commit();
+
+            return orderList;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
             return null;
@@ -50,15 +69,15 @@ public class DishDao implements Crudable<Dish> {
     }
 
     @Override
-    public Dish findById(String id) {
+    public Order findById(String id) {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
 
-            Dish dish = session.get(Dish.class, id);
+            Order order = session.get(Order.class, id);
             transaction.commit();
 
-            return dish;
+            return order;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
             return null;
@@ -68,12 +87,12 @@ public class DishDao implements Crudable<Dish> {
     }
 
     @Override
-    public boolean update(Dish updatedDish) {
+    public boolean update(Order updatedOrder) {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
 
-            session.merge(updatedDish);
+            session.merge(updatedOrder);
             transaction.commit();
 
             return true;
@@ -91,8 +110,8 @@ public class DishDao implements Crudable<Dish> {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
 
-            Dish dish = session.load(Dish.class, id);
-            session.remove(dish);
+            Order order = session.load(Order.class, id);
+            session.remove(order);
             transaction.commit();
 
             return true;
@@ -104,39 +123,19 @@ public class DishDao implements Crudable<Dish> {
         }
     }
 
-    public boolean checkDishName(String dishName) {
+    public Order findByIdAndMember(String orderId, String memberId) {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
 
-            Query query = session.createQuery("from Dish where dish_name = :dishName");
-            query.setParameter("dishName", dishName);
+            Query query = session.createQuery("from Order where order_id = :orderId and member_id = :memberId");
+            query.setParameter("orderId", orderId);
+            query.setParameter("memberId", memberId);
 
-            Dish dish = (Dish) query.uniqueResult();
+            Order order = (Order) query.uniqueResult();
             transaction.commit();
 
-            if(dish == null) return true;
-            return false;
-        } catch (HibernateException | IOException e) {
-            e.printStackTrace();
-            return false;
-        } finally {
-            HibernateUtil.closeSession();
-        }
-    }
-
-    public Dish findByName(String dishName) {
-        try {
-            Session session = HibernateUtil.getSession();
-            Transaction transaction = session.beginTransaction();
-
-            Query query = session.createQuery("from Dish where dish_name = :dishName");
-            query.setParameter("dishName", dishName);
-
-            Dish dish = (Dish) query.uniqueResult();
-            transaction.commit();
-
-            return dish;
+            return order;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
             return null;

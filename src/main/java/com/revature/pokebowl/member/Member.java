@@ -1,20 +1,19 @@
 package com.revature.pokebowl.member;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.revature.pokebowl.memberpayment.MemberPayment;
+import com.revature.pokebowl.memberpayment.Payment;
 import com.revature.pokebowl.order.Order;
 
 import javax.persistence.*;
 import java.sql.Date;
-import java.util.Set;
+import java.util.List;
 
 @Entity
 @Table(name="members")
 public class Member {
 
     @Id
-    @Column(name="member_id")
+    @Column(name="member_id") // consider putting false and unique here. currently members can be created with "" and " " and null as member_id values
     private String memberId;
 
     @Column(name="username",nullable=false,unique=true)
@@ -34,10 +33,10 @@ public class Member {
     private boolean isAdmin;
 
     @OneToMany(mappedBy="member",cascade=CascadeType.ALL)
-    private Set<MemberPayment> memberPaymentSet;
+    private List<Payment> paymentList;
 
     @OneToMany(mappedBy="member",cascade=CascadeType.ALL)
-    private Set<Order> orders;
+    private List<Order> orders;
 
     public Member(String memberId, String username, String fullName, String userPassword, Date dob, boolean isAdmin) {
         this.memberId = memberId;
@@ -100,19 +99,19 @@ public class Member {
         isAdmin = admin;
     }
 
-    public Set<MemberPayment> getMemberPaymentSet() {
-        return memberPaymentSet;
+    public List<Payment> getMemberPaymentList() {
+        return paymentList;
     }
 
-    public void setMemberPaymentSet(Set<MemberPayment> memberPaymentSet) {
-        this.memberPaymentSet = memberPaymentSet;
+    public void setMemberPaymentList(List<Payment> paymentList) {
+        this.paymentList = paymentList;
     }
 
-    public Set<Order> getOrders() {
+    public List<Order> getOrders() {
         return orders;
     }
 
-    public void setOrders(Set<Order> orders) {
+    public void setOrders(List<Order> orders) {
         this.orders = orders;
     }
 

@@ -1,6 +1,5 @@
-package com.revature.pokebowl.dish;
+package com.revature.pokebowl.member;
 
-import com.revature.pokebowl.member.Member;
 import com.revature.pokebowl.util.HibernateUtil;
 import com.revature.pokebowl.util.interfaces.Crudable;
 import org.hibernate.HibernateException;
@@ -8,21 +7,21 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
+
 import java.io.IOException;
 import java.util.List;
 
-public class DishDao implements Crudable<Dish> {
+public class MemberDao implements Crudable<Member> {
+
 
     @Override
-    public Dish create(Dish newDish) {
+    public Member create(Member newMember) {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
-
-            session.save(newDish);
+            session.save(newMember);
             transaction.commit();
-
-            return newDish;
+            return newMember;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
             return null;
@@ -32,15 +31,15 @@ public class DishDao implements Crudable<Dish> {
     }
 
     @Override
-    public List<Dish> findAll() {
+    public List<Member> findAll() {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
 
-            List<Dish> dishes = session.createQuery("FROM Dish").list();
+            List<Member> members = session.createQuery("FROM Member").list();
             transaction.commit();
 
-            return dishes;
+            return members;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
             return null;
@@ -50,15 +49,15 @@ public class DishDao implements Crudable<Dish> {
     }
 
     @Override
-    public Dish findById(String id) {
+    public Member findById(String id) {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
 
-            Dish dish = session.get(Dish.class, id);
+            Member member = session.get(Member.class, id);
             transaction.commit();
 
-            return dish;
+            return member;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
             return null;
@@ -68,12 +67,12 @@ public class DishDao implements Crudable<Dish> {
     }
 
     @Override
-    public boolean update(Dish updatedDish) {
+    public boolean update(Member updatedMember) {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
 
-            session.merge(updatedDish);
+            session.merge(updatedMember);
             transaction.commit();
 
             return true;
@@ -91,8 +90,8 @@ public class DishDao implements Crudable<Dish> {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
 
-            Dish dish = session.load(Dish.class, id);
-            session.remove(dish);
+            Member member = session.load(Member.class, id);
+            session.remove(member);
             transaction.commit();
 
             return true;
@@ -104,42 +103,44 @@ public class DishDao implements Crudable<Dish> {
         }
     }
 
-    public boolean checkDishName(String dishName) {
+    public Member loginCredentialCheck(String username, String password) {
+
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
 
-            Query query = session.createQuery("from Dish where dish_name = :dishName");
-            query.setParameter("dishName", dishName);
+            Query query = session.createQuery("from Member where username= :username and user_password= :password");
+            query.setParameter("username", username);
+            query.setParameter("password", password);
 
-            Dish dish = (Dish) query.uniqueResult();
+            Member member = (Member) query.uniqueResult();
             transaction.commit();
 
-            if(dish == null) return true;
-            return false;
+            return member;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
-            return false;
+            return null;
         } finally {
             HibernateUtil.closeSession();
         }
     }
 
-    public Dish findByName(String dishName) {
+    public boolean checkUsername(String username) {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
 
-            Query query = session.createQuery("from Dish where dish_name = :dishName");
-            query.setParameter("dishName", dishName);
+            Query query = session.createQuery("from Member where username = :username");
+            query.setParameter("username", username);
 
-            Dish dish = (Dish) query.uniqueResult();
+            Member member = (Member) query.uniqueResult();
             transaction.commit();
 
-            return dish;
+            if(member == null) return true;
+            return false;
         } catch (HibernateException | IOException e) {
             e.printStackTrace();
-            return null;
+            return false;
         } finally {
             HibernateUtil.closeSession();
         }

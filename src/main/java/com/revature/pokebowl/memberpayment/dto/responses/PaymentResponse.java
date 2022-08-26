@@ -1,53 +1,45 @@
-package com.revature.pokebowl.memberpayment;
+package com.revature.pokebowl.memberpayment.dto.responses;
 
-import com.revature.pokebowl.member.Member;
-import com.revature.pokebowl.order.Order;
+import com.revature.pokebowl.memberpayment.Payment;
 
-import javax.persistence.*;
 import java.sql.Date;
-import java.util.Set;
 
-@Entity
-@Table(name="member_payments")
-public class MemberPayment {
+public class PaymentResponse {
 
-    @Id
-    @Column(name="payment_id")
     private String paymentId;
-
-    @Column(name="balance",nullable=false)
+    private String paymentName;
     private int balance;
-
-    @Column(name="exp_date",nullable=false)
     private Date expDate;
-
-    @Column(name="ccv",nullable=false)
     private String ccv;
-
-    @Column(name="zip_code",nullable=false)
     private String zipCode;
-
-    @Column(name="provider",nullable=false)
     private String provider;
 
-    @ManyToOne
-    @JoinColumn(name="member_id")
-    private Member member;
+    private String memberId;
 
-    @OneToMany(mappedBy="memberPayment",cascade=CascadeType.ALL)
-    private Set<Order> orderSet;
+    public PaymentResponse() {
+        super();
+    }
 
-    public MemberPayment(String paymentId, int balance, Date expDate, String ccv, String zipCode, String provider, String customerUserName) {
+    public PaymentResponse(String paymentId, String paymentName, int balance, Date expDate, String ccv, String zipCode, String provider, String memberId) {
         this.paymentId = paymentId;
+        this.paymentName = paymentName;
         this.balance = balance;
         this.expDate = expDate;
         this.ccv = ccv;
         this.zipCode = zipCode;
         this.provider = provider;
+        this.memberId = memberId;
     }
-
-    public MemberPayment() {
-        super();
+    public PaymentResponse(Payment payment) {
+        this.paymentId = payment.getPaymentId();
+        this.paymentName = payment.getPaymentName();
+        this.balance = payment.getBalance();
+        this.expDate = payment.getExpDate();
+        this.ccv = payment.getCcv();
+        this.zipCode = payment.getZipCode();
+        this.provider = payment.getProvider();
+        this.memberId = payment.getMember().getMemberId();
+        //set all this.attribute= paymment.getAttribute()
     }
 
     public String getPaymentId() {
@@ -56,14 +48,6 @@ public class MemberPayment {
 
     public void setPaymentId(String paymentId) {
         this.paymentId = paymentId;
-    }
-
-    public Member getMember() {
-        return member;
-    }
-
-    public void setMember(Member member) {
-        this.member = member;
     }
 
     public int getBalance() {
@@ -106,23 +90,33 @@ public class MemberPayment {
         this.provider = provider;
     }
 
-    public Set<Order> getOrderSet() {
-        return orderSet;
+    public String getMemberId() {
+        return memberId;
     }
 
-    public void setOrderSet(Set<Order> orderSet) {
-        this.orderSet = orderSet;
+    public void setMemberId(String memberId) {
+        this.memberId = memberId;
+    }
+
+    public String getPaymentName() {
+        return paymentName;
+    }
+
+    public void setPaymentName(String paymentName) {
+        this.paymentName = paymentName;
     }
 
     @Override
     public String toString() {
-        return "MemberPayment{" +
+        return "PaymentResponse{" +
                 "paymentId='" + paymentId + '\'' +
+                ", paymentName='" + paymentName + '\'' +
                 ", balance=" + balance +
                 ", expDate=" + expDate +
                 ", ccv='" + ccv + '\'' +
                 ", zipCode='" + zipCode + '\'' +
                 ", provider='" + provider + '\'' +
+                ", memberId='" + memberId + '\'' +
                 '}';
     }
 }

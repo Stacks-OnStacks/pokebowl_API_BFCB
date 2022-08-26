@@ -1,4 +1,18 @@
 package com.revature.pokebowl.util.interfaces;
+import java.util.List;
+public interface Crudable<T> {
 
-public interface Crudable {
+    // Create
+    T create(T newObject);
+
+    //Read
+    List<T> findAll();
+    T findById(String id);
+
+    // Update
+    boolean update(T updatedObject);
+
+    //Delete
+    boolean delete(String id);
+
 }
