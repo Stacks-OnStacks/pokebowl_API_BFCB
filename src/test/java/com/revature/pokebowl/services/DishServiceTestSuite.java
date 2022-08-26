@@ -33,7 +33,7 @@ public class DishServiceTestSuite {
     }
 
     @Test
-    public void test_isMemberValid_returnFalse_givenInvalidInput(){
+    public void test_isDishValid_returnFalse_givenInvalidInput(){
         // Arrange some invalid input
         Dish invalidDish1 = null;
         Dish invalidDish2 = new Dish(null,"name",1000,"description",true);
