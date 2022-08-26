@@ -110,5 +110,16 @@ public class OrderDetailsService {
     public Order getCurrentOrder() {
         return currentOrder;
     }
+
+    public boolean areOrderDetailsValid(OrderDetails orderDetails) {
+        Predicate<String> notNullOrEmpty = (str) -> str != null && !str.trim().equals("");
+        if (orderDetails == null) return false;
+        if (notNullOrEmpty.test(orderDetails.getOrderDetailsId())) return false;
+        if (notNullOrEmpty.test(orderDetails.getComments())) return false;
+        if (orderDetails.getQuantity() < 0) return false;
+        if (orderDetails.getDish() == null) return false;
+        if (orderDetails.getOrder() == null) return false;
+        return true;
+    }
 }
 
