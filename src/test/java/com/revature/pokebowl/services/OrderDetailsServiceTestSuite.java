@@ -33,6 +33,10 @@ public class OrderDetailsServiceTestSuite {
         OrderDetails validOrderDetails = new OrderDetails("id", 1000, "comments");
         validOrderDetails.setOrder(validOrder);
         validOrderDetails.setDish(validDish);
+        System.out.println(validOrderDetails.getOrder());
+        System.out.println(validOrderDetails.getDish());
+        System.out.println(validOrderDetails);
+
 
         // Act - performing the actual action on the unit your testing (invoking a method)
         boolean actualResult = sut.areOrderDetailsValid(validOrderDetails);

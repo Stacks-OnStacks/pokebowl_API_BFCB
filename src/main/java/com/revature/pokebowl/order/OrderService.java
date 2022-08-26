@@ -77,7 +77,7 @@ public class OrderService {
         currentOrder.setOrderDate(new Date(System.currentTimeMillis()));
 
         logger.info("Order Creation service has begun with the provided: {}",currentOrder);
-        if (!isOrderValid()) {
+        if (!isOrderValid(currentOrder)) {
             throw new InvalidUserInputException("User input was invalid");
         }
 
@@ -109,7 +109,7 @@ public class OrderService {
         currentOrder.setOrderDate(new Date(System.currentTimeMillis()));
 
         logger.info("Order Creation service is trying to submit the provided order: {}",currentOrder);
-        if (!isOrderValid()) {
+        if (!isOrderValid(currentOrder)) {
             throw new InvalidUserInputException("Submitted Order was invalid");
         }
 
@@ -122,16 +122,16 @@ public class OrderService {
 
     }
 
-    public boolean isOrderValid() {
+    public boolean isOrderValid(Order order) {
         Predicate<String> notNullOrEmpty = (str) -> str != null && !str.trim().equals("");
-        if (currentOrder == null) return false;
-        if (currentOrder.getMember() == null) return false;
-        if (currentOrder.getPayment() == null) return false;
-        if (!notNullOrEmpty.test(currentOrder.getOrderId())) return false;
-        if (!notNullOrEmpty.test(currentOrder.getOrderAddress())) return false;
-        if (!notNullOrEmpty.test(currentOrder.getOrderZip())) return false;
-        if (currentOrder.getOrderDate() == null) return false;
-        if (currentOrder.getAmount() < 0) return false;
+        if (order == null) return false;
+        if (order.getMember() == null) return false;
+        if (order.getPayment() == null) return false;
+        if (!notNullOrEmpty.test(order.getOrderId())) return false;
+        if (!notNullOrEmpty.test(order.getOrderAddress())) return false;
+        if (!notNullOrEmpty.test(order.getOrderZip())) return false;
+        if (order.getOrderDate() == null) return false;
+        if (order.getAmount() < 0) return false;
         return true;
     }
 
