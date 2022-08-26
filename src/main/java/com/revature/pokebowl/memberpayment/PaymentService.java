@@ -52,7 +52,9 @@ newPayment.setMember(memberService.getSessionMember());
     return new PaymentResponse(newPayment);
 }
     public boolean isPaymentValid(Payment newPayment) {
+        if(newPayment==null) return false;
         Predicate<String> notNullOrEmpty = (str) -> str != null && !str.trim().equals("");
+        if(!notNullOrEmpty.test(newPayment.getPaymentId())){return false;}
         if(!notNullOrEmpty.test(newPayment.getPaymentName())){return false;}
         if(!notNullOrEmpty.test(newPayment.getProvider())){return false;}
         if(!notNullOrEmpty.test(newPayment.getZipCode())){return false;}
