@@ -59,20 +59,19 @@ public class MemberServiceTestSuite {
         Assertions.assertFalse(actualResult5);
         Assertions.assertFalse(actualResult6);
     }
-    // This will be uncommented when I can figure out how to register member through Postman Post request
-    // This will allow me to add a test user to the database to test login and register
-//    @Test
-//    public void test_login_returnsMember_givenValidLoginCredentials(){
-//        // Arrange
-//        String email = "cj@mail.com";
-//        String password = "pass";
-//
-//        //Act
-//        Member actualMember = sut.login(email, password);
-//
-//        // Assert
-//        Assertions.assertInstanceOf(Member.class, actualMember);
-//    }
+
+    @Test
+    public void test_login_returnsMember_givenValidLoginCredentials(){
+        // Arrange
+        String username = "PokemonMaster";
+        String password = "gary#2";
+        when(mockMemberDao.loginCredentialCheck(username,password)).thenReturn(new Member());
+        //Act
+        Member actualMember = sut.login(username, password);
+
+        // Assert
+        Assertions.assertInstanceOf(Member.class, actualMember);
+    }
 
 
 //    @Test
