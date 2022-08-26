@@ -7,7 +7,7 @@ function register() {
     var json = JSON.stringify(newMember);
     alert("Sending this information to ServletContext via POST HTTP Request which will route it to servlet with address member, there it will be processed by MemberServlet's doPost Method");
     var request = new XMLHttpRequest();
-    request.open("POST", "/member");
+    request.open("POST", "http://44.201.202.225:8080/member");
     request.send(json);
     event.preventDefault();
 }
